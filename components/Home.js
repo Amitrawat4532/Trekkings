@@ -7,7 +7,12 @@ const Home = () => {
       <Flex
         w="100vw"
         h="130vh"
-        bgImg="url('/images/bg.png')"
+        bgImg={[
+          "url('/images/bg2.png')",
+          "url('/images/bg2.png')",
+          "url('/images/bg.png')",
+          "url('/images/bg.png')",
+        ]}
         backgroundSize="100%"
         backgroundRepeat="no-repeat"
         justifyContent="center"
@@ -15,8 +20,8 @@ const Home = () => {
       >
         <Box
           transform={[
-            "translatex(-0%)",
-            "translatex(-50%)",
+            "translatex(0%)",
+            "translatex(0%)",
             "translatex(-50%)",
             "translatex(-35%)",
           ]}
@@ -27,7 +32,7 @@ const Home = () => {
             fontSize={["40px", "45px", "60px", "70px"]}
             fontWeight="400"
           >
-            make the{" "}
+            make the
           </Text>
           <Text
             as="h1"

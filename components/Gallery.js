@@ -64,7 +64,7 @@ const Gallery = () => {
             <Image
               key={key}
               src={el.image}
-              width={["90%", "300px", "550px", "609px"]}
+              width={["90%", "80%", "550px", "609px"]}
               my="10px"
               height="340px"
             />
