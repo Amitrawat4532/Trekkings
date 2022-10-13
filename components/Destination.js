@@ -230,9 +230,7 @@ function Destination() {
             as="Span"
             fontSize={["30px", "30px", "30px", "50px"]}
             color="#FF3606"
-          >
-            "
-          </Box>
+          ></Box>
           THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU NEVER
           THOUGHT TO ASK
         </Text>
