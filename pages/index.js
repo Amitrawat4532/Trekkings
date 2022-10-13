@@ -13,7 +13,7 @@ import { Box } from "@chakra-ui/react";
 const index = () => {
   return (
     <>
-      <Box p="0" m="0" overflowY="hidden">
+      <Box p="0" m="0" overflow="hidden">
         <Navbar />
         <Home />
         <About />
