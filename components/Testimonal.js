@@ -32,11 +32,8 @@ const Testimonal = () => {
   ];
   return (
     <>
-      <Flex
-        width="100%"
-        height={["90px", "100px", "150px", "180px"]}
-        background="#606060"
-      >
+      {/* Header */}
+      <Flex width="100%" height="100%" background="#606060">
         <Flex
           position="relative"
           width="100%"
@@ -48,11 +45,9 @@ const Testimonal = () => {
           <Text
             as="h1"
             fontWeight="800"
-            fontSize={["38px", "60px", "90px", "100px"]}
-            letterSpacing="0.04em"
+            fontSize={["43px", "60px", "90px", "100px"]}
             color="#000000"
             opacity="0.19"
-            padding="0px 20px"
           >
             TESTIMONALS
           </Text>
@@ -60,8 +55,7 @@ const Testimonal = () => {
           <Text
             as="h3"
             fontWeight="800"
-            fontSize={["10px", "15px", "20px", "30px"]}
-            letterSpacing="0.04em"
+            fontSize={["12px", "15px", "20px", "30px"]}
             color="#FF3606"
             position="absolute"
             textAlign="center"
@@ -71,17 +65,13 @@ const Testimonal = () => {
         </Flex>
       </Flex>
 
+      {/* Main Testimonal */}
       <Flex
         width="100%"
         background="#606060"
         justifyContent="center"
         gap="5%"
-        padding={[
-          "0px 90px 0px 50px",
-          "0px 90px 0px 50px",
-          "0px 90px 0px 100px",
-          "0px 90px 0px 0px",
-        ]}
+        padding={["20px", "30px", "40px", "50px"]}
         flexDirection={["column", "column", "row", "row"]}
       >
         <Flex
@@ -89,7 +79,7 @@ const Testimonal = () => {
           height="100%"
           // width={["200px", "200px", "240px", "300px"]}
           // height={["200px", "200px", "230px", "278px"]}
-          p="0px 20px 40px 20px"
+          // p="0px 20px 40px 20px"
           justifyContent="center"
         >
           <Image
@@ -140,6 +130,7 @@ const Testimonal = () => {
         </Flex>
       </Flex>
 
+      {/* Feature Context */}
       <Flex
         justifyContent={["center", "center", "space-evenly", "space-evenly"]}
         flexDirection={["column", "column", "row", "row"]}

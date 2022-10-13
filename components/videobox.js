@@ -11,8 +11,13 @@ const Videobox = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Image src="./images/videobox.png" width="100vw" height="500px" />
-        <Text position="absolute" textColor="orange" fontSize="90px">
+        <Image src="./images/videobox.png" width="100vw" height="200px" />
+        <Text
+          position="absolute"
+          textColor="orange"
+          fontSize="50px"
+          textAlign="center"
+        >
           Yha pe video
         </Text>
       </Flex>

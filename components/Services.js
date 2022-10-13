@@ -79,7 +79,7 @@ const Services = () => {
           return (
             <Flex
               flexDirection={key % 2 === 0 ? "row" : "row-reverse"}
-              gap={["10px", "20px", "40px", "50px"]}
+              gap={["20px", "20px", "40px", "50px"]}
               key={key}
             >
               <Flex flexDirection="column" gap="20px" flex="1">
@@ -115,9 +115,9 @@ const Services = () => {
               </Flex>
               <Flex
                 flex="1"
-                gap="40px"
+                gap="50px"
                 width="800px"
-                height={["170px", "178px", "294px", "294px"]}
+                height={["200px", "200px", "294px", "294px"]}
                 // padding="10px 10px 0px 13px"
               >
                 <Image src={el.image} />

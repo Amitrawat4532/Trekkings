@@ -38,13 +38,13 @@ function Destination() {
           width="100%"
           flexDirection="column"
           justifyContent="center"
-          alignItems={["center", "center", "start", "start"]}
+          alignItems={["center", "center", "center", "start"]}
           position="relative"
         >
           <Text
             as="h1"
             fontWeight="800"
-            fontSize={["35px", "50px", "80px", "80px"]}
+            fontSize={["43px", "50px", "80px", "80px"]}
             color="#FFFFFF"
             opacity="0.19"
             p={["0", "30", "0", "0"]}
@@ -71,23 +71,18 @@ function Destination() {
 
         <Flex
           width="100%"
-          justifyContent={[
-            "center",
-            "center",
-            "space-between",
-            "space-between",
-          ]}
-          // alignItem={["center", "center", "end", "end"]}
-          paddingBottom="60px"
-          flexDirection={["column", "column", "row", "row"]}
+          justifyContent={["center", "center", "center", "space-between"]}
+          alignItem="center"
+          paddingBottom="40px"
+          px="20px"
+          flexDirection={["column", "column", "column", "row"]}
         >
           <Text
             as="h2"
-            fontSize={["15px", "15px", "20px", "20px"]}
+            fontSize={["18px", "20px", "22px", "24px"]}
             fontWeight="800"
             color="#3E3E3E"
-            pt={["0px", "0px", "35px", "35px"]}
-            p={["10px", "10px", "0", "0"]}
+            textAlign={["center", "center", "center", "start"]}
           >
             HERE WE LIST OUR MOST POPULAR DESTINATIONS WE HAD AND FULL DETAILS
             ARE AS FOLLOWED
@@ -95,17 +90,16 @@ function Destination() {
           <Button
             backgroundColor="#FF3606"
             color="#FFFFFF"
-            height={["30px", "55px", "65px", "65px"]}
             width={["100px", "100px", "159px", "159px"]}
             borderRadius={["30px", "20px", "0px", "0px"]}
-            p={["30px"]}
-            m={["auto", "auto", "0", "0"]}
+            p={["20px", "30px", "30px", "30px"]}
+            m={["8px auto", "8px auto", "8px auto", "0"]}
           >
             View All
           </Button>
         </Flex>
 
-        <Flex justifyContent="space-between" flexWrap="wrap">
+        <Flex justifyContent="space-between" flexWrap="wrap" gap="8">
           {Gallery.map((el, id) => {
             return (
               //   *********
@@ -122,7 +116,7 @@ function Destination() {
                 //   pb="10px"
                 my="4"
                 padding="auto"
-                margin={["auto", "0", "0", "0"]}
+                margin="auto"
               >
                 <Image src={el.img} />
                 <Flex
@@ -221,18 +215,14 @@ function Destination() {
           })}
         </Flex>
         <Text
-          fontSize={["10px", "15px", "25px", "25px"]}
+          fontSize={["13px", "19px", "25px", "25px"]}
           fontWeight="800"
+          textAlign="center"
           color="#3E3E3E"
           p="40px"
         >
-          <Box
-            as="Span"
-            fontSize={["30px", "30px", "30px", "50px"]}
-            color="#FF3606"
-          ></Box>
-          THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU NEVER
-          THOUGHT TO ASK
+          &#34;THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU
+          NEVER THOUGHT TO ASK &#34;
         </Text>
       </Flex>
     </>
