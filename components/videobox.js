@@ -5,13 +5,13 @@ const Videobox = () => {
   return (
     <>
       <Flex
-        width="100vw"
+        width="100%"
         height="100%"
         position="relative"
         alignItems="center"
         justifyContent="center"
       >
-        <Image src="./images/videobox.png" width="100vw" height="200px" />
+        <Image src="./images/videobox.png" width="100%" height="200px" />
         <Text
           position="absolute"
           textColor="orange"

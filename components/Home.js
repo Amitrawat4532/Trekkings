@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <Flex
         w="100vw"
-        h="130vh"
+        h={["100vh", "100vh", "120vh", "130vh"]}
         bgImg={[
           "url('/images/bg2.png')",
           "url('/images/bg2.png')",

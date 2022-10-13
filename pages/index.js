@@ -8,20 +8,23 @@ import Services from "../components/Services";
 import Gallery from "../components/Gallery";
 import Testimonal from "../components/Testimonal";
 import Blog from "../components/Blog";
+import { Box } from "@chakra-ui/react";
 
 const index = () => {
   return (
     <>
-      <Navbar />
-      <Home />
-      <About />
-      <Destination />
-      <Services />
-      <Videobox />
-      <Whytrekking />
-      <Gallery />
-      <Testimonal />
-      <Blog />
+      <Box p="0" m="0" overflowY="hidden">
+        <Navbar />
+        <Home />
+        <About />
+        <Destination />
+        <Services />
+        <Videobox />
+        <Whytrekking />
+        <Gallery />
+        <Testimonal />
+        <Blog />
+      </Box>
     </>
   );
 };
