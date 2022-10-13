@@ -146,8 +146,8 @@ const Testimonal = () => {
       >
         {Testimonal_context.map((el, key) => {
           return (
-            <Flex flexDirection="column" alignItems="center">
-              <Flex gap="10px" key={key} alignItems="center">
+            <Flex flexDirection="column" alignItems="center" key={key}>
+              <Flex gap="10px" alignItems="center">
                 <Image src={el.icon_1} />
                 <Text
                   fontWeight="400"

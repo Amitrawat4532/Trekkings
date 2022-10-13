@@ -94,6 +94,7 @@ const Whytrekking = () => {
             {Icons.map((el, key) => {
               return (
                 <Flex
+                  key={key}
                   flex="1"
                   flexDirection="column"
                   justifyContent="center"

@@ -80,6 +80,7 @@ const Services = () => {
             <Flex
               flexDirection={key % 2 === 0 ? "row" : "row-reverse"}
               gap={["10px", "20px", "40px", "50px"]}
+              key={key}
             >
               <Flex flexDirection="column" gap="20px" flex="1">
                 <Text

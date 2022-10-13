@@ -87,12 +87,11 @@ const Blog = () => {
         >
           {vlogs.map((el, key) => {
             return (
-              <Flex alignItems="center">
+              <Flex alignItems="center" key={key}>
                 <Flex
                   // width="545px"
                   // height="405px"
                   flexDirection="column"
-                  key={key}
                   p="20px 0px 20px 0px"
                   alignItems={["center", "center", "start", "start"]}
                 >
