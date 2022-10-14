@@ -37,12 +37,12 @@ const Footer = () => {
           justifyContent="end"
         >
           <Box border="2px solid blue" width="200px">
-            <Text as="h1" color="#FFFFFF">
+            <Text as="h1" color="#FFFFFF" fontWeight="700" fontSize="30px">
               QUICK LINKS
             </Text>
 
-            <Text as="h3" color="#FFFFFF">
-              <Text as="span" color="red">
+            <Text as="h3" color="#FFFFFF" fontSize="23px">
+              <Text as="span" color="red" fontSize="23px">
                 &#9830;
               </Text>
               ABOUT US
@@ -66,14 +66,14 @@ const Footer = () => {
               OUR TEAM
             </Text>
           </Box>
-          <Box border="2px solid blue" width="300px">
-            <Text as="h1" color="#FFFFFF">
+          <Box border="2px solid blue" width="200px">
+            <Text as="h1" color="#FFFFFF" fontWeight="700" fontSize="30px">
               USEFUL LINKS
             </Text>
             <Text as="h3" color="#FFFFFF">
               <Text as="span" color="red">
                 &#9830;
-              </Text>{" "}
+              </Text>
               SUPPORT
             </Text>
             <Text as="h3" color="#FFFFFF">
