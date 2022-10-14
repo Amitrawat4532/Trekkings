@@ -36,7 +36,7 @@ const Footer = () => {
           width="70%"
           justifyContent="end"
         >
-          <Box border="2px solid blue" width="300px">
+          <Box border="2px solid blue" width="200px">
             <Text as="h1" color="#FFFFFF">
               QUICK LINKS
             </Text>
