@@ -8,8 +8,8 @@ const Home = () => {
         w="100vw"
         h={["100vh", "100vh", "120vh", "130vh"]}
         bgImg={[
-          "url('/images/bg2.png')",
-          "url('/images/bg2.png')",
+          "url('/images/bg3.png')",
+          "url('/images/bg3.png')",
           "url('/images/bg.png')",
           "url('/images/bg.png')",
         ]}

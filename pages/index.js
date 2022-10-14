@@ -9,6 +9,7 @@ import Gallery from "../components/Gallery";
 import Testimonal from "../components/Testimonal";
 import Blog from "../components/Blog";
 import { Box } from "@chakra-ui/react";
+import Footer from "../components/footer";
 
 const index = () => {
   return (
@@ -24,6 +25,7 @@ const index = () => {
         <Gallery />
         <Testimonal />
         <Blog />
+        <Footer />
       </Box>
     </>
   );
