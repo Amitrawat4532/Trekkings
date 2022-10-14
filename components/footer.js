@@ -79,19 +79,19 @@ const Footer = () => {
             <Text as="h3" color="#FFFFFF">
               <Text as="span" color="red">
                 &#9830;
-              </Text>{" "}
+              </Text>
               DISCLAMAIR
             </Text>
             <Text as="h3" color="#FFFFFF">
               <Text as="span" color="red">
                 &#9830;
-              </Text>{" "}
+              </Text>
               ELEMENT
             </Text>
             <Text as="h3" color="#FFFFFF">
               <Text as="span" color="red">
                 &#9830;
-              </Text>{" "}
+              </Text>
               PRIVACY POLICY
             </Text>
           </Box>
