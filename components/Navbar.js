@@ -6,11 +6,7 @@ import {
   Button,
   Flex,
   Image,
-  Input,
   Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
@@ -131,21 +127,66 @@ const Navbar = () => {
           finalFocusRef={btnRef}
         >
           <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
+          <DrawerContent width="68%">
+            <DrawerCloseButton fontSize="30px" fontWeight="900" color="red" />
+            {/* ***************Navbar******************** */}
 
-            {/* <DrawerHeader>Create your account</DrawerHeader>
-
-            <DrawerBody>
-              <Input placeholder="Type here..." />
-            </DrawerBody>
-
-            <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
+            <Flex
+              flexDirection="column"
+              // justifyContent="center"
+              display={["flex", "flex", "none", "none"]}
+              // alignItems="center"
+              height="100vh"
+              border="2px solid black"
+            >
+              <Button
+                fontSize="15px"
+                color="black"
+                bg="transparent"
+                h="100%"
+                fontWeight="800"
+              >
+                Home
               </Button>
-              <Button colorScheme="blue">Save</Button>
-            </DrawerFooter>*/}
+              <Button
+                fontSize="15px"
+                color="black"
+                bg="transparent"
+                h="100%"
+                fontWeight="800"
+              >
+                About Us
+              </Button>
+              <Button
+                fontSize="15px"
+                color="black"
+                bg="transparent"
+                h="100%"
+                fontWeight="800"
+              >
+                Service
+              </Button>
+              <Button
+                fontSize="15px"
+                color="black"
+                bg="transparent"
+                h="100%"
+                fontWeight="800"
+              >
+                Gallery
+              </Button>
+              <Button
+                fontSize="15px"
+                color="black"
+                bg="transparent"
+                h="100%"
+                fontWeight="800"
+              >
+                Latest Blog
+              </Button>
+            </Flex>
+
+            {/* ***************Navbar******************** */}
           </DrawerContent>
         </Drawer>
       </Flex>
