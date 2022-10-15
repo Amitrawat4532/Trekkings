@@ -31,8 +31,9 @@ const Footer = () => {
         <Flex
           //   gap="100px"
 
-          width={["65%", "82%", "70%", "70%"]}
+          width={["58%", "64%", "54%", "54%"]}
           justifyContent="start"
+          margin="auto"
         >
           <Box width={["376px"]}>
             <Text

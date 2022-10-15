@@ -127,7 +127,7 @@ const Navbar = () => {
           finalFocusRef={btnRef}
         >
           <DrawerOverlay />
-          <DrawerContent width="68%">
+          <DrawerContent>
             <DrawerCloseButton fontSize="30px" fontWeight="900" color="red" />
             {/* ***************Navbar******************** */}
 
