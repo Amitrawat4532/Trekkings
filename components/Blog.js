@@ -98,8 +98,8 @@ const Blog = () => {
                   <Image
                     src={el.Image}
                     borderRadius="61px"
-                    width={["300px", "300px", "400px", "500px"]}
-                    height={["200px", "200px", "300px", "405px"]}
+                    width={["250px", "350px", "400px", "500px"]}
+                    height={["200px", "250px", "300px", "405px"]}
                   />
                   <Text
                     fontWeight="700"

@@ -35,6 +35,7 @@ function About() {
         flexWrap="wrap"
         gap="50px"
         // padding="63px 20px 60px 30px"
+        backgroundSize="contain"
       >
         {cards.map((el, id) => {
           return (

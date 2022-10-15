@@ -20,8 +20,8 @@ const Footer = () => {
       >
         {/* *****footer logo***** */}
         <Flex
-          width={["206px", "250px", "300px", "300px"]}
-          height={["180px", "180px", "300px", "300px"]}
+          width={["250px", "350px", "450px", "555px"]}
+          height={["180px", "180px", "288px", "288px"]}
         >
           <Image src="./images/footerlogo.png" width="100%" height="100%" />
         </Flex>
@@ -31,15 +31,15 @@ const Footer = () => {
         <Flex
           //   gap="100px"
 
-          width={["84%", "82%", "70%", "70%"]}
-          justifyContent="end"
+          width={["65%", "82%", "70%", "70%"]}
+          justifyContent="start"
         >
           <Box width={["376px"]}>
             <Text
               as="h1"
               color="#FF3606"
               fontWeight="700"
-              fontSize={["16px", "22px", "27px", "30px"]}
+              fontSize={["13px", "22px", "27px", "30px"]}
               pb="15px"
             >
               QUICK LINKS
@@ -107,7 +107,7 @@ const Footer = () => {
               as="h1"
               color="#FF3606"
               fontWeight="700"
-              fontSize={["16px", "22px", "27px", "30px"]}
+              fontSize={["13px", "22px", "27px", "30px"]}
               pb="15px"
             >
               USEFUL LINKS
@@ -200,12 +200,12 @@ const Footer = () => {
           <Input
             type="email"
             placeHolder="enter your email I'd"
-            background="#D9D9D9"
+            background="#fffff"
             width={["250px", "300px", "350px", "400px"]}
             height={["38px", "45px", "55px", "60px"]}
             borderRadius={["50px", "50px", "0px", "0px"]}
             fontSize={["15px", "12px", "15px", "15px"]}
-            opacity="0.3"
+            color="black"
           />
           <Button
             background="#FF3606"
@@ -215,6 +215,7 @@ const Footer = () => {
             fontSize={["17px", "21px", "25px", "30px"]}
             color="#FFFFFF"
             borderRadius={["50px", "50px", "0px", "0px"]}
+            margin="auto"
           >
             Send
           </Button>
