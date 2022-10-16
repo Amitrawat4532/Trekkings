@@ -71,15 +71,19 @@ const Testimonal = () => {
         background="#606060"
         justifyContent="center"
         gap="5%"
-        padding={["20px", "30px", "40px", "50px"]}
+        padding={["20px", "30px", "40px", "70px"]}
         flexDirection={["column", "column", "row", "row"]}
       >
+        <Image
+          src="./images/leftarrow.png"
+          width="76px"
+          height="78px"
+          alignSelf="center"
+        />
+
         <Flex
-          width={["100%", "100%", "240px", "300px"]}
+          width={["100%", "100%", "240px", "432px"]}
           height="100%"
-          // width={["200px", "200px", "240px", "300px"]}
-          // height={["200px", "200px", "230px", "278px"]}
-          // p="0px 20px 40px 20px"
           justifyContent="center"
         >
           <Image
@@ -91,7 +95,7 @@ const Testimonal = () => {
           />
         </Flex>
         <Flex
-          width={["100%", "100%", "80%", "80%"]}
+          width={["100%", "100%", "60%", "68%"]}
           flexDirection="column"
           justifyContent="center"
         >
@@ -128,6 +132,12 @@ const Testimonal = () => {
             PRESIDENT OF AMERICA
           </Text>
         </Flex>
+        <Image
+          src="./images/rightarrow.png"
+          width="76px"
+          height="78px"
+          alignSelf="center"
+        />
       </Flex>
 
       {/* Feature Context */}

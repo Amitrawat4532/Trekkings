@@ -10,6 +10,7 @@ import Testimonal from "../components/Testimonal";
 import Blog from "../components/Blog";
 import { Box } from "@chakra-ui/react";
 import Footer from "../components/footer";
+// import Calender from "../components/Calender";
 
 const index = () => {
   return (
@@ -17,6 +18,7 @@ const index = () => {
       <Box p="0" m="0" overflow="hidden">
         <Navbar />
         <Home />
+        {/* <Calender /> */}
         <About />
         <Destination />
         <Services />

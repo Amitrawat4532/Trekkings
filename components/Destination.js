@@ -121,14 +121,14 @@ function Destination() {
                 <Image src={el.img} />
                 <Flex
                   height="64px"
-                  width="100%"
+                  width={["95%", "90%", "76%", "100%"]}
                   position="absolute"
                   justifyContent="space-evenly"
                   bottom="50px"
                 >
                   <Box
-                    height="64px"
-                    width="70px"
+                    height={["50px", "55px", "60px", "64px"]}
+                    width={["48px", "55px", "66px", "70px"]}
                     backgroundColor="#FF4417"
                     textAlign="center"
                     padding="9px 3px 0px 2px"
@@ -137,7 +137,7 @@ function Destination() {
                       as="h1"
                       color="#FFFFFF"
                       fontWeight="800"
-                      fontSize="15px"
+                      fontSize={["10px", "12px", "15px", "15px"]}
                     >
                       {el.person}
                     </Text>
@@ -145,7 +145,7 @@ function Destination() {
                       as="h1"
                       color="#FFFFFF"
                       fontWeight="800"
-                      fontSize="15px"
+                      fontSize={["10px", "12px", "15px", "15px"]}
                     >
                       PERSON
                     </Text>
@@ -153,8 +153,8 @@ function Destination() {
 
                   <Box
                     padding="9px 3px 0px 2px"
-                    height="64px"
-                    width="70px"
+                    height={["50px", "55px", "60px", "64px"]}
+                    width={["48px", "55px", "66px", "70px"]}
                     backgroundColor="#FF4417"
                     textAlign="center"
                   >
@@ -162,7 +162,7 @@ function Destination() {
                       as="h1"
                       color="#FFFFFF"
                       fontWeight="800"
-                      fontSize="15px"
+                      fontSize={["10px", "12px", "15px", "15px"]}
                     >
                       {el.days}
                     </Text>
@@ -170,14 +170,14 @@ function Destination() {
                       as="h1"
                       color="#FFFFFF"
                       fontWeight="800"
-                      fontSize="15px"
+                      fontSize={["10px", "12px", "15px", "15px"]}
                     >
                       Days
                     </Text>
                   </Box>
                   <Box
-                    height="64px"
-                    width="110px"
+                    height={["50px", "55px", "60px", "64px"]}
+                    width={["85px", "95px", "110px", "110px"]}
                     backgroundColor="#FFFFFF"
                     textAlign="center"
                     padding="9px 3px 0px 2px"
@@ -185,7 +185,7 @@ function Destination() {
                     <Text
                       as="h1"
                       fontWeight="800"
-                      fontSize="15px"
+                      fontSize={["10px", "12px", "15px", "15px"]}
                       color="#FF4417"
                     >
                       {el.price} Rs
@@ -193,7 +193,7 @@ function Destination() {
                     <Text
                       as="h1"
                       fontWeight="800"
-                      fontSize="15px"
+                      fontSize={["10px", "12px", "15px", "15px"]}
                       color="#FF4417"
                     >
                       PER PERSON

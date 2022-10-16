@@ -5,7 +5,11 @@ const Footer = () => {
   return (
     <>
       {/* ***********IMAGE********** */}
-      <Flex background="#FF4417" width="100%" height="300px">
+      <Flex
+        background="#FF4417"
+        width="100%"
+        height={["121px", "200px", "210px", "300px"]}
+      >
         <Image src="./images/footer1.png" />
         <Image src="./images/footer2.png" />
       </Flex>
