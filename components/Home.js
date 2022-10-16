@@ -20,8 +20,8 @@ const Home = () => {
       >
         <Box
           transform={[
-            "translatex(0%)",
-            "translatex(0%)",
+            "translatey(72%)",
+            "translatey(72%)",
             "translatex(-50%)",
             "translatex(-35%)",
           ]}

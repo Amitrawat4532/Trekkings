@@ -79,6 +79,7 @@ const Testimonal = () => {
           width="76px"
           height="78px"
           alignSelf="center"
+          display={["none", "none", "none", "flex"]}
         />
 
         <Flex
@@ -86,13 +87,16 @@ const Testimonal = () => {
           height="100%"
           justifyContent="center"
         >
-          <Image
-            src="./images/testimonal.png"
-            //  width="100%"
-            //  height="100%"
-            width={["200px", "200px", "240px", "300px"]}
-            height={["200px", "200px", "230px", "278px"]}
-          />
+          <Flex>
+            <Image
+              src="./images/testimonal.png"
+              //  width="100%"
+              //  height="100%"
+              width={["200px", "200px", "240px", "300px"]}
+              height={["200px", "200px", "230px", "278px"]}
+            />
+            <Image src="./images/uppercoma.png" width="50px" height="40px" />
+          </Flex>
         </Flex>
         <Flex
           width={["100%", "100%", "60%", "68%"]}
@@ -137,6 +141,7 @@ const Testimonal = () => {
           width="76px"
           height="78px"
           alignSelf="center"
+          display={["none", "none", "none", "flex"]}
         />
       </Flex>
 
