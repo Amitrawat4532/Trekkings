@@ -64,30 +64,28 @@ const Testimonal = () => {
           </Text>
         </Flex>
       </Flex>
-
-      {/* Main Testimonal */}
-      <Flex
-        width="100%"
-        background="#606060"
-        justifyContent="center"
-        gap="5%"
-        padding={["20px", "30px", "40px", "70px"]}
-        flexDirection={["column", "column", "row", "row"]}
-      >
+      {/* $$$$$$$$$$$$$testimonal container$$$$$$$$$$$$4 */}
+      <Flex background="#606060">
         <Image
           src="./images/leftarrow.png"
-          width="76px"
-          height="78px"
+          width={["60px", "65px", "76px", "76px"]}
+          height={["62px", "68px", "78px", "78px"]}
           alignSelf="center"
-          display={["none", "none", "none", "flex"]}
         />
-
+        {/* Main Testimonal */}
         <Flex
-          width={["100%", "100%", "240px", "432px"]}
-          height="100%"
+          width="100%"
+          background="#606060"
           justifyContent="center"
+          gap="5%"
+          padding={["20px", "30px", "40px", "70px"]}
+          flexDirection={["column", "column", "row", "row"]}
         >
-          <Flex>
+          <Flex
+            width={["100%", "100%", "240px", "432px"]}
+            height="100%"
+            justifyContent="center"
+          >
             <Image
               src="./images/testimonal.png"
               //  width="100%"
@@ -95,53 +93,56 @@ const Testimonal = () => {
               width={["200px", "200px", "240px", "300px"]}
               height={["200px", "200px", "230px", "278px"]}
             />
-            <Image src="./images/uppercoma.png" width="50px" height="40px" />
+            <Image
+              src="./images/uppercoma.png"
+              width={["30px", "40px", "45px", "50px"]}
+              height={["25px", "30px", "35px", "40px"]}
+            />
           </Flex>
-        </Flex>
-        <Flex
-          width={["100%", "100%", "60%", "68%"]}
-          flexDirection="column"
-          justifyContent="center"
-        >
-          <Text
-            as="h3"
-            color=" #FFFFFF"
-            fontSize="23px"
-            textAlign={["center", "center", "start", "start"]}
-          >
-            Trekking has always helped me in getting mental peace and a peaceful
-            time to spend with inner me. and i would specially thanx to this
-            company for helping me to connect with my inner spirit.
-          </Text>
           <Flex
-            width="100%"
-            justifyContent={["center", "center", "start", "start"]}
+            width={["100%", "100%", "60%", "68%"]}
+            flexDirection="column"
+            justifyContent="center"
           >
-            <Image src="./images/stars.png" width="162px" height="42px" />
+            <Text
+              as="h3"
+              color=" #FFFFFF"
+              fontSize="23px"
+              textAlign={["center", "center", "start", "start"]}
+            >
+              Trekking has always helped me in getting mental peace and a
+              peaceful time to spend with inner me. and i would specially thanx
+              to this company for helping me to connect with my inner spirit.
+            </Text>
+            <Flex
+              width="100%"
+              justifyContent={["center", "center", "start", "start"]}
+            >
+              <Image src="./images/stars.png" width="162px" height="42px" />
+            </Flex>
+            <Text
+              as="h2"
+              color=" black"
+              fontSize="35px"
+              textAlign={["center", "center", "start", "start"]}
+            >
+              NELSON MANDELA
+            </Text>
+            <Text
+              as="h2"
+              color=" #FFFFFF"
+              fontSize="23px"
+              textAlign={["center", "center", "start", "start"]}
+            >
+              PRESIDENT OF AMERICA
+            </Text>
           </Flex>
-          <Text
-            as="h2"
-            color=" black"
-            fontSize="35px"
-            textAlign={["center", "center", "start", "start"]}
-          >
-            NELSON MANDELA
-          </Text>
-          <Text
-            as="h2"
-            color=" #FFFFFF"
-            fontSize="23px"
-            textAlign={["center", "center", "start", "start"]}
-          >
-            PRESIDENT OF AMERICA
-          </Text>
         </Flex>
         <Image
           src="./images/rightarrow.png"
-          width="76px"
-          height="78px"
+          width={["60px", "65px", "76px", "76px"]}
+          height={["62px", "68px", "78px", "78px"]}
           alignSelf="center"
-          display={["none", "none", "none", "flex"]}
         />
       </Flex>
 
