@@ -2,6 +2,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import "@fontsource/anton/400.css";
 import "@fontsource/sen";
+import "@fontsource/rubik";
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {

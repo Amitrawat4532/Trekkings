@@ -39,7 +39,7 @@ const Home = () => {
             color="#FF4417"
             fontSize={["45px", "50px", "60px", "70px"]}
             fontWeight="400"
-            fontFamily="anton"
+            fontFamily="Rubik Glitch"
           >
             Impossible
           </Text>
