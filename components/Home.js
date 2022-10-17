@@ -29,7 +29,7 @@ const Home = () => {
           <Text
             as="h1"
             color=" #FFFFFF"
-            fontSize={["40px", "45px", "60px", "70px"]}
+            fontSize={["45px", "50px", "60px", "70px"]}
             fontFamily="anton"
           >
             make the
@@ -37,7 +37,7 @@ const Home = () => {
           <Text
             as="h1"
             color="#FF4417"
-            fontSize={["45px", "50px", "60px", "70px"]}
+            fontSize={["50px", "60px", "70px", "100px"]}
             fontWeight="400"
             fontFamily="Rubik Glitch"
           >

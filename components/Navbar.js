@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
-import { IconButton } from "@chakra-ui/react";
+import { HStack, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { ButtonGroup } from "@chakra-ui/react";
+
 import {
   Box,
   Button,
@@ -11,6 +13,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
+  DrawerFooter,
 } from "@chakra-ui/react";
 
 const Navbar = () => {
@@ -55,6 +58,8 @@ const Navbar = () => {
             m="0"
             px="4"
             py="2"
+            fontFamily="anton"
+            fontWeight="200"
           >
             Home
           </Button>
@@ -68,6 +73,8 @@ const Navbar = () => {
             m="0"
             px="4"
             py="2"
+            fontFamily="anton"
+            fontWeight="200"
           >
             About Us
           </Button>
@@ -81,6 +88,8 @@ const Navbar = () => {
             m="0"
             px="4"
             py="2"
+            fontFamily="anton"
+            fontWeight="200"
           >
             Service
           </Button>
@@ -94,6 +103,8 @@ const Navbar = () => {
             m="0"
             px="4"
             py="2"
+            fontWeight="200"
+            fontFamily="anton"
           >
             Gallery
           </Button>
@@ -107,10 +118,13 @@ const Navbar = () => {
             m="0"
             px="4"
             py="2"
+            fontFamily="anton"
+            fontWeight="200"
           >
             Latest Blog
           </Button>
         </Flex>
+
         <IconButton
           ref={btnRef}
           colorScheme="teal"
@@ -120,6 +134,7 @@ const Navbar = () => {
           display={["flex", "flex", "none", "none"]}
           color="red"
           background="tranparent"
+          fontSize="50px"
         />
 
         <Drawer
@@ -127,46 +142,84 @@ const Navbar = () => {
           placement="right"
           onClose={onClose}
           finalFocusRef={btnRef}
-          width="2em"
-          height="2em"
         >
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerCloseButton fontSize="30px" fontWeight="900" color="red" />
+            <DrawerCloseButton fontSize="30px" color="red" m="4" />
             {/* ***************Navbar******************** */}
 
             <Flex
               flexDirection="column"
-              // justifyContent="center"
+              justifyContent="center"
               display={["flex", "flex", "none", "none"]}
-              // alignItems="center"
-              height="100vh"
-              border="2px solid black"
+              alignItems="center"
+              height="100%"
             >
               <Button
-                fontSize="15px"
+                fontSize="25px"
                 color="black"
                 bg="transparent"
-                h="80%"
-                marginTop="50px"
+                h="100px"
+                w="100%"
+                fontFamily="anton"
+                fontWeight="200"
               >
                 Home
               </Button>
-              <Button fontSize="15px" color="black" bg="transparent" h="100%">
+              <Button
+                fontSize="25px"
+                color="black"
+                bg="transparent"
+                h="100px"
+                w="100%"
+                fontFamily="anton"
+                fontWeight="200"
+              >
                 About Us
               </Button>
-              <Button fontSize="15px" color="black" bg="transparent" h="100%">
+              <Button
+                fontSize="25px"
+                color="black"
+                bg="transparent"
+                h="100px"
+                w="100%"
+                fontFamily="anton"
+                fontWeight="200"
+              >
                 Service
               </Button>
-              <Button fontSize="15px" color="black" bg="transparent" h="100%">
+              <Button
+                fontSize="25px"
+                color="black"
+                bg="transparent"
+                h="100px"
+                w="100%"
+                fontFamily="anton"
+                fontWeight="200"
+              >
                 Gallery
               </Button>
-              <Button fontSize="15px" color="black" bg="transparent" h="100%">
+              <Button
+                fontSize="25px"
+                color="black"
+                bg="transparent"
+                h="100px"
+                w="100%"
+                fontFamily="anton"
+                fontWeight="200"
+              >
                 Latest Blog
               </Button>
             </Flex>
 
             {/* ***************Navbar******************** */}
+            <DrawerFooter borderTopWidth="1px">
+              <Flex height="6vh" width="100%" justifyContent="space-evenly">
+                <Image src="./images/instagram.png" />
+                <Image src="./images/viber.png" />
+                <Image src="./images/gmail.png" />
+              </Flex>
+            </DrawerFooter>
           </DrawerContent>
         </Drawer>
       </Flex>
