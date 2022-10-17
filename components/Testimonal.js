@@ -44,21 +44,23 @@ const Testimonal = () => {
         >
           <Text
             as="h1"
-            fontWeight="800"
+            fontWeight="400"
             fontSize={["43px", "60px", "90px", "100px"]}
             color="#000000"
             opacity="0.19"
+            fontFamily="anton"
           >
             TESTIMONALS
           </Text>
 
           <Text
             as="h3"
-            fontWeight="800"
+            fontWeight="400"
             fontSize={["12px", "15px", "20px", "30px"]}
             color="#FF3606"
             position="absolute"
             textAlign="center"
+            fontFamily="anton"
           >
             WHAT THEY SAY ABOUT US
           </Text>
@@ -117,6 +119,7 @@ const Testimonal = () => {
               color=" #FFFFFF"
               fontSize="23px"
               textAlign={["center", "center", "start", "start"]}
+              fontFamily="anton"
             >
               Trekking has always helped me in getting mental peace and a
               peaceful time to spend with inner me. and i would specially thanx
@@ -133,6 +136,7 @@ const Testimonal = () => {
               color=" black"
               fontSize="35px"
               textAlign={["center", "center", "start", "start"]}
+              fontFamily="anton"
             >
               NELSON MANDELA
             </Text>
@@ -141,6 +145,7 @@ const Testimonal = () => {
               color=" #FFFFFF"
               fontSize="23px"
               textAlign={["center", "center", "start", "start"]}
+              fontFamily="anton"
             >
               PRESIDENT OF AMERICA
             </Text>
@@ -169,6 +174,7 @@ const Testimonal = () => {
                   fontSize="45px"
                   letterpSacing="0.02em"
                   color="#000000"
+                  fontFamily="anton"
                 >
                   {el.header}
                 </Text>
@@ -176,10 +182,11 @@ const Testimonal = () => {
               </Flex>
               <Flex>
                 <Text
-                  fontWeight="800"
+                  fontWeight="400"
                   fontSize={["12px", "15px", "20px", "23px"]}
                   letterSpacing="0.01em"
                   color="#000000"
+                  fontFamily="anton"
                 >
                   {el.heading}
                 </Text>

@@ -55,24 +55,26 @@ const Blog = () => {
           >
             <Text
               as="h1"
-              fontWeight="800"
+              fontWeight="400"
               fontSize={["46px", "60px", "90px", "100px"]}
               letterSpacing="0.04em"
               color="white"
               opacity="0.5"
               padding="0px 20px"
+              fontFamily="anton"
             >
               OUR VLOGS
             </Text>
 
             <Text
               as="h3"
-              fontWeight="800"
+              fontWeight="400"
               fontSize={["10px", "15px", "20px", "30px"]}
               letterSpacing="0.04em"
               color="black"
               position="absolute"
               textAlign="center"
+              fontFamily="anton"
             >
               LATEST VLOG
             </Text>
@@ -106,30 +108,34 @@ const Blog = () => {
                     fontSize={["15px", "20px", "30px", "30px"]}
                     letterSpacing="0.02em"
                     color="#000000"
+                    fontFamily="anton"
                   >
                     {el.header}
                   </Text>
                   <Text
-                    fontWeight="500"
+                    fontWeight="400"
                     fontSize={["15px", "20px", "30px", "35px"]}
                     letterSpacing="0.02em"
                     color="white"
+                    fontFamily="anton"
                   >
                     {el.date}
                   </Text>
                   <Text
-                    fontWeight="500"
+                    fontWeight="400"
                     fontSize={["10px", "13px", "17px", "23px"]}
                     letterSpacing="0.02em"
                     color="white"
+                    fontFamily="anton"
                   >
                     {el.paragraph}
                   </Text>
                   <Text
-                    fontWeight="800"
+                    fontWeight="400"
                     fontSize={["10px", "15px", "20px", "25px"]}
                     letterSpacing="0.02em"
                     color="#000000"
+                    fontFamily="anton"
                   >
                     {el.readmore_button}
                   </Text>

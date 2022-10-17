@@ -43,13 +43,14 @@ const Whytrekking = () => {
         >
           <Text
             as="h1"
-            fontWeight="800"
+            fontWeight="400"
             fontSize={["35px", "33px", "47px", "60px"]}
             color="#FFFFFF"
             opacity="0.19"
             m="0"
             textAlign={["center", "center", "start", "start"]}
             textTransform="uppercase"
+            fontFamily="anton"
           >
             WHY TREKKING WITH US?
           </Text>
@@ -58,8 +59,9 @@ const Whytrekking = () => {
             as="h3"
             position="absolute"
             fontSize={["10px", "12px", "13px", "15px"]}
-            fontWeight="800"
+            fontWeight="400"
             color="#FFFFFF"
+            fontFamily="anton"
             //textAlign="center"
             // pl="1"
             // m="auto"
@@ -111,8 +113,9 @@ const Whytrekking = () => {
                   <Text
                     color="#FFFFFF"
                     fontSize={["10px", "20px", "30px", "30px"]}
-                    fontWeight="800"
+                    fontWeight="400"
                     textAlign="center"
+                    fontFamily="anton"
                   >
                     {el.heading}
                   </Text>

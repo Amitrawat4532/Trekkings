@@ -30,7 +30,7 @@ const Home = () => {
             as="h1"
             color=" #FFFFFF"
             fontSize={["40px", "45px", "60px", "70px"]}
-            fontWeight="400"
+            fontFamily="anton"
           >
             make the
           </Text>
@@ -39,6 +39,7 @@ const Home = () => {
             color="#FF4417"
             fontSize={["45px", "50px", "60px", "70px"]}
             fontWeight="400"
+            fontFamily="anton"
           >
             Impossible
           </Text>

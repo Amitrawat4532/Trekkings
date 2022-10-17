@@ -43,13 +43,14 @@ function Destination() {
         >
           <Text
             as="h1"
-            fontWeight="800"
+            fontWeight="400"
             fontSize={["43px", "50px", "80px", "80px"]}
             color="#FFFFFF"
             opacity="0.19"
             p={["0", "30", "0", "0"]}
             m="0"
             textTransform="uppercase"
+            fontFamily="anton"
           >
             Destination
           </Text>
@@ -57,8 +58,9 @@ function Destination() {
           <Text
             as="h3"
             position="absolute"
+            fontFamily="anton"
             fontSize={["15px", "15px", "20px", "20px"]}
-            fontWeight="800"
+            fontWeight="400"
             color="#FFFFFF"
             // textAlign="center"
             pl="1"
@@ -80,9 +82,10 @@ function Destination() {
           <Text
             as="h2"
             fontSize={["18px", "20px", "22px", "24px"]}
-            fontWeight="800"
+            fontWeight="400"
             color="#3E3E3E"
             textAlign={["center", "center", "center", "start"]}
+            fontFamily="anton"
           >
             HERE WE LIST OUR MOST POPULAR DESTINATIONS WE HAD AND FULL DETAILS
             ARE AS FOLLOWED
@@ -136,16 +139,18 @@ function Destination() {
                     <Text
                       as="h1"
                       color="#FFFFFF"
-                      fontWeight="800"
+                      fontWeight="400"
                       fontSize={["10px", "12px", "15px", "15px"]}
+                      fontFamily="anton"
                     >
                       {el.person}
                     </Text>
                     <Text
                       as="h1"
                       color="#FFFFFF"
-                      fontWeight="800"
+                      fontWeight="400"
                       fontSize={["10px", "12px", "15px", "15px"]}
+                      fontFamily="anton"
                     >
                       PERSON
                     </Text>
@@ -161,16 +166,18 @@ function Destination() {
                     <Text
                       as="h1"
                       color="#FFFFFF"
-                      fontWeight="800"
+                      fontWeight="400"
                       fontSize={["10px", "12px", "15px", "15px"]}
+                      fontFamily="anton"
                     >
                       {el.days}
                     </Text>
                     <Text
                       as="h1"
                       color="#FFFFFF"
-                      fontWeight="800"
+                      fontWeight="400"
                       fontSize={["10px", "12px", "15px", "15px"]}
+                      fontFamily="anton"
                     >
                       Days
                     </Text>
@@ -184,27 +191,30 @@ function Destination() {
                   >
                     <Text
                       as="h1"
-                      fontWeight="800"
+                      fontWeight="400"
                       fontSize={["10px", "12px", "15px", "15px"]}
                       color="#FF4417"
+                      fontFamily="anton"
                     >
                       {el.price} Rs
                     </Text>
                     <Text
                       as="h1"
-                      fontWeight="800"
+                      fontWeight="400"
                       fontSize={["10px", "12px", "15px", "15px"]}
                       color="#FF4417"
+                      fontFamily="anton"
                     >
                       PER PERSON
                     </Text>
                   </Box>
                 </Flex>
                 <Text
-                  fontWeight="800"
+                  fontWeight="400"
                   fontSize="20px"
                   color="#FF3606"
                   alignItems="center"
+                  fontFamily="anton"
                   // position="absolute"
                 >
                   START EXPLORING--
@@ -216,13 +226,17 @@ function Destination() {
         </Flex>
         <Text
           fontSize={["13px", "19px", "25px", "25px"]}
-          fontWeight="800"
+          fontWeight="400"
           textAlign="center"
           color="#3E3E3E"
           p="40px"
+          fontFamily="anton"
         >
-          &#34;THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU
-          NEVER THOUGHT TO ASK &#34;
+          <Text as="span" fontSize="50px" color="red" fontFamily="anton">
+            &#34;
+          </Text>
+          THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU NEVER
+          THOUGHT TO ASK
         </Text>
       </Flex>
     </>

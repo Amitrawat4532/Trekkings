@@ -148,45 +148,20 @@ const Navbar = () => {
                 color="black"
                 bg="transparent"
                 h="80%"
-                fontWeight="800"
                 marginTop="50px"
               >
                 Home
               </Button>
-              <Button
-                fontSize="15px"
-                color="black"
-                bg="transparent"
-                h="100%"
-                fontWeight="800"
-              >
+              <Button fontSize="15px" color="black" bg="transparent" h="100%">
                 About Us
               </Button>
-              <Button
-                fontSize="15px"
-                color="black"
-                bg="transparent"
-                h="100%"
-                fontWeight="800"
-              >
+              <Button fontSize="15px" color="black" bg="transparent" h="100%">
                 Service
               </Button>
-              <Button
-                fontSize="15px"
-                color="black"
-                bg="transparent"
-                h="100%"
-                fontWeight="800"
-              >
+              <Button fontSize="15px" color="black" bg="transparent" h="100%">
                 Gallery
               </Button>
-              <Button
-                fontSize="15px"
-                color="black"
-                bg="transparent"
-                h="100%"
-                fontWeight="800"
-              >
+              <Button fontSize="15px" color="black" bg="transparent" h="100%">
                 Latest Blog
               </Button>
             </Flex>

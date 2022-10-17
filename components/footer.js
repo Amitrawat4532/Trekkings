@@ -46,6 +46,7 @@ const Footer = () => {
               fontWeight="700"
               fontSize={["13px", "22px", "27px", "30px"]}
               pb="15px"
+              fontFamily="anton"
             >
               QUICK LINKS
             </Text>
@@ -54,11 +55,13 @@ const Footer = () => {
               as="h3"
               color="#FFFFFF"
               fontSize={["12px", "17px", "23px", "23px"]}
+              fontFamily="anton"
             >
               <Text
                 as="span"
                 color="red"
                 fontSize={["12px", "17px", "23px", "23px"]}
+                fontFamily="anton"
               >
                 &#9830;
               </Text>
@@ -68,11 +71,13 @@ const Footer = () => {
               as="h3"
               color="#FFFFFF"
               fontSize={["12px", "17px", "23px", "23px"]}
+              fontFamily="anton"
             >
               <Text
                 as="span"
                 color="red"
                 fontSize={["12px", "17px", "23px", "23px"]}
+                fontFamily="anton"
               >
                 &#9830;
               </Text>{" "}
@@ -82,11 +87,13 @@ const Footer = () => {
               as="h3"
               color="#FFFFFF"
               fontSize={["12px", "17px", "23px", "23px"]}
+              fontFamily="anton"
             >
               <Text
                 as="span"
                 color="red"
                 fontSize={["12px", "17px", "23px", "23px"]}
+                fontFamily="anton"
               >
                 &#9830;
               </Text>{" "}
@@ -96,11 +103,13 @@ const Footer = () => {
               as="h3"
               color="#FFFFFF"
               fontSize={["12px", "17px", "23px", "23px"]}
+              fontFamily="anton"
             >
               <Text
                 as="span"
                 color="red"
                 fontSize={["12px", "17px", "23px", "23px"]}
+                fontFamily="anton"
               >
                 &#9830;
               </Text>{" "}
@@ -114,6 +123,7 @@ const Footer = () => {
               fontWeight="700"
               fontSize={["13px", "22px", "27px", "30px"]}
               pb="15px"
+              fontFamily="anton"
             >
               USEFUL LINKS
             </Text>
@@ -121,11 +131,13 @@ const Footer = () => {
               as="h3"
               color="#FFFFFF"
               fontSize={["12px", "17px", "23px", "23px"]}
+              fontFamily="anton"
             >
               <Text
                 as="span"
                 color="red"
                 fontSize={["12px", "17px", "23px", "23px"]}
+                fontFamily="anton"
               >
                 &#9830;
               </Text>
@@ -135,11 +147,13 @@ const Footer = () => {
               as="h3"
               color="#FFFFFF"
               fontSize={["12px", "17px", "23px", "23px"]}
+              fontFamily="anton"
             >
               <Text
                 as="span"
                 color="red"
                 fontSize={["12px", "17px", "23px", "23px"]}
+                fontFamily="anton"
               >
                 &#9830;
               </Text>
@@ -149,6 +163,7 @@ const Footer = () => {
               as="h3"
               color="#FFFFFF"
               fontSize={["12px", "17px", "23px", "23px"]}
+              fontFamily="anton"
             >
               <Text
                 as="span"
@@ -163,11 +178,13 @@ const Footer = () => {
               as="h3"
               color="#FFFFFF"
               fontSize={["12px", "17px", "23px", "23px"]}
+              fontFamily="anton"
             >
               <Text
                 as="span"
                 color="red"
                 fontSize={["12px", "17px", "23px", "23px"]}
+                fontFamily="anton"
               >
                 &#9830;
               </Text>
@@ -194,6 +211,7 @@ const Footer = () => {
           fontSize={["20px", "24px", "28px", "30px"]}
           letterSpacing="0.02em"
           color="#FF3606"
+          fontFamily="anton"
         >
           CONNECT WITH US--
         </Text>
@@ -221,6 +239,7 @@ const Footer = () => {
             color="#FFFFFF"
             borderRadius={["50px", "50px", "0px", "0px"]}
             margin="auto"
+            fontFamily="anton"
           >
             Send
           </Button>

@@ -68,15 +68,27 @@ function About() {
 
                 // transform={["translatex(-20%)"]}
               >
-                <Text as="h3" fontWeight="800" fontSize="23px" color="#000000">
+                <Text
+                  as="h3"
+                  fontWeight="400"
+                  fontSize="23px"
+                  color="#000000"
+                  fontFamily="anton"
+                >
                   SECRET LOCATIONS
                 </Text>
-                <Text as="h4" fontSize="15px" fontWeight="400">
+                <Text as="h4" fontSize="15px" fontWeight="400" fontFamily="sen">
                   We xplore for the fun and provide you with the best and
                   beutiful locations available here so that you can add a new
                   chapter of your adventure with beautiful memories
                 </Text>
-                <Text as="a" color="#FF3606" fontWeight="800" fontSize="23px">
+                <Text
+                  as="a"
+                  color="#FF3606"
+                  fontWeight="400"
+                  fontSize="23px"
+                  fontFamily="anton"
+                >
                   READ MORE
                 </Text>
               </Flex>
@@ -88,20 +100,22 @@ function About() {
         <Flex gap="30px" flexDirection={["column", "column", "row", "row"]}>
           <Text
             as="h1"
-            fontWeight="500"
+            fontWeight="400"
             fontSize="23px"
             padding="0 0 0 45px"
             letterSpacing="0.01em"
             color="#848383"
+            fontFamily="anton"
           >
             Dont hesistate to contact us for more details
           </Text>
           <Text
             as="a"
-            fontWeight="800"
+            fontWeight="400"
             fontSize="23px"
             color="#FF3606"
             padding="0 0 0 45px"
+            fontFamily="anton"
           >
             EXPLORE ALL TREKKING--
           </Text>

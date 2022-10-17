@@ -52,24 +52,26 @@ const Services = () => {
         >
           <Text
             as="h1"
-            fontWeight="800"
+            fontWeight="400"
             fontSize={["45px", "60px", "110px", "124px"]}
             letterSpacing="0.04em"
             color="#000000"
             opacity="0.19"
             padding="0px 20px"
+            fontFamily="anton"
           >
             SERVICES
           </Text>
 
           <Text
             as="h3"
-            fontWeight="800"
+            fontWeight="400"
             fontSize={["10px", "15px", "20px", "30px"]}
             letterSpacing="0.04em"
             color="#FF3606"
             position="absolute"
             textAlign="center"
+            fontFamily="anton"
           >
             TOUR TRAVEL FOOD AND STAY
           </Text>
@@ -86,7 +88,8 @@ const Services = () => {
                 <Text
                   as="h1"
                   fontSize={["20px", "25px", "33px", "33px"]}
-                  fontWeight="800"
+                  fontWeight="400"
+                  fontFamily="anton"
 
                   //   p="10px 0px 10px 10px"
                 >
@@ -97,6 +100,7 @@ const Services = () => {
                   fontSize={["12px", "12px", "15px", "18px"]}
                   fontWeight="400"
                   color="#8B8B8B"
+                  fontFamily="anton"
                   // p="10px 0px 20px 0px"
                 >
                   {el.paragraph}
@@ -109,6 +113,8 @@ const Services = () => {
                   fontSize={["10px", "12px", "18px", "18px"]}
                   color="#FFFFFF"
                   padding="0px 0px"
+                  fontFamily="anton"
+                  fontWeight="100"
                 >
                   KNOW MORE
                 </Button>

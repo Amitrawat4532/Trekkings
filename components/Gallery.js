@@ -29,24 +29,26 @@ const Gallery = () => {
         >
           <Text
             as="h1"
-            fontWeight="800"
+            fontWeight="400"
             fontSize={["45px", "60px", "110px", "124px"]}
             letterSpacing="0.04em"
             color="#000000"
             opacity="0.19"
             padding="0px 20px"
+            fontFamily="anton"
           >
             JOURNEY
           </Text>
 
           <Text
             as="h3"
-            fontWeight="800"
+            fontWeight="400"
             fontSize={["10px", "15px", "20px", "30px"]}
             letterSpacing="0.04em"
             color="black"
             position="absolute"
             textAlign="center"
+            fontFamily="anton"
           >
             GALLERY F THE TOURS
           </Text>
