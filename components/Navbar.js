@@ -162,7 +162,7 @@ const Navbar = () => {
                 h="100px"
                 w="100%"
                 fontFamily="anton"
-                fontWeight="200"
+                fontWeight="light"
               >
                 Home
               </Button>
@@ -173,7 +173,7 @@ const Navbar = () => {
                 h="100px"
                 w="100%"
                 fontFamily="anton"
-                fontWeight="200"
+                fontWeight="light"
               >
                 About Us
               </Button>
@@ -184,7 +184,7 @@ const Navbar = () => {
                 h="100px"
                 w="100%"
                 fontFamily="anton"
-                fontWeight="200"
+                fontWeight="light"
               >
                 Service
               </Button>
@@ -195,7 +195,7 @@ const Navbar = () => {
                 h="100px"
                 w="100%"
                 fontFamily="anton"
-                fontWeight="200"
+                fontWeight="light"
               >
                 Gallery
               </Button>
@@ -206,7 +206,7 @@ const Navbar = () => {
                 h="100px"
                 w="100%"
                 fontFamily="anton"
-                fontWeight="200"
+                fontWeight="light"
               >
                 Latest Blog
               </Button>
@@ -214,10 +214,16 @@ const Navbar = () => {
 
             {/* ***************Navbar******************** */}
             <DrawerFooter borderTopWidth="1px">
-              <Flex height="6vh" width="100%" justifyContent="space-evenly">
+              <Flex
+                height="4vh"
+                width="100%"
+                justifyContent="space-evenly"
+                mb="15px"
+              >
                 <Image src="./images/instagram.png" />
                 <Image src="./images/viber.png" />
                 <Image src="./images/gmail.png" />
+                <Image src="./images/whatsapp.png" />
               </Flex>
             </DrawerFooter>
           </DrawerContent>
