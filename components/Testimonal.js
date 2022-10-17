@@ -18,16 +18,16 @@ const Testimonal = () => {
 
     {
       icon_1: "./images/tickicon.png",
-      header: "3,210",
+      header: "30",
       icon_2: "./images/plusicon.png",
-      heading: "Satisfied Hikers",
+      heading: " Certified guides",
     },
 
     {
       icon_1: "./images/tickicon.png",
-      header: "30",
+      header: "3,210",
       icon_2: "./images/plusicon.png",
-      heading: "Certified guides",
+      heading: "Satisfied Hikers",
     },
   ];
   return (
@@ -82,9 +82,10 @@ const Testimonal = () => {
           flexDirection={["column", "column", "row", "row"]}
         >
           <Flex
-            width={["100%", "100%", "240px", "432px"]}
+            width={["100%", "100%", "240px", "30%"]}
             height="100%"
             justifyContent="center"
+            position="relative"
           >
             <Image
               src="./images/testimonal.png"
@@ -93,11 +94,18 @@ const Testimonal = () => {
               width={["200px", "200px", "240px", "300px"]}
               height={["200px", "200px", "230px", "278px"]}
             />
-            <Image
-              src="./images/uppercoma.png"
-              width={["30px", "40px", "45px", "50px"]}
-              height={["25px", "30px", "35px", "40px"]}
-            />
+            <Box
+              width={["62px", "62px", "62px", "65px"]}
+              height={["67px", "67px", "67px", "73px"]}
+              borderRadius="50px"
+              background="#ABAAAA"
+              p="25px 15px 0px 20px"
+              position="absolute"
+              right="0px"
+              top="0px"
+            >
+              <Image src="./images/uppercoma.png" />
+            </Box>
           </Flex>
           <Flex
             width={["100%", "100%", "60%", "68%"]}

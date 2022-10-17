@@ -118,6 +118,8 @@ const Navbar = () => {
           aria-label="Search database"
           icon={<HamburgerIcon />}
           display={["flex", "flex", "none", "none"]}
+          color="red"
+          background="tranparent"
         />
 
         <Drawer
@@ -125,6 +127,8 @@ const Navbar = () => {
           placement="right"
           onClose={onClose}
           finalFocusRef={btnRef}
+          width="2em"
+          height="2em"
         >
           <DrawerOverlay />
           <DrawerContent>
@@ -143,8 +147,9 @@ const Navbar = () => {
                 fontSize="15px"
                 color="black"
                 bg="transparent"
-                h="100%"
+                h="80%"
                 fontWeight="800"
+                marginTop="50px"
               >
                 Home
               </Button>
