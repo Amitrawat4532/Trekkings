@@ -11,7 +11,7 @@ const Footer = () => {
         height={["121px", "200px", "210px", "300px"]}
       >
         <Image src="./images/footer1.png" />
-        <Image src="./images/footer2.png" />
+        <Image src="./images/footer2.png" position="relative" top="25px" />
       </Flex>
       {/* ***********end************** */}
 
