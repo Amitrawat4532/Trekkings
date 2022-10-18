@@ -4,10 +4,12 @@ import "@fontsource/anton/400.css";
 import "@fontsource/sen";
 import "@fontsource/rubik-glitch";
 
+import customTheme from "../theme/customTheme";
+
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={customTheme}>
       <Component {...pageProps} />
     </ChakraProvider>
   );

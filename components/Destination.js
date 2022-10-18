@@ -25,6 +25,7 @@ function Destination() {
 
   return (
     <>
+      {/* main container */}
       <Flex
         width="100%"
         height="100%"
@@ -33,6 +34,7 @@ function Destination() {
         px={["0", "0", "20", "20"]}
         py={["0", "0", "16", "16"]}
       >
+        {/* header container */}
         <Flex
           height="100%"
           width="100%"
@@ -41,36 +43,11 @@ function Destination() {
           alignItems={["center", "center", "center", "start"]}
           position="relative"
         >
-          <Text
-            as="h1"
-            fontWeight="400"
-            fontSize={["43px", "50px", "80px", "80px"]}
-            color="#FFFFFF"
-            opacity="0.19"
-            p={["0", "30", "0", "0"]}
-            m="0"
-            textTransform="uppercase"
-            fontFamily="anton"
-          >
-            Destination
-          </Text>
+          <Text variant="destinationHeader">Destination</Text>
 
-          <Text
-            as="h3"
-            position="absolute"
-            fontFamily="anton"
-            fontSize={["15px", "15px", "20px", "20px"]}
-            fontWeight="400"
-            color="#FFFFFF"
-            // textAlign="center"
-            pl="1"
-            m="0"
-            // p={["31", "31", "0", "0"]}
-          >
-            MOST POPULAR TREKKING
-          </Text>
+          <Text variant="destinationHeading1">MOST POPULAR TREKKING</Text>
         </Flex>
-
+        {/* header end */}
         <Flex
           width="100%"
           justifyContent={["center", "center", "center", "space-between"]}
@@ -79,14 +56,7 @@ function Destination() {
           px="20px"
           flexDirection={["column", "column", "column", "row"]}
         >
-          <Text
-            as="h2"
-            fontSize={["18px", "20px", "22px", "24px"]}
-            fontWeight="400"
-            color="#3E3E3E"
-            textAlign={["center", "center", "center", "start"]}
-            fontFamily="anton"
-          >
+          <Text variant="destinationHeading2">
             HERE WE LIST OUR MOST POPULAR DESTINATIONS WE HAD AND FULL DETAILS
             ARE AS FOLLOWED
           </Text>
@@ -102,6 +72,7 @@ function Destination() {
           </Button>
         </Flex>
 
+        {/* card container */}
         <Flex justifyContent="space-between" flexWrap="wrap" gap="8">
           {Gallery.map((el, id) => {
             return (
@@ -145,15 +116,7 @@ function Destination() {
                     >
                       {el.person}
                     </Text>
-                    <Text
-                      as="h1"
-                      color="#FFFFFF"
-                      fontWeight="400"
-                      fontSize={["10px", "12px", "15px", "15px"]}
-                      fontFamily="anton"
-                    >
-                      PERSON
-                    </Text>
+                    <Text variant="destinationPerson">PERSON</Text>
                   </Box>
 
                   <Box
@@ -172,15 +135,7 @@ function Destination() {
                     >
                       {el.days}
                     </Text>
-                    <Text
-                      as="h1"
-                      color="#FFFFFF"
-                      fontWeight="400"
-                      fontSize={["10px", "12px", "15px", "15px"]}
-                      fontFamily="anton"
-                    >
-                      Days
-                    </Text>
+                    <Text variant="destinationDays">Days</Text>
                   </Box>
                   <Box
                     height={["50px", "55px", "60px", "64px"]}
@@ -198,25 +153,10 @@ function Destination() {
                     >
                       {el.price} Rs
                     </Text>
-                    <Text
-                      as="h1"
-                      fontWeight="400"
-                      fontSize={["10px", "12px", "15px", "15px"]}
-                      color="#FF4417"
-                      fontFamily="anton"
-                    >
-                      PER PERSON
-                    </Text>
+                    <Text variant="destinationPerperson">PER PERSON</Text>
                   </Box>
                 </Flex>
-                <Text
-                  fontWeight="400"
-                  fontSize="20px"
-                  color="#FF3606"
-                  alignItems="center"
-                  fontFamily="anton"
-                  // position="absolute"
-                >
+                <Text variant="destinationStartexploring">
                   START EXPLORING--
                 </Text>
               </Flex>
@@ -224,14 +164,7 @@ function Destination() {
             );
           })}
         </Flex>
-        <Text
-          fontSize={["13px", "19px", "25px", "25px"]}
-          fontWeight="400"
-          textAlign="center"
-          color="#3E3E3E"
-          p="40px"
-          fontFamily="anton"
-        >
+        <Text variant="destinationHeading3">
           <Text as="span" fontSize="50px" color="red" fontFamily="anton">
             &#34;
           </Text>

@@ -4,6 +4,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
+      {/* main container */}
       <Flex
         w="100vw"
         h={["100vh", "100vh", "120vh", "130vh"]}
@@ -18,6 +19,7 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
       >
+        {/* heading container */}
         <Box
           transform={[
             "translatey(72%)",
@@ -26,34 +28,10 @@ const Home = () => {
             "translatex(-35%)",
           ]}
         >
-          <Text
-            as="h1"
-            color=" #FFFFFF"
-            fontSize={["45px", "50px", "60px", "70px"]}
-            fontFamily="anton"
-          >
-            make the
-          </Text>
-          <Text
-            as="h1"
-            color="#FF4417"
-            fontSize={["50px", "60px", "70px", "100px"]}
-            fontWeight="400"
-            fontFamily="Rubik Glitch"
-          >
-            Impossible
-          </Text>
-        </Box>
+          <Text variant="homeHeader1">make the</Text>
 
-        {/* <Flex
-          flexDirection="column"
-          Border="2px solid white"
-          justifyContent="start"
-          gap="5px"
-        >
-          <Button>call</Button>
-          <Button>message</Button>
-        </Flex> */}
+          <Text variant="homeHeader2">Impossible</Text>
+        </Box>
       </Flex>
     </>
   );

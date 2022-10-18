@@ -32,7 +32,7 @@ const Testimonal = () => {
   ];
   return (
     <>
-      {/* Header */}
+      {/* Header container*/}
       <Flex width="100%" height="100%" background="#606060">
         <Flex
           position="relative"
@@ -42,28 +42,9 @@ const Testimonal = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text
-            as="h1"
-            fontWeight="400"
-            fontSize={["43px", "60px", "90px", "100px"]}
-            color="#000000"
-            opacity="0.19"
-            fontFamily="anton"
-          >
-            TESTIMONALS
-          </Text>
+          <Text variant="testimonalHeader1">TESTIMONALS</Text>
 
-          <Text
-            as="h3"
-            fontWeight="400"
-            fontSize={["12px", "15px", "20px", "30px"]}
-            color="#FF3606"
-            position="absolute"
-            textAlign="center"
-            fontFamily="anton"
-          >
-            WHAT THEY SAY ABOUT US
-          </Text>
+          <Text variant="testimonalHeader2">WHAT THEY SAY ABOUT US</Text>
         </Flex>
       </Flex>
       {/* $$$$$$$$$$$$$testimonal container$$$$$$$$$$$$4 */}
@@ -114,13 +95,7 @@ const Testimonal = () => {
             flexDirection="column"
             justifyContent="center"
           >
-            <Text
-              as="h3"
-              color=" #FFFFFF"
-              fontSize="23px"
-              textAlign={["center", "center", "start", "start"]}
-              fontFamily="anton"
-            >
+            <Text variant="testimonalParagraph">
               Trekking has always helped me in getting mental peace and a
               peaceful time to spend with inner me. and i would specially thanx
               to this company for helping me to connect with my inner spirit.
@@ -131,24 +106,8 @@ const Testimonal = () => {
             >
               <Image src="./images/stars.png" width="162px" height="42px" />
             </Flex>
-            <Text
-              as="h2"
-              color=" black"
-              fontSize="35px"
-              textAlign={["center", "center", "start", "start"]}
-              fontFamily="anton"
-            >
-              NELSON MANDELA
-            </Text>
-            <Text
-              as="h2"
-              color=" #FFFFFF"
-              fontSize="23px"
-              textAlign={["center", "center", "start", "start"]}
-              fontFamily="anton"
-            >
-              PRESIDENT OF AMERICA
-            </Text>
+            <Text variant="testimonalHeading1">NELSON MANDELA</Text>
+            <Text variant="testimonalHeading2">PRESIDENT OF AMERICA</Text>
           </Flex>
         </Flex>
         <Image
@@ -169,27 +128,11 @@ const Testimonal = () => {
             <Flex flexDirection="column" alignItems="center" key={key}>
               <Flex gap="10px" alignItems="center">
                 <Image src={el.icon_1} />
-                <Text
-                  fontWeight="400"
-                  fontSize="45px"
-                  letterpSacing="0.02em"
-                  color="#000000"
-                  fontFamily="anton"
-                >
-                  {el.header}
-                </Text>
+                <Text variant="testimonalHeader">{el.header}</Text>
                 <Image src={el.icon_2} height="20px" />
               </Flex>
               <Flex>
-                <Text
-                  fontWeight="400"
-                  fontSize={["12px", "15px", "20px", "23px"]}
-                  letterSpacing="0.01em"
-                  color="#000000"
-                  fontFamily="anton"
-                >
-                  {el.heading}
-                </Text>
+                <Text variant="testimonalHeading">{el.heading}</Text>
               </Flex>
             </Flex>
           );

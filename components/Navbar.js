@@ -22,6 +22,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* main container */}
       <Flex
         justifyContent="space-between"
         alignItems="center"
@@ -38,6 +39,8 @@ const Navbar = () => {
             height={["140", "170", "256", "256"]}
           />
         </Box>
+
+        {/* Navbar container desktop */}
         <Flex
           backgroundColor="rgba(255,255,255,0.3)"
           width="70%"
@@ -48,81 +51,11 @@ const Navbar = () => {
           pr="5"
           display={["none", "none", "flex", "flex"]}
         >
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="transparent"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-            fontFamily="anton"
-            fontWeight="200"
-          >
-            Home
-          </Button>
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="transparent"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-            fontFamily="anton"
-            fontWeight="200"
-          >
-            About Us
-          </Button>
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="transparent"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-            fontFamily="anton"
-            fontWeight="200"
-          >
-            Service
-          </Button>
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="transparent"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-            fontWeight="200"
-            fontFamily="anton"
-          >
-            Gallery
-          </Button>
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="#FF3606"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-            fontFamily="anton"
-            fontWeight="200"
-          >
-            Latest Blog
-          </Button>
+          <Button variant="navButton">Home</Button>
+          <Button variant="navButton">About Us</Button>
+          <Button variant="navButton">Service</Button>
+          <Button variant="navButton">Gallery</Button>
+          <Button variant="blogButton">Latest Blog</Button>
         </Flex>
 
         <IconButton
@@ -146,7 +79,8 @@ const Navbar = () => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton fontSize="30px" color="red" m="4" />
-            {/* ***************Navbar******************** */}
+
+            {/* Navbar container desktop */}
 
             <Flex
               flexDirection="column"
@@ -155,64 +89,14 @@ const Navbar = () => {
               alignItems="center"
               height="100%"
             >
-              <Button
-                fontSize="25px"
-                color="black"
-                bg="transparent"
-                h="100px"
-                w="100%"
-                fontFamily="anton"
-                fontWeight="light"
-              >
-                Home
-              </Button>
-              <Button
-                fontSize="25px"
-                color="black"
-                bg="transparent"
-                h="100px"
-                w="100%"
-                fontFamily="anton"
-                fontWeight="light"
-              >
-                About Us
-              </Button>
-              <Button
-                fontSize="25px"
-                color="black"
-                bg="transparent"
-                h="100px"
-                w="100%"
-                fontFamily="anton"
-                fontWeight="light"
-              >
-                Service
-              </Button>
-              <Button
-                fontSize="25px"
-                color="black"
-                bg="transparent"
-                h="100px"
-                w="100%"
-                fontFamily="anton"
-                fontWeight="light"
-              >
-                Gallery
-              </Button>
-              <Button
-                fontSize="25px"
-                color="black"
-                bg="transparent"
-                h="100px"
-                w="100%"
-                fontFamily="anton"
-                fontWeight="light"
-              >
-                Latest Blog
-              </Button>
+              <Button variant="responsiveNavButton">Home</Button>
+              <Button variant="responsiveNavButton">About Us</Button>
+              <Button variant="responsiveNavButton">Service</Button>
+              <Button variant="responsiveNavButton">Gallery</Button>
+              <Button variant="responsiveNavButton">Latest Blog</Button>
             </Flex>
 
-            {/* ***************Navbar******************** */}
+            {/* ***************Navbar  footer mobile view******************** */}
             <DrawerFooter borderTopWidth="1px">
               <Flex
                 height="4vh"

@@ -25,6 +25,7 @@ function About() {
 
   return (
     <>
+      {/* main container */}
       <Flex
         width="100%"
         height="100%"
@@ -38,6 +39,7 @@ function About() {
         backgroundSize="contain"
         bgRepeat="no-repeat"
       >
+        {/* card container */}
         {cards.map((el, id) => {
           return (
             <Flex
@@ -68,29 +70,13 @@ function About() {
 
                 // transform={["translatex(-20%)"]}
               >
-                <Text
-                  as="h3"
-                  fontWeight="400"
-                  fontSize="23px"
-                  color="#000000"
-                  fontFamily="anton"
-                >
-                  SECRET LOCATIONS
-                </Text>
-                <Text as="h4" fontSize="15px" fontWeight="400" fontFamily="sen">
+                <Text variant="aboutHeader">SECRET LOCATIONS</Text>
+                <Text variant="aboutParagraph">
                   We xplore for the fun and provide you with the best and
                   beutiful locations available here so that you can add a new
                   chapter of your adventure with beautiful memories
                 </Text>
-                <Text
-                  as="a"
-                  color="#FF3606"
-                  fontWeight="400"
-                  fontSize="23px"
-                  fontFamily="anton"
-                >
-                  READ MORE
-                </Text>
+                <Text variant="aboutbutton">READ MORE</Text>
               </Flex>
             </Flex>
           );

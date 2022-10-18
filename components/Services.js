@@ -30,7 +30,7 @@ const Services = () => {
   ];
   return (
     <>
-      {" "}
+      {/* main container */}
       <Flex
         backgroundImage="url('./images/map 2.png')"
         backgroundSize="20%"
@@ -42,6 +42,7 @@ const Services = () => {
         padding={["20px 20px", ",20px 40px", "20px 140px", "20px 140px"]}
         gap="20px"
       >
+        {/* header container */}
         <Flex
           position="relative"
           width="100%"
@@ -50,32 +51,12 @@ const Services = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text
-            as="h1"
-            fontWeight="400"
-            fontSize={["45px", "60px", "110px", "124px"]}
-            letterSpacing="0.04em"
-            color="#000000"
-            opacity="0.19"
-            padding="0px 20px"
-            fontFamily="anton"
-          >
-            SERVICES
-          </Text>
+          <Text variant="serviceHeader1">SERVICES</Text>
 
-          <Text
-            as="h3"
-            fontWeight="400"
-            fontSize={["10px", "15px", "20px", "30px"]}
-            letterSpacing="0.04em"
-            color="#FF3606"
-            position="absolute"
-            textAlign="center"
-            fontFamily="anton"
-          >
-            TOUR TRAVEL FOOD AND STAY
-          </Text>
+          <Text variant="serviceHeader2">TOUR TRAVEL FOOD AND STAY</Text>
         </Flex>
+
+        {/* card container */}
 
         {Ourservices.map((el, key) => {
           return (
@@ -85,39 +66,9 @@ const Services = () => {
               key={key}
             >
               <Flex flexDirection="column" gap="20px" flex="1">
-                <Text
-                  as="h1"
-                  fontSize={["20px", "25px", "33px", "33px"]}
-                  fontWeight="400"
-                  fontFamily="anton"
-
-                  //   p="10px 0px 10px 10px"
-                >
-                  {el.header}
-                </Text>
-                <Text
-                  as="h4"
-                  fontSize={["12px", "12px", "15px", "18px"]}
-                  fontWeight="400"
-                  color="#8B8B8B"
-                  fontFamily="anton"
-                  // p="10px 0px 20px 0px"
-                >
-                  {el.paragraph}
-                </Text>
-                <Button
-                  background="#FF3606"
-                  borderRadius="10px"
-                  width="170px"
-                  height="30px"
-                  fontSize={["10px", "12px", "18px", "18px"]}
-                  color="#FFFFFF"
-                  padding="0px 0px"
-                  fontFamily="anton"
-                  fontWeight="100"
-                >
-                  KNOW MORE
-                </Button>
+                <Text variant="serviceHeader">{el.header}</Text>
+                <Text>{el.paragraph}</Text>
+                <Button variant="whytrekkingButton">KNOW MORE</Button>
               </Flex>
               <Flex
                 flex="1"

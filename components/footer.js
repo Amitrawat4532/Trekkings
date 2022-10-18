@@ -40,152 +40,59 @@ const Footer = () => {
           margin="auto"
         >
           <Box width={["376px"]}>
-            <Text
-              as="h1"
-              color="#FF3606"
-              fontWeight="700"
-              fontSize={["13px", "22px", "27px", "30px"]}
-              pb="15px"
-              fontFamily="anton"
-            >
-              QUICK LINKS
-            </Text>
+            <Text variant="footerQuicklink">QUICK LINKS</Text>
 
-            <Text
-              as="h3"
-              color="#FFFFFF"
-              fontSize={["12px", "17px", "23px", "23px"]}
-              fontFamily="anton"
-            >
-              <Text
-                as="span"
-                color="red"
-                fontSize={["12px", "17px", "23px", "23px"]}
-                fontFamily="anton"
-              >
+            <Text variant="footerQuicklinks">
+              <Text as="span" variant="footerQuicklinksSpan">
                 &#9830;
               </Text>
               ABOUT US
             </Text>
-            <Text
-              as="h3"
-              color="#FFFFFF"
-              fontSize={["12px", "17px", "23px", "23px"]}
-              fontFamily="anton"
-            >
-              <Text
-                as="span"
-                color="red"
-                fontSize={["12px", "17px", "23px", "23px"]}
-                fontFamily="anton"
-              >
+            <Text variant="footerQuicklinks">
+              <Text as="span" variant="footerQuicklinksSpan">
                 &#9830;
-              </Text>{" "}
+              </Text>
               TREKKING
             </Text>
-            <Text
-              as="h3"
-              color="#FFFFFF"
-              fontSize={["12px", "17px", "23px", "23px"]}
-              fontFamily="anton"
-            >
-              <Text
-                as="span"
-                color="red"
-                fontSize={["12px", "17px", "23px", "23px"]}
-                fontFamily="anton"
-              >
+            <Text variant="footerQuicklinks">
+              <Text as="span" variant="footerQuicklinksSpan">
                 &#9830;
-              </Text>{" "}
-              GALLERY{" "}
+              </Text>
+              GALLERY
             </Text>
-            <Text
-              as="h3"
-              color="#FFFFFF"
-              fontSize={["12px", "17px", "23px", "23px"]}
-              fontFamily="anton"
-            >
-              <Text
-                as="span"
-                color="red"
-                fontSize={["12px", "17px", "23px", "23px"]}
-                fontFamily="anton"
-              >
+            <Text variant="footerQuicklinks">
+              <Text as="span" variant="footerQuicklinksSpan">
                 &#9830;
-              </Text>{" "}
+              </Text>
               OUR TEAM
             </Text>
           </Box>
           <Box width="376px">
-            <Text
-              as="h1"
-              color="#FF3606"
-              fontWeight="700"
-              fontSize={["13px", "22px", "27px", "30px"]}
-              pb="15px"
-              fontFamily="anton"
-            >
-              USEFUL LINKS
-            </Text>
-            <Text
-              as="h3"
-              color="#FFFFFF"
-              fontSize={["12px", "17px", "23px", "23px"]}
-              fontFamily="anton"
-            >
-              <Text
-                as="span"
-                color="red"
-                fontSize={["12px", "17px", "23px", "23px"]}
-                fontFamily="anton"
-              >
+            <Text variant="footerQuicklink">USEFUL LINKS</Text>
+
+            <Text variant="footerQuicklinks">
+              <Text as="span" variant="footerQuicklinksSpan">
                 &#9830;
               </Text>
               SUPPORT
             </Text>
-            <Text
-              as="h3"
-              color="#FFFFFF"
-              fontSize={["12px", "17px", "23px", "23px"]}
-              fontFamily="anton"
-            >
-              <Text
-                as="span"
-                color="red"
-                fontSize={["12px", "17px", "23px", "23px"]}
-                fontFamily="anton"
-              >
+
+            <Text variant="footerQuicklinks">
+              <Text as="span" variant="footerQuicklinksSpan">
                 &#9830;
               </Text>
               DISCLAMAIR
             </Text>
-            <Text
-              as="h3"
-              color="#FFFFFF"
-              fontSize={["12px", "17px", "23px", "23px"]}
-              fontFamily="anton"
-            >
-              <Text
-                as="span"
-                color="red"
-                fontSize={["12px", "17px", "23px", "23px"]}
-              >
+
+            <Text variant="footerQuicklinks">
+              <Text as="span" variant="footerQuicklinksSpan">
                 &#9830;
               </Text>
               ELEMENT
             </Text>
-            <Text
-              as="h3"
-              color="#FFFFFF"
-              fontSize={["12px", "17px", "23px", "23px"]}
-              fontFamily="anton"
-            >
-              <Text
-                as="span"
-                color="red"
-                fontSize={["12px", "17px", "23px", "23px"]}
-                fontFamily="anton"
-              >
+
+            <Text variant="footerQuicklinks">
+              <Text as="span" variant="footerQuicklinksSpan">
                 &#9830;
               </Text>
               PRIVACY POLICY
@@ -230,19 +137,7 @@ const Footer = () => {
             fontSize={["15px", "12px", "15px", "15px"]}
             color="black"
           />
-          <Button
-            background="#FF3606"
-            width={["100px", "130px", "180px", "210px"]}
-            height={["38px", "45px", "55px", "60px"]}
-            fontWeight="700"
-            fontSize={["17px", "21px", "25px", "30px"]}
-            color="#FFFFFF"
-            borderRadius={["50px", "50px", "0px", "0px"]}
-            margin="auto"
-            fontFamily="anton"
-          >
-            Send
-          </Button>
+          <Button variant="footerButton">Send</Button>
         </Flex>
       </Flex>
     </>
