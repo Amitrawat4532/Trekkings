@@ -4,6 +4,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
+      {/* main container */}
       <Flex
         w="100vw"
         h={["100vh", "100vh", "120vh", "130vh"]}
@@ -18,41 +19,19 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
       >
+        {/* heading container */}
         <Box
           transform={[
-            "translatex(0%)",
-            "translatex(0%)",
+            "translatey(72%)",
+            "translatey(72%)",
             "translatex(-50%)",
             "translatex(-35%)",
           ]}
         >
-          <Text
-            as="h1"
-            color=" #FFFFFF"
-            fontSize={["40px", "45px", "60px", "70px"]}
-            fontWeight="400"
-          >
-            make the
-          </Text>
-          <Text
-            as="h1"
-            color="#FF4417"
-            fontSize={["45px", "50px", "60px", "70px"]}
-            fontWeight="400"
-          >
-            Impossible
-          </Text>
-        </Box>
+          <Text variant="homeHeader1">make the</Text>
 
-        {/* <Flex
-          flexDirection="column"
-          Border="2px solid white"
-          justifyContent="start"
-          gap="5px"
-        >
-          <Button>call</Button>
-          <Button>message</Button>
-        </Flex> */}
+          <Text variant="homeHeader2">Impossible</Text>
+        </Box>
       </Flex>
     </>
   );

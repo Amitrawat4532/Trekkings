@@ -25,12 +25,14 @@ const Whytrekking = () => {
   ];
   return (
     <>
+      {/* main container */}
       <Flex
         backgroundColor="black"
         width="100%"
         height="100%"
         flexDirection="column"
       >
+        {/* header container */}
         <Flex
           height="100%"
           width="100%"
@@ -41,35 +43,14 @@ const Whytrekking = () => {
           backgroundColor="black"
           p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
         >
-          <Text
-            as="h1"
-            fontWeight="800"
-            fontSize={["35px", "33px", "47px", "60px"]}
-            color="#FFFFFF"
-            opacity="0.19"
-            m="0"
-            textAlign={["center", "center", "start", "start"]}
-            textTransform="uppercase"
-          >
-            WHY TREKKING WITH US?
-          </Text>
+          <Text variant="whytrekkingHeader1">WHY TREKKING WITH US?</Text>
 
-          <Text
-            as="h3"
-            position="absolute"
-            fontSize={["10px", "12px", "13px", "15px"]}
-            fontWeight="800"
-            color="#FFFFFF"
-            //textAlign="center"
-            // pl="1"
-            // m="auto"
-            // p={["31", "31", "0", "0"]}
-            // padding="40px 0px 0px 40px"
-            p="1px  0px 1px 1px"
-          >
+          <Text variant="whytrekkingHeader2">
             WE PROVIDE BEST HIKING AND TREKKING TO YOUR JOURNEY
           </Text>
         </Flex>
+
+        {/* img container */}
         <Flex
           justifyContent="center"
           width="100%"
@@ -108,14 +89,7 @@ const Whytrekking = () => {
                     h={["40px", "40px", "60px", "90px"]}
                     w={["30px", "30px", "100px", "130px"]}
                   />
-                  <Text
-                    color="#FFFFFF"
-                    fontSize={["10px", "20px", "30px", "30px"]}
-                    fontWeight="800"
-                    textAlign="center"
-                  >
-                    {el.heading}
-                  </Text>
+                  <Text variant="whytrekkingHeading">{el.heading}</Text>
                 </Flex>
               );
             })}

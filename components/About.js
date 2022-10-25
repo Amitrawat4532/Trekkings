@@ -25,6 +25,7 @@ function About() {
 
   return (
     <>
+      {/* main container */}
       <Flex
         width="100%"
         height="100%"
@@ -35,7 +36,10 @@ function About() {
         flexWrap="wrap"
         gap="50px"
         // padding="63px 20px 60px 30px"
+        backgroundSize="contain"
+        bgRepeat="no-repeat"
       >
+        {/* card container */}
         {cards.map((el, id) => {
           return (
             <Flex
@@ -66,17 +70,13 @@ function About() {
 
                 // transform={["translatex(-20%)"]}
               >
-                <Text as="h3" fontWeight="800" fontSize="23px" color="#000000">
-                  SECRET LOCATIONS
-                </Text>
-                <Text as="h4" fontSize="15px" fontWeight="400">
+                <Text variant="aboutHeader">SECRET LOCATIONS</Text>
+                <Text variant="aboutParagraph">
                   We xplore for the fun and provide you with the best and
                   beutiful locations available here so that you can add a new
                   chapter of your adventure with beautiful memories
                 </Text>
-                <Text as="a" color="#FF3606" fontWeight="800" fontSize="23px">
-                  READ MORE
-                </Text>
+                <Text variant="aboutbutton">READ MORE</Text>
               </Flex>
             </Flex>
           );
@@ -86,20 +86,22 @@ function About() {
         <Flex gap="30px" flexDirection={["column", "column", "row", "row"]}>
           <Text
             as="h1"
-            fontWeight="500"
+            fontWeight="400"
             fontSize="23px"
             padding="0 0 0 45px"
             letterSpacing="0.01em"
             color="#848383"
+            fontFamily="anton"
           >
             Dont hesistate to contact us for more details
           </Text>
           <Text
             as="a"
-            fontWeight="800"
+            fontWeight="400"
             fontSize="23px"
             color="#FF3606"
             padding="0 0 0 45px"
+            fontFamily="anton"
           >
             EXPLORE ALL TREKKING--
           </Text>

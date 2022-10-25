@@ -17,6 +17,7 @@ const Videobox = () => {
           textColor="orange"
           fontSize="50px"
           textAlign="center"
+          fontFamily="anton"
         >
           Yha pe video
         </Text>

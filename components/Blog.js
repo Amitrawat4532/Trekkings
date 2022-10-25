@@ -53,32 +53,15 @@ const Blog = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Text
-              as="h1"
-              fontWeight="800"
-              fontSize={["46px", "60px", "90px", "100px"]}
-              letterSpacing="0.04em"
-              color="white"
-              opacity="0.5"
-              padding="0px 20px"
-            >
+            <Text variant="blogMainheader" id="latestblog">
               OUR VLOGS
             </Text>
 
-            <Text
-              as="h3"
-              fontWeight="800"
-              fontSize={["10px", "15px", "20px", "30px"]}
-              letterSpacing="0.04em"
-              color="black"
-              position="absolute"
-              textAlign="center"
-            >
-              LATEST VLOG
-            </Text>
+            <Text variant="blogMainheader1">LATEST VLOG</Text>
           </Flex>
         </Flex>
 
+        {/* card container */}
         <Flex
           flexWrap="wrap"
           justifyContent="center"
@@ -98,41 +81,13 @@ const Blog = () => {
                   <Image
                     src={el.Image}
                     borderRadius="61px"
-                    width={["300px", "300px", "400px", "500px"]}
-                    height={["200px", "200px", "300px", "405px"]}
+                    width={["250px", "350px", "400px", "500px"]}
+                    height={["200px", "250px", "300px", "405px"]}
                   />
-                  <Text
-                    fontWeight="700"
-                    fontSize={["15px", "20px", "30px", "30px"]}
-                    letterSpacing="0.02em"
-                    color="#000000"
-                  >
-                    {el.header}
-                  </Text>
-                  <Text
-                    fontWeight="500"
-                    fontSize={["15px", "20px", "30px", "35px"]}
-                    letterSpacing="0.02em"
-                    color="white"
-                  >
-                    {el.date}
-                  </Text>
-                  <Text
-                    fontWeight="500"
-                    fontSize={["10px", "13px", "17px", "23px"]}
-                    letterSpacing="0.02em"
-                    color="white"
-                  >
-                    {el.paragraph}
-                  </Text>
-                  <Text
-                    fontWeight="800"
-                    fontSize={["10px", "15px", "20px", "25px"]}
-                    letterSpacing="0.02em"
-                    color="#000000"
-                  >
-                    {el.readmore_button}
-                  </Text>
+                  <Text variant="blogHeader">{el.header}</Text>
+                  <Text variant="blogDate">{el.date}</Text>
+                  <Text variant="blogParagraph">{el.paragraph}</Text>
+                  <Text variant="blogReadmore">{el.readmore_button}</Text>
                 </Flex>
               </Flex>
             );

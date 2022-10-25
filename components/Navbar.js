@@ -1,20 +1,19 @@
 import React, { useRef } from "react";
-import { IconButton } from "@chakra-ui/react";
+import { HStack, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { ButtonGroup } from "@chakra-ui/react";
+
 import {
   Box,
   Button,
   Flex,
   Image,
-  Input,
   Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
+  DrawerFooter,
 } from "@chakra-ui/react";
 
 const Navbar = () => {
@@ -23,6 +22,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* main container */}
       <Flex
         justifyContent="space-between"
         alignItems="center"
@@ -39,6 +39,8 @@ const Navbar = () => {
             height={["140", "170", "256", "256"]}
           />
         </Box>
+
+        {/* Navbar container desktop */}
         <Flex
           backgroundColor="rgba(255,255,255,0.3)"
           width="70%"
@@ -49,72 +51,15 @@ const Navbar = () => {
           pr="5"
           display={["none", "none", "flex", "flex"]}
         >
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="transparent"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-          >
+          <Button variant="navButton" link="latestblog">
             Home
           </Button>
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="transparent"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-          >
-            About Us
-          </Button>
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="transparent"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-          >
-            Service
-          </Button>
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="transparent"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-          >
-            Gallery
-          </Button>
-          <Button
-            fontSize="25px"
-            color="white"
-            bg="#FF3606"
-            h="100%"
-            border="0"
-            borderRadius="0"
-            m="0"
-            px="4"
-            py="2"
-          >
-            Latest Blog
-          </Button>
+          <Button variant="navButton">About Us</Button>
+          <Button variant="navButton">Service</Button>
+          <Button variant="navButton">Gallery</Button>
+          <Button variant="blogButton">Latest Blog</Button>
         </Flex>
+
         <IconButton
           ref={btnRef}
           colorScheme="teal"
@@ -122,6 +67,9 @@ const Navbar = () => {
           aria-label="Search database"
           icon={<HamburgerIcon />}
           display={["flex", "flex", "none", "none"]}
+          color="red"
+          background="tranparent"
+          fontSize="50px"
         />
 
         <Drawer
@@ -132,20 +80,38 @@ const Navbar = () => {
         >
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerCloseButton />
+            <DrawerCloseButton fontSize="30px" color="red" m="4" />
 
-            {/* <DrawerHeader>Create your account</DrawerHeader>
+            {/* Navbar container desktop */}
 
-            <DrawerBody>
-              <Input placeholder="Type here..." />
-            </DrawerBody>
+            <Flex
+              flexDirection="column"
+              justifyContent="center"
+              display={["flex", "flex", "none", "none"]}
+              alignItems="center"
+              height="100%"
+            >
+              <Button variant="responsiveNavButton">Home</Button>
+              <Button variant="responsiveNavButton">About Us</Button>
+              <Button variant="responsiveNavButton">Service</Button>
+              <Button variant="responsiveNavButton">Gallery</Button>
+              <Button variant="responsiveNavButton">Latest Blog</Button>
+            </Flex>
 
-            <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Save</Button>
-            </DrawerFooter>*/}
+            {/* ***************Navbar  footer mobile view******************** */}
+            <DrawerFooter borderTopWidth="1px">
+              <Flex
+                height="4vh"
+                width="100%"
+                justifyContent="space-evenly"
+                mb="15px"
+              >
+                <Image src="./images/instagram.png" />
+                <Image src="./images/viber.png" />
+                <Image src="./images/gmail.png" />
+                <Image src="./images/whatsapp.png" />
+              </Flex>
+            </DrawerFooter>
           </DrawerContent>
         </Drawer>
       </Flex>
