@@ -1,3 +1,4 @@
+
 import Home from "../components/Home";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
@@ -10,13 +11,17 @@ import Testimonal from "../components/Testimonal";
 import Blog from "../components/Blog";
 import { Box } from "@chakra-ui/react";
 import Footer from "../components/footer";
+import CalendarComp from "../components/Calendar";
 
 const index = () => {
+
+  
   return (
     <>
       <Box p="0" m="0" overflow="hidden">
         <Navbar />
         <Home />
+        <CalendarComp />
         <About />
         <Destination />
         <Services />

@@ -15,10 +15,27 @@ a {
   box-sizing: border-box;
 }
 
+.calendar {
+  margin: auto;
+  width: 100% !important;
+  /* height: 100% !important;  */
+  background: red;
+}
+
+.calendar .react-calendar__month-view__days {
+  height: 350px !important;
+  /* background: #000; */
+}
+
+.highlight {
+  color: red;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
