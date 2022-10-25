@@ -51,7 +51,9 @@ const Navbar = () => {
           pr="5"
           display={["none", "none", "flex", "flex"]}
         >
-          <Button variant="navButton">Home</Button>
+          <Button variant="navButton" link="latestblog">
+            Home
+          </Button>
           <Button variant="navButton">About Us</Button>
           <Button variant="navButton">Service</Button>
           <Button variant="navButton">Gallery</Button>

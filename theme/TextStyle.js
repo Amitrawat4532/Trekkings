@@ -9,19 +9,20 @@ export const TextStyle = {
       fontSize: "23px",
       color: "#000000",
       fontFamily: "anton",
+      fontWeight: "400",
     },
     aboutbutton: {
       as: "a",
       color: "#FF3606",
       fontWeight: "400",
       fontSize: "23px",
-      fontFamily: "anton",
+      fontFamily: "sen",
     },
     aboutParagraph: {
       as: "h4",
       fontSize: "15p",
       fontWeight: "400",
-      fontFamily: "sen",
+      fontFamily: "sans-serif",
     },
 
     // **********************Home page*****************
@@ -153,7 +154,7 @@ export const TextStyle = {
     whytrekkingHeader1: {
       as: "h1",
       fontWeight: "400",
-      fontSize: ["35px", "33px", "47px", "60px"],
+      fontSize: ["35px", "33px", "47px", "70px"],
       color: "#FFFFFF",
       opacity: "0.19",
       m: "0",

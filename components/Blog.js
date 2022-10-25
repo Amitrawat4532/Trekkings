@@ -53,7 +53,9 @@ const Blog = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Text variant="blogMainheader">OUR VLOGS</Text>
+            <Text variant="blogMainheader" id="latestblog">
+              OUR VLOGS
+            </Text>
 
             <Text variant="blogMainheader1">LATEST VLOG</Text>
           </Flex>
