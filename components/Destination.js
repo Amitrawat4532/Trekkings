@@ -51,7 +51,7 @@ function Destination() {
         <Flex
           width="100%"
           justifyContent={["center", "center", "center", "space-between"]}
-          alignItem="center"
+          alignItems="center"
           paddingBottom="40px"
           px="20px"
           flexDirection={["column", "column", "column", "row"]}

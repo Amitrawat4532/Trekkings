@@ -37,7 +37,7 @@ const Services = () => {
         width="100vw"
         height="100%"
         justifyContent="start"
-        aligItem="start"
+        alignItems="start"
         flexDirection="column"
         padding={["20px 20px", ",20px 40px", "20px 140px", "20px 140px"]}
         gap="20px"

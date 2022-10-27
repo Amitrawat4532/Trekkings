@@ -129,7 +129,7 @@ const Footer = () => {
         >
           <Input
             type="email"
-            placeHolder="enter your email I'd"
+            placeholder="enter your email I'd"
             background="#fffff"
             width={["250px", "300px", "350px", "400px"]}
             height={["38px", "45px", "55px", "60px"]}

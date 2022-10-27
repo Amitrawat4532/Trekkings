@@ -13,7 +13,6 @@ import { Box } from "@chakra-ui/react";
 import Footer from "../components/footer";
 import CalendarComp from "../components/Calendar";
 
-// import Calender from "../components/Calender";
 
 const index = () => {
 
@@ -24,7 +23,6 @@ const index = () => {
         <Navbar />
         <Home />
         <CalendarComp />
-        {/* <Calender /> */}
         <About />
         <Destination />
         <Services />
