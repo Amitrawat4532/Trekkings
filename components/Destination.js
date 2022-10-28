@@ -21,6 +21,18 @@ function Destination() {
       days: "4",
       price: "3000",
     },
+    {
+      img: "/images/card2.png",
+      person: "10",
+      days: "8",
+      price: "4000",
+    },
+    {
+      img: "/images/card3.png",
+      person: "10",
+      days: "4",
+      price: "3000",
+    },
   ];
 
   return (
@@ -73,15 +85,38 @@ function Destination() {
         </Flex>
 
         {/* card container */}
-        <Flex justifyContent="space-between" flexWrap="wrap" gap="8">
+        <Flex
+          justifyContent="space-between"
+          width="100%"
+          // flexWrap="wrap"
+          gap="8"
+          overflowY="auto"
+          css={{
+            "&::-webkit-scrollbar": {
+              width: "4px",
+              height: "4px",
+            },
+            "&::-webkit-scrollbar-track": {
+              width: "6px",
+              marginTop: "15px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "gray",
+              borderRadius: "24px",
+            },
+          }}
+          scrollSnapType="x mandatory"
+          px={["8", "8", "0", "0"]}
+        >
           {Gallery.map((el, id) => {
             return (
               //   *********
               <Flex
-                key={"id"}
+                key={id}
                 // width="392.75px"
                 // height="100%"
-                width={["80%", "80%", "392px", "392px"]}
+                // flex="1"
+                width={["100%", "100%", "500px", "500px"]}
                 height="100%"
                 position="relative"
                 justifyContent="end"
@@ -91,6 +126,7 @@ function Destination() {
                 my="4"
                 padding="auto"
                 margin="auto"
+                scrollSnapAlign="center"
               >
                 <Image src={el.img} />
                 <Flex
@@ -156,7 +192,7 @@ function Destination() {
                     <Text variant="destinationPerperson">PER PERSON</Text>
                   </Box>
                 </Flex>
-                <Text variant="destinationStartexploring">
+                <Text variant="destinationStartexploring" minWidth="300px">
                   START EXPLORING--
                 </Text>
               </Flex>

@@ -88,6 +88,7 @@ const Whytrekking = () => {
                     src={el.image}
                     h={["40px", "40px", "60px", "90px"]}
                     w={["30px", "30px", "100px", "130px"]}
+                    objectFit="contain"
                   />
                   <Text variant="whytrekkingHeading">{el.heading}</Text>
                 </Flex>

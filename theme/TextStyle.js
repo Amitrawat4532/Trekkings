@@ -68,6 +68,7 @@ export const TextStyle = {
       pl: "1",
       m: "0",
       // p:{["31", "31", "0", "0"]}
+      letterSpacing: ["8px", "8px", "5px", "5px"],
     },
     destinationHeading2: {
       as: "h2",
@@ -110,7 +111,7 @@ export const TextStyle = {
       fontWeight: "200",
       fontSize: "20px",
       color: "#FF3606",
-      alignItems: "center",
+      textAlign: "center",
       fontFamily: "anton",
       // position:"absolute"
     },
@@ -120,6 +121,7 @@ export const TextStyle = {
       fontSize: ["20px", "25px", "33px", "33px"],
       fontWeight: "400",
       fontFamily: "anton",
+      letterSpacing: ["8px", "8px", "5px", "5px"],
     },
 
     serviceHeader1: {
@@ -131,6 +133,7 @@ export const TextStyle = {
       opacity: "0.19",
       padding: "0px 20px",
       fontFamily: "anton",
+      // letterSpacing: ["8px", "8px", "5px", "5px"],
     },
     serviceHeader2: {
       as: "h3",
@@ -163,6 +166,7 @@ export const TextStyle = {
       textAlign: ["center", "center", "start", "start"],
       textTransform: "uppercase",
       fontFamily: "anton",
+      letterSpacing: ["8px", "8px", "5px", "5px"],
     },
     whytrekkingHeader2: {
       as: "h3",
@@ -172,6 +176,7 @@ export const TextStyle = {
       color: "#FFFFFF",
       fontFamily: "anton",
       p: "1px  0px 1px 1px",
+      // letterSpacing: ["8px", "8px", "5px", "5px"],
     },
     whytrekkingHeading: {
       color: "#FFFFFF",
@@ -191,6 +196,7 @@ export const TextStyle = {
       opacity: "0.19",
       padding: "0px 20px",
       fontFamily: "anton",
+      letterSpacing: ["8px", "8px", "5px", "5px"],
     },
 
     galleryHeader2: {
@@ -202,6 +208,7 @@ export const TextStyle = {
       position: "absolute",
       textAlign: "center",
       fontFamily: "anton",
+      // letterSpacing: ["8px", "8px", "5px", "5px"],
     },
 
     // ********************************Testimonal page**********
@@ -212,6 +219,7 @@ export const TextStyle = {
       letterpSacing: "0.02em",
       color: "#000000",
       fontFamily: "anton",
+      letterSpacing: ["8px", "8px", "5px", "5px"],
     },
 
     testimonalHeader1: {
@@ -221,6 +229,7 @@ export const TextStyle = {
       color: "#000000",
       opacity: "0.19",
       fontFamily: "anton",
+      // letterSpacing: ["8px", "8px", "5px", "5px"],
     },
     testimonalHeader2: {
       as: "h3",
@@ -237,6 +246,7 @@ export const TextStyle = {
       fontSize: "23px",
       textAlign: ["center", "center", "start", "start"],
       fontFamily: "anton",
+      fontWeight: "300",
     },
     testimonalHeading: {
       fontWeight: "400",
@@ -244,6 +254,7 @@ export const TextStyle = {
       letterSpacing: "0.01em",
       color: "#000000",
       fontFamily: "anton",
+      fontWeight: "300",
     },
 
     testimonalHeading1: {

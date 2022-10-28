@@ -94,12 +94,12 @@ function About() {
         flexDirection={["column", "column", "row", "row"]}
         justifyContent="center"
         py="6"
+        px="2"
       >
         <Text
           as="h1"
           fontWeight="400"
           fontSize="23px"
-          padding="0 0 0 45px"
           letterSpacing="0.01em"
           color="#848383"
           fontFamily="anton"
@@ -112,7 +112,6 @@ function About() {
           fontWeight="400"
           fontSize="23px"
           color="#FF3606"
-          padding="0 0 0 45px"
           fontFamily="anton"
           textAlign="center"
         >

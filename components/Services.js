@@ -4,25 +4,25 @@ import React from "react";
 const Services = () => {
   const Ourservices = [
     {
-      header: "HIKING/TREKKING",
+      header: "HIKING / TREKKING",
       paragraph:
         " WE PROVIDE YOU THE BEST AND THE SAFEST TREK AMONG ANY OTHER.WE PROVIDE OU WITH THE PROFESSIONAL TREKKER AND HELP YOU TO REACH THE DESTINY AND ENJOY YOUR ADVENTURE",
       image: "./images/gallery1.png",
     },
     {
-      header: "HIKING/TREKKING",
+      header: "HIKING / TREKKING",
       paragraph:
         " WE PROVIDE YOU THE BEST AND THE SAFEST TREK AMONG ANY OTHER.WE PROVIDE OU WITH THE PROFESSIONAL TREKKER AND HELP YOU TO REACH THE DESTINY AND ENJOY YOUR ADVENTURE",
       image: "./images/gallery2.png",
     },
     {
-      header: "HIKING/TREKKING",
+      header: "HIKING / TREKKING",
       paragraph:
         " WE PROVIDE YOU THE BEST AND THE SAFEST TREK AMONG ANY OTHER.WE PROVIDE OU WITH THE PROFESSIONAL TREKKER AND HELP YOU TO REACH THE DESTINY AND ENJOY YOUR ADVENTURE",
       image: "./images/gallery3.png",
     },
     {
-      header: "HIKING/TREKKING",
+      header: "HIKING / TREKKING",
       paragraph:
         " WE PROVIDE YOU THE BEST AND THE SAFEST TREK AMONG ANY OTHER.WE PROVIDE OU WITH THE PROFESSIONAL TREKKER AND HELP YOU TO REACH THE DESTINY AND ENJOY YOUR ADVENTURE",
       image: "./images/gallery4.png",
@@ -57,31 +57,40 @@ const Services = () => {
         </Flex>
 
         {/* card container */}
-
-        {Ourservices.map((el, key) => {
-          return (
-            <Flex
-              flexDirection={key % 2 === 0 ? "row" : "row-reverse"}
-              gap={["20px", "20px", "40px", "50px"]}
-              key={key}
-            >
-              <Flex flexDirection="column" gap="20px" flex="1">
-                <Text variant="serviceHeader">{el.header}</Text>
-                <Text>{el.paragraph}</Text>
-                <Button variant="whytrekkingButton">KNOW MORE</Button>
-              </Flex>
+        <Box width="100%">
+          {Ourservices.map((el, key) => {
+            return (
               <Flex
-                flex="1"
-                gap="50px"
-                width="800px"
-                height={["200px", "200px", "294px", "294px"]}
-                // padding="10px 10px 0px 13px"
+                flexDirection={key % 2 === 0 ? "row" : "row-reverse"}
+                gap={["20px", "20px", "40px", "50px"]}
+                key={key}
+                alignItems="center"
+                mx="1"
+                my="8"
               >
-                <Image src={el.image} />
+                <Flex flexDirection="column" gap="20px" flex="1" width="100%">
+                  <Text
+                    variant="serviceHeader"
+                    textAlign={key % 2 === 0 ? "start" : "end"}
+                  >
+                    {el.header}
+                  </Text>
+                  <Text textAlign={key % 2 === 0 ? "start" : "end"}>
+                    {el.paragraph}
+                  </Text>
+                  <Button variant="whytrekkingButton">KNOW MORE</Button>
+                </Flex>
+
+                <Image
+                  src={el.image}
+                  objectFit="cover"
+                  width={["200px", "200px", "400px", "500px"]}
+                  height={["200px", "200px", "294px", "294px"]}
+                />
               </Flex>
-            </Flex>
-          );
-        })}
+            );
+          })}
+        </Box>
       </Flex>
     </>
   );
