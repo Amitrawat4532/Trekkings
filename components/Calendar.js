@@ -83,15 +83,15 @@ const CalendarComp = () => {
         justifyContent="center"
         alignItems="center"
         flexDirection={["column", "column", "row", "row"]}
-        p="10"
-        gap="4"
+        py={["1", "3", "6", "8"]}
+        gap="2"
       >
         <Flex
           // border='1px solid green'
           flex="1"
           height="500px"
           width="100%"
-          p={["2", "2", "4", "4"]}
+          p={["2", "4", "6", "8"]}
         >
           <Calendar
             onChange={onChange}
@@ -161,9 +161,10 @@ const CalendarComp = () => {
           direction="column"
           alignItems="center"
           // border='1px solid green'
-          p="4"
+          p={["2", "2", "4", "4"]}
           flex="1"
           height="500px"
+          w="100%"
         >
           <Text
             fontSize="32px"

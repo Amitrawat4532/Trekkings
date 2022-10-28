@@ -23,6 +23,7 @@ export const TextStyle = {
       fontSize: "15p",
       fontWeight: "400",
       fontFamily: "sans-serif",
+      textAlign: "center",
     },
 
     // **********************Home page*****************
@@ -53,6 +54,7 @@ export const TextStyle = {
       m: "0",
       textTransform: "uppercase",
       fontFamily: "anton",
+      letterSpacing: ["8px", "8px", "5px", "5px"],
     },
 
     destinationHeading1: {
@@ -60,7 +62,7 @@ export const TextStyle = {
       position: "absolute",
       fontFamily: "anton",
       fontSize: ["15px", "15px", "20px", "20px"],
-      fontWeight: "400",
+      fontWeight: "300",
       color: "#FFFFFF",
       // textAlign:"center"
       pl: "1",
@@ -76,7 +78,7 @@ export const TextStyle = {
       fontFamily: "anton",
     },
     destinationHeading3: {
-      fontSize: ["13px", "19px", "25px", "25px"],
+      fontSize: ["18px", "18px", "25px", "25px"],
       fontWeight: "400",
       textAlign: "center",
       color: "#3E3E3E",
@@ -105,7 +107,7 @@ export const TextStyle = {
       fontFamily: "anton",
     },
     destinationStartexploring: {
-      fontWeight: "400",
+      fontWeight: "200",
       fontSize: "20px",
       color: "#FF3606",
       alignItems: "center",

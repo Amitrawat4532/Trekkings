@@ -165,7 +165,7 @@ function Destination() {
           })}
         </Flex>
         <Text variant="destinationHeading3">
-          <Text as="span" fontSize="50px" color="red" fontFamily="anton">
+          <Text as="span" fontSize="40px" color="red" fontFamily="anton">
             &#34;
           </Text>
           THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU NEVER
