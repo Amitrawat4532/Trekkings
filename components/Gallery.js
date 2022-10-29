@@ -11,10 +11,12 @@ import Image from "next/image";
 const Gallery = () => {
   const gallery = [
     "/images/card1.png",
+    "/images/card1.png",
 
     "/images/card2.png",
 
     "/images/card3.png",
+    "/images/card2.png",
 
     "/images/card1.png",
   ];
@@ -41,7 +43,7 @@ const Gallery = () => {
       {/* header container end */}
 
       {/* Gallery Slides */}
-      <Box w="100%" h="100%" my="5">
+      <Box w="100%" h="100%" mt="8" mb="5">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -55,17 +57,17 @@ const Gallery = () => {
           }}
           spaceBetween={-100}
           slidesPerView={3}
-          // breakpoints={{
-          //   640: {
-          //     spaceBetween: -50,
-          //   },
-          //   768: {
-          //     spaceBetween: -50,
-          //   },
-          //   1024: {
-          //     spaceBetween: 10,
-          //   },
-          // }}
+          breakpoints={{
+            640: {
+              spaceBetween: -100,
+            },
+            768: {
+              spaceBetween: -100,
+            },
+            1024: {
+              spaceBetween: 10,
+            },
+          }}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,
