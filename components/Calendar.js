@@ -188,20 +188,21 @@ const CalendarComp = () => {
             overflowY="auto"
           >
             {trek.filter(filterByMonth).map((el, id) => {
-              const date = moment(el?.startDate, "DD/MM/YYYY").format("DD MMM");
+              const date = moment(el?.startDate, "DD/MM/YYYY").format("DD");
+              const month = moment(el?.startDate, "DD/MM/YYYY").format("MMM");
               // const imgNum = slideImages(el?.images);
               const imgNum = 0;
               return (
                 <React.Fragment key={id}>
                   <Flex
-                    justifyContent="space-between"
+                    justifyContent="start"
                     alignItems="center"
                     fontSize="20px"
                     fontWeight="600"
                     color="#FF3606"
-                    m="2"
+                    mb="4"
                     bg="gray.100"
-                    height="80px"
+                    height="70px"
                     // px="2"
                     borderRadius="20px"
                     _hover={{
@@ -213,17 +214,21 @@ const CalendarComp = () => {
                     }}
                     overflow="hidden"
                   >
-                    <Text
+                    <Flex
                       as="span"
-                      bg="white"
-                      p="18px 8px"
-                      m="2"
-                      borderRadius="20px"
-                      color="orange.900"
+                      color="white"
+                      height="100%"
+                      px="2"
+                      py="2"
+                      ml="6"
+                      bg="orange.200"
                       fontFamily="Kanit"
+                      textAlign="center"
                     >
                       {date}
-                    </Text>
+                      <br />
+                      {month}
+                    </Flex>
                     <Box
                       whiteSpace="nowrap"
                       color="blackAlpha.800"
@@ -231,17 +236,19 @@ const CalendarComp = () => {
                       overflow="hidden"
                       textOverflow="ellipsis"
                       width="50%"
+                      px="4"
                     >
                       {el?.title}
                     </Box>
-                    <Box>
+
+                    {/* <Box>
                       <Image
                         src={el?.images[imgNum]}
                         width="120px"
                         height="100%"
                         objectFit="cover"
                       />
-                    </Box>
+                    </Box> */}
                   </Flex>
                 </React.Fragment>
               );

@@ -1,20 +1,22 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Text, Box } from "@chakra-ui/react";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+import { EffectCoverflow, Pagination, Autoplay } from "swiper";
+import Image from "next/image";
 
 const Gallery = () => {
   const gallery = [
-    {
-      image: "./images/card1.png",
-    },
-    {
-      image: "./images/card2.png",
-    },
-    {
-      image: "./images/card3.png",
-    },
-    {
-      image: "./images/card1.png",
-    },
+    "/images/card1.png",
+
+    "/images/card2.png",
+
+    "/images/card3.png",
+
+    "/images/card1.png",
   ];
   return (
     <>
@@ -36,7 +38,7 @@ const Gallery = () => {
       {/* header container end */}
 
       {/* CArd container */}
-      <Flex
+      {/* <Flex
         backgroundColor="white"
         flexWrap="wrap"
         width="100%"
@@ -54,7 +56,45 @@ const Gallery = () => {
             />
           );
         })}
-      </Flex>
+      </Flex> */}
+
+      <Box w="100%" h="100%" my="5">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          // centeredSlides={true}
+          slidesPerView={3}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          pagination={true}
+          modules={[Autoplay, EffectCoverflow, Pagination]}
+          className="mySwiper"
+        >
+          {gallery.map((el) => {
+            return (
+              <SwiperSlide>
+                <Image
+                  width="500px"
+                  height="400px"
+                  src={el}
+                  objectFit="contain"
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </Box>
     </>
   );
 };
