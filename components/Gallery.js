@@ -53,19 +53,19 @@ const Gallery = () => {
             modifier: 1,
             slideShadows: false,
           }}
-          // spaceBetween: 30,
-          slidesPerView={2}
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
+          spaceBetween={-20}
+          slidesPerView={3}
+          // breakpoints={{
+          //   640: {
+          //     slidesPerView: 2,
+          //   },
+          //   768: {
+          //     slidesPerView: 3,
+          //   },
+          //   1024: {
+          //     slidesPerView: 3,
+          //   },
+          // }}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,
@@ -90,6 +90,14 @@ const Gallery = () => {
           })}
         </Swiper>
       </Box>
+
+      <Text variant="destinationHeading3">
+        <Text as="span" fontSize="40px" color="red" fontFamily="anton">
+          &#34;
+        </Text>
+        THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU NEVER
+        THOUGHT TO ASK
+      </Text>
     </>
   );
 };

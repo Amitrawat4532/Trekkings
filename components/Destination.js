@@ -107,6 +107,7 @@ function Destination() {
           }}
           scrollSnapType="x mandatory"
           px={["8", "8", "0", "0"]}
+          mb="10"
         >
           {Gallery.map((el, id) => {
             return (
@@ -200,13 +201,6 @@ function Destination() {
             );
           })}
         </Flex>
-        <Text variant="destinationHeading3">
-          <Text as="span" fontSize="40px" color="red" fontFamily="anton">
-            &#34;
-          </Text>
-          THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU NEVER
-          THOUGHT TO ASK
-        </Text>
       </Flex>
     </>
   );

@@ -84,6 +84,7 @@ export const TextStyle = {
       textAlign: "center",
       color: "#3E3E3E",
       p: "40px",
+      pt: "20px",
       fontFamily: "anton",
     },
     destinationPerson: {
