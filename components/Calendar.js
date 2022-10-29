@@ -6,22 +6,22 @@ import {
   useDisclosure,
   Badge,
   Heading,
-  Image,
 } from "@chakra-ui/react";
 import React, { useState, useRef } from "react";
 import Calendar from "react-calendar";
 import moment from "moment";
 import CalendarModal from "./CalendarModal";
 import { WarningTwoIcon } from "@chakra-ui/icons";
+import Image from "next/image";
 
 const CalendarComp = () => {
   const [value, onChange] = useState(new Date());
   const trek = [
     {
-      title: "IgatPuri Trek -1",
+      title: "IgatPuri Trek -1jdpfajfpoajdpfojapfjspojfposdjp",
       startDate: "04-10-2022",
       endDate: "04-10-2022",
-      images: [],
+      images: ["/images/c1.png", "/images/c2.png", "/images/c3.png"],
       detail:
         "IgatPuri Trek detailss Id ea et nisi irure irure labore esse sint.",
     },
@@ -29,7 +29,8 @@ const CalendarComp = () => {
       title: "IgatPuri Trek -2",
       startDate: "07-10-2022",
       endDate: "07-10-2022",
-      images: [],
+      images: ["/images/c3.png", "/images/c1.png", "/images/c2.png"],
+
       detail:
         "IgatPuri Trek detailss Id ea et nisi irure irure labore esse sint.",
     },
@@ -37,7 +38,8 @@ const CalendarComp = () => {
       title: "IgatPuri Trek -3",
       startDate: "12-11-2022",
       endDate: "12-11-2022",
-      images: [],
+      images: ["/images/c2.png", "/images/c3.png", "/images/c1.png"],
+
       detail:
         "IgatPuri Trek detailss Id ea et nisi irure irure labore esse sint.",
     },
@@ -186,65 +188,60 @@ const CalendarComp = () => {
             overflowY="auto"
           >
             {trek.filter(filterByMonth).map((el, id) => {
-              const date = moment(el?.startDate, "DD/MM/YYYY").format("DD");
-              const month = moment(el?.startDate, "DD/MM/YYYY").format("MMMM");
-              const endDate = moment(el?.endDate, "DD/MM/YYYY").format(
-                "DD MM YY"
-              );
-
+              const date = moment(el?.startDate, "DD/MM/YYYY").format("DD MMM");
+              // const imgNum = slideImages(el?.images);
+              const imgNum = 0;
               return (
                 <React.Fragment key={id}>
                   <Flex
+                    justifyContent="space-between"
                     alignItems="center"
-                    gap="4"
-                    border="1px solid rgba(0,0,0,0)"
-                    w="100%"
-                    h="80px"
-                    mb="4"
-                    bgImage="linear-gradient(90deg, #FFFFFF 11.7%, rgba(255, 255, 255, 0) 100%)  , url('/images/bg.png')"
-                    bgSize="cover"
-                    bgRepeat="no-repeat"
+                    fontSize="20px"
+                    fontWeight="600"
+                    color="#FF3606"
+                    m="2"
+                    bg="gray.100"
+                    height="80px"
+                    // px="2"
+                    borderRadius="20px"
+                    _hover={{
+                      bg: "#ff4517a7",
+                      color: "black",
+                    }}
+                    onClick={() => {
+                      onDateSelect(el?.startDate);
+                    }}
+                    overflow="hidden"
                   >
                     <Text
+                      as="span"
+                      bg="white"
+                      p="18px 8px"
+                      m="2"
+                      borderRadius="20px"
+                      color="orange.900"
                       fontFamily="Kanit"
-                      fontStyle="normal"
-                      fontWeight="100"
-                      fontSize="68px"
-                      lineHeight="100px"
-                      letterSpacing="-0.05em"
-                      color="#FF3606"
                     >
                       {date}
-                      <Text
-                        as="span"
-                        fontFamily="Kanit"
-                        fontStyle="normal"
-                        fontWeight="300"
-                        fontSize="15px"
-                        lineHeight="18px"
-                        letterSpacing="-0.05em"
-                        color="#000000"
-                        bg="white"
-                        px="2"
-                        borderRadius="20px"
-                        position="relative"
-                        left="-10px"
-                      >
-                        {month}
-                        {/* <Text
-                          as="span"
-                          fontFamily="Kanit"
-                          fontStyle="normal"
-                          fontWeight="300"
-                          fontSize="6px"
-                          lineHeight="9px"
-                          letterSpacing="-0.05em"
-                          color="#000000"
-                        >
-                          {endDate}
-                        </Text> */}
-                      </Text>
                     </Text>
+                    <Box
+                      whiteSpace="nowrap"
+                      color="blackAlpha.800"
+                      fontSize="25px"
+                      overflow="hidden"
+                      textOverflow="ellipsis"
+                      width="50%"
+                    >
+                      {el?.title}
+                    </Box>
+                    <Box>
+                      <Image
+                        src={el?.images[imgNum]}
+                        width="120px"
+                        height="100%"
+                        objectFit="cover"
+                      />
+                    </Box>
                   </Flex>
                 </React.Fragment>
               );
