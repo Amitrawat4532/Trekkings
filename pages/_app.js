@@ -1,10 +1,11 @@
-import '../styles/globals.css'
-import 'react-calendar/dist/Calendar.css';
+import "../styles/globals.css";
+import "react-calendar/dist/Calendar.css";
 // pages/_app.js
 import { ChakraProvider } from "@chakra-ui/react";
 import "@fontsource/anton/400.css";
 import "@fontsource/sen";
 import "@fontsource/rubik-glitch";
+import "@fontsource/kanit";
 
 import customTheme from "../theme/customTheme";
 

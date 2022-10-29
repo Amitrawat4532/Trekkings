@@ -14,6 +14,7 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@fontsource/anton": "^4.5.9",
+    "@fontsource/kanit": "^4.5.10",
     "@fontsource/rubik": "^4.5.11",
     "@fontsource/rubik-glitch": "^4.5.4",
     "@fontsource/sen": "^4.5.9",

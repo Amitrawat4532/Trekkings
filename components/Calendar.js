@@ -6,6 +6,7 @@ import {
   useDisclosure,
   Badge,
   Heading,
+  Image,
 } from "@chakra-ui/react";
 import React, { useState, useRef } from "react";
 import Calendar from "react-calendar";
@@ -185,38 +186,66 @@ const CalendarComp = () => {
             overflowY="auto"
           >
             {trek.filter(filterByMonth).map((el, id) => {
-              const date = moment(el?.startDate, "DD/MM/YYYY").format("DD MMM");
+              const date = moment(el?.startDate, "DD/MM/YYYY").format("DD");
+              const month = moment(el?.startDate, "DD/MM/YYYY").format("MMMM");
+              const endDate = moment(el?.endDate, "DD/MM/YYYY").format(
+                "DD MM YY"
+              );
+
               return (
                 <React.Fragment key={id}>
-                  <Text
-                    fontSize="20px"
-                    fontWeight="600"
-                    color="#FF3606"
-                    m="2"
-                    bg="gray.200"
-                    py="5"
-                    px="2"
-                    borderRadius="20px"
-                    _hover={{
-                      bg: "#ff4517a7",
-                      color: "black",
-                    }}
-                    onClick={() => {
-                      onDateSelect(el?.startDate);
-                    }}
+                  <Flex
+                    alignItems="center"
+                    gap="4"
+                    border="1px solid rgba(0,0,0,0)"
+                    w="100%"
+                    h="80px"
+                    mb="4"
+                    bgImage="linear-gradient(90deg, #FFFFFF 11.7%, rgba(255, 255, 255, 0) 100%)  , url('/images/bg.png')"
+                    bgSize="cover"
+                    bgRepeat="no-repeat"
                   >
                     <Text
-                      as="span"
-                      bg="white"
-                      p="2"
-                      m="2"
-                      borderRadius="20px"
-                      color="orange.900"
+                      fontFamily="Kanit"
+                      fontStyle="normal"
+                      fontWeight="100"
+                      fontSize="68px"
+                      lineHeight="100px"
+                      letterSpacing="-0.05em"
+                      color="#FF3606"
                     >
                       {date}
+                      <Text
+                        as="span"
+                        fontFamily="Kanit"
+                        fontStyle="normal"
+                        fontWeight="300"
+                        fontSize="15px"
+                        lineHeight="18px"
+                        letterSpacing="-0.05em"
+                        color="#000000"
+                        bg="white"
+                        px="2"
+                        borderRadius="20px"
+                        position="relative"
+                        left="-10px"
+                      >
+                        {month}
+                        {/* <Text
+                          as="span"
+                          fontFamily="Kanit"
+                          fontStyle="normal"
+                          fontWeight="300"
+                          fontSize="6px"
+                          lineHeight="9px"
+                          letterSpacing="-0.05em"
+                          color="#000000"
+                        >
+                          {endDate}
+                        </Text> */}
+                      </Text>
                     </Text>
-                    {el?.title}
-                  </Text>
+                  </Flex>
                 </React.Fragment>
               );
             })}
