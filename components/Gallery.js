@@ -53,19 +53,19 @@ const Gallery = () => {
             modifier: 1,
             slideShadows: false,
           }}
-          spaceBetween={-20}
+          spaceBetween={10}
           slidesPerView={3}
-          // breakpoints={{
-          //   640: {
-          //     slidesPerView: 2,
-          //   },
-          //   768: {
-          //     slidesPerView: 3,
-          //   },
-          //   1024: {
-          //     slidesPerView: 3,
-          //   },
-          // }}
+          breakpoints={{
+            640: {
+              spaceBetween: -50,
+            },
+            768: {
+              spaceBetween: 10,
+            },
+            1024: {
+              spaceBetween: 10,
+            },
+          }}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,
@@ -83,7 +83,7 @@ const Gallery = () => {
                   width="500px"
                   height="500px"
                   src={el}
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </SwiperSlide>
             );
