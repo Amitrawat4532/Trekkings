@@ -1,5 +1,5 @@
 import { Flex, Text, Box } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -18,6 +18,9 @@ const Gallery = () => {
 
     "/images/card1.png",
   ];
+
+  const [winSize, setWinSize] = useState();
+
   return (
     <>
       {/* header container */}
@@ -37,39 +40,31 @@ const Gallery = () => {
       </Flex>
       {/* header container end */}
 
-      {/* CArd container */}
-      {/* <Flex
-        backgroundColor="white"
-        flexWrap="wrap"
-        width="100%"
-        justifyContent="space-evenly"
-        // gap="0px"
-      >
-        {gallery.map((el, key) => {
-          return (
-            <Image
-              key={key}
-              src={el.image}
-              width={["90%", "80%", "550px", "609px"]}
-              my="10px"
-              height="340px"
-            />
-          );
-        })}
-      </Flex> */}
-
+      {/* Gallery Slides */}
       <Box w="100%" h="100%" my="5">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
           // centeredSlides={true}
-          slidesPerView={3}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
             depth: 100,
             modifier: 1,
             slideShadows: false,
+          }}
+          // spaceBetween: 30,
+          slidesPerView={2}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
           }}
           autoplay={{
             delay: 3500,
