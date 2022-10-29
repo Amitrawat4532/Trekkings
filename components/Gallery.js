@@ -86,7 +86,7 @@ const Gallery = () => {
               <SwiperSlide key={id}>
                 <Image
                   width="500px"
-                  height="400px"
+                  height="500px"
                   src={el}
                   objectFit="contain"
                 />
