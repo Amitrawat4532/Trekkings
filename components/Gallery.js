@@ -60,7 +60,7 @@ const Gallery = () => {
               spaceBetween: -50,
             },
             768: {
-              spaceBetween: 10,
+              spaceBetween: -50,
             },
             1024: {
               spaceBetween: 10,
