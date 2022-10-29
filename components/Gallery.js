@@ -53,19 +53,19 @@ const Gallery = () => {
             modifier: 1,
             slideShadows: false,
           }}
-          spaceBetween={10}
+          spaceBetween={-100}
           slidesPerView={3}
-          breakpoints={{
-            640: {
-              spaceBetween: -50,
-            },
-            768: {
-              spaceBetween: -50,
-            },
-            1024: {
-              spaceBetween: 10,
-            },
-          }}
+          // breakpoints={{
+          //   640: {
+          //     spaceBetween: -50,
+          //   },
+          //   768: {
+          //     spaceBetween: -50,
+          //   },
+          //   1024: {
+          //     spaceBetween: 10,
+          //   },
+          // }}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,
