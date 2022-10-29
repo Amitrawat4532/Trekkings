@@ -81,9 +81,9 @@ const Gallery = () => {
           modules={[Autoplay, EffectCoverflow, Pagination]}
           className="mySwiper"
         >
-          {gallery.map((el) => {
+          {gallery.map((el, id) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={id}>
                 <Image
                   width="500px"
                   height="400px"
