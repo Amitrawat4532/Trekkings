@@ -57,5 +57,10 @@ export const ButtonStyle = {
       margin: "auto",
       fontFamily: "anton",
     },
+    calendar_btn: {
+      background: "transparent",
+      borderRadius: "20px",
+      p: "3",
+    },
   },
 };

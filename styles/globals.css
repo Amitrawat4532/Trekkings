@@ -25,7 +25,8 @@ a {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .react-calendar__navigation{
-  background: #ff4517a7;
+  background: #ff4517;
+  color:white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 

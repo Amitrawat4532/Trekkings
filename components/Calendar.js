@@ -6,6 +6,7 @@ import {
   useDisclosure,
   Badge,
   Heading,
+  Button,
 } from "@chakra-ui/react";
 import React, { useState, useRef } from "react";
 import Calendar from "react-calendar";
@@ -195,13 +196,13 @@ const CalendarComp = () => {
               return (
                 <React.Fragment key={id}>
                   <Flex
-                    justifyContent="start"
+                    justifyContent="space-between"
                     alignItems="center"
                     fontSize="20px"
                     fontWeight="600"
                     color="#FF3606"
                     mb="4"
-                    bg="gray.100"
+                    bg="gray.300"
                     height="70px"
                     // px="2"
                     borderRadius="20px"
@@ -221,7 +222,7 @@ const CalendarComp = () => {
                       px="2"
                       py="2"
                       ml="6"
-                      bg="orange.200"
+                      bg="mainOrange"
                       fontFamily="Kanit"
                       textAlign="center"
                     >
@@ -241,14 +242,29 @@ const CalendarComp = () => {
                       {el?.title}
                     </Box>
 
-                    {/* <Box>
-                      <Image
-                        src={el?.images[imgNum]}
-                        width="120px"
-                        height="100%"
-                        objectFit="cover"
-                      />
-                    </Box> */}
+                    <Box>
+                      <Button variant="calendar_btn">
+                        <Image
+                          height="25px"
+                          width="25px"
+                          src="/images/Travel.png"
+                        />
+                      </Button>
+                      <Button variant="calendar_btn">
+                        <Image
+                          height="25px"
+                          width="25px"
+                          src="/images/Home.png"
+                        />
+                      </Button>
+                      <Button variant="calendar_btn">
+                        <Image
+                          height="25px"
+                          width="25px"
+                          src="/images/Food.png"
+                        />
+                      </Button>
+                    </Box>
                   </Flex>
                 </React.Fragment>
               );
