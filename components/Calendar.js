@@ -88,6 +88,7 @@ const CalendarComp = () => {
         alignItems="center"
         flexDirection={["column", "column", "row", "row"]}
         py={["1", "3", "6", "8"]}
+        flexWrap="wrap"
         gap="2"
       >
         <Flex
@@ -169,6 +170,7 @@ const CalendarComp = () => {
           flex="1"
           height="500px"
           w="100%"
+          maxW="650px"
         >
           <Text
             fontSize="32px"
@@ -221,7 +223,7 @@ const CalendarComp = () => {
                       height="100%"
                       px="2"
                       py="2"
-                      ml="6"
+                      ml={["4", "4", "6", "6"]}
                       bg="mainOrange"
                       fontFamily="Kanit"
                       textAlign="center"
@@ -237,12 +239,12 @@ const CalendarComp = () => {
                       overflow="hidden"
                       textOverflow="ellipsis"
                       width="50%"
-                      px="4"
+                      px={["2", "2", "4", "4"]}
                     >
                       {el?.title}
                     </Box>
 
-                    <Box>
+                    <Flex>
                       <Button variant="calendar_btn">
                         <Image
                           height="25px"
@@ -264,7 +266,7 @@ const CalendarComp = () => {
                           src="/images/Food.png"
                         />
                       </Button>
-                    </Box>
+                    </Flex>
                   </Flex>
                 </React.Fragment>
               );
