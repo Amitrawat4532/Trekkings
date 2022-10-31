@@ -7,6 +7,8 @@ import Whytrekking from "../components/whytrekking";
 import Services from "../components/Services";
 import Gallery from "../components/Gallery";
 import Testimonal from "../components/Testimonal";
+import Testimonal2 from "../components/Testimonial2";
+
 import Blog from "../components/Blog";
 import { Box } from "@chakra-ui/react";
 import Footer from "../components/footer";
@@ -26,6 +28,7 @@ const index = () => {
         <Whytrekking />
         <Gallery />
         <Testimonal />
+        {/* <Testimonal2 /> */}
         <Blog />
         <Footer />
       </Box>

@@ -67,7 +67,7 @@ const Services = () => {
                 key={key}
                 alignItems="center"
                 mx="1"
-                my="8"
+                my="12"
               >
                 <Flex flexDirection="column" gap="20px" flex="1" width="100%">
                   <Text
@@ -76,7 +76,10 @@ const Services = () => {
                   >
                     {el.header}
                   </Text>
-                  <Text textAlign={key % 2 === 0 ? "start" : "end"}>
+                  <Text
+                    variant="serviceParagraph"
+                    textAlign={key % 2 === 0 ? "start" : "end"}
+                  >
                     {el.paragraph}
                   </Text>
                   <Button variant="whytrekkingButton">KNOW MORE</Button>
@@ -85,7 +88,7 @@ const Services = () => {
                 <Image
                   src={el.image}
                   objectFit="cover"
-                  width={["200px", "200px", "400px", "500px"]}
+                  width={["200px", "200px", "400px", "600px"]}
                   height={["200px", "200px", "294px", "294px"]}
                 />
               </Flex>

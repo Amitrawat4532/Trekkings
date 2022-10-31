@@ -31,6 +31,8 @@ const Whytrekking = () => {
         width="100%"
         height="100%"
         flexDirection="column"
+        minHeight="90vh"
+        justifyContent="space-around"
       >
         {/* header container */}
         <Flex
@@ -86,8 +88,8 @@ const Whytrekking = () => {
                 >
                   <Image
                     src={el.image}
-                    h={["40px", "40px", "60px", "90px"]}
-                    w={["30px", "30px", "100px", "130px"]}
+                    h={["50px", "40px", "60px", "90px"]}
+                    w={["40px", "30px", "100px", "130px"]}
                     objectFit="contain"
                   />
                   <Text variant="whytrekkingHeading">{el.heading}</Text>

@@ -53,7 +53,7 @@ export const TextStyle = {
     destinationHeader: {
       as: "h1",
       fontWeight: "400",
-      fontSize: ["43px", "50px", "80px", "80px"],
+      fontSize: ["48px", "50px", "80px", "80px"],
       color: "#FFFFFF",
       opacity: "0.19",
       p: ["0", "30", "0", "0"],
@@ -120,6 +120,8 @@ export const TextStyle = {
       color: "#FF3606",
       textAlign: "center",
       fontFamily: "anton",
+      mb: "5",
+      mt: "1",
       // position:"absolute"
     },
     //  *************************************service page*************
@@ -132,7 +134,7 @@ export const TextStyle = {
     },
 
     serviceHeader1: {
-      as: "h1",
+      as: "p",
       fontWeight: "400",
       fontSize: ["45px", "60px", "110px", "124px"],
       letterSpacing: "0.04em",
@@ -143,7 +145,7 @@ export const TextStyle = {
       // letterSpacing: ["8px", "8px", "5px", "5px"],
     },
     serviceHeader2: {
-      as: "h3",
+      as: "p",
       fontWeight: "400",
       fontSize: ["10px", "15px", "20px", "30px"],
       letterSpacing: "0.04em",
@@ -153,11 +155,12 @@ export const TextStyle = {
       fontFamily: "anton",
     },
     serviceParagraph: {
-      as: "h4",
+      as: "p",
       fontSize: ["12px", "12px", "15px", "18px"],
       fontWeight: "400",
       color: "#8B8B8B",
       fontFamily: "anton",
+      letterSpacing: "0.02em",
       // p:"10px 0px 20px 0px"
     },
 
@@ -174,16 +177,17 @@ export const TextStyle = {
       textTransform: "uppercase",
       fontFamily: "anton",
       letterSpacing: ["8px", "8px", "5px", "5px"],
+      lineHeight: "2",
     },
     whytrekkingHeader2: {
       as: "h3",
       position: "absolute",
-      fontSize: ["10px", "12px", "13px", "15px"],
+      fontSize: ["15px", "15px", "18px", "20px"],
       fontWeight: "400",
       color: "#FFFFFF",
       fontFamily: "anton",
       p: "1px  0px 1px 1px",
-      // letterSpacing: ["8px", "8px", "5px", "5px"],
+      letterSpacing: "2",
     },
     whytrekkingHeading: {
       color: "#FFFFFF",
@@ -197,7 +201,7 @@ export const TextStyle = {
     galleryHeader1: {
       as: "h1",
       fontWeight: "400",
-      fontSize: ["45px", "60px", "110px", "124px"],
+      fontSize: ["45px", "60px", "80px", "80px"],
       letterSpacing: "0.04em",
       color: "#000000",
       opacity: "0.19",
@@ -209,7 +213,7 @@ export const TextStyle = {
     galleryHeader2: {
       as: "h3",
       fontWeight: "400",
-      fontSize: ["10px", "15px", "20px", "30px"],
+      fontSize: ["10px", "15px", "20px", "22px"],
       letterSpacing: "0.04em",
       color: "black",
       position: "absolute",
@@ -232,28 +236,29 @@ export const TextStyle = {
     testimonalHeader1: {
       as: "h1",
       fontWeight: "400",
-      fontSize: ["43px", "60px", "90px", "100px"],
+      fontSize: ["43px", "60px", "80px", "80px"],
       color: "#000000",
       opacity: "0.19",
       fontFamily: "anton",
-      // letterSpacing: ["8px", "8px", "5px", "5px"],
+      letterSpacing: ["8px", "8px", "5px", "5px"],
     },
     testimonalHeader2: {
-      as: "h3",
+      as: "p",
       fontWeight: "400",
-      fontSize: ["12px", "15px", "20px", "30px"],
+      fontSize: ["12px", "15px", "25px", "25px"],
       color: "#FF3606",
       position: "absolute",
       textAlign: "center",
       fontFamily: "anton",
     },
     testimonalParagraph: {
-      as: "h3",
+      as: "p",
       color: " #FFFFFF",
-      fontSize: "23px",
+      fontSize: ["15px", "15px", "20px", "20px"],
       textAlign: ["center", "center", "start", "start"],
       fontFamily: "anton",
-      fontWeight: "300",
+      fontWeight: "200",
+      letterSpacing: "2",
     },
     testimonalHeading: {
       fontWeight: "400",
@@ -265,16 +270,17 @@ export const TextStyle = {
     },
 
     testimonalHeading1: {
-      as: "h2",
+      as: "p",
       color: " black",
-      fontSize: "35px",
+      fontSize: ["25px", "25px", "35px", "35px"],
       textAlign: ["center", "center", "start", "start"],
       fontFamily: "anton",
+      fontWeight: "light",
     },
     testimonalHeading2: {
-      as: "h2",
+      as: "p",
       color: " #FFFFFF",
-      fontSize: "23px",
+      fontSize: ["15px", "15px", "23px", "23px"],
       textAlign: ["center", "center", "start", "start"],
       fontFamily: "anton",
     },
