@@ -32,6 +32,7 @@ const Services = () => {
     <>
       {/* main container */}
       <Flex
+        className="service_container"
         backgroundImage="url('./images/map 2.png')"
         backgroundSize="20%"
         width="100vw"

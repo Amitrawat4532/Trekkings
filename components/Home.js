@@ -6,31 +6,35 @@ const Home = () => {
     <>
       {/* main container */}
       <Flex
+        className="home_container"
         w="100vw"
-        h={["100vh", "100vh", "120vh", "130vh"]}
+        h={["100vh", "100vh", "120vh", "120vh"]}
         bgImg={[
           "url('/images/bg6.png')",
           "url('/images/bg6.png')",
-          "url('/images/bg.png')",
-          "url('/images/bg.png')",
+          "url('/images/finalBg.png')",
+          "url('/images/finalBg.png')",
         ]}
         backgroundSize="100%"
         backgroundRepeat="no-repeat"
         justifyContent="center"
         alignItems="center"
+        // border="1px solid red"
       >
         {/* heading container */}
         <Box
-          transform={[
-            "translatey(72%)",
-            "translatey(72%)",
-            "translatex(-50%)",
-            "translatex(-35%)",
-          ]}
+          // transform={[
+          //   "translateY(72%)",
+          //   "translateY(72%)",
+          //   "translateX(-50%)",
+          //   "translateX(-20%) translateY(-40%)",
+          // ]}
+          position="relative"
+          top={["20", "20", "-10", "-10"]}
         >
-          <Text variant="homeHeader1">make the</Text>
+          <Text variant="homeHeader1">MAKE THE</Text>
 
-          <Text variant="homeHeader2">Impossible</Text>
+          <Text variant="homeHeader2">IMPOSSIBLE</Text>
         </Box>
       </Flex>
     </>

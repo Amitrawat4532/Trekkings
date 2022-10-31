@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { HStack, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { ButtonGroup } from "@chakra-ui/react";
+import jump from "jump.js";
 
 import {
   Box,
@@ -36,7 +37,7 @@ const Navbar = () => {
           <Image
             src="/images/logo.png"
             width={["200", "250", "328", "328"]}
-            height={["140", "170", "256", "256"]}
+            height={["140", "170", "256", "200"]}
           />
         </Box>
 
@@ -48,16 +49,40 @@ const Navbar = () => {
           justifyContent="end"
           gap="2"
           transform="translateY(-30px)"
-          pr="5"
+          pr="6"
           display={["none", "none", "flex", "flex"]}
         >
-          <Button variant="navButton" link="latestblog">
+          <Button
+            variant="navButton"
+            link="latestblog"
+            onClick={() => jump(".home_container", { duration: 2000 })}
+          >
             Home
           </Button>
-          <Button variant="navButton">About Us</Button>
-          <Button variant="navButton">Service</Button>
-          <Button variant="navButton">Gallery</Button>
-          <Button variant="blogButton">Latest Blog</Button>
+          <Button
+            variant="navButton"
+            onClick={() => jump(".about_container", { duration: 4000 })}
+          >
+            About Us
+          </Button>
+          <Button
+            variant="navButton"
+            onClick={() => jump(".service_container", { duration: 6000 })}
+          >
+            Service
+          </Button>
+          <Button
+            variant="navButton"
+            onClick={() => jump(".gallery_container", { duration: 8000 })}
+          >
+            Gallery
+          </Button>
+          <Button
+            variant="blogButton"
+            onClick={() => jump(".blog_container", { duration: 10000 })}
+          >
+            Latest Blog
+          </Button>
         </Flex>
 
         <IconButton
@@ -69,7 +94,7 @@ const Navbar = () => {
           display={["flex", "flex", "none", "none"]}
           color="red"
           background="tranparent"
-          fontSize="50px"
+          fontSize="40px"
         />
 
         <Drawer
@@ -91,11 +116,51 @@ const Navbar = () => {
               alignItems="center"
               height="100%"
             >
-              <Button variant="responsiveNavButton">Home</Button>
-              <Button variant="responsiveNavButton">About Us</Button>
-              <Button variant="responsiveNavButton">Service</Button>
-              <Button variant="responsiveNavButton">Gallery</Button>
-              <Button variant="responsiveNavButton">Latest Blog</Button>
+              <Button
+                variant="responsiveNavButton"
+                onClick={() => {
+                  onClose();
+                  jump(".home_container", { duration: 2000 });
+                }}
+              >
+                Home
+              </Button>
+              <Button
+                onClick={() => {
+                  onClose();
+                  jump(".about_container", { duration: 4000 });
+                }}
+                variant="responsiveNavButton"
+              >
+                About Us
+              </Button>
+              <Button
+                onClick={() => {
+                  onClose();
+                  jump(".service_container", { duration: 6000 });
+                }}
+                variant="responsiveNavButton"
+              >
+                Service
+              </Button>
+              <Button
+                onClick={() => {
+                  onClose();
+                  jump(".gallery_container", { duration: 8000 });
+                }}
+                variant="responsiveNavButton"
+              >
+                Gallery
+              </Button>
+              <Button
+                onClick={() => {
+                  onClose();
+                  jump(".blog_container", { duration: 10000 });
+                }}
+                variant="responsiveNavButton"
+              >
+                Latest Blog
+              </Button>
             </Flex>
 
             {/* ***************Navbar  footer mobile view******************** */}

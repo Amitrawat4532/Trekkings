@@ -29,17 +29,23 @@ export const TextStyle = {
     // **********************Home page*****************
 
     homeHeader1: {
-      as: "h1",
+      as: "p",
       color: " #FFFFFF",
       fontSize: ["45px", "50px", "60px", "70px"],
       fontFamily: "anton",
+      p: "0",
+      m: "0",
+      position: "relative",
+      bottom: ["-20px", "-20px", "-40px", "-40px"],
     },
     homeHeader2: {
-      as: "h1",
+      as: "p",
       color: "#FF4417",
       fontSize: ["50px", "60px", "70px", "100px"],
       fontWeight: "400",
       fontFamily: "Rubik Glitch",
+      p: "0",
+      m: "0",
     },
 
     // ************************destination page****************

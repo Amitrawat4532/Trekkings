@@ -26,7 +26,7 @@ const Gallery = () => {
   return (
     <>
       {/* header container */}
-      <Flex width="100vw" height="100%">
+      <Flex width="100vw" height="100%" className="gallery_container">
         <Flex
           position="relative"
           width="100%"

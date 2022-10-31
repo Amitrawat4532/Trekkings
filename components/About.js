@@ -10,13 +10,13 @@ function About() {
         " We xplore for the fun and provide you with the best and beutiful locations available here so that you can add a new chapter of your adventure with beautiful memories",
     },
     {
-      img: "/images/location.png",
+      img: "/images/safe_adventure.png",
       header: "SECRET LOCATIONS",
       description:
         " We xplore for the fun and provide you with the best and beutiful locations available here so that you can add a new chapter of your adventure with beautiful memories",
     },
     {
-      img: "/images/location.png",
+      img: "/images/professional_hiker.png",
       header: "SECRET LOCATIONS",
       description:
         " We xplore for the fun and provide you with the best and beutiful locations available here so that you can add a new chapter of your adventure with beautiful memories",
@@ -27,15 +27,17 @@ function About() {
     <>
       {/* main container */}
       <Flex
+        className="about_container"
         width="100%"
+        minHeight="85vh"
         height="100%"
         justifyContent="center"
         backgroundImage="url('/images/bg1.png')"
         py="10"
         flexWrap="wrap"
-        gap="100px 0"
+        gap="80px"
         // filter="blur(2px)"
-        backgroundSize="80%"
+        backgroundSize="90%"
         backgroundPosition="center"
         bgRepeat="no-repeat"
       >
@@ -44,8 +46,9 @@ function About() {
           return (
             <Flex
               key={id}
-              width={["80%", "80%", "400px", "400px"]}
+              width={["80%", "80%", "350px", "350px"]}
               height="100%"
+              maxHeight="400px"
               justifyContent="center"
               alignItems="center"
               backgroundColor="white"
@@ -54,7 +57,7 @@ function About() {
               boxShadow="15px 15px 8px rgba(0, 0, 0, 0.25)"
               borderRadius="30px"
               p="20px"
-              m="auto"
+              m="auto 0"
               position="relative"
             >
               <Box
@@ -63,7 +66,13 @@ function About() {
                 position={["absolute", "absolute", "relative", "relative"]}
                 top={["-20%", "-20%", "0%", "0%"]}
               >
-                <Image src="/images/location.png" />
+                <Image
+                  src={el?.img}
+                  objectFit="cover"
+                  height="100%"
+                  w="100%"
+                  bg="transparent"
+                />
               </Box>
 
               <Flex
