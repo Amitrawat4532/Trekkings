@@ -74,7 +74,7 @@ export const TextStyle = {
       pl: "1",
       m: "0",
       // p:{["31", "31", "0", "0"]}
-      letterSpacing: ["8px", "8px", "5px", "5px"],
+      letterSpacing: ["2px", "2px", "3px", "3px"],
     },
     destinationHeading2: {
       as: "h2",

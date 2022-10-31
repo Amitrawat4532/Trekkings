@@ -36,7 +36,6 @@ function About() {
         py="10"
         flexWrap="wrap"
         gap="80px"
-        // filter="blur(2px)"
         backgroundSize="90%"
         backgroundPosition="center"
         bgRepeat="no-repeat"
@@ -56,7 +55,7 @@ function About() {
               border="1px solid #949494"
               boxShadow="15px 15px 8px rgba(0, 0, 0, 0.25)"
               borderRadius="30px"
-              p="20px"
+              p={["10px", "10px", "20px", "20px"]}
               m="auto 0"
               position="relative"
             >
@@ -80,7 +79,7 @@ function About() {
                 flexDirection="column"
                 gap="10px"
                 justifyContent="center"
-                p="20px"
+                p={["10px", "10px", "20px", "20px"]}
                 pt={["70px", "70px", "20px", "20px"]}
                 // transform={["translatex(-20%)"]}
               >
