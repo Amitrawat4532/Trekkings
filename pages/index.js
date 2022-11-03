@@ -24,7 +24,7 @@ const index = () => {
         <About />
         <Destination />
         <Services />
-        <Videobox />
+        {/* <Videobox /> */}
         <Whytrekking />
         <Gallery />
         <Testimonal />

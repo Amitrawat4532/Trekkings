@@ -34,13 +34,13 @@ const Services = () => {
       <Flex
         className="service_container"
         backgroundImage="url('./images/map 2.png')"
-        backgroundSize="20%"
+        backgroundSize="10%"
         width="100vw"
         height="100%"
         justifyContent="start"
         alignItems="start"
         flexDirection="column"
-        padding={["20px 20px", ",20px 40px", "20px 140px", "20px 140px"]}
+        padding={["20px 20px", ",20px 40px", "20px 100px", "20px 140px"]}
         gap="20px"
       >
         {/* header container */}
@@ -69,7 +69,13 @@ const Services = () => {
                 mx="1"
                 my="12"
               >
-                <Flex flexDirection="column" gap="20px" flex="1" width="100%">
+                <Flex
+                  flexDirection="column"
+                  gap="20px"
+                  flex="1"
+                  width="100%"
+                  alignItems={key % 2 === 0 ? "start" : "end"}
+                >
                   <Text
                     variant="serviceHeader"
                     textAlign={key % 2 === 0 ? "start" : "end"}
@@ -86,9 +92,15 @@ const Services = () => {
                 </Flex>
 
                 <Image
-                  src={el.image}
+                  css={{
+                    maskImage: "url('/images/stroke_mask.png')",
+                    maskSize: "140%",
+                    maskRepeat: "no-repeat",
+                    maskPosition: "center",
+                  }}
+                  src={el?.image}
                   objectFit="cover"
-                  width={["200px", "200px", "400px", "600px"]}
+                  width={["200px", "200px", "400px", "500px"]}
                   height={["200px", "200px", "294px", "294px"]}
                 />
               </Flex>

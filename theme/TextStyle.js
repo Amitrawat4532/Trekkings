@@ -53,7 +53,7 @@ export const TextStyle = {
     destinationHeader: {
       as: "h1",
       fontWeight: "400",
-      fontSize: ["48px", "50px", "80px", "80px"],
+      fontSize: ["58px", "58px", "80px", "80px"],
       color: "#FFFFFF",
       opacity: "0.19",
       p: ["0", "30", "0", "0"],
@@ -120,8 +120,8 @@ export const TextStyle = {
       color: "#FF3606",
       textAlign: "center",
       fontFamily: "anton",
-      mb: "5",
-      mt: "1",
+      // mb: "5",
+      // mt: "1",
       // position:"absolute"
     },
     //  *************************************service page*************
@@ -226,9 +226,9 @@ export const TextStyle = {
 
     testimonalHeader: {
       fontWeight: "400",
-      fontSize: "45px",
+      fontSize: "25px",
       letterpSacing: "0.02em",
-      color: "#000000",
+      color: "#ffffff",
       fontFamily: "anton",
       letterSpacing: ["8px", "8px", "5px", "5px"],
     },
@@ -264,7 +264,7 @@ export const TextStyle = {
       fontWeight: "400",
       fontSize: ["12px", "15px", "20px", "23px"],
       letterSpacing: "0.01em",
-      color: "#000000",
+      color: "#ffffff",
       fontFamily: "anton",
       fontWeight: "300",
     },

@@ -51,6 +51,8 @@ const Navbar = () => {
           transform="translateY(-30px)"
           pr="6"
           display={["none", "none", "flex", "flex"]}
+          position="relative"
+          top="-5px"
         >
           <Button
             variant="navButton"

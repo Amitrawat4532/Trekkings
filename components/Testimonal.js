@@ -2,34 +2,6 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Testimonal = () => {
-  const Testimonal_context = [
-    {
-      icon_1: "./images/tickicon.png",
-      header: "15",
-      icon_2: "./images/plusicon.png",
-      heading: "Years Of Experience",
-    },
-    {
-      icon_1: "./images/tickicon.png",
-      header: "60",
-      icon_2: "./images/plusicon.png",
-      heading: "Years Of best Destination",
-    },
-
-    {
-      icon_1: "./images/tickicon.png",
-      header: "30",
-      icon_2: "./images/plusicon.png",
-      heading: " Certified guides",
-    },
-
-    {
-      icon_1: "./images/tickicon.png",
-      header: "3,210",
-      icon_2: "./images/plusicon.png",
-      heading: "Satisfied Hikers",
-    },
-  ];
   return (
     <>
       {/* Header container*/}
@@ -127,26 +99,6 @@ const Testimonal = () => {
             alignSelf="center"
           />
         </Flex>
-      </Flex>
-      {/* Feature Context */}
-      <Flex
-        justifyContent={["center", "center", "space-evenly", "space-evenly"]}
-        flexDirection={["column", "column", "row", "row"]}
-      >
-        {Testimonal_context.map((el, key) => {
-          return (
-            <Flex flexDirection="column" alignItems="center" key={key}>
-              <Flex gap="10px" alignItems="center">
-                <Image src={el.icon_1} />
-                <Text variant="testimonalHeader">{el.header}</Text>
-                <Image src={el.icon_2} height="20px" />
-              </Flex>
-              <Flex>
-                <Text variant="testimonalHeading">{el.heading}</Text>
-              </Flex>
-            </Flex>
-          );
-        })}
       </Flex>
     </>
   );

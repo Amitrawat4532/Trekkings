@@ -1,26 +1,37 @@
 export const ButtonStyle = {
   variants: {
     navButton: {
-      fontSize: "25px",
+      h: "38px",
+      fontSize: "20px",
       color: "white",
       bg: "transparent",
       border: "0",
       borderRadius: "0",
       m: "0",
+      py: "0",
       px: "4",
       fontFamily: "anton",
       fontWeight: "200",
+      textTransform: "uppercase",
+      _hover: {
+        bg: "#FF441785",
+      },
     },
     blogButton: {
-      fontSize: "25px",
+      h: "38px",
+
+      fontSize: "20px",
       color: "white",
       bg: "mainOrange",
       border: "0",
       borderRadius: "0",
       m: "0",
+      py: "0",
+
       px: "4",
       fontFamily: "anton",
       fontWeight: "200",
+      textTransform: "uppercase",
     },
     responsiveNavButton: {
       fontSize: "25px",

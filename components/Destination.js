@@ -44,9 +44,10 @@ function Destination() {
         backgroundColor="#717171"
         flexDirection="column"
         px={["0", "0", "20", "20"]}
-        py={["5", "5", "16", "16"]}
+        pt={["5", "5", "10", "10"]}
         minHeight="80vh"
         justifyContent="space-around"
+        gap="6"
       >
         {/* header container */}
         <Flex
@@ -66,7 +67,7 @@ function Destination() {
           width="100%"
           justifyContent={["center", "center", "center", "space-between"]}
           alignItems="center"
-          paddingBottom={["20px", "20px", "40px", "40px"]}
+          // paddingBottom={["20px", "20px", "40px", "40px"]}
           px={["20px", "20px", "0px", "0px"]}
           flexDirection={["column", "column", "column", "row"]}
         >

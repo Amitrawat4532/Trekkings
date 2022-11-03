@@ -2,25 +2,32 @@ import { Flex, Image, Text, HStack, Box } from "@chakra-ui/react";
 import React from "react";
 
 const Whytrekking = () => {
-  const Icons = [
+  const Testimonal_context = [
     {
-      image: "./images/icon1.png",
-      heading: "EXPLORATION",
+      icon_1: "./images/tickicon.png",
+      header: "15",
+      icon_2: "./images/plusicon.png",
+      heading: "Years Of Experience",
+    },
+    {
+      icon_1: "./images/tickicon.png",
+      header: "60",
+      icon_2: "./images/plusicon.png",
+      heading: "Years Of best Destination",
     },
 
     {
-      image: "./images/icon2.png",
-      heading: "PROVIDE EQUIPMENTS",
+      icon_1: "./images/tickicon.png",
+      header: "30",
+      icon_2: "./images/plusicon.png",
+      heading: " Certified guides",
     },
 
     {
-      image: "./images/icon3.png",
-      heading: "ADVENTURES",
-    },
-
-    {
-      image: "./images/icon4.png",
-      heading: "PROFESSIONAL GUIDE",
+      icon_1: "./images/tickicon.png",
+      header: "3,210",
+      icon_2: "./images/plusicon.png",
+      heading: "Satisfied Hikers",
     },
   ];
   return (
@@ -31,8 +38,11 @@ const Whytrekking = () => {
         width="100%"
         height="100%"
         flexDirection="column"
-        minHeight="90vh"
+        minHeight="100vh"
         justifyContent="space-around"
+        // p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
+        px={["10", "10", "20", "20"]}
+        py="20px"
       >
         {/* header container */}
         <Flex
@@ -43,7 +53,7 @@ const Whytrekking = () => {
           alignItems={["center", "center", "start", "start"]}
           position="relative"
           backgroundColor="black"
-          p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
+          // p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
         >
           <Text variant="whytrekkingHeader1">WHY TREKKING WITH US?</Text>
 
@@ -56,43 +66,50 @@ const Whytrekking = () => {
         <Flex
           justifyContent="center"
           width="100%"
+          pb="8"
           // height="20%"
-          padding="40px 40px 40px 40px"
         >
           <Image
-            src="/images/gallery_4.png"
+            src="/images/adv2.jpg"
             borderRadius="41px"
-            width={["349px", "400px", "1304px", "1304px"]}
-            height={["349px", "450px", "500px", "500px"]}
+            width="100%"
+            height={["349px", "450px", "350px", "350px"]}
+            objectFit="cover"
           />
         </Flex>
 
-        <Flex key={"id"} justifyContent="space-evenly">
+        <Flex justifyContent="space-evenly">
+          {/* Feature Context */}
           <Flex
+            // justifyContent={[
+            //   "center",
+            //   "center",
+            //   "space-evenly",
+            //   "space-evenly",
+            // ]}
+            alignItems="start"
+            justifyContent="space-around"
+            // flexDirection={["column", "column", "row", "row"]}
+            flexDirection="row"
             flexWrap="wrap"
-            justifyContent="space-between"
-            w="100%"
-            h="100%"
-            m={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
+            gap="10"
           >
-            {Icons.map((el, key) => {
+            {Testimonal_context.map((el, key) => {
               return (
                 <Flex
-                  key={key}
-                  flex="1"
                   flexDirection="column"
-                  justifyContent="center"
                   alignItems="center"
-                  mx="2"
-                  my="4"
+                  alignSelf="start"
+                  key={key}
                 >
-                  <Image
-                    src={el.image}
-                    h={["50px", "40px", "60px", "90px"]}
-                    w={["40px", "30px", "100px", "130px"]}
-                    objectFit="contain"
-                  />
-                  <Text variant="whytrekkingHeading">{el.heading}</Text>
+                  <Flex gap="10px" alignItems="center">
+                    {/* <Image src={el.icon_1} /> */}
+                    <Text variant="testimonalHeader">{el.header}</Text>
+                    <Image src={el.icon_2} height="20px" />
+                  </Flex>
+                  <Flex>
+                    <Text variant="testimonalHeading">{el.heading}</Text>
+                  </Flex>
                 </Flex>
               );
             })}
