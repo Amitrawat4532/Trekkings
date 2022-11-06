@@ -67,6 +67,7 @@ const Whytrekking = () => {
           justifyContent="center"
           width="100%"
           pb="8"
+          my="5"
           // height="20%"
         >
           <Image
@@ -78,42 +79,42 @@ const Whytrekking = () => {
           />
         </Flex>
 
-        <Flex justifyContent="space-evenly">
-          {/* Feature Context */}
-          <Flex
-            // justifyContent={[
-            //   "center",
-            //   "center",
-            //   "space-evenly",
-            //   "space-evenly",
-            // ]}
-            alignItems="start"
-            justifyContent="space-around"
-            // flexDirection={["column", "column", "row", "row"]}
-            flexDirection="row"
-            flexWrap="wrap"
-            gap="10"
-          >
-            {Testimonal_context.map((el, key) => {
-              return (
-                <Flex
-                  flexDirection="column"
-                  alignItems="center"
-                  alignSelf="start"
-                  key={key}
-                >
-                  <Flex gap="10px" alignItems="center">
-                    {/* <Image src={el.icon_1} /> */}
-                    <Text variant="testimonalHeader">{el.header}</Text>
-                    <Image src={el.icon_2} height="20px" />
-                  </Flex>
-                  <Flex>
-                    <Text variant="testimonalHeading">{el.heading}</Text>
-                  </Flex>
+        {/* Feature Context */}
+        <Flex
+          // justifyContent={[
+          //   "center",
+          //   "center",
+          //   "space-evenly",
+          //   "space-evenly",
+          // ]}
+          px="4"
+          mb="4"
+          alignItems="start"
+          justifyContent="space-between"
+          // flexDirection={["column", "column", "row", "row"]}
+          flexDirection="row"
+          flexWrap="wrap"
+          gap="10"
+        >
+          {Testimonal_context.map((el, key) => {
+            return (
+              <Flex
+                flexDirection="column"
+                alignItems="center"
+                alignSelf="start"
+                key={key}
+              >
+                <Flex gap="10px" alignItems="center">
+                  {/* <Image src={el.icon_1} /> */}
+                  <Text variant="testimonalHeader">{el.header}</Text>
+                  <Image src={el.icon_2} height="20px" />
                 </Flex>
-              );
-            })}
-          </Flex>
+                <Flex>
+                  <Text variant="testimonalHeading">{el.heading}</Text>
+                </Flex>
+              </Flex>
+            );
+          })}
         </Flex>
       </Flex>
     </>

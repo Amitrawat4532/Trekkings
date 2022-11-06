@@ -12,7 +12,7 @@ const Testimonal = () => {
         flexDirection="column"
         justifyContent="space-evenly"
         minHeight="60vh"
-        py="5"
+        pb="5"
       >
         <Flex
           position="relative"
@@ -26,12 +26,14 @@ const Testimonal = () => {
 
           <Text variant="testimonalHeader2">WHAT THEY SAY ABOUT US</Text>
         </Flex>
+
         {/* $$$$$$$$$$$$$testimonal container$$$$$$$$$$$$4 */}
         <Flex background="#606060">
           <Image
             src="./images/leftarrow.png"
             width={["60px", "65px", "76px", "76px"]}
-            height={["62px", "68px", "78px", "78px"]}
+            // height={["62px", "68px", "78px", "78px"]}
+            h="auto"
             alignSelf="center"
           />
           {/* Main Testimonal */}
@@ -41,7 +43,7 @@ const Testimonal = () => {
             justifyContent="center"
             alignItems="center"
             gap="5%"
-            padding={["20px", "30px", "40px", "70px"]}
+            p="20px"
             flexDirection={["column", "column", "row", "row"]}
           >
             <Flex
@@ -59,14 +61,14 @@ const Testimonal = () => {
                 height={["100px", "100px", "178px", "178px"]}
               />
               <Box
-                width={["50px", "50px", "60px", "60px"]}
-                height={["50px", "50px", "60px", "60px"]}
+                w="30px"
+                h="30px"
                 borderRadius="50px"
                 background="#ABAAAA"
-                p="15px"
+                p="5px"
                 position="absolute"
-                right="-10px"
-                top="-10px"
+                right={["0px", "0px", "10px", "10px"]}
+                top="0px"
               >
                 <Image src="./images/uppercoma.png" />
               </Box>
