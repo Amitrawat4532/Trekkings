@@ -146,8 +146,8 @@ const Blog = () => {
             >
               {vlogs.map((el, key) => {
                 return (
-                  <SwiperSlide>
-                    <Flex alignItems="center" justifyContent="center" key={key}>
+                  <SwiperSlide key={key}>
+                    <Flex alignItems="center" justifyContent="center">
                       <Flex
                         // width="545px"
                         // height="405px"
