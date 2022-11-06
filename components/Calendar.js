@@ -100,7 +100,7 @@ const CalendarComp = () => {
               onChange={onChange}
               value={value}
               className="calendar"
-              maxDetail="month"
+              // maxDetail="month"
               tileClassName={({ date, view }) => {
                 if (
                   trek.find(

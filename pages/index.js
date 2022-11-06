@@ -21,7 +21,7 @@ const index = () => {
         <Home />
         <UpcomingTrek />
         <About />
-        UpcomingTrek <Destination />
+        <Destination />
         <Services />
         {/* <Videobox /> */}
         <Whytrekking />
