@@ -36,8 +36,9 @@ a {
 
 } */
 
+
 .calendar .react-calendar__month-view__days {
-  height: 350px !important;
+  height: 300px !important;
   /* background: #000; */
 }
 

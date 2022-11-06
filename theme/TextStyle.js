@@ -305,7 +305,7 @@ export const TextStyle = {
     },
     blogParagraph: {
       fontWeight: "300",
-      fontSize: ["10px", "10px", "12px", "15px"],
+      fontSize: ["14px", "14px", "18px", "18px"],
       letterSpacing: "0.02em",
       color: "white",
       fontFamily: "kanit",

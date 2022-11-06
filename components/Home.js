@@ -8,7 +8,7 @@ const Home = () => {
       <Flex
         className="home_container"
         w="100vw"
-        h={["100vh", "100vh", "120vh", "130vh"]}
+        h={["100vh", "100vh", "120vh", "120vh"]}
         bgImg={[
           "url('/images/bg6.png')",
           "url('/images/bg6.png')",
