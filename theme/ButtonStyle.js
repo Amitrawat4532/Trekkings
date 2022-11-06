@@ -56,7 +56,7 @@ export const ButtonStyle = {
     footerButton: {
       background: "#FF3606",
       width: ["100px", "130px", "180px", "210px"],
-      height: ["38px", "45px", "55px", "60px"],
+      height: ["38px", "45px", "50px", "50px"],
       fontWeight: "100",
       fontSize: ["17px", "21px", "25px", "30px"],
       color: "#FFFFFF",

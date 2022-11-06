@@ -81,17 +81,10 @@ const Whytrekking = () => {
 
         {/* Feature Context */}
         <Flex
-          // justifyContent={[
-          //   "center",
-          //   "center",
-          //   "space-evenly",
-          //   "space-evenly",
-          // ]}
           px="4"
           mb="4"
           alignItems="start"
-          justifyContent="space-between"
-          // flexDirection={["column", "column", "row", "row"]}
+          justifyContent="space-evenly"
           flexDirection="row"
           flexWrap="wrap"
           gap="10"

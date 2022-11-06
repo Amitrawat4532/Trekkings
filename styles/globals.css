@@ -85,6 +85,13 @@ body {
 
 }
 
+@media only screen and (max-width:480px){
+
+.blogs_slider{
+  width: 280px;
+}
+  
+}
 
 @media (prefers-color-scheme: dark) {
   html {

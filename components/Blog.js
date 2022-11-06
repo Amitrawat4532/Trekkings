@@ -106,6 +106,7 @@ const Blog = () => {
           justifyContent="center"
           alignItems="center"
           flexWrap="wrap"
+          flexDirection={["column", "column", "row", "row"]}
         >
           <Flex width="auto" flex="1" p="5">
             <Text variant="blogParagraph">
@@ -137,7 +138,7 @@ const Blog = () => {
             </Text>
           </Flex>
 
-          <Flex w="100%" flex="1">
+          <Flex w="100%" flex="1" my="4">
             <Swiper
               effect={"cards"}
               grabCursor={true}
@@ -149,8 +150,6 @@ const Blog = () => {
                   <SwiperSlide key={key}>
                     <Flex alignItems="center" justifyContent="center">
                       <Flex
-                        // width="545px"
-                        // height="405px"
                         flexDirection="column"
                         p="20px 0px 20px 0px"
                         alignItems={["center", "center", "start", "start"]}
@@ -159,7 +158,7 @@ const Blog = () => {
                           mb="2"
                           src={el.Image}
                           borderRadius="61px"
-                          width={["350px", "350px", "350px", "350px"]}
+                          width={["250px", "250px", "350px", "350px"]}
                           height={["200px", "200px", "300px", "300px"]}
                         />
                         <Text variant="blogHeader">{el.header}</Text>

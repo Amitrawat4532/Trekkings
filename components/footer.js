@@ -11,7 +11,12 @@ const Footer = () => {
         height={["121px", "200px", "210px", "300px"]}
       >
         <Image src="./images/footer1.png" />
-        <Image src="./images/footer2.png" position="relative" top="25px" />
+        <Image
+          src="./images/footer2.png"
+          position="relative"
+          top={["10px", "10px", "25px", "25px"]}
+          width="50vw"
+        />
       </Flex>
       {/* ***********end************** */}
 
@@ -20,26 +25,22 @@ const Footer = () => {
         background="black"
         width="100%"
         justifyContent="center"
-        flexWrap="wrap"
+        flexDirection={["column", "column", "row", "row"]}
+        // flexWrap="wrap"
       >
         {/* *****footer logo***** */}
-        <Flex
-          width={["250px", "350px", "450px", "555px"]}
-          height={["180px", "180px", "288px", "288px"]}
-        >
-          <Image src="./images/footerlogo.png" width="100%" height="100%" />
+        <Flex width="100%" height="100%" justifyContent="center">
+          <Image
+            src="./images/footerlogo.png"
+            width={["250px", "350px", "450px", "555px"]}
+            height={["180px", "180px", "288px", "288px"]}
+          />
         </Flex>
         {/* *****end***** */}
 
         {/* *********main link div******** */}
-        <Flex
-          //   gap="100px"
-
-          width={["58%", "64%", "54%", "54%"]}
-          justifyContent="start"
-          margin="auto"
-        >
-          <Box width={["376px"]}>
+        <Flex width="100%" justifyContent="center" margin="auto">
+          <Box width="100%" pl={["20%", "20%", "0%", "0%"]}>
             <Text variant="footerQuicklink">QUICK LINKS</Text>
 
             <Text variant="footerQuicklinks">
@@ -67,7 +68,7 @@ const Footer = () => {
               OUR TEAM
             </Text>
           </Box>
-          <Box width="376px">
+          <Box width="100%" pl={["10%", "10%", "0%", "0%"]}>
             <Text variant="footerQuicklink">USEFUL LINKS</Text>
 
             <Text variant="footerQuicklinks">
@@ -132,7 +133,7 @@ const Footer = () => {
             placeholder="enter your email I'd"
             background="#fffff"
             width={["250px", "300px", "350px", "400px"]}
-            height={["38px", "45px", "55px", "60px"]}
+            height={["38px", "45px", "50px", "50px"]}
             borderRadius={["50px", "50px", "0px", "0px"]}
             fontSize={["15px", "12px", "15px", "15px"]}
             color="black"
