@@ -155,10 +155,10 @@ const CalendarComp = () => {
               // selectRange={true}
               // next2Label={false}
               // prev2Label={false}
-              onViewChange={(props) => onCalendarChange(props)}
               // nextAriaLabel={(props)=>onCalendarChange(props)}
-              onClickDay={(props) => onDateSelect(props)}
-              onActiveStartDateChange={(props) => onCalendarChange(props)}
+              // onViewChange={(props) => onCalendarChange(props)}
+              // onClickDay={(props) => onDateSelect(props)}
+              // onActiveStartDateChange={(props) => onCalendarChange(props)}
             />
           </PopoverBody>
         </PopoverContent>
