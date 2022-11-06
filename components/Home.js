@@ -8,7 +8,7 @@ const Home = () => {
       <Flex
         className="home_container"
         w="100vw"
-        h={["100vh", "100vh", "120vh", "120vh"]}
+        h={["100vh", "100vh", "120vh", "130vh"]}
         bgImg={[
           "url('/images/bg6.png')",
           "url('/images/bg6.png')",
@@ -22,16 +22,7 @@ const Home = () => {
         // border="1px solid red"
       >
         {/* heading container */}
-        <Box
-          // transform={[
-          //   "translateY(72%)",
-          //   "translateY(72%)",
-          //   "translateX(-50%)",
-          //   "translateX(-20%) translateY(-40%)",
-          // ]}
-          position="relative"
-          top={["20", "20", "-10", "-10"]}
-        >
+        <Box position="relative" top={["20", "20", "-10", "-10"]}>
           <Text variant="homeHeader1">MAKE THE</Text>
 
           <Text variant="homeHeader2">IMPOSSIBLE</Text>

@@ -36,7 +36,7 @@ function About() {
         py="10"
         flexWrap="wrap"
         gap="80px"
-        backgroundSize="90%"
+        backgroundSize="70%"
         backgroundPosition="center"
         bgRepeat="no-repeat"
       >

@@ -41,7 +41,7 @@ export const TextStyle = {
     homeHeader2: {
       as: "p",
       color: "#FF4417",
-      fontSize: ["50px", "60px", "70px", "100px"],
+      fontSize: ["55px", "60px", "70px", "100px"],
       fontWeight: "400",
       fontFamily: "Rubik Glitch",
       p: "0",

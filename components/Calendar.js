@@ -81,13 +81,16 @@ const CalendarComp = () => {
   return (
     <>
       <Flex
-        bg="white"
         w="100vw"
-        h="100% "
+        h="100%"
         justifyContent="center"
         alignItems="center"
+        bg="url('/images/m2.png')"
+        backgroundSize={["100%", "100%", "40%", "40%"]}
+        backgroundRepeat="no-repeat"
+        bgPos="right bottom"
         flexDirection={["column", "column", "row", "row"]}
-        py={["1", "3", "6", "8"]}
+        py={["1", "3", "6", "10"]}
         flexWrap="wrap"
         gap="2"
       >
@@ -188,6 +191,7 @@ const CalendarComp = () => {
             p="6"
             w="100%"
             h="100%"
+            minH="400px"
             overflowY="auto"
           >
             {trek.filter(filterByMonth).map((el, id) => {
@@ -202,9 +206,9 @@ const CalendarComp = () => {
                     alignItems="center"
                     fontSize="20px"
                     fontWeight="600"
-                    color="#FF3606"
+                    color="#FF3603a7"
                     mb="4"
-                    bg="gray.300"
+                    bg="#cbd5e0ad"
                     height="70px"
                     // px="2"
                     borderRadius="20px"
