@@ -1,6 +1,7 @@
 import {
   Flex,
   Box,
+  Image,
   Text,
   Divider,
   useDisclosure,
@@ -20,7 +21,6 @@ import Calendar from "react-calendar";
 import moment from "moment";
 import CalendarModal from "./CalendarModal";
 import { WarningTwoIcon } from "@chakra-ui/icons";
-import Image from "next/image";
 
 const CalendarComp = () => {
   const [value, onChange] = useState(new Date());
@@ -89,7 +89,14 @@ const CalendarComp = () => {
     <>
       <Popover>
         <PopoverTrigger>
-          <Button>Trigger</Button>
+          <Button
+            py="8"
+            borderRadius="80px"
+            bg="white"
+            boxShadow="rgba(0, 0, 0, 0.56) 0px 22px 70px 4px"
+          >
+            <Image src="/images/calendarIcon.png" w="35px" h="35px" />
+          </Button>
         </PopoverTrigger>
         <PopoverContent width="350px" ml="5">
           <PopoverArrow />
