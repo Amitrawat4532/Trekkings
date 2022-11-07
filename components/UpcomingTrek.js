@@ -87,6 +87,7 @@ const UpcomingTrek = () => {
           height="500px"
           width="100%"
           justifyContent="center"
+          bg="transparent"
           //   bg="url('/images/m6.png')"
           //   backgroundSize="80%"
           //   backgroundRepeat="no-repeat"
