@@ -91,7 +91,7 @@ const CalendarComp = () => {
         <PopoverTrigger>
           <Button>Trigger</Button>
         </PopoverTrigger>
-        <PopoverContent width="400px" ml="5">
+        <PopoverContent width="350px" ml="5">
           <PopoverArrow />
           <PopoverCloseButton />
           <PopoverHeader>TREKKING CALENDAR</PopoverHeader>

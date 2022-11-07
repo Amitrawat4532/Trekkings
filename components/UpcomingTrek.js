@@ -115,7 +115,7 @@ const UpcomingTrek = () => {
             color="black"
           >
             {/* {selectedMonth} */}
-            UPCOMING TREK'S
+            UPCOMING TREKS
           </Text>
           <Box
             // border='1px solid green'
