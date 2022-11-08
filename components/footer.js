@@ -10,7 +10,8 @@ const Footer = () => {
         bgImage="url('/images/space5.jpg')"
         bgPosition="0 -674px"
         width="100%"
-        height={["121px", "200px", "210px", "300px"]}
+        // height={["121px", "200px", "210px", "300px"]}
+        h="100%"
       >
         <Image src="./images/footer1.png" className="footerImg" />
         <Image
@@ -109,12 +110,13 @@ const Footer = () => {
 
       <Flex
         backgroundColor="black"
-        height="200px"
+        height="100%"
         justifyContent="center"
         alignItems="center"
         flexDirection="column"
         gap="20px"
-        pb="30px"
+        pt="30px"
+        pb="80px"
       >
         <Text
           as="h1"

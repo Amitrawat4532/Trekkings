@@ -83,12 +83,8 @@ function About() {
                 pt={["70px", "70px", "20px", "20px"]}
                 // transform={["translatex(-20%)"]}
               >
-                <Text variant="aboutHeader">SECRET LOCATIONS</Text>
-                <Text variant="aboutParagraph">
-                  We xplore for the fun and provide you with the best and
-                  beutiful locations available here so that you can add a new
-                  chapter of your adventure with beautiful memories
-                </Text>
+                <Text variant="aboutHeader">{el?.header}</Text>
+                <Text variant="aboutParagraph">{el?.description}</Text>
                 <Text variant="aboutbutton">READ MORE</Text>
               </Flex>
             </Flex>

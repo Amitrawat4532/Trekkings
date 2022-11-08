@@ -55,7 +55,7 @@ const Whytrekking = () => {
           backgroundColor="black"
           // p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
         >
-          <Text variant="whytrekkingHeader1">WHY TREKKING WITH US?</Text>
+          <Text variant="whytrekkingHeader1">WHY TO TREK WITH US?</Text>
 
           <Text variant="whytrekkingHeader2">
             WE PROVIDE BEST HIKING AND TREKKING TO YOUR JOURNEY

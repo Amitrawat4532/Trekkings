@@ -99,7 +99,7 @@ const Services = () => {
                     maskPosition: "center",
                   }}
                   src={el?.image}
-                  objectFit="cover"
+                  objectFit="contain"
                   width={["200px", "200px", "400px", "500px"]}
                   height={["200px", "200px", "294px", "294px"]}
                 />
