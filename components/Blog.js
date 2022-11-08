@@ -50,6 +50,7 @@ const Blog = () => {
         heigh="100%"
         flexDirection="column"
         className="blogs_container"
+        py="5"
       >
         {/* Title */}
 
@@ -60,6 +61,7 @@ const Blog = () => {
           alignSelf="start"
           justifyContent="center"
           alignItems="center"
+          pb="4"
         >
           <Text variant="blogMainheader" id="latestblog">
             OUR VLOGS
