@@ -38,10 +38,10 @@ const Whytrekking = () => {
         width="100%"
         height="100%"
         flexDirection="column"
-        minHeight="100vh"
+        // minHeight="100vh"
         justifyContent="space-around"
         // p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
-        px={["10", "10", "20", "20"]}
+        px={["4", "4", "20", "20"]}
         py="20px"
       >
         {/* header container */}
@@ -74,7 +74,7 @@ const Whytrekking = () => {
             src="/images/whyTrek.png"
             borderRadius="41px"
             width="100%"
-            height={["349px", "450px", "350px", "350px"]}
+            height={["150px", "150px", "350px", "350px"]}
             objectFit="contain"
           />
         </Flex>

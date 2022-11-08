@@ -30,7 +30,7 @@ const index = () => {
         {/* <Testimonal2 /> */}
         <Blog />
         <Footer />
-        <Box position="fixed" left="5" bottom="5">
+        <Box position="fixed" left="5" bottom="5" zIndex="100">
           <CalendarComp />
         </Box>
       </Box>

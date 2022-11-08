@@ -169,7 +169,7 @@ export const TextStyle = {
     whytrekkingHeader1: {
       as: "h1",
       fontWeight: "400",
-      fontSize: ["35px", "33px", "47px", "70px"],
+      fontSize: ["32px", "32px", "47px", "70px"],
       color: "#FFFFFF",
       opacity: "0.39",
       m: "0",
@@ -182,7 +182,7 @@ export const TextStyle = {
     whytrekkingHeader2: {
       as: "h3",
       position: "absolute",
-      fontSize: ["15px", "15px", "18px", "20px"],
+      fontSize: ["12px", "12px", "18px", "20px"],
       fontWeight: "400",
       color: "#FFFFFF",
       fontFamily: "anton",
