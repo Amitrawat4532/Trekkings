@@ -79,10 +79,22 @@ body {
 
 .blogs_slider .swiper-slide{
   border-radius: 20px;
-  background: #ff4b1f;  /* fallback for old browsers */
+  /* background: #ff4b1f;  fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ff9068, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: linear-gradient(to right, #ff9068, #ff4b1f); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
+  /* background: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+  /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
+  /* background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; */
+  /* background-blend-mode: multiply,multiply; */
+
+  /* background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%); */
+  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+  /* background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%); */
+  background-image: linear-gradient(to left, #d7d2cc 0%, #304352 100%);
+
+
+
 
 }
 

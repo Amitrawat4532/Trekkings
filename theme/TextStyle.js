@@ -171,7 +171,7 @@ export const TextStyle = {
       fontWeight: "400",
       fontSize: ["35px", "33px", "47px", "70px"],
       color: "#FFFFFF",
-      opacity: "0.19",
+      opacity: "0.39",
       m: "0",
       textAlign: ["center", "center", "start", "start"],
       textTransform: "uppercase",

@@ -57,31 +57,31 @@ const Navbar = () => {
           <Button
             variant="navButton"
             link="latestblog"
-            onClick={() => jump(".home_container", { duration: 2000 })}
+            onClick={() => jump(".home_container", { duration: 1000 })}
           >
             Home
           </Button>
           <Button
             variant="navButton"
-            onClick={() => jump(".about_container", { duration: 4000 })}
+            onClick={() => jump(".about_container", { duration: 2000 })}
           >
             About Us
           </Button>
           <Button
             variant="navButton"
-            onClick={() => jump(".service_container", { duration: 6000 })}
+            onClick={() => jump(".service_container", { duration: 3000 })}
           >
             Service
           </Button>
           <Button
             variant="navButton"
-            onClick={() => jump(".gallery_container", { duration: 8000 })}
+            onClick={() => jump(".gallery_container", { duration: 4000 })}
           >
             Gallery
           </Button>
           <Button
             variant="blogButton"
-            onClick={() => jump(".blog_container", { duration: 10000 })}
+            onClick={() => jump(".blogs_container", { duration: 5000 })}
           >
             Latest Blog
           </Button>
@@ -122,7 +122,7 @@ const Navbar = () => {
                 variant="responsiveNavButton"
                 onClick={() => {
                   onClose();
-                  jump(".home_container", { duration: 2000 });
+                  jump(".home_container", { duration: 1000 });
                 }}
               >
                 Home
@@ -130,7 +130,7 @@ const Navbar = () => {
               <Button
                 onClick={() => {
                   onClose();
-                  jump(".about_container", { duration: 4000 });
+                  jump(".about_container", { duration: 2000 });
                 }}
                 variant="responsiveNavButton"
               >
@@ -139,7 +139,7 @@ const Navbar = () => {
               <Button
                 onClick={() => {
                   onClose();
-                  jump(".service_container", { duration: 6000 });
+                  jump(".service_container", { duration: 3000 });
                 }}
                 variant="responsiveNavButton"
               >
@@ -148,7 +148,7 @@ const Navbar = () => {
               <Button
                 onClick={() => {
                   onClose();
-                  jump(".gallery_container", { duration: 8000 });
+                  jump(".gallery_container", { duration: 4000 });
                 }}
                 variant="responsiveNavButton"
               >
@@ -157,7 +157,7 @@ const Navbar = () => {
               <Button
                 onClick={() => {
                   onClose();
-                  jump(".blog_container", { duration: 10000 });
+                  jump(".blogs_container", { duration: 5000 });
                 }}
                 variant="responsiveNavButton"
               >

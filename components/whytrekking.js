@@ -71,11 +71,11 @@ const Whytrekking = () => {
           // height="20%"
         >
           <Image
-            src="/images/adv2.jpg"
+            src="/images/whyTrek.png"
             borderRadius="41px"
             width="100%"
             height={["349px", "450px", "350px", "350px"]}
-            objectFit="cover"
+            objectFit="contain"
           />
         </Flex>
 

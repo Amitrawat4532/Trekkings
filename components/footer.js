@@ -6,7 +6,9 @@ const Footer = () => {
     <>
       {/* ***********IMAGE********** */}
       <Flex
-        background="#FF4417"
+        // background="#FF4417"
+        bgImage="url('/images/space5.jpg')"
+        bgPosition="0 -674px"
         width="100%"
         height={["121px", "200px", "210px", "300px"]}
       >

@@ -44,10 +44,12 @@ const Blog = () => {
   return (
     <>
       <Flex
-        background="  #FF4417"
+        // background="#2A2550"
+        bgImage="url('/images/space5.jpg')"
         width="100%"
         heigh="100%"
         flexDirection="column"
+        className="blogs_container"
       >
         {/* Title */}
 
@@ -63,7 +65,7 @@ const Blog = () => {
             OUR VLOGS
           </Text>
 
-          <Text variant="blogMainheader1">LATEST VLOG</Text>
+          {/* <Text variant="blogMainheader1">LATEST VLOG</Text> */}
         </Flex>
 
         {/* card container */}
@@ -126,6 +128,12 @@ const Blog = () => {
               deserunt est dolore duis sunt exercitation et commodo aute anim
               excepteur excepteur voluptate.
             </Text>
+            {/* <Image
+              src="/images/whyTrek.png"
+              w="100%"
+              h="500px"
+              objectFit="contain"
+            /> */}
           </Flex>
 
           <Flex w="100%" flex="1" my="4">
