@@ -12,8 +12,9 @@ const Footer = () => {
         width="100%"
         height={["121px", "200px", "210px", "300px"]}
       >
-        <Image src="./images/footer1.png" />
+        <Image src="./images/footer1.png" className="footerImg" />
         <Image
+          className="footerImg"
           src="./images/footer2.png"
           position="relative"
           top={["10px", "10px", "25px", "25px"]}

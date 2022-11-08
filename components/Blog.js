@@ -68,39 +68,6 @@ const Blog = () => {
           {/* <Text variant="blogMainheader1">LATEST VLOG</Text> */}
         </Flex>
 
-        {/* card container */}
-        {/* <Flex
-          flexWrap="wrap"
-          justifyContent="center"
-          gap="5%"
-          alignItems="center"
-        >
-          {vlogs.map((el, key) => {
-            return (
-              <Flex alignItems="center" key={key}>
-                <Flex
-                  // width="545px"
-                  // height="405px"
-                  flexDirection="column"
-                  p="20px 0px 20px 0px"
-                  alignItems={["center", "center", "start", "start"]}
-                >
-                  <Image
-                    src={el.Image}
-                    borderRadius="61px"
-                    width={["250px", "350px", "400px", "500px"]}
-                    height={["200px", "250px", "300px", "405px"]}
-                  />
-                  <Text variant="blogHeader">{el.header}</Text>
-                  <Text variant="blogDate">{el.date}</Text>
-                  <Text variant="blogParagraph">{el.paragraph}</Text>
-                  <Text variant="blogReadmore">{el.readmore_button}</Text>
-                </Flex>
-              </Flex>
-            );
-          })}
-        </Flex> */}
-
         <Flex
           w="100%"
           h="100%"
