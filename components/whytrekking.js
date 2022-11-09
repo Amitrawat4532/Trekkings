@@ -97,6 +97,11 @@ const Whytrekking = () => {
                 alignItems="center"
                 alignSelf="start"
                 key={key}
+                // transform={
+                //   key === 0 || key === Testimonal_context.length - 1
+                //     ? ["none", "none", "none", "translateY(-50px)"]
+                //     : "none"
+                // }
               >
                 <Flex gap="10px" alignItems="center">
                   {/* <Image src={el.icon_1} /> */}

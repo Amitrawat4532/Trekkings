@@ -8,7 +8,7 @@ const Footer = () => {
       <Flex
         // background="#FF4417"
         bgImage="url('/images/space5.jpg')"
-        bgPosition="0 -674px"
+        bgPosition="0 -694px"
         width="100%"
         // height={["121px", "200px", "210px", "300px"]}
         h="100%"
@@ -153,8 +153,8 @@ const Footer = () => {
         alignItems="center"
         bgColor="black"
       >
-        <Text fontSize="20px" color="white">
-          © 2022 Trekkings. All right reserve
+        <Text fontSize={["16px", "16px", "20px", "20px"]} color="white">
+          © 2022 Trekkings. All right reserved.
         </Text>
       </Flex>
     </>
