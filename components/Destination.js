@@ -46,7 +46,7 @@ function Destination() {
         flexDirection="column"
         px={["0", "0", "20", "20"]}
         py={["6", "6", "50px", "50px"]}
-        minHeight="90vh"
+        minHeight="75vh"
         justifyContent="space-around"
         gap="7"
         mx="auto"

@@ -153,7 +153,10 @@ const Footer = () => {
         alignItems="center"
         bgColor="black"
       >
-        <Text fontSize={["16px", "16px", "20px", "20px"]} color="white">
+        <Text
+          fontSize={["16px", "16px", "20px", "20px"]}
+          color="whiteAlpha.600"
+        >
           © 2022 Trekkings. All right reserved.
         </Text>
       </Flex>
