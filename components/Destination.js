@@ -41,17 +41,17 @@ function Destination() {
       <Flex
         // width={["96%", "96%", "92%", "92%"]}
         h="100%"
-        w="96%"
+        w={["100%", "100%", "96%", "96%"]}
         backgroundColor="#666161e3"
         flexDirection="column"
         px={["0", "0", "20", "20"]}
-        py={["10", "10", "50px", "50px"]}
+        py={["6", "6", "50px", "50px"]}
         minHeight="90vh"
         justifyContent="space-around"
         gap="7"
         mx="auto"
         my="50px"
-        borderRadius="50px"
+        borderRadius={["0px", "0px", "50px", "50px"]}
         // boxShadow="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
         // borderRadius="3% 3% 3% 3% / 50% 50% 50% 50%"
       >
