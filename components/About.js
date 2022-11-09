@@ -85,7 +85,9 @@ function About() {
               >
                 <Text variant="aboutHeader">{el?.header}</Text>
                 <Text variant="aboutParagraph">{el?.description}</Text>
-                <Text variant="aboutbutton">READ MORE</Text>
+                <Text variant="aboutbutton" fontWeight="600">
+                  READ MORE &rarr;
+                </Text>
               </Flex>
             </Flex>
           );
@@ -119,7 +121,7 @@ function About() {
           fontFamily="anton"
           textAlign="center"
         >
-          EXPLORE ALL TREKKING--
+          EXPLORE ALL TREKKING &rarr;
         </Text>
       </Flex>
     </>

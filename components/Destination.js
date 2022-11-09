@@ -75,7 +75,7 @@ function Destination() {
             HERE WE LIST OUR MOST POPULAR DESTINATIONS WE HAD AND FULL DETAILS
             ARE AS FOLLOWED
           </Text>
-          <Button
+          {/* <Button
             backgroundColor="#FF3606"
             color="#FFFFFF"
             width={["100px", "100px", "159px", "159px"]}
@@ -84,7 +84,7 @@ function Destination() {
             m={["8px auto", "8px auto", "8px auto", "0"]}
           >
             View All
-          </Button>
+          </Button> */}
         </Flex>
 
         {/* card container */}
@@ -197,7 +197,7 @@ function Destination() {
                   </Box>
                 </Flex>
                 <Text variant="destinationStartexploring" minWidth="300px">
-                  START EXPLORING--
+                  START EXPLORING--&rarr;
                 </Text>
               </Flex>
               //   **************

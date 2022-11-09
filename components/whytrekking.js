@@ -50,9 +50,10 @@ const Whytrekking = () => {
           width="100%"
           flexDirection="column"
           justifyContent="center"
-          alignItems={["center", "center", "start", "start"]}
+          alignItems="center"
           position="relative"
           backgroundColor="black"
+          p="20px"
           // p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
         >
           <Text variant="whytrekkingHeader1">WHY TO TREK WITH US?</Text>

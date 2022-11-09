@@ -147,6 +147,16 @@ const Footer = () => {
           <Button variant="footerButton">Send</Button>
         </Flex>
       </Flex>
+      <Flex
+        height="50px"
+        justifyContent="center"
+        alignItems="center"
+        bgColor="black"
+      >
+        <Text fontSize="20px" color="white">
+          © 2022 Trekkings. All right reserve
+        </Text>
+      </Flex>
     </>
   );
 };
