@@ -100,6 +100,9 @@ const Gallery = () => {
           </Text>
           THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU NEVER
           THOUGHT TO ASK
+          <Text as="span" fontSize="40px" color="red" fontFamily="anton">
+            &#34;
+          </Text>
         </Text>
       </Flex>
     </>
