@@ -115,6 +115,7 @@ import {
   Container,
   Avatar,
   useColorModeValue,
+  background,
 } from "@chakra-ui/react";
 
 const Testimonial = ({ children }) => {
@@ -188,7 +189,7 @@ const TestimonialAvatar = ({ src, name, title }) => {
 
 export default function WithSpeechBubbles() {
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.700")}>
+    <Box bg={useColorModeValue("wheat")}>
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
           <Heading>Our Clients Speak</Heading>
@@ -199,7 +200,7 @@ export default function WithSpeechBubbles() {
           spacing={{ base: 10, md: 4, lg: 10 }}
         >
           <Testimonial>
-            <TestimonialContent>
+            <TestimonialContent background="red">
               <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
               <TestimonialText>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
