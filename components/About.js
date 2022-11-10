@@ -30,7 +30,7 @@ function About() {
       <Flex
         className="about_container"
         width="100%"
-        minHeight="70vh"
+        // minHeight="70vh"
         height="100%"
         justifyContent="center"
         backgroundImage="url('/images/bg1.png')"

@@ -181,7 +181,7 @@ const TestimonialContent = ({ children }) => {
 
 const TestimonialHeading = ({ children }) => {
   return (
-    <Heading as={"h3"} fontSize={"xl"}>
+    <Heading as={"h3"} fontSize={"xl"} textAlign="center">
       {children}
     </Heading>
   );
@@ -204,8 +204,14 @@ const TestimonialAvatar = ({ src, name, title }) => {
     <Flex align={"center"} mt={8} direction={"column"}>
       <Avatar src={src} alt={name} mb={2} />
       <Stack spacing={-1} align={"center"}>
-        <Text fontWeight={600}>{name}</Text>
-        <Text fontSize={"sm"} color={useColorModeValue("gray.600", "gray.400")}>
+        <Text textAlign="center" fontWeight={600}>
+          {name}
+        </Text>
+        <Text
+          fontSize={"sm"}
+          textAlign="center"
+          color={useColorModeValue("gray.600", "gray.400")}
+        >
           {title}
         </Text>
       </Stack>
@@ -239,7 +245,9 @@ export default function WithSpeechBubbles() {
               <AnimationOnScroll animateIn="animate__zoomInUp" key={key}>
                 <Testimonial>
                   <TestimonialContent>
-                    <TestimonialHeading>{el?.header}</TestimonialHeading>
+                    <TestimonialHeading textAlign="center">
+                      {el?.header}
+                    </TestimonialHeading>
                     <TestimonialText>{el?.message}</TestimonialText>
                   </TestimonialContent>
                   <TestimonialAvatar
