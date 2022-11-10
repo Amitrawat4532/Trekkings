@@ -39,12 +39,10 @@ function Destination() {
     <>
       {/* main container */}
       <Flex
-        width="100%"
-        height="100%"
-        backgroundColor="wheat"
         // width={["96%", "96%", "92%", "92%"]}
         h="100%"
         w={["100%", "100%", "96%", "96%"]}
+        backgroundColor="#666161e3"
         flexDirection="column"
         px={["0", "0", "20", "20"]}
         py={["6", "6", "50px", "50px"]}
