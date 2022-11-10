@@ -1,5 +1,5 @@
-import { Box, Flex } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, ScaleFade } from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
 
 const StartLoader = () => {
   return (

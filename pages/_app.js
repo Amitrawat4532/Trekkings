@@ -6,16 +6,35 @@ import "@fontsource/anton/400.css";
 import "@fontsource/sen";
 import "@fontsource/rubik-glitch";
 import "@fontsource/kanit";
+import StartLoader from "../components/StartLoader";
+import { Box, ScaleFade } from "@chakra-ui/react";
 
 import customTheme from "../theme/customTheme";
+import React, { useState, useEffect } from "react";
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
-  return (
-    <ChakraProvider theme={customTheme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
-  );
+  const [startAnim, setStartAnim] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setStartAnim(false);
+    }, 2000);
+  }, []);
+
+  if (!startAnim) {
+    return (
+      <ChakraProvider theme={customTheme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    );
+  } else {
+    return (
+      <ScaleFade initialScale={0.9} in={startAnim}>
+        <StartLoader />
+      </ScaleFade>
+    );
+  }
 }
 
 export default MyApp;
