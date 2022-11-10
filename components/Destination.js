@@ -41,7 +41,7 @@ function Destination() {
       <Flex
         width="100%"
         height="100%"
-        backgroundColor="#717171"
+        backgroundColor="wheat"
         flexDirection="column"
         px={["0", "0", "20", "20"]}
         pt={["5", "5", "10", "10"]}

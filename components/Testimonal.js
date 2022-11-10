@@ -200,7 +200,7 @@ export default function WithSpeechBubbles() {
           spacing={{ base: 10, md: 4, lg: 10 }}
         >
           <Testimonial>
-            <TestimonialContent background="red">
+            <TestimonialContent>
               <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
               <TestimonialText>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
