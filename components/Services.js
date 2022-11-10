@@ -94,12 +94,13 @@ const Services = () => {
                 <Image
                   css={{
                     maskImage: "url('/images/stroke_mask.png')",
-                    maskSize: "140%",
+                    maskSize: "134%",
                     maskRepeat: "no-repeat",
                     maskPosition: "center",
                   }}
                   src={el?.image}
-                  objectFit="contain"
+                  objectPosition="center"
+                  objectFit="cover"
                   width={["200px", "200px", "400px", "500px"]}
                   height={["200px", "200px", "294px", "294px"]}
                 />

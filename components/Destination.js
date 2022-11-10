@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Button, Image, Span } from "@chakra-ui/react";
+import { Box, Text, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 
 function Destination() {
@@ -42,12 +42,20 @@ function Destination() {
         width="100%"
         height="100%"
         backgroundColor="wheat"
+        // width={["96%", "96%", "92%", "92%"]}
+        h="100%"
+        w={["100%", "100%", "96%", "96%"]}
         flexDirection="column"
         px={["0", "0", "20", "20"]}
-        pt={["5", "5", "10", "10"]}
-        minHeight="80vh"
+        py={["6", "6", "50px", "50px"]}
+        minHeight="75vh"
         justifyContent="space-around"
-        gap="6"
+        gap="7"
+        mx="auto"
+        my="50px"
+        borderRadius={["0px", "0px", "50px", "50px"]}
+        // boxShadow="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+        // borderRadius="3% 3% 3% 3% / 50% 50% 50% 50%"
       >
         {/* header container */}
         <Flex

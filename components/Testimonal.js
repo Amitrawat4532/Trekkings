@@ -105,7 +105,6 @@
 //     </>
 //   );
 // };
-import { ReactNode } from "react";
 import {
   Box,
   Flex,
@@ -115,7 +114,6 @@ import {
   Container,
   Avatar,
   useColorModeValue,
-  background,
 } from "@chakra-ui/react";
 
 const Testimonial = ({ children }) => {
@@ -189,10 +187,19 @@ const TestimonialAvatar = ({ src, name, title }) => {
 
 export default function WithSpeechBubbles() {
   return (
-    <Box bg={useColorModeValue("wheat")}>
-      <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
+    <Box bg={useColorModeValue("gray.100", "gray.700")}>
+      <Container maxW={"7xl"} py={10} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
-          <Heading>Our Clients Speak</Heading>
+          <Text
+            fontSize="32px"
+            fontWeight="800"
+            fontFamily="anton"
+            textTransform="uppercase"
+            color="black"
+            letterSpacing={["3px", "3px", "5px", "5px"]}
+          >
+            Our Clients Speak
+          </Text>
           <Text>We have been working with clients around the world</Text>
         </Stack>
         <Stack

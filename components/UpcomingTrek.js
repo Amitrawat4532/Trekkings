@@ -80,6 +80,7 @@ const UpcomingTrek = () => {
         py="2"
         flexWrap="wrap"
         gap="2"
+        mb={["45px", "45px", "4", "4"]}
       >
         <Flex
           // border='1px solid green'

@@ -29,7 +29,7 @@ function About() {
       <Flex
         className="about_container"
         width="100%"
-        minHeight="85vh"
+        minHeight="70vh"
         height="100%"
         justifyContent="center"
         backgroundImage="url('/images/bg1.png')"
@@ -39,6 +39,7 @@ function About() {
         backgroundSize="70%"
         backgroundPosition="center"
         bgRepeat="no-repeat"
+        // border="1px solid red"
       >
         {/* card container */}
         {cards.map((el, id) => {
