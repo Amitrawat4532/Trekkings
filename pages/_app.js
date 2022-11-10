@@ -6,6 +6,7 @@ import "@fontsource/anton/400.css";
 import "@fontsource/sen";
 import "@fontsource/rubik-glitch";
 import "@fontsource/kanit";
+import "animate.css/animate.min.css";
 import StartLoader from "../components/StartLoader";
 import { Box, ScaleFade } from "@chakra-ui/react";
 
@@ -14,7 +15,7 @@ import React, { useState, useEffect } from "react";
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
-  const [startAnim, setStartAnim] = useState(true);
+  const [startAnim, setStartAnim] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {

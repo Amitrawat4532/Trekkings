@@ -1,5 +1,6 @@
 import { Box, Text, Flex, Image } from "@chakra-ui/react";
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Destination() {
   const Gallery = [
@@ -94,122 +95,126 @@ function Destination() {
         </Flex>
 
         {/* card container */}
-        <Flex
-          justifyContent="space-between"
-          width="100%"
-          // flexWrap="wrap"
-          gap="8"
-          overflowY="auto"
-          css={{
-            "&::-webkit-scrollbar": {
-              width: "4px",
-              height: "4px",
-            },
-            "&::-webkit-scrollbar-track": {
-              width: "6px",
-              marginTop: "15px",
-            },
-            "&::-webkit-scrollbar-thumb": {
-              background: "gray",
-              borderRadius: "24px",
-            },
-          }}
-          scrollSnapType="x mandatory"
-          px={["8", "8", "0", "0"]}
-          mb="10"
-        >
-          {Gallery.map((el, id) => {
-            return (
-              //   *********
-              <Flex
-                key={id}
-                // width="392.75px"
-                // height="100%"
-                // flex="1"
-                width={["100%", "100%", "500px", "500px"]}
-                height="100%"
-                position="relative"
-                justifyContent="end"
-                alignItems="center"
-                flexDirection="column"
-                //   pb="10px"
-                my="4"
-                padding="auto"
-                margin="auto"
-                scrollSnapAlign="center"
-              >
-                <Image src={el.img} />
-                <Flex
-                  height="64px"
-                  width={["95%", "90%", "76%", "100%"]}
-                  position="absolute"
-                  justifyContent="space-evenly"
-                  bottom="50px"
-                >
-                  <Box
-                    height={["50px", "55px", "60px", "64px"]}
-                    width={["48px", "55px", "66px", "70px"]}
-                    backgroundColor="#FF4417"
-                    textAlign="center"
-                    padding="9px 3px 0px 2px"
-                  >
-                    <Text
-                      as="h1"
-                      color="#FFFFFF"
-                      fontWeight="400"
-                      fontSize={["10px", "12px", "15px", "15px"]}
-                      fontFamily="anton"
-                    >
-                      {el.person}
-                    </Text>
-                    <Text variant="destinationPerson">PERSON</Text>
-                  </Box>
 
-                  <Box
-                    padding="9px 3px 0px 2px"
-                    height={["50px", "55px", "60px", "64px"]}
-                    width={["48px", "55px", "66px", "70px"]}
-                    backgroundColor="#FF4417"
-                    textAlign="center"
+        <AnimationOnScroll
+          animateIn="animate__fadeInUp"
+          // animateOut="animate__fadeOutUP"
+        >
+          <Flex
+            justifyContent="space-between"
+            width="100%"
+            // flexWrap="wrap"
+            gap="8"
+            overflowY="auto"
+            css={{
+              "&::-webkit-scrollbar": {
+                width: "4px",
+                height: "4px",
+              },
+              "&::-webkit-scrollbar-track": {
+                width: "6px",
+                marginTop: "15px",
+              },
+              "&::-webkit-scrollbar-thumb": {
+                background: "gray",
+                borderRadius: "24px",
+              },
+            }}
+            scrollSnapType="x mandatory"
+            px={["8", "8", "0", "0"]}
+            mb="10"
+          >
+            {Gallery.map((el, id) => {
+              return (
+                <Flex
+                  key={id}
+                  // width="392.75px"
+                  // height="100%"
+                  // flex="1"
+                  width={["100%", "100%", "500px", "500px"]}
+                  height="100%"
+                  position="relative"
+                  justifyContent="end"
+                  alignItems="center"
+                  flexDirection="column"
+                  //   pb="10px"
+                  my="4"
+                  padding="auto"
+                  margin="auto"
+                  scrollSnapAlign="center"
+                >
+                  <Image src={el.img} />
+                  <Flex
+                    height="64px"
+                    width={["95%", "90%", "76%", "100%"]}
+                    position="absolute"
+                    justifyContent="space-evenly"
+                    bottom="50px"
                   >
-                    <Text
-                      as="h1"
-                      color="#FFFFFF"
-                      fontWeight="400"
-                      fontSize={["10px", "12px", "15px", "15px"]}
-                      fontFamily="anton"
+                    <Box
+                      height={["50px", "55px", "60px", "64px"]}
+                      width={["48px", "55px", "66px", "70px"]}
+                      backgroundColor="#FF4417"
+                      textAlign="center"
+                      padding="9px 3px 0px 2px"
                     >
-                      {el.days}
-                    </Text>
-                    <Text variant="destinationDays">Days</Text>
-                  </Box>
-                  <Box
-                    height={["50px", "55px", "60px", "64px"]}
-                    width={["85px", "95px", "110px", "110px"]}
-                    backgroundColor="#FFFFFF"
-                    textAlign="center"
-                    padding="9px 3px 0px 2px"
-                  >
-                    <Text
-                      as="h1"
-                      fontWeight="400"
-                      fontSize={["10px", "12px", "15px", "15px"]}
-                      color="#FF4417"
-                      fontFamily="anton"
+                      <Text
+                        as="h1"
+                        color="#FFFFFF"
+                        fontWeight="400"
+                        fontSize={["10px", "12px", "15px", "15px"]}
+                        fontFamily="anton"
+                      >
+                        {el.person}
+                      </Text>
+                      <Text variant="destinationPerson">PERSON</Text>
+                    </Box>
+
+                    <Box
+                      padding="9px 3px 0px 2px"
+                      height={["50px", "55px", "60px", "64px"]}
+                      width={["48px", "55px", "66px", "70px"]}
+                      backgroundColor="#FF4417"
+                      textAlign="center"
                     >
-                      {el.price} Rs
-                    </Text>
-                    <Text variant="destinationPerperson">PER PERSON</Text>
-                  </Box>
+                      <Text
+                        as="h1"
+                        color="#FFFFFF"
+                        fontWeight="400"
+                        fontSize={["10px", "12px", "15px", "15px"]}
+                        fontFamily="anton"
+                      >
+                        {el.days}
+                      </Text>
+                      <Text variant="destinationDays">Days</Text>
+                    </Box>
+                    <Box
+                      height={["50px", "55px", "60px", "64px"]}
+                      width={["85px", "95px", "110px", "110px"]}
+                      backgroundColor="#FFFFFF"
+                      textAlign="center"
+                      padding="9px 3px 0px 2px"
+                    >
+                      <Text
+                        as="h1"
+                        fontWeight="400"
+                        fontSize={["10px", "12px", "15px", "15px"]}
+                        color="#FF4417"
+                        fontFamily="anton"
+                      >
+                        {el.price} Rs
+                      </Text>
+                      <Text variant="destinationPerperson">PER PERSON</Text>
+                    </Box>
+                  </Flex>
+                  <Text variant="destinationStartexploring" minWidth="300px">
+                    START EXPLORING--&rarr;
+                  </Text>
                 </Flex>
-                <Text variant="destinationStartexploring" minWidth="300px">
-                  START EXPLORING--&rarr;
-                </Text>
-              </Flex>
-              //   **************
-            );
-          })}
-        </Flex>
+              );
+            })}
+          </Flex>
+        </AnimationOnScroll>
       </Flex>
     </>
   );

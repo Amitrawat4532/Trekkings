@@ -88,6 +88,11 @@ body {
 
 .startLoader {
   height: 150px;
+  background: white;
+}
+.startLoader video{
+  background: white !important;
+
 }
 
 @media only screen and (max-width:600px){

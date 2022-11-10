@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Services = () => {
   const Ourservices = [
@@ -61,50 +62,58 @@ const Services = () => {
         <Box width="100%">
           {Ourservices.map((el, key) => {
             return (
-              <Flex
-                flexDirection={key % 2 === 0 ? "row" : "row-reverse"}
-                gap={["20px", "20px", "40px", "50px"]}
+              <AnimationOnScroll
+                animateIn={
+                  key % 2 === 0
+                    ? "animate__fadeInLeftBig"
+                    : "animate__fadeInRightBig"
+                }
                 key={key}
-                alignItems="center"
-                mx="1"
-                my="12"
               >
                 <Flex
-                  flexDirection="column"
-                  gap="20px"
-                  flex="1"
-                  width="100%"
-                  alignItems={key % 2 === 0 ? "start" : "end"}
+                  flexDirection={key % 2 === 0 ? "row" : "row-reverse"}
+                  gap={["20px", "20px", "40px", "50px"]}
+                  alignItems="center"
+                  mx="1"
+                  my="12"
                 >
-                  <Text
-                    variant="serviceHeader"
-                    textAlign={key % 2 === 0 ? "start" : "end"}
+                  <Flex
+                    flexDirection="column"
+                    gap="20px"
+                    flex="1"
+                    width="100%"
+                    alignItems={key % 2 === 0 ? "start" : "end"}
                   >
-                    {el.header}
-                  </Text>
-                  <Text
-                    variant="serviceParagraph"
-                    textAlign={key % 2 === 0 ? "start" : "end"}
-                  >
-                    {el.paragraph}
-                  </Text>
-                  <Button variant="whytrekkingButton">KNOW MORE</Button>
-                </Flex>
+                    <Text
+                      variant="serviceHeader"
+                      textAlign={key % 2 === 0 ? "start" : "end"}
+                    >
+                      {el.header}
+                    </Text>
+                    <Text
+                      variant="serviceParagraph"
+                      textAlign={key % 2 === 0 ? "start" : "end"}
+                    >
+                      {el.paragraph}
+                    </Text>
+                    <Button variant="whytrekkingButton">KNOW MORE</Button>
+                  </Flex>
 
-                <Image
-                  css={{
-                    maskImage: "url('/images/stroke_mask.png')",
-                    maskSize: "134%",
-                    maskRepeat: "no-repeat",
-                    maskPosition: "center",
-                  }}
-                  src={el?.image}
-                  objectPosition="center"
-                  objectFit="cover"
-                  width={["200px", "200px", "400px", "500px"]}
-                  height={["200px", "200px", "294px", "294px"]}
-                />
-              </Flex>
+                  <Image
+                    css={{
+                      maskImage: "url('/images/stroke_mask.png')",
+                      maskSize: "134%",
+                      maskRepeat: "no-repeat",
+                      maskPosition: "center",
+                    }}
+                    src={el?.image}
+                    objectPosition="center"
+                    objectFit="cover"
+                    width={["200px", "200px", "400px", "500px"]}
+                    height={["200px", "200px", "294px", "294px"]}
+                  />
+                </Flex>
+              </AnimationOnScroll>
             );
           })}
         </Box>

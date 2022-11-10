@@ -1,4 +1,4 @@
-import { Box, ScaleFade } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import About from "../components/About";
 import Blog from "../components/Blog";
 import CalendarComp from "../components/Calendar";

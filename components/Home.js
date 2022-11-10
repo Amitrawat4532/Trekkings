@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Home = () => {
@@ -24,7 +24,6 @@ const Home = () => {
         {/* heading container */}
         <Box position="relative" top={["20", "20", "-10", "-10"]}>
           <Text variant="homeHeader1">MAKE THE</Text>
-
           <Text variant="homeHeader2">IMPOSSIBLE</Text>
         </Box>
       </Flex>

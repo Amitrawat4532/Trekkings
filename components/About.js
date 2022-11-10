@@ -1,5 +1,6 @@
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function About() {
   const cards = [
@@ -26,6 +27,7 @@ function About() {
   return (
     <>
       {/* main container */}
+
       <Flex
         className="about_container"
         width="100%"
@@ -44,53 +46,55 @@ function About() {
         {/* card container */}
         {cards.map((el, id) => {
           return (
-            <Flex
-              key={id}
-              width={["80%", "80%", "350px", "350px"]}
-              height="100%"
-              maxHeight="400px"
-              justifyContent="center"
-              alignItems="center"
-              backgroundColor="white"
-              direction="column"
-              border="1px solid #949494"
-              boxShadow="15px 15px 8px rgba(0, 0, 0, 0.25)"
-              borderRadius="30px"
-              p={["10px", "10px", "20px", "20px"]}
-              m="auto 0"
-              position="relative"
-            >
-              <Box
-                width="90px"
-                height="121px"
-                position={["absolute", "absolute", "relative", "relative"]}
-                top={["-20%", "-20%", "0%", "0%"]}
-              >
-                <Image
-                  src={el?.img}
-                  objectFit="cover"
-                  height="100%"
-                  w="100%"
-                  bg="transparent"
-                />
-              </Box>
-
+            <AnimationOnScroll animateIn="animate__bounceIn">
               <Flex
-                alignItems="center"
-                flexDirection="column"
-                gap="10px"
+                width={["80%", "80%", "350px", "350px"]}
+                height="100%"
+                key={id}
+                maxHeight="400px"
                 justifyContent="center"
+                alignItems="center"
+                backgroundColor="white"
+                direction="column"
+                border="1px solid #949494"
+                boxShadow="15px 15px 8px rgba(0, 0, 0, 0.25)"
+                borderRadius="30px"
                 p={["10px", "10px", "20px", "20px"]}
-                pt={["70px", "70px", "20px", "20px"]}
-                // transform={["translatex(-20%)"]}
+                m="auto 0"
+                position="relative"
               >
-                <Text variant="aboutHeader">{el?.header}</Text>
-                <Text variant="aboutParagraph">{el?.description}</Text>
-                <Text variant="aboutbutton" fontWeight="600">
-                  READ MORE &rarr;
-                </Text>
+                <Box
+                  width="90px"
+                  height="121px"
+                  position={["absolute", "absolute", "relative", "relative"]}
+                  top={["-20%", "-20%", "0%", "0%"]}
+                >
+                  <Image
+                    src={el?.img}
+                    objectFit="cover"
+                    height="100%"
+                    w="100%"
+                    bg="transparent"
+                  />
+                </Box>
+
+                <Flex
+                  alignItems="center"
+                  flexDirection="column"
+                  gap="10px"
+                  justifyContent="center"
+                  p={["10px", "10px", "20px", "20px"]}
+                  pt={["70px", "70px", "20px", "20px"]}
+                  // transform={["translatex(-20%)"]}
+                >
+                  <Text variant="aboutHeader">{el?.header}</Text>
+                  <Text variant="aboutParagraph">{el?.description}</Text>
+                  <Text variant="aboutbutton" fontWeight="600">
+                    READ MORE &rarr;
+                  </Text>
+                </Flex>
               </Flex>
-            </Flex>
+            </AnimationOnScroll>
           );
         })}
       </Flex>
