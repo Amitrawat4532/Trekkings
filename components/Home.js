@@ -1,5 +1,6 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Home = () => {
   return (
@@ -24,7 +25,12 @@ const Home = () => {
         {/* heading container */}
         <Box position="relative" top={["20", "20", "-10", "-10"]}>
           <Text variant="homeHeader1">MAKE THE</Text>
-          <Text variant="homeHeader2">IMPOSSIBLE</Text>
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            initiallyVisible={true}
+          >
+            <Text variant="homeHeader2">IMPOSSIBLE</Text>
+          </AnimationOnScroll>
         </Box>
       </Flex>
     </>

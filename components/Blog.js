@@ -2,6 +2,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 // Import Swiper styles
 import "swiper/css";
@@ -80,23 +81,25 @@ const Blog = () => {
           flexDirection={["column-reverse", "column-reverse", "row", "row"]}
         >
           <Flex width="auto" flex="1" p="5">
-            <Text variant="blogParagraph">
-              Duis voluptate nulla ex sint veniam nisi. Enim in deserunt est
-              dolore adipisicing eu do ad exercitation sit. Officia ad enim
-              deserunt laborum sint fugiat ullamco anim aliqua dolor. Do
-              deserunt est dolore duis sunt exercitation et commodo aute anim
-              excepteur excepteur voluptate. Veniam labore velit fugiat esse
-              incididunt amet eu irure culpa ut voluptate ad. Et sit mollit
-              nostrud Lorem nulla ut nisi quis qui cupidatat sint ea. Ut
-              consequat cupidatat adipisicing et aute ullamco. Irure anim ad
-              commodo aliqua id culpa dolore esse.
-              <br />
-              Duis voluptate nulla ex sint veniam nisi. Enim in deserunt est
-              dolore adipisicing eu do ad exercitation sit. Officia ad enim
-              deserunt laborum sint fugiat ullamco anim aliqua dolor. Do
-              deserunt est dolore duis sunt exercitation et commodo aute anim
-              excepteur excepteur voluptate.
-            </Text>
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+              <Text variant="blogParagraph">
+                Duis voluptate nulla ex sint veniam nisi. Enim in deserunt est
+                dolore adipisicing eu do ad exercitation sit. Officia ad enim
+                deserunt laborum sint fugiat ullamco anim aliqua dolor. Do
+                deserunt est dolore duis sunt exercitation et commodo aute anim
+                excepteur excepteur voluptate. Veniam labore velit fugiat esse
+                incididunt amet eu irure culpa ut voluptate ad. Et sit mollit
+                nostrud Lorem nulla ut nisi quis qui cupidatat sint ea. Ut
+                consequat cupidatat adipisicing et aute ullamco. Irure anim ad
+                commodo aliqua id culpa dolore esse.
+                <br />
+                Duis voluptate nulla ex sint veniam nisi. Enim in deserunt est
+                dolore adipisicing eu do ad exercitation sit. Officia ad enim
+                deserunt laborum sint fugiat ullamco anim aliqua dolor. Do
+                deserunt est dolore duis sunt exercitation et commodo aute anim
+                excepteur excepteur voluptate.
+              </Text>
+            </AnimationOnScroll>
             {/* <Image
               src="/images/whyTrek.png"
               w="100%"

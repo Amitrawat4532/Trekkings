@@ -15,7 +15,7 @@ import React, { useState, useEffect } from "react";
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
-  const [startAnim, setStartAnim] = useState(false);
+  const [startAnim, setStartAnim] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {

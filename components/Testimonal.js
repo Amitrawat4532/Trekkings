@@ -115,6 +115,34 @@ import {
   Avatar,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
+const testimonal = [
+  {
+    name: "Jane Cooper",
+    profile: "CEO at ABC Corporation",
+    header: "Efficient Collaborating",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    img: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+  },
+  {
+    name: "Jane Cooper",
+    profile: "CEO at ABC Corporation",
+    header: "Intuitive Design",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    img: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+  },
+  {
+    name: "Jane Cooper",
+    profile: "CEO at ABC Corporation",
+    header: "Mindblowing Service",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    img: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+  },
+];
 
 const Testimonial = ({ children }) => {
   return <Box>{children}</Box>;
@@ -206,54 +234,23 @@ export default function WithSpeechBubbles() {
           direction={{ base: "column", md: "row" }}
           spacing={{ base: 10, md: 4, lg: 10 }}
         >
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-              }
-              name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
-            />
-          </Testimonial>
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Intuitive Design</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-              }
-              name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
-            />
-          </Testimonial>
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Mindblowing Service</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-              }
-              name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
-            />
-          </Testimonial>
+          {testimonal.map((el, key) => {
+            return (
+              <AnimationOnScroll animateIn="animate__zoomInUp" key={key}>
+                <Testimonial>
+                  <TestimonialContent>
+                    <TestimonialHeading>{el?.header}</TestimonialHeading>
+                    <TestimonialText>{el?.message}</TestimonialText>
+                  </TestimonialContent>
+                  <TestimonialAvatar
+                    src={el?.img}
+                    name={el?.name}
+                    title={el?.profile}
+                  />
+                </Testimonial>
+              </AnimationOnScroll>
+            );
+          })}
         </Stack>
       </Container>
     </Box>
