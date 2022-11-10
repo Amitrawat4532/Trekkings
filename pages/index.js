@@ -8,15 +8,34 @@ import Gallery from "../components/Gallery";
 import Testimonal from "../components/Testimonal";
 import Testimonal2 from "../components/Testimonial2";
 import Blog from "../components/Blog";
-import { Box } from "@chakra-ui/react";
+import { Box, Fade, ScaleFade } from "@chakra-ui/react";
 import Footer from "../components/footer";
 import UpcomingTrek from "../components/UpcomingTrek";
 import CalendarComp from "../components/Calendar";
+import { useState, useEffect } from "react";
+import StartLoader from "../components/StartLoader";
 
 const index = () => {
+  const [startAnim, setStartAnim] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setStartAnim(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
-      <Box p="0" m="0" overflow="hidden" position="relative">
+      <ScaleFade initialScale={0.9} in={startAnim}>
+        <StartLoader />
+      </ScaleFade>
+      <Box
+        p="0"
+        m="0"
+        overflow="hidden"
+        position="relative"
+        visibility={startAnim ? "hidden" : "visible"}
+      >
         <Navbar />
         <Home />
         <UpcomingTrek />
