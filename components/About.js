@@ -45,11 +45,10 @@ function About() {
         {/* card container */}
         {cards.map((el, id) => {
           return (
-            <AnimationOnScroll animateIn="animate__bounceIn">
+            <AnimationOnScroll animateIn="animate__bounceIn" key={id}>
               <Flex
                 width={["80%", "80%", "350px", "350px"]}
                 height="100%"
-                key={id}
                 maxHeight="400px"
                 justifyContent="center"
                 alignItems="center"
