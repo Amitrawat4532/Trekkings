@@ -36,9 +36,6 @@ const Whytrekking = () => {
     },
   ];
 
-  useEffect(() => {
-    console.log(visible);
-  }, [visible]);
   return (
     <>
       {/* main container */}

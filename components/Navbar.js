@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { HStack, IconButton } from "@chakra-ui/react";
+import { HStack, IconButton, Link } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { ButtonGroup } from "@chakra-ui/react";
 import jump from "jump.js";
@@ -106,7 +106,7 @@ const Navbar = () => {
           finalFocusRef={btnRef}
         >
           <DrawerOverlay />
-          <DrawerContent>
+          <DrawerContent backdropFilter="blur(20px)" bg="rgba(255,255,255,0.5)">
             <DrawerCloseButton fontSize="30px" color="red" m="4" />
 
             {/* Navbar container desktop */}
@@ -173,10 +173,18 @@ const Navbar = () => {
                 justifyContent="space-evenly"
                 mb="15px"
               >
-                <Image src="./images/instagram.png" />
-                <Image src="./images/viber.png" />
-                <Image src="./images/gmail.png" />
-                <Image src="./images/whatsapp.png" />
+                <a href="https://www.instagram.com" target="_blank">
+                  <Image h="30px" w="30px" src="./images/instagram.png" />
+                </a>
+                <a href="tel:+91 1234567890" target="_blank">
+                  <Image h="30px" w="30px" src="./images/viber.png" />
+                </a>
+                <a href="https://www.gmail.com" target="_blank">
+                  <Image h="30px" w="30px" src="./images/gmail.png" />
+                </a>
+                <a href="https://wa.me/8080463271" target="_blank">
+                  <Image h="30px" w="30px" src="./images/whatsapp.png" />
+                </a>
               </Flex>
             </DrawerFooter>
           </DrawerContent>

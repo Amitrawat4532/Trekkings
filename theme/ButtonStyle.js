@@ -41,6 +41,8 @@ export const ButtonStyle = {
       w: "100%",
       fontFamily: "anton",
       fontWeight: "light",
+      letterSpacing: "3px",
+      textTransform: "uppercase",
     },
     whytrekkingButton: {
       background: "#FF3606",
