@@ -173,16 +173,28 @@ const Navbar = () => {
                 justifyContent="space-evenly"
                 mb="15px"
               >
-                <a href="https://www.instagram.com" target="_blank">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image h="30px" w="30px" src="./images/instagram.png" />
                 </a>
-                <a href="tel:+91 1234567890" target="_blank">
+                <a href="tel:+91 1234567890" target="_blank" rel="noreferrer">
                   <Image h="30px" w="30px" src="./images/viber.png" />
                 </a>
-                <a href="https://www.gmail.com" target="_blank">
+                <a
+                  href="https://www.gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image h="30px" w="30px" src="./images/gmail.png" />
                 </a>
-                <a href="https://wa.me/8080463271" target="_blank">
+                <a
+                  href="https://wa.me/8080463271"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image h="30px" w="30px" src="./images/whatsapp.png" />
                 </a>
               </Flex>
