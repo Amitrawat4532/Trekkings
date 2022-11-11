@@ -1,35 +1,44 @@
 import { Flex, Image, Text, HStack, Box } from "@chakra-ui/react";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import CountUp, { useCountUp } from "react-countup";
 
 const Whytrekking = () => {
+  const countUpRef = React.useRef(null);
+  const [visible, setVisible] = useState(false);
+
   const Testimonal_context = [
     {
       icon_1: "./images/tickicon.png",
-      header: "15",
+      number: "15",
       icon_2: "./images/plusicon.png",
       heading: "Years Of Experience",
     },
     {
       icon_1: "./images/tickicon.png",
-      header: "60",
+      number: "60",
       icon_2: "./images/plusicon.png",
       heading: "Years Of best Destination",
     },
 
     {
       icon_1: "./images/tickicon.png",
-      header: "30",
+      number: "30",
       icon_2: "./images/plusicon.png",
       heading: " Certified guides",
     },
 
     {
       icon_1: "./images/tickicon.png",
-      header: "3,210",
+      number: "3210",
       icon_2: "./images/plusicon.png",
       heading: "Satisfied Hikers",
     },
   ];
+
+  useEffect(() => {
+    console.log(visible);
+  }, [visible]);
   return (
     <>
       {/* main container */}
@@ -105,7 +114,18 @@ const Whytrekking = () => {
               >
                 <Flex gap="10px" alignItems="center">
                   {/* <Image src={el.icon_1} /> */}
-                  <Text variant="testimonalHeader">{el.header}</Text>
+                  <AnimationOnScroll
+                    animateIn="animate__fadeIn"
+                    animateOut="animate__fadeOut"
+                    afterAnimatedIn={() => setVisible(true)}
+                    afterAnimatedOut={() => setVisible(false)}
+                  >
+                    {visible && (
+                      <Text variant="testimonalHeader" ref={countUpRef}>
+                        <CountUp end={el?.number} delay={0}></CountUp>
+                      </Text>
+                    )}
+                  </AnimationOnScroll>
                   <Image src={el.icon_2} height="20px" />
                 </Flex>
                 <Flex>

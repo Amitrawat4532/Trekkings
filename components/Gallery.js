@@ -25,7 +25,7 @@ const Gallery = () => {
         width="100vw"
         height="100%"
         className="gallery_container"
-        minHeight="70vh"
+        // minHeight="70vh"
         flexDirection="column"
         justifyContent="space-around"
       >
