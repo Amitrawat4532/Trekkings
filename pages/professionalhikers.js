@@ -4,16 +4,7 @@ import React from "react";
 
 const Professionalhikers = () => {
   return (
-    <Box
-      p="0"
-      m="0"
-      minH="100vh"
-      overflow="hidden"
-      position="relative"
-      bgImg="url('/images/professionalhikers.png')"
-      bgSize="100%"
-      bgRepeat="no-repeat"
-    >
+    <Box p="0" m="0" minH="100vh" overflow="hidden" position="relative">
       <Link href="/">
         <Button
           position="absolute"
@@ -28,6 +19,12 @@ const Professionalhikers = () => {
           &larr; Back
         </Button>
       </Link>
+      <Image
+        src="/images/professionalhikers.png"
+        h="100%"
+        w="100%"
+        fallbackSrc="/images/logo.png"
+      />
     </Box>
   );
 };
