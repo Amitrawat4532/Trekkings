@@ -67,9 +67,10 @@ const CalendarModal = ({ onClose, isOpen, scrollBehavior, data }) => {
           </HStack>
           <Box my="6">{data?.description}</Box>
           <HStack my="3" wrap="wrap" gap="2">
-            {data?.images?.map((el) => {
+            {data?.images?.map((el, id) => {
               return (
                 <Image
+                  key={id}
                   src={el?.img_url}
                   width={["160px", "250px"]}
                   height={["100px", "200px"]}
