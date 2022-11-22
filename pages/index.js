@@ -89,7 +89,7 @@ const index = ({ gallery, destination, event, vlog, testimonial }) => {
           >
             <Image
               alt="Chat on WhatsApp"
-              src="/images/whatsApp.png"
+              src="/images/whatsapp.png"
               className="btn-whatsapp-pulse"
             />
           </a>
