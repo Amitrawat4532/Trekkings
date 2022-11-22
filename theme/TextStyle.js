@@ -347,6 +347,37 @@ export const TextStyle = {
       mt: "2",
     },
 
+    secretLocationHeader: {
+      fontFamily: "Anton",
+      fontStyle: "normal",
+      fontWeight: "400",
+      fontSize: ["30px", "35px", "40px", "50px"],
+      lineHeight: "75px",
+      letterSpacing: "0.04em",
+      color: "#000000",
+    },
+    secretLocationText: {
+      fontFamily: "Anton",
+      fontStyle: "normal",
+      fontWeight: "200",
+      fontSize: ["12px", "12px", "14px", "16px"],
+      lineHeight: "23px",
+      wordSpacing: "0.14em",
+      color: "#000000d1",
+      textAlign: "center",
+      mt: "10%",
+    },
+    secretLocationNumber: {
+      fontFamily: "Anton",
+      fontStyle: "normal",
+      fontWeight: "400",
+      fontSize: ["50px", "50px", "100px", "100px"],
+      lineHeight: "151px",
+      letterSpacing: "0.04em",
+      color: "rgba(0, 0, 0, 0.5)",
+      px: "4",
+    },
+
     // ******************************footer page************
     footerQuicklink: {
       as: "h1",

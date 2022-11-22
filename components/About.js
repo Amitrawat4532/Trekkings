@@ -88,7 +88,7 @@ function About() {
                 >
                   <Text variant="aboutHeader">{el?.header}</Text>
                   <Text variant="aboutParagraph">{el?.description}</Text>
-                  <Link href="/about">
+                  <Link href="/secretlocation">
                     <Text variant="aboutbutton" fontWeight="600">
                       READ MORE &rarr;
                     </Text>
