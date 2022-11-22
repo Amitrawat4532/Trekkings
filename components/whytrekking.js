@@ -112,10 +112,10 @@ const Whytrekking = () => {
                 <Flex gap="10px" alignItems="center">
                   {/* <Image src={el.icon_1} /> */}
                   <AnimationOnScroll
+                    animateOnce={true}
+                    duration={0}
                     animateIn="animate__fadeIn"
-                    animateOut="animate__fadeOut"
                     afterAnimatedIn={() => setVisible(true)}
-                    afterAnimatedOut={() => setVisible(false)}
                   >
                     {visible && (
                       <Text variant="testimonalHeader" ref={countUpRef}>

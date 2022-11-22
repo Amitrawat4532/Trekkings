@@ -341,6 +341,11 @@ export const TextStyle = {
       fontFamily: "anton",
     },
 
+    calendarModalText: {
+      fontWeight: "bold",
+      mt: "2",
+    },
+
     // ******************************footer page************
     footerQuicklink: {
       as: "h1",
@@ -353,15 +358,16 @@ export const TextStyle = {
     footerQuicklinks: {
       as: "h3",
       color: "#FFFFFF",
-      fontSize: ["12px", "17px", "23px", "23px"],
+      fontSize: ["14px", "17px", "23px", "23px"],
       fontFamily: "anton",
       fontWeight: "100",
       display: "flex",
     },
     footerQuicklinksSpan: {
       color: "red",
-      fontSize: ["12px", "17px", "23px", "23px"],
+      fontSize: ["13px", "17px", "23px", "23px"],
       fontFamily: "anton",
+      pr: "1",
     },
   },
 };

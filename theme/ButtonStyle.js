@@ -67,9 +67,14 @@ export const ButtonStyle = {
       fontFamily: "anton",
     },
     calendar_btn: {
-      background: "transparent",
+      background: "white",
       borderRadius: "20px",
-      p: "3",
+      fontSize: "14px",
+      color: "black",
+      py: "1",
+      px: "3",
+      m: "1",
+      h: "100%",
     },
   },
 };

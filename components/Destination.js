@@ -2,7 +2,7 @@ import { Box, Text, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-function Destination() {
+function Destination({ destination }) {
   const Gallery = [
     {
       img: "/images/card1.png",
@@ -46,7 +46,8 @@ function Destination() {
         backgroundColor="#666161e3"
         flexDirection="column"
         px={["0", "0", "20", "20"]}
-        py={["6", "6", "50px", "50px"]}
+        pt={["6", "6", "50px", "50px"]}
+        pb="4"
         // minHeight="75vh"
         justifyContent="space-around"
         gap="7"
@@ -124,7 +125,7 @@ function Destination() {
             px={["8", "8", "0", "0"]}
             mb="10"
           >
-            {Gallery.map((el, id) => {
+            {destination?.map((el, id) => {
               return (
                 <Flex
                   key={id}
@@ -143,7 +144,13 @@ function Destination() {
                   margin="auto"
                   scrollSnapAlign="center"
                 >
-                  <Image src={el.img} />
+                  <Image
+                    src={el?.thumbnail}
+                    h="320px"
+                    w="400px"
+                    fallbackSrc="/images/plusicon.png"
+                    objectFit="cover"
+                  />
                   <Flex
                     height="64px"
                     width={["95%", "90%", "76%", "100%"]}
@@ -165,7 +172,7 @@ function Destination() {
                         fontSize={["10px", "12px", "15px", "15px"]}
                         fontFamily="anton"
                       >
-                        {el.person}
+                        {el?.trekkers}
                       </Text>
                       <Text variant="destinationPerson">PERSON</Text>
                     </Box>
@@ -184,7 +191,7 @@ function Destination() {
                         fontSize={["10px", "12px", "15px", "15px"]}
                         fontFamily="anton"
                       >
-                        {el.days}
+                        {el?.days}
                       </Text>
                       <Text variant="destinationDays">Days</Text>
                     </Box>
@@ -202,7 +209,7 @@ function Destination() {
                         color="#FF4417"
                         fontFamily="anton"
                       >
-                        {el.price} Rs
+                        {el?.price} Rs
                       </Text>
                       <Text variant="destinationPerperson">PER PERSON</Text>
                     </Box>

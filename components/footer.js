@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Image, Text, Input } from "@chakra-ui/react";
 import React from "react";
+import jump from "jump.js";
 
 const Footer = () => {
   return (

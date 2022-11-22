@@ -8,40 +8,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-const Blog = () => {
-  const vlogs = [
-    {
-      Image: "./images/blog1.png",
-      header: "Camping on cold mountains",
-      date: "🕐 27 August,2022",
-      paragraph: "this is a paragraph ",
-      readmore_button: "Read More",
-    },
-
-    {
-      Image: "./images/blog1.png",
-      header: "Camping on cold mountains",
-      date: "🕐 27 August,2022",
-      paragraph: "this is a paragraph ",
-      readmore_button: "Read More",
-    },
-
-    {
-      Image: "./images/blog1.png",
-      header: "Camping on cold mountains",
-      date: "🕐 27 August,2022",
-      paragraph: "this is a paragraph ",
-      readmore_button: "Read More",
-    },
-
-    {
-      Image: "./images/blog1.png",
-      header: "Camping on cold mountains",
-      date: "🕐 27 August,2022",
-      paragraph: "this is a paragraph ",
-      readmore_button: "Read More",
-    },
-  ];
+const Vlog = ({ vlog }) => {
   return (
     <>
       <Flex
@@ -83,21 +50,23 @@ const Blog = () => {
           <Flex width="auto" flex="1" p="5">
             <AnimationOnScroll animateIn="animate__fadeInUp">
               <Text variant="blogParagraph">
-                Duis voluptate nulla ex sint veniam nisi. Enim in deserunt est
-                dolore adipisicing eu do ad exercitation sit. Officia ad enim
-                deserunt laborum sint fugiat ullamco anim aliqua dolor. Do
-                deserunt est dolore duis sunt exercitation et commodo aute anim
-                excepteur excepteur voluptate. Veniam labore velit fugiat esse
-                incididunt amet eu irure culpa ut voluptate ad. Et sit mollit
-                nostrud Lorem nulla ut nisi quis qui cupidatat sint ea. Ut
-                consequat cupidatat adipisicing et aute ullamco. Irure anim ad
-                commodo aliqua id culpa dolore esse.
+                Vlog stands for a video blog or video log, and refers to a type
+                of blog where most or all of the content is in a video format.
+                Vlog posts consist of creating a video of yourself where you
+                talk on a particular subject such as reporting or reviewing a
+                product or an event. It can even serve as a way to share your
+                artistic process or provide a tutorial guide on a creative
+                practice or topic. Some vloggers even use it as a means to share
+                new performance art or music they have created. In fact, just
+                like blogs you can vlog about almost anything.
                 <br />
-                Duis voluptate nulla ex sint veniam nisi. Enim in deserunt est
-                dolore adipisicing eu do ad exercitation sit. Officia ad enim
-                deserunt laborum sint fugiat ullamco anim aliqua dolor. Do
-                deserunt est dolore duis sunt exercitation et commodo aute anim
-                excepteur excepteur voluptate.
+                Vlogging makes the culture familiar. Through vlogs, people can
+                understand the culture of different countries. The cultural
+                shocks or cultural barriers seem to be less as compared to when
+                there were no vlogs. When a vlogger makes daily vlogs and
+                showcases their lifestyle and what kind of country they live in,
+                the people of other countries can easily understand the culture
+                of the vloggers country.
               </Text>
             </AnimationOnScroll>
             {/* <Image
@@ -115,25 +84,26 @@ const Blog = () => {
               modules={[EffectCards]}
               className="blogs_slider"
             >
-              {vlogs.map((el, key) => {
+              {vlog?.map((el, key) => {
                 return (
                   <SwiperSlide key={key}>
                     <Flex alignItems="center" justifyContent="center">
                       <Flex
                         flexDirection="column"
                         p="20px 0px 20px 0px"
-                        alignItems={["center", "center", "start", "start"]}
+                        alignItems="center"
                       >
                         <Image
                           mb="2"
-                          src={el.Image}
+                          src={el?.image}
                           borderRadius="61px"
                           width={["250px", "250px", "350px", "350px"]}
                           height={["200px", "200px", "300px", "300px"]}
+                          fallbackSrc="/images/logo.png"
                         />
-                        <Text variant="blogHeader">{el.header}</Text>
+                        <Text variant="blogHeader">{el?.title}</Text>
                         <Text variant="blogDate">{el.date}</Text>
-                        <Text variant="blogReadmore">{el.readmore_button}</Text>
+                        <Text variant="blogReadmore">Read More</Text>
                       </Flex>
                     </Flex>
                   </SwiperSlide>
@@ -147,4 +117,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Vlog;

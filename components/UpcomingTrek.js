@@ -12,7 +12,7 @@ import CalendarModal from "./CalendarModal";
 import { WarningTwoIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 
-const UpcomingTrek = () => {
+const UpcomingTrek = ({ event }) => {
   const trek = [
     {
       title: "IgatPuri Trek -1jdpfajfpoajdpfojapfjspojfposdjp",
@@ -48,9 +48,9 @@ const UpcomingTrek = () => {
   );
 
   const onDateSelect = (date) => {
-    const formmatedDate = moment(date, "DD/MM/YYYY").format("DD-MM-YYYY");
-    const data = trek.filter((x) => {
-      if (x.startDate == formmatedDate) {
+    const formmatedDate = moment(date, "YYYY-MM-DD HH:mm").format("DD-MM-YYYY");
+    const data = event.filter((x) => {
+      if (x.startDate == date) {
         return x;
       }
     });
@@ -63,8 +63,9 @@ const UpcomingTrek = () => {
   };
 
   const filterByMonth = (x) => {
-    const month = moment(x?.startDate, "DD-MM-YYYY").format("MMMM");
-    if (month === selectedMonth) {
+    const selectedMonthNumber = moment(selectedMonth, "MMMM").format("MM");
+    const month = moment(x?.startDate, "YYYY-MM-DD HH:mm").format("MM");
+    if (month >= selectedMonthNumber) {
       return x;
     }
   };
@@ -128,15 +129,17 @@ const UpcomingTrek = () => {
             h="100%"
             overflowY="auto"
           >
-            {trek.filter(filterByMonth).map((el, id) => {
-              const date = moment(el?.startDate, "DD/MM/YYYY").format("DD");
-              const month = moment(el?.startDate, "DD/MM/YYYY").format("MMM");
-              // const imgNum = slideImages(el?.images);
-              const imgNum = 0;
+            {event?.filter(filterByMonth).map((el, id) => {
+              const date = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
+                "DD"
+              );
+              const month = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
+                "MMM"
+              );
               return (
                 <React.Fragment key={id}>
                   <Flex
-                    justifyContent="space-between"
+                    justifyContent="start"
                     alignItems="center"
                     fontSize="20px"
                     fontWeight="600"
@@ -154,6 +157,7 @@ const UpcomingTrek = () => {
                       onDateSelect(el?.startDate);
                     }}
                     overflow="hidden"
+                    position="relative"
                   >
                     <Flex
                       as="span"
@@ -170,46 +174,82 @@ const UpcomingTrek = () => {
                       <br />
                       {month}
                     </Flex>
-                    <Box
-                      whiteSpace="nowrap"
-                      color="blackAlpha.800"
-                      fontSize="25px"
-                      overflow="hidden"
-                      textOverflow="ellipsis"
-                      width="50%"
-                      px={["2", "2", "4", "4"]}
-                    >
-                      {el?.title}
-                    </Box>
+                    <Flex direction="column" px="2" w="80%" whiteSpace="nowrap">
+                      <Text
+                        color="blackAlpha.800"
+                        fontSize="23px"
+                        overflow="hidden"
+                        textOverflow="ellipsis"
+                        w={["70%", "70%", "70%", "50%"]}
+                      >
+                        {el?.name}
+                      </Text>
+                      <Text
+                        as="span"
+                        fontSize="11px"
+                        color="gray.800"
+                        textOverflow="ellipsis"
+                        overflow="hidden"
+                      >
+                        {el?.description}
+                      </Text>
+                    </Flex>
 
-                    <Flex>
-                      <Button variant="calendar_btn">
-                        <Image
-                          height="25px"
-                          width="25px"
-                          src="/images/Travel.png"
-                        />
-                      </Button>
-                      <Button variant="calendar_btn">
-                        <Image
-                          height="25px"
-                          width="25px"
-                          src="/images/Home.png"
-                        />
-                      </Button>
-                      <Button variant="calendar_btn">
-                        <Image
-                          height="25px"
-                          width="25px"
-                          src="/images/Food.png"
-                        />
-                      </Button>
+                    <Flex position="absolute" right="5px" top="0">
+                      {el?.travel && (
+                        <Button variant="calendar_btn">
+                          <Text
+                            display={["none", "none", "none", "block"]}
+                            mr="1"
+                            p="0"
+                          >
+                            Travel
+                          </Text>
+                          <Image
+                            height="15px"
+                            width="15px"
+                            src="/images/Travel.png"
+                          />
+                        </Button>
+                      )}
+                      {el?.stay && (
+                        <Button variant="calendar_btn">
+                          <Text
+                            display={["none", "none", "none", "block"]}
+                            mr="1"
+                            p="0"
+                          >
+                            Stay
+                          </Text>
+                          <Image
+                            height="15px"
+                            width="15px"
+                            src="/images/Home.png"
+                          />
+                        </Button>
+                      )}
+                      {el?.food && (
+                        <Button variant="calendar_btn">
+                          <Text
+                            display={["none", "none", "none", "block"]}
+                            mr="1"
+                            p="0"
+                          >
+                            Food
+                          </Text>
+                          <Image
+                            height="15px"
+                            width="15px"
+                            src="/images/Food.png"
+                          />
+                        </Button>
+                      )}
                     </Flex>
                   </Flex>
                 </React.Fragment>
               );
             })}
-            {trek.filter(filterByMonth).length <= 0 && (
+            {event.filter(filterByMonth).length <= 0 && (
               <Box
                 textAlign="center"
                 py={10}

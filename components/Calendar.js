@@ -22,7 +22,7 @@ import moment from "moment";
 import CalendarModal from "./CalendarModal";
 import { WarningTwoIcon } from "@chakra-ui/icons";
 
-const CalendarComp = () => {
+const CalendarComp = ({ event }) => {
   const [value, onChange] = useState(new Date());
   const trek = [
     {
@@ -59,8 +59,8 @@ const CalendarComp = () => {
   );
 
   const onDateSelect = (date) => {
-    const formmatedDate = moment(date, "DD/MM/YYYY").format("DD-MM-YYYY");
-    const data = trek.filter((x) => {
+    const formmatedDate = moment(date, "YYYY-MM-DD HH:mm").format("DD-MM-YYYY");
+    const data = event.filter((x) => {
       if (x.startDate == formmatedDate) {
         return x;
       }
@@ -79,7 +79,7 @@ const CalendarComp = () => {
   };
 
   const filterByMonth = (x) => {
-    const month = moment(x?.startDate, "DD-MM-YYYY").format("MMMM");
+    const month = moment(x?.startDate, "YYYY-MM-DD HH:mm").format("MMMM");
     if (month === selectedMonth) {
       return x;
     }
@@ -110,21 +110,42 @@ const CalendarComp = () => {
               // maxDetail="month"
               tileClassName={({ date, view }) => {
                 if (
-                  trek.find(
-                    (x) => x?.startDate === moment(date).format("DD-MM-YYYY")
-                  )
+                  event.find((x) => {
+                    const formmatedDate = moment(
+                      x?.startDate,
+                      "YYYY-MM-DD HH:mm"
+                    ).format("DD-MM-YYYY");
+                    return (
+                      formmatedDate ===
+                      moment(date, "YYYY-MM-DD HH:mm").format("DD-MM-YYYY")
+                    );
+                  })
                 ) {
                   return "highlight";
                 }
               }}
               tileContent={({ date, view }) => {
                 if (
-                  trek.find(
-                    (x) => x?.startDate === moment(date).format("DD-MM-YYYY")
-                  )
+                  event.find((x) => {
+                    const formmatedDate = moment(
+                      x?.startDate,
+                      "YYYY-MM-DD HH:mm"
+                    ).format("DD-MM-YYYY");
+                    return (
+                      formmatedDate ===
+                      moment(date, "YYYY-MM-DD HH:mm").format("DD-MM-YYYY")
+                    );
+                  })
                 ) {
                   const today = new Date();
-                  if (date < today) {
+                  const formmatedDate = moment(date, "YYYY-MM-DD HH:mm").format(
+                    "X"
+                  );
+                  const formmatedToday = moment(
+                    today,
+                    "YYYY-MM-DD HH:mm"
+                  ).format("X");
+                  if (Number(formmatedDate) - Number(formmatedToday) < 0) {
                     return (
                       <Badge
                         variant="solid"
@@ -136,7 +157,7 @@ const CalendarComp = () => {
                         padding="1px 3px"
                         fontSize="7px"
                       >
-                        {moment(date).format("DD-MM-YYYY")}
+                        {moment(date, "YYYY-MM-DD HH:mm").format("DD-MM-YYYY")}
                       </Badge>
                     );
                   } else {

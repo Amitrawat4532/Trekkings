@@ -8,8 +8,8 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 // import Image from "next/image";
 
-const Gallery = () => {
-  const gallery = [
+const Gallery = ({ gallery }) => {
+  const galleryTemp = [
     "/images/card1.png",
     "/images/card1.png",
     "/images/card2.png",
@@ -79,7 +79,7 @@ const Gallery = () => {
             modules={[Autoplay, EffectCoverflow, Pagination]}
             className="mySwiper"
           >
-            {gallery.map((el, id) => {
+            {gallery[0]?.images?.map((el, id) => {
               return (
                 <SwiperSlide key={id}>
                   <Image
