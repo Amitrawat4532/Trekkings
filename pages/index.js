@@ -82,7 +82,7 @@ const index = ({ gallery, destination, event, vlog, testimonial }) => {
         <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
           {/* <CalendarComp event={event} /> */}
           <a
-            href="https://wa.me/8080463271?text=Hello There"
+            href="https://wa.me/918080463271?text=Hello There"
             target="_blank"
             rel="noreferrer"
             aria-label="Chat on WhatsApp"

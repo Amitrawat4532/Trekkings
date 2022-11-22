@@ -191,7 +191,7 @@ const Navbar = () => {
                   <Image h="30px" w="30px" src="./images/gmail.png" />
                 </a>
                 <a
-                  href="https://wa.me/8080463271"
+                  href="https://wa.me/918080463271"
                   target="_blank"
                   rel="noreferrer"
                 >
