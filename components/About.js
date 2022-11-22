@@ -10,18 +10,21 @@ function About() {
       header: "SECRET LOCATIONS",
       description:
         " We xplore for the fun and provide you with the best and beutiful locations available here so that you can add a new chapter of your adventure with beautiful memories",
+      link: "/secretlocation",
     },
     {
       img: "/images/safe_adventure.png",
       header: "SAFE ADVENTURE",
       description:
         " We take a spical care with our team of our beloved customer so they dont face any difficulties while the journey and we take the whole responsibilities during the trek",
+      link: "/safeadventure",
     },
     {
       img: "/images/professional_hiker.png",
       header: "PROFESSIONAL HIKERS",
       description:
         "We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer",
+      link: "/professionalhikers",
     },
   ];
 
@@ -88,7 +91,7 @@ function About() {
                 >
                   <Text variant="aboutHeader">{el?.header}</Text>
                   <Text variant="aboutParagraph">{el?.description}</Text>
-                  <Link href="/secretlocation">
+                  <Link href={el?.link}>
                     <Text variant="aboutbutton" fontWeight="600">
                       READ MORE &rarr;
                     </Text>
