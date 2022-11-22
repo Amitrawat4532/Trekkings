@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button, Image } from "@chakra-ui/react";
 import About from "../components/About";
 import Vlog from "../components/Vlog";
 import CalendarComp from "../components/Calendar";
@@ -79,8 +79,19 @@ const index = ({ gallery, destination, event, vlog, testimonial }) => {
         <WithSpeechBubbles testimonial={testimonial} />
         <Vlog vlog={vlog} />
         <Footer />
-        <Box position="fixed" left="5" bottom="5" zIndex="100">
-          <CalendarComp event={event} />
+        <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
+          {/* <CalendarComp event={event} /> */}
+          <a
+            href="https://wa.me/8080463271?text=Hello There"
+            target="_blank"
+            aria-label="Chat on WhatsApp"
+          >
+            <Image
+              alt="Chat on WhatsApp"
+              src="/images/WhatsAppButtonGreenLarge.png"
+              className="btn-whatsapp-pulse"
+            />
+          </a>
         </Box>
       </Box>
     </>

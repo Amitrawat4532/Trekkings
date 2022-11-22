@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { HStack, IconButton, Link } from "@chakra-ui/react";
+import { HStack, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { ButtonGroup } from "@chakra-ui/react";
 import jump from "jump.js";

@@ -17,6 +17,7 @@ export const TextStyle = {
       fontWeight: "400",
       fontSize: "23px",
       fontFamily: "sen",
+      cursor: "pointer",
     },
     aboutParagraph: {
       as: "h4",
@@ -362,6 +363,7 @@ export const TextStyle = {
       fontFamily: "anton",
       fontWeight: "100",
       display: "flex",
+      cursor: "pointer",
     },
     footerQuicklinksSpan: {
       color: "red",

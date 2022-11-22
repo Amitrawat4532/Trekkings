@@ -34,8 +34,9 @@ const Services = () => {
       {/* main container */}
       <Flex
         className="service_container"
-        backgroundImage="url('./images/map 2.png')"
-        backgroundSize="10%"
+        // backgroundImage="url('./images/map 2.png')"
+        // backgroundSize="10%"
+        background="radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 0% 0% / 20px 20px, radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 10px 10px / 20px 20px, linear-gradient(rgba(94, 60, 5, 0.02) 2px, transparent 2px) 0px -1px / 10px 10px, linear-gradient(90deg, rgba(94, 60, 5, 0.04) 2px, #ffffff 2px) -1px 0px / 10px 10px #ffffff"
         width="100vw"
         height="100%"
         justifyContent="start"

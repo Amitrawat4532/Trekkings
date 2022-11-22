@@ -1,6 +1,7 @@
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Link from "next/link";
 
 function About() {
   const cards = [
@@ -87,9 +88,11 @@ function About() {
                 >
                   <Text variant="aboutHeader">{el?.header}</Text>
                   <Text variant="aboutParagraph">{el?.description}</Text>
-                  <Text variant="aboutbutton" fontWeight="600">
-                    READ MORE &rarr;
-                  </Text>
+                  <Link href="/about">
+                    <Text variant="aboutbutton" fontWeight="600">
+                      READ MORE &rarr;
+                    </Text>
+                  </Link>
                 </Flex>
               </Flex>
             </AnimationOnScroll>
