@@ -84,11 +84,12 @@ const index = ({ gallery, destination, event, vlog, testimonial }) => {
           <a
             href="https://wa.me/8080463271?text=Hello There"
             target="_blank"
+            rel="noreferrer"
             aria-label="Chat on WhatsApp"
           >
             <Image
               alt="Chat on WhatsApp"
-              src="/images/WhatsAppButtonGreenLarge.png"
+              src="/images/WhatsApp.png"
               className="btn-whatsapp-pulse"
             />
           </a>
