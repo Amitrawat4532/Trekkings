@@ -86,7 +86,7 @@ const Secretlocation = () => {
                 alignItems="center"
                 direction="column"
                 order={
-                  id % 2 === 0 ? 0 : id % 2 !== 0 ? 0 : id / 3 === 0 ? 1 : ""
+                  id % 2 === 0 ? 0 : id % 2 !== 0 ? 1 : id / 3 === 0 ? 1 : ""
                 }
               >
                 <Text variant="secretLocationNumber">0{id + 1}</Text>
