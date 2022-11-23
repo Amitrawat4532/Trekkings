@@ -351,7 +351,7 @@ export const TextStyle = {
       fontFamily: "Anton",
       fontStyle: "normal",
       fontWeight: "400",
-      fontSize: ["30px", "35px", "40px", "50px"],
+      fontSize: ["30px", "35px", "40px", "45px"],
       lineHeight: "75px",
       letterSpacing: "0.04em",
       color: "#000000",

@@ -95,12 +95,12 @@ const Secretlocation = () => {
               <Flex
                 minH="460px"
                 //   border="1px solid black"
-                mx={["2", "4"]}
+                mx="2"
                 justifyContent="start"
                 alignItmes={id % 2 === 0 ? "start" : "end"}
                 flexDirection="column"
-                px={["2", "4", "8", "10"]}
-                py="5"
+                px={["2", "4", "8", "6"]}
+                // py="5"
               >
                 <Text
                   variant="secretLocationHeader"
