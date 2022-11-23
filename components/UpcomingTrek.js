@@ -129,126 +129,134 @@ const UpcomingTrek = ({ event }) => {
             h="100%"
             overflowY="auto"
           >
-            {event?.filter(filterByMonth).map((el, id) => {
-              const date = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
-                "DD"
-              );
-              const month = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
-                "MMM"
-              );
-              return (
-                <React.Fragment key={id}>
-                  <Flex
-                    justifyContent="start"
-                    alignItems="center"
-                    fontSize="20px"
-                    fontWeight="600"
-                    color="#FF3603a7"
-                    mb="4"
-                    bg="#cbd5e0ad"
-                    height="70px"
-                    // px="2"
-                    borderRadius="20px"
-                    _hover={{
-                      bg: "#ff4517a7",
-                      color: "black",
-                    }}
-                    onClick={() => {
-                      onDateSelect(el?.startDate);
-                    }}
-                    overflow="hidden"
-                    position="relative"
-                  >
+            {event
+              ?.filter(filterByMonth)
+              .slice(0, 5)
+              .map((el, id) => {
+                const date = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
+                  "DD"
+                );
+                const month = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
+                  "MMM"
+                );
+                return (
+                  <React.Fragment key={id}>
                     <Flex
-                      as="span"
-                      color="white"
-                      height="100%"
-                      px="2"
-                      py="2"
-                      ml={["4", "4", "6", "6"]}
-                      bg="mainOrange"
-                      fontFamily="Kanit"
-                      textAlign="center"
+                      justifyContent="start"
+                      alignItems="center"
+                      fontSize="20px"
+                      fontWeight="600"
+                      color="#FF3603a7"
+                      mb="4"
+                      bg="#cbd5e0ad"
+                      height="70px"
+                      // px="2"
+                      borderRadius="20px"
+                      _hover={{
+                        bg: "#ff4517a7",
+                        color: "black",
+                      }}
+                      onClick={() => {
+                        onDateSelect(el?.startDate);
+                      }}
+                      overflow="hidden"
+                      position="relative"
                     >
-                      {date}
-                      <br />
-                      {month}
-                    </Flex>
-                    <Flex direction="column" px="2" w="80%" whiteSpace="nowrap">
-                      <Text
-                        color="blackAlpha.800"
-                        fontSize="23px"
-                        overflow="hidden"
-                        textOverflow="ellipsis"
-                        w={["70%", "70%", "70%", "50%"]}
-                      >
-                        {el?.name}
-                      </Text>
-                      <Text
+                      <Flex
                         as="span"
-                        fontSize="11px"
-                        color="gray.800"
-                        textOverflow="ellipsis"
-                        overflow="hidden"
+                        color="white"
+                        height="100%"
+                        px="2"
+                        py="2"
+                        ml={["4", "4", "6", "6"]}
+                        bg="mainOrange"
+                        fontFamily="Kanit"
+                        textAlign="center"
                       >
-                        {el?.description}
-                      </Text>
-                    </Flex>
+                        {date}
+                        <br />
+                        {month}
+                      </Flex>
+                      <Flex
+                        direction="column"
+                        px="2"
+                        w="80%"
+                        whiteSpace="nowrap"
+                      >
+                        <Text
+                          color="blackAlpha.800"
+                          fontSize="23px"
+                          overflow="hidden"
+                          textOverflow="ellipsis"
+                          w={["70%", "70%", "70%", "50%"]}
+                        >
+                          {el?.name}
+                        </Text>
+                        <Text
+                          as="span"
+                          fontSize="11px"
+                          color="gray.800"
+                          textOverflow="ellipsis"
+                          overflow="hidden"
+                        >
+                          {el?.description}
+                        </Text>
+                      </Flex>
 
-                    <Flex position="absolute" right="5px" top="0">
-                      {el?.travel && (
-                        <Button variant="calendar_btn">
-                          <Text
-                            display={["none", "none", "none", "block"]}
-                            mr="1"
-                            p="0"
-                          >
-                            Travel
-                          </Text>
-                          <Image
-                            height="15px"
-                            width="15px"
-                            src="/images/Travel.png"
-                          />
-                        </Button>
-                      )}
-                      {el?.stay && (
-                        <Button variant="calendar_btn">
-                          <Text
-                            display={["none", "none", "none", "block"]}
-                            mr="1"
-                            p="0"
-                          >
-                            Stay
-                          </Text>
-                          <Image
-                            height="15px"
-                            width="15px"
-                            src="/images/Home.png"
-                          />
-                        </Button>
-                      )}
-                      {el?.food && (
-                        <Button variant="calendar_btn">
-                          <Text
-                            display={["none", "none", "none", "block"]}
-                            mr="1"
-                            p="0"
-                          >
-                            Food
-                          </Text>
-                          <Image
-                            height="15px"
-                            width="15px"
-                            src="/images/Food.png"
-                          />
-                        </Button>
-                      )}
+                      <Flex position="absolute" right="5px" top="0">
+                        {el?.travel && (
+                          <Button variant="calendar_btn">
+                            <Text
+                              display={["none", "none", "none", "block"]}
+                              mr="1"
+                              p="0"
+                            >
+                              Travel
+                            </Text>
+                            <Image
+                              height="15px"
+                              width="15px"
+                              src="/images/Travel.png"
+                            />
+                          </Button>
+                        )}
+                        {el?.stay && (
+                          <Button variant="calendar_btn">
+                            <Text
+                              display={["none", "none", "none", "block"]}
+                              mr="1"
+                              p="0"
+                            >
+                              Stay
+                            </Text>
+                            <Image
+                              height="15px"
+                              width="15px"
+                              src="/images/Home.png"
+                            />
+                          </Button>
+                        )}
+                        {el?.food && (
+                          <Button variant="calendar_btn">
+                            <Text
+                              display={["none", "none", "none", "block"]}
+                              mr="1"
+                              p="0"
+                            >
+                              Food
+                            </Text>
+                            <Image
+                              height="15px"
+                              width="15px"
+                              src="/images/Food.png"
+                            />
+                          </Button>
+                        )}
+                      </Flex>
                     </Flex>
-                  </Flex>
-                </React.Fragment>
-              );
-            })}
+                  </React.Fragment>
+                );
+              })}
             {event.filter(filterByMonth).length <= 0 && (
               <Box
                 textAlign="center"

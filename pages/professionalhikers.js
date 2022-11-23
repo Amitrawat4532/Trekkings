@@ -1,4 +1,4 @@
-import { Box, Button, Image } from "@chakra-ui/react";
+import { Box, Button, Image, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 
@@ -16,7 +16,10 @@ const Professionalhikers = () => {
           fontSize="22px"
           fontFamily="anton"
         >
-          &larr; Back
+          <Text as="span" pb="2" pr="1">
+            &larr;
+          </Text>{" "}
+          Back
         </Button>
       </Link>
       <Image

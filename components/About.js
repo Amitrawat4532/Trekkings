@@ -122,16 +122,19 @@ function About() {
         >
           Dont hesistate to contact us for more details
         </Text>
-        <Text
-          as="a"
-          fontWeight="400"
-          fontSize="23px"
-          color="#FF3606"
-          fontFamily="anton"
-          textAlign="center"
-        >
-          EXPLORE ALL TREKKING &rarr;
-        </Text>
+        <Link href="/events">
+          <Text
+            as="a"
+            fontWeight="400"
+            fontSize="23px"
+            color="#FF3606"
+            fontFamily="anton"
+            textAlign="center"
+            cursor="pointer"
+          >
+            EXPLORE ALL TREKKING &rarr;
+          </Text>
+        </Link>
       </Flex>
     </>
   );

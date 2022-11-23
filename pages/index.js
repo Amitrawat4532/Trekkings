@@ -1,4 +1,4 @@
-import { Box, Button, Image } from "@chakra-ui/react";
+import { Box, Button, Image, keyframes, Avatar } from "@chakra-ui/react";
 import About from "../components/About";
 import Vlog from "../components/Vlog";
 import CalendarComp from "../components/Calendar";
@@ -63,6 +63,19 @@ export async function getStaticProps(context) {
   };
 }
 
+const pulseRing = keyframes`
+	0% {
+    transform: scale(0.33);
+  }
+  40%,
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+	`;
+
 const index = ({ gallery, destination, event, vlog, testimonial }) => {
   console.log(testimonial, "---testimonial");
   return (
@@ -79,8 +92,8 @@ const index = ({ gallery, destination, event, vlog, testimonial }) => {
         <WithSpeechBubbles testimonial={testimonial} />
         <Vlog vlog={vlog} />
         <Footer />
+        {/* <CalendarComp event={event} /> */}
         <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
-          {/* <CalendarComp event={event} /> */}
           <a
             href="https://wa.me/918080463271?text=Hello There"
             target="_blank"
@@ -94,6 +107,34 @@ const index = ({ gallery, destination, event, vlog, testimonial }) => {
             />
           </a>
         </Box>
+        {/* <Box
+          position="fixed"
+          left="10"
+          bottom="10"
+          w="70px"
+          h="70px"
+          _before={{
+            content: "''",
+            position: "relative",
+            display: "block",
+            width: "300%",
+            height: "300%",
+            boxSizing: "border-box",
+            marginLeft: "-100%",
+            marginTop: "-75%",
+            borderRadius: "50%",
+            bgColor: "green",
+            animation: `2.25s ${pulseRing} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`,
+          }}
+        >
+          <Image
+            alt="Chat on WhatsApp"
+            src="/images/whatsapp.png"
+            className="btn-whatsapp-pulse"
+            position="absolute"
+            top="0"
+          />
+        </Box> */}
       </Box>
     </>
   );

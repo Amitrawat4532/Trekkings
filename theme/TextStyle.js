@@ -355,7 +355,6 @@ export const TextStyle = {
       lineHeight: "75px",
       letterSpacing: "0.04em",
       color: "#000000",
-      textAlign: "center",
     },
     secretLocationText: {
       fontFamily: "Anton",
@@ -365,7 +364,6 @@ export const TextStyle = {
       lineHeight: "23px",
       wordSpacing: "0.14em",
       color: "#000000d1",
-      textAlign: "center",
       mt: "10%",
     },
     secretLocationNumber: {
