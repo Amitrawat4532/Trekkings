@@ -100,17 +100,19 @@ const Secretlocation = () => {
                 alignItmes={id % 2 === 0 ? "start" : "end"}
                 flexDirection="column"
                 px={["2", "4", "8", "6"]}
-                // py="5"
+                py="5"
               >
                 <Text
                   variant="secretLocationHeader"
-                  textAlign={id % 2 === 0 ? "left" : "right"}
+                  // textAlign={id % 2 === 0 ? "left" : "right"}
+                  textAlign="left"
                 >
                   {el?.title}
                 </Text>
                 <Text
                   variant="secretLocationText"
-                  textAlign={id % 2 === 0 ? "left" : "right"}
+                  // textAlign={id % 2 === 0 ? "left" : "right"}
+                  textAlign="left"
                 >
                   {el?.description}
                 </Text>
