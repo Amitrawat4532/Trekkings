@@ -24,8 +24,8 @@ const Safeadventure = () => {
         </Button>
       </Link>
 
-      <Flex direction={["column", "column", "row", "row"]}>
-        <Flex direction="column" p="10" flex="1">
+      <Flex direction={["column", "column", "row", "row"]} alignItems="end">
+        <Flex direction="column" px="10" py="70px" flex="1">
           <Text variant="secretLocationHeader">SAFE ADVENTURE</Text>
           <Text variant="secretLocationText">
             Adventures are some of the moments in life, which makes our heart
@@ -49,28 +49,29 @@ const Safeadventure = () => {
         <Image
           flex="1"
           src="/images/safeadventure.png"
-          h={["300px", "300px", "450px", "450px"]}
-          w="100%"
-          ml="4"
+          h={["250px", "250px", "450px", "450px"]}
+          w={["90%", "90%", "100%", "100%"]}
           borderLeft="20px solid #FF4417"
           borderBottom="20px solid #FF4417"
-          borderTopLeftRadius={["50px", "50px", "0", "0"]}
+          borderTop="20px solid #FF4417"
+          borderTopLeftRadius={["50px", "50px", "50px", "50px"]}
           borderBottomLeftRadius="85px"
         />
       </Flex>
 
       <Flex
         justifyContent="center"
-        alignItems="center"
+        alignItems="start"
         wrap="wrap"
         direction={["column-reverse", "column-reverse", "row", "row"]}
-        py="50px"
+        pt={["0px", "0px", "50px", "70px"]}
+        pb="50px"
       >
         <Image
           flex="1"
           src="/images/safeadventure2.png"
           h="300px"
-          w="100%"
+          w={["90%", "90%", "100%", "100%"]}
           borderTopRightRadius="85px"
           borderBottomRightRadius="85px"
           borderRight="20px solid #FF4417"
