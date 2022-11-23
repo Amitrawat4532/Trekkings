@@ -207,8 +207,16 @@ const Events = ({ event }) => {
                     "start",
                   ]}
                 >
-                  <Box minW={["auto", "auto", "150px", "150px"]}>
-                    <Text fontSize="16px" pt="4" color="gray.800">
+                  <Box
+                    minW={["auto", "auto", "150px", "150px"]}
+                    fontSize={["15px", "15px", "20px", "20px"]}
+                  >
+                    <Text
+                      fontSize={["13px", "13px", "16px", "16px"]}
+                      pt="4"
+                      color="gray.800"
+                      textAlign={["center", "center", "start", "start"]}
+                    >
                       Starting Date -
                     </Text>
                     {moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
@@ -216,8 +224,16 @@ const Events = ({ event }) => {
                     )}
                   </Box>
 
-                  <Box minW={["auto", "auto", "150px", "150px"]}>
-                    <Text fontSize="16px" pt="4" color="gray.800">
+                  <Box
+                    minW={["auto", "auto", "150px", "150px"]}
+                    fontSize={["15px", "15px", "20px", "20px"]}
+                  >
+                    <Text
+                      fontSize={["13px", "13px", "16px", "16px"]}
+                      textAlign={["center", "center", "start", "start"]}
+                      pt="4"
+                      color="gray.800"
+                    >
                       End Date -
                     </Text>
                     {moment(el?.endDate, "YYYY-MM-DD HH:mm").format(
@@ -225,8 +241,16 @@ const Events = ({ event }) => {
                     )}
                   </Box>
 
-                  <Box minW={["auto", "auto", "150px", "150px"]}>
-                    <Text fontSize="16px" pt="4" color="gray.800">
+                  <Box
+                    minW={["auto", "auto", "150px", "150px"]}
+                    fontSize={["15px", "15px", "20px", "20px"]}
+                  >
+                    <Text
+                      fontSize={["13px", "13px", "16px", "16px"]}
+                      textAlign={["center", "center", "start", "start"]}
+                      pt="4"
+                      color="gray.800"
+                    >
                       Amount -
                     </Text>
                     {el?.price} ₹
