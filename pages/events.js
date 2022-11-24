@@ -43,7 +43,17 @@ const Events = ({ event }) => {
   const [searchInput, setSearchInput] = useState("");
 
   return (
-    <Box p="0" m="0" minH="100vh" overflow="hidden" position="relative">
+    <Box
+      p="0"
+      m="0"
+      minH="100vh"
+      overflow="hidden"
+      position="relative"
+      background="repeating-radial-gradient(circle, transparent, transparent 3.5px, rgba(255, 55, 5, 0.07) 3.5px, rgba(255, 55, 5, 0.07) 4.5px), repeating-radial-gradient(circle, transparent, transparent 3.5px, rgba(255, 55, 5, 0.07) 3.5px, rgba(255, 55, 5, 0.07) 4.5px), rgba(20, 23, 38, 0)"
+      backgroundSize="20px 20px"
+      backgroundPosition="0 0, 10px 10px, 20px 10px"
+      backgroundColor="rgba(20, 23, 38, 0)"
+    >
       <Link href="/">
         <Button
           position="absolute"
@@ -68,10 +78,11 @@ const Events = ({ event }) => {
         pt={["80px", "80px", "50px", "50px"]}
         pb="10"
       >
-        <InputGroup size="lg" w={["300px", "500px", "700px", "700px"]}>
+        <InputGroup size="lg" w={["80%", "80%", "700px", "700px"]}>
           <Input
             type={"text"}
             placeholder="Search Events By Location"
+            bg="white"
             boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
@@ -134,10 +145,10 @@ const Events = ({ event }) => {
                 height="100%"
                 // px="2"
                 borderRadius="20px"
-                _hover={{
-                  bg: "#ff4517a1",
-                  color: "black",
-                }}
+                // _hover={{
+                //   bg: "#ff4517a1",
+                //   color: "black",
+                // }}
                 boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
                 overflow="hidden"
                 position="relative"
@@ -321,7 +332,8 @@ const Events = ({ event }) => {
                 {/* Book Now Button */}
                 {monthNumber >= selectedMonthNumber && (
                   <a
-                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name} \r\n Event Date = ${date} \n`}
+                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name} \r\n
+                     Event Date = ${date} \n`}
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Chat on WhatsApp"
