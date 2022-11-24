@@ -107,6 +107,9 @@ const Events = ({ event }) => {
           .sort()
           .reverse()
           .map((el, id) => {
+            const fullDate = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
+              "DD MM YYYY"
+            );
             const date = moment(el?.startDate, "YYYY-MM-DD HH:mm").format("DD");
             const month = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
               "MMM"
@@ -318,17 +321,23 @@ const Events = ({ event }) => {
                 {/* Book Now Button */}
                 {monthNumber >= selectedMonthNumber && (
                   <a
-                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name} \n Event Date = ${date} \n`}
+                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name} \r\n Event Date = ${date} \n`}
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Chat on WhatsApp"
+                    style={{ width: "100%" }}
                   >
                     <Button
-                      position="absolute"
+                      position={[
+                        "relative",
+                        "relative",
+                        "absolute",
+                        "absolute",
+                      ]}
+                      w={["100%", "100%", "200px", "200px"]}
                       right="0"
                       bottom="0"
                       py="6"
-                      px="10"
                       bg="mainOrange"
                       color="white"
                       _hover={{
