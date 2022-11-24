@@ -71,7 +71,7 @@ const Events = ({ event }) => {
         <InputGroup size="lg" w={["300px", "500px", "700px", "700px"]}>
           <Input
             type={"text"}
-            placeholder="Search Events"
+            placeholder="Search Events By Location"
             boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
@@ -99,16 +99,25 @@ const Events = ({ event }) => {
       >
         {event
           ?.filter((row) => {
-            return Object.values(row.name)
+            return Object.values(row?.name)
               .join("")
               .toLowerCase()
               .includes(searchInput.toLowerCase());
           })
+          .sort()
+          .reverse()
           .map((el, id) => {
             const date = moment(el?.startDate, "YYYY-MM-DD HH:mm").format("DD");
             const month = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
               "MMM"
             );
+            const selectedMonthNumber = moment(new Date(), "DD-MM-YY").format(
+              "X"
+            );
+            const monthNumber = moment(
+              el?.startDate,
+              "YYYY-MM-DD HH:mm"
+            ).format("X");
             return (
               <Flex
                 key={id}
@@ -126,9 +135,7 @@ const Events = ({ event }) => {
                   bg: "#ff4517a1",
                   color: "black",
                 }}
-                // onClick={() => {
-                //   onDateSelect(el?.startDate);
-                // }}
+                boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
                 overflow="hidden"
                 position="relative"
                 direction="column"
@@ -307,6 +314,34 @@ const Events = ({ event }) => {
                     </Button>
                   )}
                 </Flex>
+
+                {/* Book Now Button */}
+                {monthNumber >= selectedMonthNumber && (
+                  <a
+                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name} /n Event Date = ${el?.startDate}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Chat on WhatsApp"
+                  >
+                    <Button
+                      position="absolute"
+                      right="0"
+                      bottom="0"
+                      py="6"
+                      px="10"
+                      bg="mainOrange"
+                      color="white"
+                      _hover={{
+                        color: "black",
+                      }}
+                    >
+                      Book Now
+                      <Text as="span" pb="2" pl="2" fontSize="35px">
+                        &#8594;
+                      </Text>
+                    </Button>
+                  </a>
+                )}
               </Flex>
             );
           })}
