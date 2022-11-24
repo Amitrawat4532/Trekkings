@@ -140,7 +140,7 @@ const Events = ({ event }) => {
                 fontSize="20px"
                 fontWeight="600"
                 color="#FF3603a7"
-                mb="8"
+                mb="10"
                 bg="#cbd5e0ad"
                 height="100%"
                 // px="2"
@@ -332,8 +332,9 @@ const Events = ({ event }) => {
                 {/* Book Now Button */}
                 {monthNumber >= selectedMonthNumber && (
                   <a
-                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name} \r\n
-                     Event Date = ${date} \n`}
+                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name}
+                     Event Date = ${fullDate}
+                     `}
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Chat on WhatsApp"
