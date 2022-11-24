@@ -318,7 +318,7 @@ const Events = ({ event }) => {
                 {/* Book Now Button */}
                 {monthNumber >= selectedMonthNumber && (
                   <a
-                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name} /n Event Date = ${el?.startDate}`}
+                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name} \n Event Date = ${date} \n`}
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Chat on WhatsApp"
