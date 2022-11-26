@@ -37,7 +37,8 @@ export async function getStaticProps(context) {
 
   const vlogQuery = `*[_type == "vlog"]{
       ..., 
-      "image": image.asset->url
+      "image": image.asset->url,
+      "video": video.asset->url,
     }`;
 
   const testimonialQuery = `*[_type == "testimonial"]{

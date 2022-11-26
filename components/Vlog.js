@@ -69,12 +69,6 @@ const Vlog = ({ vlog }) => {
                 of the vloggers country.
               </Text>
             </AnimationOnScroll>
-            {/* <Image
-              src="/images/whyTrek.png"
-              w="100%"
-              h="500px"
-              objectFit="contain"
-            /> */}
           </Flex>
 
           <Flex w="100%" flex="1" my="4">
@@ -84,31 +78,47 @@ const Vlog = ({ vlog }) => {
               modules={[EffectCards]}
               className="blogs_slider"
             >
-              {vlog?.map((el, key) => {
-                return (
-                  <SwiperSlide key={key}>
-                    <Flex alignItems="center" justifyContent="center">
-                      <Flex
-                        flexDirection="column"
-                        p="20px 0px 20px 0px"
-                        alignItems="center"
-                      >
-                        <Image
+              {vlog
+                ?.sort()
+                .reverse()
+                .map((el, key) => {
+                  return (
+                    <SwiperSlide key={key}>
+                      <Flex alignItems="start" justifyContent="center" h="100%">
+                        <Flex
+                          flexDirection="column"
+                          justifyContent="space-around"
+                          p="20px 15px"
+                          alignItems="center"
+                          // border="1px solid red"
+                          h="100%"
+                        >
+                          {/* <Image
                           mb="2"
                           src={el?.image}
                           borderRadius="61px"
                           width={["250px", "250px", "350px", "350px"]}
                           height={["200px", "200px", "300px", "300px"]}
                           fallbackSrc="/images/logo.png"
-                        />
-                        <Text variant="blogHeader">{el?.title}</Text>
-                        <Text variant="blogDate">{el.date}</Text>
-                        <Text variant="blogReadmore">Read More</Text>
+                        /> */}
+                          <video
+                            className="videoVlog"
+                            poster={el?.image}
+                            controls
+                          >
+                            <source src={el?.video} type="video/mp4"></source>
+                          </video>
+                          <Text variant="blogHeader">{el?.title}</Text>
+                          <Text variant="blogDate">{el.date}</Text>
+                          <Text variant="blogDescription">
+                            {el?.description}
+                          </Text>
+                          <Text variant="blogReadmore">Read More</Text>
+                        </Flex>
                       </Flex>
-                    </Flex>
-                  </SwiperSlide>
-                );
-              })}
+                    </SwiperSlide>
+                  );
+                })}
             </Swiper>
           </Flex>
         </Flex>

@@ -119,7 +119,7 @@ const Events = ({ event }) => {
           .reverse()
           .map((el, id) => {
             const fullDate = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
-              "DD MM YYYY"
+              "DD MMM YYYY"
             );
             const date = moment(el?.startDate, "YYYY-MM-DD HH:mm").format("DD");
             const month = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
@@ -334,6 +334,7 @@ const Events = ({ event }) => {
                   <a
                     href={`https://wa.me/918080463271?text=Event Name = ${el?.name}
                      Event Date = ${fullDate}
+                     
                      `}
                     target="_blank"
                     rel="noreferrer"
@@ -355,6 +356,7 @@ const Events = ({ event }) => {
                       color="white"
                       _hover={{
                         color: "black",
+                        transform: "scale(1.1)",
                       }}
                     >
                       Book Now

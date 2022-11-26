@@ -294,6 +294,7 @@ export const TextStyle = {
       color: "#000000",
       fontFamily: "anton",
       mt: "2",
+      textAlign: "center",
     },
     blogDate: {
       fontWeight: "400",
@@ -303,6 +304,16 @@ export const TextStyle = {
       fontFamily: "kanit",
       textAlign: "center",
       w: "100%",
+    },
+    blogDescription: {
+      fontWeight: "300",
+      fontSize: ["12px", "12px", "15px", "15px"],
+      letterSpacing: "0.02em",
+      color: "white",
+      fontFamily: "kanit",
+      h: "100%",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
     },
     blogParagraph: {
       fontWeight: "300",
