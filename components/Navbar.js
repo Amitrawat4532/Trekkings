@@ -1,20 +1,19 @@
-import React, { useRef } from "react";
-import { HStack, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { ButtonGroup } from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/react";
 import jump from "jump.js";
+import React, { useRef } from "react";
 
 import {
   Box,
   Button,
+  Drawer,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerOverlay,
   Flex,
   Image,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
   useDisclosure,
-  DrawerFooter,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
