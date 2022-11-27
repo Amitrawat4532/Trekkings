@@ -1,8 +1,19 @@
 import React, { useRef } from "react";
 import { HStack, IconButton } from "@chakra-ui/react";
+import Link from "next/link";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { ButtonGroup } from "@chakra-ui/react";
 import jump from "jump.js";
+import {
+  BsGithub,
+  BsLinkedin,
+  BsPerson,
+  BsTwitter,
+  BsInstagram,
+  BsPhone,
+  BsWhatsapp,
+  BsTelephonePlus,
+} from "react-icons/bs";
+import { MdEmail, MdOutlineEmail, MdOutlineMailOutline } from "react-icons/md";
 
 import {
   Box,
@@ -80,11 +91,14 @@ const Navbar = () => {
             Gallery
           </Button>
           <Button
-            variant="blogButton"
+            variant="navButton"
             onClick={() => jump(".blogs_container", { duration: 5000 })}
           >
             Latest Blog
           </Button>
+          <Link href="/contact">
+            <Button variant="blogButton">Contact</Button>
+          </Link>
         </Flex>
 
         <IconButton
@@ -163,6 +177,9 @@ const Navbar = () => {
               >
                 Latest Blog
               </Button>
+              <Link href="/contact">
+                <Button variant="responsiveNavButton">Contact</Button>
+              </Link>
             </Flex>
 
             {/* ***************Navbar  footer mobile view******************** */}
@@ -173,29 +190,74 @@ const Navbar = () => {
                 justifyContent="space-evenly"
                 mb="15px"
               >
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image h="30px" w="30px" src="./images/instagram.png" />
-                </a>
-                <a href="tel:+91 1234567890" target="_blank" rel="noreferrer">
-                  <Image h="30px" w="30px" src="./images/viber.png" />
-                </a>
-                <a
-                  href="https://www.gmail.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image h="30px" w="30px" src="./images/gmail.png" />
+                <a href="tel:8080463271" target="_blank" rel="noreferrer">
+                  <IconButton
+                    aria-label="email"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<BsTelephonePlus />}
+                    _hover={{
+                      bg: "blue.500",
+                      color: "gray.700",
+                    }}
+                    isRound
+                  />
                 </a>
                 <a
                   href="https://wa.me/918080463271"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image h="30px" w="30px" src="./images/whatsapp.png" />
+                  <IconButton
+                    aria-label="email"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<BsWhatsapp />}
+                    _hover={{
+                      bg: "blue.500",
+                      color: "gray.700",
+                    }}
+                    isRound
+                  />
+                </a>
+
+                <a
+                  href="https://www.gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <IconButton
+                    aria-label="email"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<MdOutlineMailOutline />}
+                    _hover={{
+                      bg: "blue.500",
+                      color: "gray.700",
+                    }}
+                    isRound
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <IconButton
+                    aria-label="email"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<BsInstagram />}
+                    _hover={{
+                      bg: "blue.500",
+                      color: "gray.700",
+                    }}
+                    isRound
+                  />
                 </a>
               </Flex>
             </DrawerFooter>
