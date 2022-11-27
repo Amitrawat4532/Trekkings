@@ -10,33 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-const testimonal2 = [
-  {
-    name: "Jane Cooper",
-    profile: "CEO at ABC Corporation",
-    header: "Efficient Collaborating",
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
-    img: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-  },
-  {
-    name: "Jane Cooper",
-    profile: "CEO at ABC Corporation",
-    header: "Intuitive Design",
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
-    img: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-  },
-  {
-    name: "Jane Cooper",
-    profile: "CEO at ABC Corporation",
-    header: "Mindblowing Service",
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
-    img: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-  },
-];
-
 const Testimonial = ({ children }) => {
   return <Box>{children}</Box>;
 };
@@ -136,7 +109,11 @@ export default function WithSpeechBubbles({ testimonial }) {
         >
           {testimonial?.map((el, key) => {
             return (
-              <AnimationOnScroll animateIn="animate__zoomInUp" key={key}>
+              <AnimationOnScroll
+                animateOnce={true}
+                animateIn="animate__zoomInUp"
+                key={key}
+              >
                 <Testimonial>
                   <TestimonialContent>
                     <TestimonialHeading textAlign="center">

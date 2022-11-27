@@ -10,6 +10,12 @@ import {
   Image,
   Heading,
   HStack,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Badge,
 } from "@chakra-ui/react";
 
 import { SearchIcon, WarningTwoIcon } from "@chakra-ui/icons";
@@ -159,15 +165,27 @@ const Events = ({ event }) => {
                   as="span"
                   color="white"
                   height="auto"
-                  px="2"
-                  py="2"
                   ml={["4", "4", "6", "6"]}
-                  bg="mainOrange"
                   fontFamily="Kanit"
                   textAlign="center"
                   position="absolute"
                 >
-                  {date} {month}
+                  <Box bg="mainOrange" px="2" py="2">
+                    {date} {month}
+                  </Box>
+                  {monthNumber >= selectedMonthNumber && (
+                    <Text
+                      py="2"
+                      px="4"
+                      bgGradient="radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);"
+                      bgClip="text"
+                      fontSize={["16px", "16px", "20px", "20px"]}
+                      fontWeight="extrabold"
+                    >
+                      UPCOMING!!
+                    </Text>
+                  )}
                 </Flex>
 
                 <Flex direction={["column", "column", "row", "row"]} flex="1">
@@ -189,94 +207,110 @@ const Events = ({ event }) => {
                     </Text>
                   </Flex>
 
-                  <HStack
-                    my="3"
+                  {/* Dates and Amount */}
+                  <Flex
+                    mt={["10px", "10px", "50px", "50px"]}
+                    w="100%"
                     wrap="wrap"
-                    justifyContent="space-evenly"
-                    gap="2"
+                    px="8"
+                    pb="8"
+                    color="black"
                     flex="1"
-                    mt="60px"
-                    mx="auto"
+                    gap="2"
+                    justifyContent={[
+                      "space-between",
+                      "space-between",
+                      "start",
+                      "start",
+                    ]}
                   >
-                    {el?.images?.map((el, id) => {
-                      return (
-                        <Image
-                          key={id}
-                          src={el?.img_url}
-                          width={["160px", "120px"]}
-                          height={["100px", "100px"]}
-                          objectFit="cover"
-                          fallbackSrc="/images/logo.png"
-                        ></Image>
-                      );
-                    })}
-                  </HStack>
-                </Flex>
-                {/* Dates and Amount */}
-                <Flex
-                  w="100%"
-                  wrap="wrap"
-                  px="8"
-                  pb="8"
-                  color="black"
-                  flex="1"
-                  gap="2"
-                  justifyContent={[
-                    "space-between",
-                    "space-between",
-                    "start",
-                    "start",
-                  ]}
-                >
-                  <Box
-                    minW={["auto", "auto", "150px", "150px"]}
-                    fontSize={["15px", "15px", "20px", "20px"]}
-                  >
-                    <Text
-                      fontSize={["13px", "13px", "16px", "16px"]}
-                      pt="4"
-                      color="gray.800"
-                      textAlign={["center", "center", "start", "start"]}
+                    <Box
+                      minW={["auto", "auto", "150px", "150px"]}
+                      fontSize={["15px", "15px", "20px", "20px"]}
                     >
-                      Starting Date -
-                    </Text>
-                    {moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
-                      "DD-MM-YYYY"
-                    )}
-                  </Box>
+                      <Text
+                        fontSize={["13px", "13px", "16px", "16px"]}
+                        pt="4"
+                        color="gray.800"
+                        textAlign={["center", "center", "start", "start"]}
+                      >
+                        Starting Date -
+                      </Text>
+                      {moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
+                        "DD-MM-YYYY"
+                      )}
+                    </Box>
 
-                  <Box
-                    minW={["auto", "auto", "150px", "150px"]}
-                    fontSize={["15px", "15px", "20px", "20px"]}
-                  >
-                    <Text
-                      fontSize={["13px", "13px", "16px", "16px"]}
-                      textAlign={["center", "center", "start", "start"]}
-                      pt="4"
-                      color="gray.800"
+                    <Box
+                      minW={["auto", "auto", "150px", "150px"]}
+                      fontSize={["15px", "15px", "20px", "20px"]}
                     >
-                      End Date -
-                    </Text>
-                    {moment(el?.endDate, "YYYY-MM-DD HH:mm").format(
-                      "DD-MM-YYYY"
-                    )}
-                  </Box>
+                      <Text
+                        fontSize={["13px", "13px", "16px", "16px"]}
+                        textAlign={["center", "center", "start", "start"]}
+                        pt="4"
+                        color="gray.800"
+                      >
+                        End Date -
+                      </Text>
+                      {moment(el?.endDate, "YYYY-MM-DD HH:mm").format(
+                        "DD-MM-YYYY"
+                      )}
+                    </Box>
 
-                  <Box
-                    minW={["auto", "auto", "150px", "150px"]}
-                    fontSize={["15px", "15px", "20px", "20px"]}
-                  >
-                    <Text
-                      fontSize={["13px", "13px", "16px", "16px"]}
-                      textAlign={["center", "center", "start", "start"]}
-                      pt="4"
-                      color="gray.800"
+                    <Box
+                      minW={["auto", "auto", "150px", "150px"]}
+                      fontSize={["15px", "15px", "20px", "20px"]}
                     >
-                      Amount -
-                    </Text>
-                    {el?.price} ₹
-                  </Box>
+                      <Text
+                        fontSize={["13px", "13px", "16px", "16px"]}
+                        textAlign={["center", "center", "start", "start"]}
+                        pt="4"
+                        color="gray.800"
+                      >
+                        Amount -
+                      </Text>
+                      {el?.price} ₹
+                    </Box>
+                  </Flex>
                 </Flex>
+
+                <Accordion mt="4" w="100%" allowToggle>
+                  <AccordionItem>
+                    <AccordionButton color="black">
+                      <Box flex="1" textAlign="left">
+                        <Text fontSize="18px" fontWeight="600">
+                          Show Images
+                        </Text>
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                    <AccordionPanel>
+                      <HStack
+                        my="3"
+                        wrap="wrap"
+                        justifyContent="space-evenly"
+                        gap="2"
+                        flex="1"
+                        mt="60px"
+                        mx="auto"
+                      >
+                        {el?.images?.map((el, id) => {
+                          return (
+                            <Image
+                              key={id}
+                              src={el?.img_url}
+                              width={["140px", "120px"]}
+                              height={["100px", "100px"]}
+                              objectFit="cover"
+                              fallbackSrc="/images/logo.png"
+                            ></Image>
+                          );
+                        })}
+                      </HStack>
+                    </AccordionPanel>
+                  </AccordionItem>
+                </Accordion>
                 {/* Food / Travel / Stay */}
                 <Flex position="absolute" right="2" top="2">
                   {el?.travel && (
@@ -331,40 +365,39 @@ const Events = ({ event }) => {
 
                 {/* Book Now Button */}
                 {monthNumber >= selectedMonthNumber && (
-                  <a
-                    href={`https://wa.me/918080463271?text=Event Name = ${el?.name}
+                  <Flex justifyContent="end" alignItems="end" w="100%">
+                    <a
+                      href={`https://wa.me/918080463271?text=Event Name = ${el?.name}
                      Event Date = ${fullDate}
                      
                      `}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Chat on WhatsApp"
-                    style={{ width: "100%" }}
-                  >
-                    <Button
-                      position={[
-                        "relative",
-                        "relative",
-                        "absolute",
-                        "absolute",
-                      ]}
-                      w={["100%", "100%", "200px", "200px"]}
-                      right="0"
-                      bottom="0"
-                      py="6"
-                      bg="mainOrange"
-                      color="white"
-                      _hover={{
-                        color: "black",
-                        transform: "scale(1.1)",
-                      }}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Chat on WhatsApp"
+                      style={{ width: "100%" }}
                     >
-                      Book Now
-                      <Text as="span" pb="2" pl="2" fontSize="35px">
-                        &#8594;
-                      </Text>
-                    </Button>
-                  </a>
+                      <Button
+                        // position="relative"
+                        // w={["100%", "100%", "200px", "200px"]}
+                        w="100%"
+                        // right="0"
+                        // bottom="0"
+                        py="6"
+                        bg="mainOrange"
+                        color="white"
+                        _hover={{
+                          color: "black",
+                          transform: "scale(1.1)",
+                        }}
+                        borderRadius="0"
+                      >
+                        Book Now
+                        <Text as="span" pb="2" pl="2" fontSize="35px">
+                          &#8594;
+                        </Text>
+                      </Button>
+                    </a>
+                  </Flex>
                 )}
               </Flex>
             );

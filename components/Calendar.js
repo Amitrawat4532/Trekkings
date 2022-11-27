@@ -24,34 +24,6 @@ import { WarningTwoIcon } from "@chakra-ui/icons";
 
 const CalendarComp = ({ event }) => {
   const [value, onChange] = useState(new Date());
-  const trek = [
-    {
-      title: "IgatPuri Trek -1jdpfajfpoajdpfojapfjspojfposdjp",
-      startDate: "04-10-2022",
-      endDate: "04-10-2022",
-      images: ["/images/c1.png", "/images/c2.png", "/images/c3.png"],
-      detail:
-        "IgatPuri Trek detailss Id ea et nisi irure irure labore esse sint.",
-    },
-    {
-      title: "IgatPuri Trek -2",
-      startDate: "07-10-2022",
-      endDate: "07-10-2022",
-      images: ["/images/c3.png", "/images/c1.png", "/images/c2.png"],
-
-      detail:
-        "IgatPuri Trek detailss Id ea et nisi irure irure labore esse sint.",
-    },
-    {
-      title: "IgatPuri Trek -3",
-      startDate: "12-11-2022",
-      endDate: "12-11-2022",
-      images: ["/images/c2.png", "/images/c3.png", "/images/c1.png"],
-
-      detail:
-        "IgatPuri Trek detailss Id ea et nisi irure irure labore esse sint.",
-    },
-  ];
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedTrek, setSelectedTrek] = useState({});
   const [selectedMonth, setSelectedMonth] = useState(

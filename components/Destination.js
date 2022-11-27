@@ -3,39 +3,6 @@ import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Destination({ destination }) {
-  const Gallery = [
-    {
-      img: "/images/card1.png",
-      person: "10",
-      days: "4",
-      price: "4000",
-    },
-    {
-      img: "/images/card2.png",
-      person: "10",
-      days: "8",
-      price: "4000",
-    },
-    {
-      img: "/images/card3.png",
-      person: "10",
-      days: "4",
-      price: "3000",
-    },
-    {
-      img: "/images/card2.png",
-      person: "10",
-      days: "8",
-      price: "4000",
-    },
-    {
-      img: "/images/card3.png",
-      person: "10",
-      days: "4",
-      price: "3000",
-    },
-  ];
-
   return (
     <>
       {/* main container */}
@@ -98,6 +65,7 @@ function Destination({ destination }) {
         {/* card container */}
 
         <AnimationOnScroll
+          animateOnce={true}
           animateIn="animate__fadeInUp"
           // animateOut="animate__fadeOutUP"
         >

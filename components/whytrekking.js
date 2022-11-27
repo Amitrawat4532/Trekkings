@@ -89,7 +89,7 @@ const Whytrekking = () => {
         {/* Feature Context */}
         <Flex
           px="4"
-          mb="4"
+          my="6"
           alignItems="start"
           justifyContent="space-evenly"
           flexDirection="row"

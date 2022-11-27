@@ -28,6 +28,7 @@ const Home = () => {
           <AnimationOnScroll
             animateIn="animate__fadeInUp"
             initiallyVisible={true}
+            animateOnce={true}
           >
             <Text variant="homeHeader2">IMPOSSIBLE</Text>
           </AnimationOnScroll>

@@ -12,7 +12,6 @@ const Vlog = ({ vlog }) => {
   return (
     <>
       <Flex
-        // background="#2A2550"
         bgImage="url('/images/space5.jpg')"
         width="100%"
         heigh="100%"
@@ -21,7 +20,6 @@ const Vlog = ({ vlog }) => {
         py="5"
       >
         {/* Title */}
-
         <Flex
           position="relative"
           width="100%"
@@ -34,8 +32,6 @@ const Vlog = ({ vlog }) => {
           <Text variant="blogMainheader" id="latestblog">
             OUR VLOGS
           </Text>
-
-          {/* <Text variant="blogMainheader1">LATEST VLOG</Text> */}
         </Flex>
 
         <Flex
@@ -48,7 +44,7 @@ const Vlog = ({ vlog }) => {
           flexDirection={["column-reverse", "column-reverse", "row", "row"]}
         >
           <Flex width="auto" flex="1" p="5">
-            <AnimationOnScroll animateIn="animate__fadeInUp">
+            <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInUp">
               <Text variant="blogParagraph">
                 Vlog stands for a video blog or video log, and refers to a type
                 of blog where most or all of the content is in a video format.
@@ -90,17 +86,8 @@ const Vlog = ({ vlog }) => {
                           justifyContent="space-around"
                           p="20px 15px"
                           alignItems="center"
-                          // border="1px solid red"
                           h="100%"
                         >
-                          {/* <Image
-                          mb="2"
-                          src={el?.image}
-                          borderRadius="61px"
-                          width={["250px", "250px", "350px", "350px"]}
-                          height={["200px", "200px", "300px", "300px"]}
-                          fallbackSrc="/images/logo.png"
-                        /> */}
                           <video
                             className="videoVlog"
                             poster={el?.image}

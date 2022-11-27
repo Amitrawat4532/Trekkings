@@ -49,7 +49,11 @@ function About() {
         {/* card container */}
         {cards.map((el, id) => {
           return (
-            <AnimationOnScroll animateIn="animate__bounceIn" key={id}>
+            <AnimationOnScroll
+              animateOnce={true}
+              animateIn="animate__bounceIn"
+              key={id}
+            >
               <Flex
                 width={["80%", "80%", "350px", "350px"]}
                 height="100%"

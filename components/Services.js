@@ -64,6 +64,7 @@ const Services = () => {
           {Ourservices.map((el, key) => {
             return (
               <AnimationOnScroll
+                animateOnce={true}
                 animateIn={
                   key % 2 === 0
                     ? "animate__fadeInLeftBig"

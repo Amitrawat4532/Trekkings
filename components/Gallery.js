@@ -9,15 +9,6 @@ import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 // import Image from "next/image";
 
 const Gallery = ({ gallery }) => {
-  const galleryTemp = [
-    "/images/card1.png",
-    "/images/card1.png",
-    "/images/card2.png",
-    "/images/card3.png",
-    "/images/card2.png",
-    "/images/card1.png",
-  ];
-
   return (
     <>
       {/* header container */}
@@ -30,9 +21,10 @@ const Gallery = ({ gallery }) => {
         justifyContent="space-around"
       >
         <Flex
+          my="8"
           position="relative"
           width="100%"
-          heigh="100px"
+          height="100%"
           alignSelf="start"
           justifyContent="center"
           alignItems="center"
@@ -94,7 +86,7 @@ const Gallery = ({ gallery }) => {
           </Swiper>
         </Box>
 
-        <Text variant="destinationHeading3">
+        <Text variant="destinationHeading3" my="4">
           <Text as="span" fontSize="40px" color="red" fontFamily="anton">
             &#34;
           </Text>
