@@ -1,19 +1,8 @@
 import React, { useRef } from "react";
 import { HStack, IconButton } from "@chakra-ui/react";
-import Link from "next/link";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { ButtonGroup } from "@chakra-ui/react";
 import jump from "jump.js";
-import {
-  BsGithub,
-  BsLinkedin,
-  BsPerson,
-  BsTwitter,
-  BsInstagram,
-  BsPhone,
-  BsWhatsapp,
-  BsTelephonePlus,
-} from "react-icons/bs";
-import { MdEmail, MdOutlineEmail, MdOutlineMailOutline } from "react-icons/md";
 
 import {
   Box,
@@ -27,6 +16,7 @@ import {
   useDisclosure,
   DrawerFooter,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -97,7 +87,7 @@ const Navbar = () => {
             Latest Blog
           </Button>
           <Link href="/contact">
-            <Button variant="blogButton">Contact</Button>
+            <Button variant="blogButton">Contact Us</Button>
           </Link>
         </Flex>
 
@@ -178,7 +168,7 @@ const Navbar = () => {
                 Latest Blog
               </Button>
               <Link href="/contact">
-                <Button variant="responsiveNavButton">Contact</Button>
+                <Button variant="responsiveNavButton">Contact Us</Button>
               </Link>
             </Flex>
 
@@ -191,73 +181,28 @@ const Navbar = () => {
                 mb="15px"
               >
                 <a href="tel:8080463271" target="_blank" rel="noreferrer">
-                  <IconButton
-                    aria-label="email"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<BsTelephonePlus />}
-                    _hover={{
-                      bg: "blue.500",
-                      color: "gray.700",
-                    }}
-                    isRound
-                  />
+                  <Image h="30px" w="30px" src="./images/viber.png" />
                 </a>
                 <a
                   href="https://wa.me/918080463271"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <IconButton
-                    aria-label="email"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<BsWhatsapp />}
-                    _hover={{
-                      bg: "blue.500",
-                      color: "gray.700",
-                    }}
-                    isRound
-                  />
+                  <Image h="30px" w="30px" src="./images/whatsapp.png" />
                 </a>
-
                 <a
                   href="https://www.gmail.com"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <IconButton
-                    aria-label="email"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<MdOutlineMailOutline />}
-                    _hover={{
-                      bg: "blue.500",
-                      color: "gray.700",
-                    }}
-                    isRound
-                  />
+                  <Image h="30px" w="30px" src="./images/gmail.png" />
                 </a>
                 <a
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <IconButton
-                    aria-label="email"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<BsInstagram />}
-                    _hover={{
-                      bg: "blue.500",
-                      color: "gray.700",
-                    }}
-                    isRound
-                  />
+                  <Image h="30px" w="30px" src="./images/instagram.png" />
                 </a>
               </Flex>
             </DrawerFooter>

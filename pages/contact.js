@@ -55,11 +55,18 @@ export default function ContactFormWithSocialButtons() {
   const { hasCopied, onCopy } = useClipboard("example@example.com");
 
   return (
-    <Box p="0" m="0" minH="100vh" overflow="hidden" position="relative">
+    <Box
+      p="0"
+      m="0"
+      minH="100vh"
+      overflow="hidden"
+      position="relative"
+      bg="gray.200"
+    >
       <Link href="/">
         <Button
-          position="absolute"
-          mt="4"
+          position={["relative", "relative", "absolute", "absolute"]}
+          my="4"
           ml="4"
           bg="transparent"
           color="mainOrange"
@@ -74,13 +81,9 @@ export default function ContactFormWithSocialButtons() {
         </Button>
       </Link>
       <Flex
-        bg={useColorModeValue("gray.100", "gray.900")}
+        bg="gray.200"
         align="center"
         justify="center"
-        css={{
-          backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
-          backgroundAttachment: "fixed",
-        }}
         id="contact"
         h="100vh"
       >
