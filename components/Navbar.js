@@ -17,10 +17,9 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({ settings }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
-
   return (
     <>
       {/* main container */}
@@ -35,7 +34,7 @@ const Navbar = () => {
       >
         <Box>
           <Image
-            src="/images/logo.png"
+            src={settings?.logo}
             width={["200", "250", "328", "328"]}
             height={["140", "170", "256", "200"]}
           />
@@ -179,28 +178,28 @@ const Navbar = () => {
                 justifyContent="space-evenly"
                 mb="15px"
               >
-                <a href="tel:8080463271" target="_blank" rel="noreferrer">
+                <a
+                  href={`tel:${settings?.contact}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image h="30px" w="30px" src="./images/viber.png" />
                 </a>
                 <a
-                  href="https://wa.me/918080463271"
+                  href={`https://wa.me/91${settings?.whatsapp}`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <Image h="30px" w="30px" src="./images/whatsapp.png" />
                 </a>
                 <a
-                  href="https://www.gmail.com"
+                  href={`mailto:${settings?.email}`}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <Image h="30px" w="30px" src="./images/gmail.png" />
                 </a>
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={settings?.instagram} target="_blank" rel="noreferrer">
                   <Image h="30px" w="30px" src="./images/instagram.png" />
                 </a>
               </Flex>

@@ -47,11 +47,17 @@ export async function getStaticProps(context) {
       "image": image.asset->url
     }`;
 
+  const settingsQuery = `*[_type == "settings"]{
+    ..., 
+    "logo": logo.asset->url
+  }`;
+
   const gallery = await client.fetch(galleryQuery);
   const destination = await client.fetch(destinationQuery);
   const event = await client.fetch(eventQuery);
   const vlog = await client.fetch(vlogQuery);
   const testimonial = await client.fetch(testimonialQuery);
+  const settings = await client.fetch(settingsQuery);
 
   return {
     props: {
@@ -60,6 +66,7 @@ export async function getStaticProps(context) {
       event,
       vlog,
       testimonial,
+      settings,
     },
   };
 }
@@ -77,12 +84,19 @@ const pulseRing = keyframes`
   }
 	`;
 
-const index = ({ gallery, destination, event, vlog, testimonial }) => {
-  console.log(testimonial, "---testimonial");
+const index = ({
+  gallery,
+  destination,
+  event,
+  vlog,
+  testimonial,
+  settings,
+}) => {
+  console.log(settings, "---settings");
   return (
     <>
       <Box p="0" m="0" overflow="hidden" position="relative">
-        <Navbar />
+        <Navbar settings={settings[0]} />
         <Home />
         <UpcomingTrek event={event} />
         <About />
@@ -92,11 +106,11 @@ const index = ({ gallery, destination, event, vlog, testimonial }) => {
         <Gallery gallery={gallery} />
         <WithSpeechBubbles testimonial={testimonial} />
         <Vlog vlog={vlog} />
-        <Footer />
+        <Footer settings={settings[0]} />
         {/* <CalendarComp event={event} /> */}
         <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
           <a
-            href="https://wa.me/918080463271?text=Hello There"
+            href={`https://wa.me/91${settings[0]?.whatsapp}?text=Hello There`}
             target="_blank"
             rel="noreferrer"
             aria-label="Chat on WhatsApp"

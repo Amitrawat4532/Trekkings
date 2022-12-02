@@ -2,7 +2,7 @@ import { Box, Button, Flex, Image, Text, Input } from "@chakra-ui/react";
 import React from "react";
 import jump from "jump.js";
 
-const Footer = () => {
+const Footer = ({ settings }) => {
   return (
     <>
       {/* ***********IMAGE********** */}
@@ -36,7 +36,8 @@ const Footer = () => {
         {/* *****footer logo***** */}
         <Flex width="100%" height="100%" justifyContent="center">
           <Image
-            src="./images/footerlogo.png"
+            className="footerImg"
+            src={settings?.logo}
             width={["250px", "350px", "450px", "555px"]}
             height={["180px", "180px", "288px", "288px"]}
           />
@@ -158,7 +159,7 @@ const Footer = () => {
           fontSize={["16px", "16px", "20px", "20px"]}
           color="whiteAlpha.600"
         >
-          © 2022 Trekkings. All right reserved.
+          © 2022 {settings?.name}. All right reserved.
         </Text>
       </Flex>
     </>
