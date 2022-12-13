@@ -78,7 +78,7 @@ const Gallery = ({ gallery }) => {
                     width="500px"
                     height={["300px", "300px", "340px", "340px"]}
                     src={el}
-                    objectFit="cover"
+                    objectFit="contain"
                   />
                 </SwiperSlide>
               );

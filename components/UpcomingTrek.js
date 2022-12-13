@@ -13,7 +13,7 @@ import { WarningTwoIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import Link from "next/link";
 
-const UpcomingTrek = ({ event }) => {
+const UpcomingTrek = ({ event, settings }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedTrek, setSelectedTrek] = useState({});
   const [selectedMonth, setSelectedMonth] = useState(
@@ -260,6 +260,7 @@ const UpcomingTrek = ({ event }) => {
             onClose={onClose}
             isOpen={isOpen}
             data={selectedTrek}
+            settings={settings}
           />
         </Flex>
       </Flex>

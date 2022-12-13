@@ -1,7 +1,6 @@
-import { Box, Button, Image, keyframes, Avatar } from "@chakra-ui/react";
+import { Box, Image, keyframes } from "@chakra-ui/react";
+import { createClient } from "next-sanity";
 import About from "../components/About";
-import Vlog from "../components/Vlog";
-import CalendarComp from "../components/Calendar";
 import Destination from "../components/Destination";
 import Footer from "../components/footer";
 import Gallery from "../components/Gallery";
@@ -10,10 +9,10 @@ import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import WithSpeechBubbles from "../components/Testimonal";
 import UpcomingTrek from "../components/UpcomingTrek";
+import Vlog from "../components/Vlog";
 import Whytrekking from "../components/whytrekking";
-import { createClient } from "next-sanity";
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const client = createClient({
     projectId: process.env.PROJECT_ID,
     dataset: process.env.DATASET,
@@ -92,13 +91,13 @@ const index = ({
   testimonial,
   settings,
 }) => {
-  console.log(settings, "---settings");
+  // console.log(settings, "---settings");
   return (
     <>
       <Box p="0" m="0" overflow="hidden" position="relative">
         <Navbar settings={settings[0]} />
         <Home />
-        <UpcomingTrek event={event} />
+        <UpcomingTrek event={event} settings={settings} />
         <About />
         <Destination destination={destination} />
         <Services />
