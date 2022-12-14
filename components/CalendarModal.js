@@ -15,7 +15,10 @@ import {
 import moment from "moment";
 import React from "react";
 
-const CalendarModal = ({ onClose, isOpen, scrollBehavior, data }) => {
+const CalendarModal = ({ onClose, isOpen, data, settings }) => {
+  const fullDate = moment(data?.startDate, "YYYY-MM-DD HH:mm").format(
+    "DD MMM YYYY"
+  );
   return (
     <Modal
       onClose={onClose}
@@ -83,7 +86,23 @@ const CalendarModal = ({ onClose, isOpen, scrollBehavior, data }) => {
         </ModalBody>
         <ModalFooter>
           <Button onClick={onClose}>Close</Button>
-          <Button variant="ghost">Book Now!</Button>
+          <a
+            href={`https://wa.me/91${settings[0]?.whatsapp}?text=Event Name = ${data?.name}
+                     Event Date = ${fullDate}
+
+                     `}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Chat on WhatsApp"
+            style={{ width: "100%" }}
+          >
+            <Button colorScheme="teal" variant="solid" mx="1">
+              Book Now
+              <Text as="span" pb="2" pl="2" fontSize="35px">
+                &#8594;
+              </Text>
+            </Button>
+          </a>
         </ModalFooter>
       </ModalContent>
     </Modal>

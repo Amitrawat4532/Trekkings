@@ -24,7 +24,7 @@ import { createClient } from "next-sanity";
 import moment from "moment";
 import Link from "next/link";
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const client = createClient({
     projectId: process.env.PROJECT_ID,
     dataset: process.env.DATASET,
@@ -35,17 +35,23 @@ export async function getStaticProps(context) {
         ..., 
         images[]{"img_url": asset->url}
       }`;
+  const settingsQuery = `*[_type == "settings"]{
+    ..., 
+    "logo": logo.asset->url
+  }`;
 
   const event = await client.fetch(eventQuery);
+  const settings = await client.fetch(settingsQuery);
 
   return {
     props: {
       event,
+      settings,
     },
   };
 }
 
-const Events = ({ event }) => {
+const Events = ({ event, settings }) => {
   const [searchInput, setSearchInput] = useState("");
 
   return (
@@ -121,8 +127,12 @@ const Events = ({ event }) => {
               .toLowerCase()
               .includes(searchInput.toLowerCase());
           })
-          .sort()
-          .reverse()
+          .sort((a, b) => {
+            const bDate = moment(b?.startDate, "YYYY-MM-DD HH:mm").format("X");
+            const aDate = moment(a?.startDate, "YYYY-MM-DD HH:mm").format("X");
+
+            return bDate - aDate;
+          })
           .map((el, id) => {
             const fullDate = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
               "DD MMM YYYY"
@@ -367,9 +377,9 @@ const Events = ({ event }) => {
                 {monthNumber >= selectedMonthNumber && (
                   <Flex justifyContent="end" alignItems="end" w="100%">
                     <a
-                      href={`https://wa.me/918080463271?text=Event Name = ${el?.name}
+                      href={`https://wa.me/91${settings[0]?.whatsapp}?text=Event Name = ${el?.name}
                      Event Date = ${fullDate}
-                     
+                    
                      `}
                       target="_blank"
                       rel="noreferrer"
