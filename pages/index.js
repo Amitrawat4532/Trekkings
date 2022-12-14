@@ -19,7 +19,7 @@ export async function getStaticProps(context) {
     dataset: process.env.DATASET,
     useCdn: false,
   });
-
+  //hello
   const galleryQuery = `*[_type == "gallery"]{
     "images": images[].asset->url
    }`;
