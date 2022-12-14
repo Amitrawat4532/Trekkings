@@ -202,25 +202,25 @@ export const TextStyle = {
     galleryHeader1: {
       as: "h1",
       fontWeight: "400",
-      fontSize: ["45px", "60px", "80px", "80px"],
+      fontSize: ["55px", "60px", "80px", "80px"],
       letterSpacing: "0.04em",
       color: "#000000",
       opacity: "0.19",
       padding: "0px 20px",
       fontFamily: "anton",
-      letterSpacing: ["8px", "8px", "5px", "5px"],
+      letterSpacing: ["10px", "10px", "8px", "8px"],
     },
 
     galleryHeader2: {
       as: "h3",
       fontWeight: "400",
-      fontSize: ["10px", "15px", "20px", "22px"],
+      fontSize: ["18px", "18px", "20px", "22px"],
       letterSpacing: "0.04em",
       color: "black",
       position: "absolute",
       textAlign: "center",
       fontFamily: "anton",
-      // letterSpacing: ["8px", "8px", "5px", "5px"],
+      letterSpacing: "5px",
     },
 
     // ********************************Testimonal page**********

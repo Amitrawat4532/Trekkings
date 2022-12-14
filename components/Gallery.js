@@ -36,7 +36,7 @@ const Gallery = ({ gallery }) => {
         {/* header container end */}
 
         {/* Gallery Slides */}
-        <Box w="100%" h="100%" mt="8" mb="5">
+        <Box w="100%" h="100%" mt="8" px="4" mb="5">
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -48,17 +48,20 @@ const Gallery = ({ gallery }) => {
               modifier: 1,
               slideShadows: false,
             }}
-            spaceBetween={-100}
-            slidesPerView={3}
+            spaceBetween={100}
+            slidesPerView={1}
             breakpoints={{
               640: {
-                spaceBetween: -100,
+                spaceBetween: 100,
+                slidesPerView: 1,
               },
               768: {
-                spaceBetween: -100,
+                spaceBetween: 10,
+                slidesPerView: 3,
               },
               1024: {
                 spaceBetween: 10,
+                slidesPerView: 3,
               },
             }}
             autoplay={{
@@ -75,10 +78,11 @@ const Gallery = ({ gallery }) => {
               return (
                 <SwiperSlide key={id}>
                   <Image
-                    width="500px"
-                    height={["300px", "300px", "340px", "340px"]}
+                    width="100%"
+                    height={["320px", "320px", "340px", "340px"]}
                     src={el}
                     objectFit="contain"
+                    bg="blackAlpha.100"
                   />
                 </SwiperSlide>
               );

@@ -74,14 +74,14 @@ const Whytrekking = () => {
           justifyContent="center"
           width="100%"
           pb="8"
-          my="5"
+          my="8"
           // height="20%"
         >
           <Image
             src="/images/whyTrek.png"
-            borderRadius="41px"
+            // borderRadius="41px"
             width="100%"
-            height={["150px", "150px", "350px", "350px"]}
+            height={["180px", "180px", "350px", "350px"]}
             objectFit="contain"
           />
         </Flex>

@@ -97,10 +97,13 @@ export default function WithSpeechBubbles({ testimonial }) {
             textTransform="uppercase"
             color="black"
             letterSpacing={["3px", "3px", "5px", "5px"]}
+            textAlign="center"
           >
             Our Clients Speak
           </Text>
-          <Text>We have been working with clients around the world</Text>
+          <Text textAlign="center">
+            We have been working with clients around the world
+          </Text>
         </Stack>
         <Stack
           direction={{ base: "column", md: "row" }}

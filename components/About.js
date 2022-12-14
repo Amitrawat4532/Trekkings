@@ -1,5 +1,6 @@
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import Image from "next/image";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Link from "next/link";
 
@@ -78,9 +79,8 @@ function About() {
                   <Image
                     src={el?.img}
                     objectFit="cover"
-                    height="100%"
-                    w="100%"
-                    bg="transparent"
+                    height="121px"
+                    width="90px"
                   />
                 </Box>
 

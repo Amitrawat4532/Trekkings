@@ -102,6 +102,10 @@ body {
   border-radius: 5%;
 }
 
+.galleryImg{
+  background: rgba(0, 0, 0, 0.055);
+}
+
 @media only screen and (max-width:600px){
 
 .blogs_slider{
