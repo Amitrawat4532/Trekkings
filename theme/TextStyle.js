@@ -208,7 +208,7 @@ export const TextStyle = {
       opacity: "0.19",
       padding: "0px 20px",
       fontFamily: "anton",
-      letterSpacing: ["10px", "10px", "8px", "8px"],
+      letterSpacing: ["20px", "20px", "8px", "8px"],
     },
 
     galleryHeader2: {

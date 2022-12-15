@@ -121,17 +121,17 @@ function Destination({ destination }) {
                   />
                   <Flex
                     height="64px"
-                    width={["95%", "90%", "76%", "100%"]}
+                    width={["100%", "100%", "80%", "80%"]}
                     position="absolute"
                     justifyContent="space-evenly"
                     bottom="50px"
                   >
                     <Box
                       height={["50px", "55px", "60px", "64px"]}
-                      width={["48px", "55px", "66px", "70px"]}
+                      width={["48px", "55px", "66px", "100px"]}
                       backgroundColor="#FF4417"
                       textAlign="center"
-                      padding="9px 3px 0px 2px"
+                      padding="3"
                     >
                       <Text
                         as="h1"
@@ -146,9 +146,9 @@ function Destination({ destination }) {
                     </Box>
 
                     <Box
-                      padding="9px 3px 0px 2px"
+                      padding="3"
                       height={["50px", "55px", "60px", "64px"]}
-                      width={["48px", "55px", "66px", "70px"]}
+                      width={["48px", "55px", "66px", "100px"]}
                       backgroundColor="#FF4417"
                       textAlign="center"
                     >
@@ -168,7 +168,7 @@ function Destination({ destination }) {
                       width={["85px", "95px", "110px", "110px"]}
                       backgroundColor="#FFFFFF"
                       textAlign="center"
-                      padding="9px 3px 0px 2px"
+                      padding="3"
                     >
                       <Text
                         as="h1"
@@ -182,8 +182,12 @@ function Destination({ destination }) {
                       <Text variant="destinationPerperson">PER PERSON</Text>
                     </Box>
                   </Flex>
-                  <Text variant="destinationStartexploring" minWidth="300px">
-                    START EXPLORING--&rarr;
+                  <Text
+                    variant="destinationStartexploring"
+                    mt="2"
+                    minWidth="300px"
+                  >
+                    START EXPLORING&rarr;
                   </Text>
                 </Flex>
               );

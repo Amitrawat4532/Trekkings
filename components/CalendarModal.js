@@ -11,6 +11,7 @@ import {
   Text,
   Image,
   Box,
+  Flex,
 } from "@chakra-ui/react";
 import moment from "moment";
 import React from "react";
@@ -31,58 +32,78 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
         <ModalHeader>{data?.name}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <HStack fontSize="16px" wrap="wrap" mb="4">
-            <Box minW={["100px", "200px"]}>
+          <Flex
+            fontSize="16px"
+            wrap="wrap"
+            mb="4"
+            justifyContent="space-between"
+            w={["100%", "100%", "70%", "60%"]}
+          >
+            <Box flex="1">
               <Text variant="calendarModalText">Starting Date -</Text>
               {moment(data?.startDate, "YYYY-MM-DD HH:mm").format("DD-MM-YYYY")}
             </Box>
 
-            <Box minW={["100px", "200px"]}>
+            <Box flex="1">
               <Text variant="calendarModalText">End Date -</Text>
               {moment(data?.endDate, "YYYY-MM-DD HH:mm").format("DD-MM-YYYY")}
             </Box>
 
-            <Box minW={["100px", "200px"]}>
+            <Box flex="1">
               <Text variant="calendarModalText">Amount -</Text>
               {data?.price} ₹
             </Box>
-          </HStack>
+          </Flex>
 
-          <HStack fontSize="16px" wrap="wrap" mb="4">
+          <Flex
+            fontSize="16px"
+            wrap="wrap"
+            mb="4"
+            justifyContent="space-between"
+            w={["100%", "100%", "70%", "60%"]}
+          >
             {data?.food && (
-              <Box minW={["100px", "200px"]}>
+              <Box flex="1">
                 <Text variant="calendarModalText">Food -</Text>
                 Available
               </Box>
             )}
             {data?.stay && (
-              <Box minW={["100px", "200px"]}>
+              <Box flex="1">
                 <Text variant="calendarModalText">Stay -</Text>
                 Available
               </Box>
             )}
             {data?.travel && (
-              <Box minW={["100px", "200px"]}>
+              <Box flex="1">
                 <Text variant="calendarModalText">Travel -</Text>
                 Available
               </Box>
             )}
-          </HStack>
+          </Flex>
           <Box my="6">{data?.description}</Box>
-          <HStack my="3" wrap="wrap" gap="2">
+          <Flex
+            my="3"
+            gap="2"
+            // maxH="250px"
+            w="100%"
+            h="100%"
+            overflowX="auto"
+            overflowY="hidden"
+          >
             {data?.images?.map((el, id) => {
               return (
                 <Image
                   key={id}
                   src={el?.img_url}
-                  width={["160px", "250px"]}
-                  height={["100px", "200px"]}
+                  width="100%"
+                  height={["120px", "120px", "200px", "200px"]}
                   objectFit="cover"
                   fallbackSrc="/images/logo.png"
                 ></Image>
               );
             })}
-          </HStack>
+          </Flex>
         </ModalBody>
         <ModalFooter>
           <Button onClick={onClose}>Close</Button>

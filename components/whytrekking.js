@@ -3,36 +3,36 @@ import React, { useState, useEffect } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import CountUp, { useCountUp } from "react-countup";
 
-const Whytrekking = () => {
+const Whytrekking = ({ settings }) => {
   const countUpRef = React.useRef(null);
   const [visible, setVisible] = useState(false);
 
   const Testimonal_context = [
     {
       icon_1: "./images/tickicon.png",
-      number: "15",
+      number: settings?.experience,
       icon_2: "./images/plusicon.png",
       heading: "Years Of Experience",
     },
     {
       icon_1: "./images/tickicon.png",
-      number: "60",
+      number: settings?.totalTreks,
       icon_2: "./images/plusicon.png",
-      heading: "Years Of best Destination",
+      heading: "Treks Completed",
     },
 
     {
       icon_1: "./images/tickicon.png",
-      number: "30",
-      icon_2: "./images/plusicon.png",
-      heading: " Certified guides",
-    },
-
-    {
-      icon_1: "./images/tickicon.png",
-      number: "3210",
+      number: settings?.hikers,
       icon_2: "./images/plusicon.png",
       heading: "Satisfied Hikers",
+    },
+
+    {
+      icon_1: "./images/tickicon.png",
+      number: settings?.destination,
+      icon_2: "./images/plusicon.png",
+      heading: "Destinations Hiked",
     },
   ];
 
@@ -116,6 +116,7 @@ const Whytrekking = () => {
                     duration={0}
                     animateIn="animate__fadeIn"
                     afterAnimatedIn={() => setVisible(true)}
+                    initiallyVisible={true}
                   >
                     {visible && (
                       <Text variant="testimonalHeader" ref={countUpRef}>
