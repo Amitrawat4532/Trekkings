@@ -2,7 +2,7 @@ import { Box, Image, keyframes } from "@chakra-ui/react";
 import { createClient } from "next-sanity";
 import About from "../components/About";
 import Destination from "../components/Destination";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import Gallery from "../components/Gallery";
 import Home from "../components/Home";
 import Navbar from "../components/Navbar";
