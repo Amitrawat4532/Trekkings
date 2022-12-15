@@ -76,12 +76,12 @@ const UpcomingTrek = ({ event, settings }) => {
         <Flex
           direction="column"
           alignItems="center"
-          // border='1px solid green'
-          p={["2", "2", "4", "4"]}
+          p={["1", "1", "4", "4"]}
           flex="1"
           height="500px"
           w="100%"
           maxW="650px"
+          overflow="hidden"
         >
           <Text
             fontSize="32px"
@@ -90,19 +90,31 @@ const UpcomingTrek = ({ event, settings }) => {
             letterSpacing="1.3px"
             textTransform="uppercase"
             color="black"
+            position="relative"
+            bottom="-25px"
+            bg="white"
+            px="4"
+            zIndex={2}
+            borderRadius="20px"
           >
             {/* {selectedMonth} */}
             UPCOMING TREKS
           </Text>
           <Flex
             direction="column"
-            // border='1px solid green'
-            my="2"
+            borderRadius="20px"
+            mb="2"
             mx="auto"
-            p="6"
-            w="100%"
+            px={["2", "2", "6", "6"]}
+            pt="10"
+            pb="3"
+            w="95%"
             h="100%"
+            minH="300px"
             overflowY="auto"
+            background="rgba(0,0,0,0.17)"
+            backdropFilter="blur(10px)"
+            border="1px solid rgba(255,255,255,0.25)"
           >
             {event
               ?.filter(filterByMonth)
@@ -118,15 +130,15 @@ const UpcomingTrek = ({ event, settings }) => {
                   <Flex
                     key={id}
                     justifyContent="start"
-                    alignItems="center"
+                    alignItems="end"
                     fontSize="20px"
                     fontWeight="600"
                     color="#FF3603a7"
                     mb="4"
-                    bg="#cbd5e0ad"
+                    bg="#ffffff7d"
                     height="70px"
-                    // px="2"
-                    borderRadius="20px"
+                    // py="2"
+                    borderRadius="10px"
                     _hover={{
                       bg: "#ff4517a7",
                       color: "black",
@@ -143,10 +155,11 @@ const UpcomingTrek = ({ event, settings }) => {
                       height="100%"
                       px="2"
                       py="2"
-                      ml={["4", "4", "6", "6"]}
+                      ml={["3", "3", "4", "4"]}
                       bg="mainOrange"
                       fontFamily="Kanit"
                       textAlign="center"
+                      fontSize={["16px", "16px", "18px", "18px"]}
                     >
                       {date}
                       <br />
@@ -155,7 +168,7 @@ const UpcomingTrek = ({ event, settings }) => {
                     <Flex direction="column" px="2" w="80%" whiteSpace="nowrap">
                       <Text
                         color="blackAlpha.800"
-                        fontSize="23px"
+                        fontSize={["18px", "18px", "23px", "23px"]}
                         overflow="hidden"
                         textOverflow="ellipsis"
                         w={["70%", "70%", "70%", "50%"]}
@@ -168,6 +181,7 @@ const UpcomingTrek = ({ event, settings }) => {
                         color="gray.800"
                         textOverflow="ellipsis"
                         overflow="hidden"
+                        pb="2"
                       >
                         {el?.description}
                       </Text>
@@ -240,21 +254,21 @@ const UpcomingTrek = ({ event, settings }) => {
                 </Heading>
               </Box>
             )}
-            <Link href="/events">
-              <Text
-                as="a"
-                mt="2"
-                fontWeight="400"
-                fontSize="23px"
-                color="#FF3606"
-                fontFamily="anton"
-                textAlign="center"
-                cursor="pointer"
-              >
-                EXPLORE ALL TREKKING &rarr;
-              </Text>
-            </Link>
           </Flex>
+          <Link href="/events">
+            <Text
+              as="a"
+              mt="2"
+              fontWeight="400"
+              fontSize="23px"
+              color="#FF3606"
+              fontFamily="anton"
+              textAlign="center"
+              cursor="pointer"
+            >
+              EXPLORE ALL TREKKING &rarr;
+            </Text>
+          </Link>
 
           <CalendarModal
             onClose={onClose}

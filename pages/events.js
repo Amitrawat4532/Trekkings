@@ -285,7 +285,7 @@ const Events = ({ event, settings }) => {
                   </Flex>
                 </Flex>
 
-                <Accordion mt="4" w="100%" allowToggle>
+                <Accordion mt="4" w="100%" bg="white" allowToggle>
                   <AccordionItem>
                     <AccordionButton color="black">
                       <Box flex="1" textAlign="left">
@@ -296,28 +296,30 @@ const Events = ({ event, settings }) => {
                       <AccordionIcon />
                     </AccordionButton>
                     <AccordionPanel>
-                      <HStack
+                      <Flex
                         my="3"
-                        wrap="wrap"
-                        justifyContent="space-evenly"
+                        justifyContent="start"
                         gap="2"
                         flex="1"
-                        mt="60px"
                         mx="auto"
+                        w="auto"
+                        maxH="220px"
+                        overflowY="hidden"
+                        overflowX="scroll"
                       >
                         {el?.images?.map((el, id) => {
                           return (
                             <Image
                               key={id}
                               src={el?.img_url}
-                              width={["140px", "120px"]}
-                              height={["100px", "100px"]}
-                              objectFit="cover"
+                              width="100%"
+                              height={["200px", "200px"]}
+                              objectFit="contain"
                               fallbackSrc="/images/logo.png"
                             ></Image>
                           );
                         })}
-                      </HStack>
+                      </Flex>
                     </AccordionPanel>
                   </AccordionItem>
                 </Accordion>
