@@ -87,7 +87,7 @@ const TestimonialAvatar = ({ src, name, title }) => {
 
 export default function WithSpeechBubbles({ testimonial }) {
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.700")}>
+    <Box bg="#E6DDC4">
       <Container maxW={"7xl"} py={10} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
           <Text
@@ -95,7 +95,7 @@ export default function WithSpeechBubbles({ testimonial }) {
             fontWeight="800"
             fontFamily="anton"
             textTransform="uppercase"
-            color="black"
+            color="#2B3A55"
             letterSpacing={["3px", "3px", "5px", "5px"]}
             textAlign="center"
           >

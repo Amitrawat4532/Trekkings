@@ -36,7 +36,7 @@ const Gallery = ({ gallery }) => {
         {/* header container end */}
 
         {/* Gallery Slides */}
-        <Box w="100%" h="100%" mt="8" px="4" mb="5">
+        <Box w="100%" h="100%" mt="4" px="4" mb="5">
           <Swiper
             effect={"coverflow"}
             grabCursor={true}

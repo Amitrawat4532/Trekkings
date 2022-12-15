@@ -42,7 +42,7 @@ const Services = () => {
         justifyContent="start"
         alignItems="start"
         flexDirection="column"
-        padding={["20px 20px", ",20px 40px", "20px 100px", "20px 140px"]}
+        padding={["0px 20px", ",0px 40px", "20px 100px", "20px 140px"]}
         gap="20px"
       >
         {/* header container */}
