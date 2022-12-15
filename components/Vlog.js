@@ -100,7 +100,7 @@ const Vlog = ({ vlog }) => {
                           <Text variant="blogDescription">
                             {el?.description}
                           </Text>
-                          <Text variant="blogReadmore">Read More</Text>
+                          {/* <Text variant="blogReadmore">Read More</Text> */}
                         </Flex>
                       </Flex>
                     </SwiperSlide>

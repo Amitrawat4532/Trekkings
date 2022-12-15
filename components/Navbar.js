@@ -176,7 +176,8 @@ const Navbar = ({ settings }) => {
                 height="4vh"
                 width="100%"
                 justifyContent="space-evenly"
-                mb="15px"
+                alignItems="center"
+                py="6"
               >
                 <a
                   href={`tel:${settings?.contact}`}

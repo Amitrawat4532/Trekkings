@@ -103,6 +103,7 @@ const Whytrekking = ({ settings }) => {
                 alignItems="center"
                 alignSelf="start"
                 key={key}
+                minW="100px"
                 // transform={
                 //   key === 0 || key === Testimonal_context.length - 1
                 //     ? ["none", "none", "none", "translateY(-50px)"]

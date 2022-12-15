@@ -148,7 +148,39 @@ const Footer = ({ settings }) => {
           />
           <Button variant="footerButton">Send</Button>
         </Flex>
+        {/* <Flex
+          width={["100%", "100%", "500px", "500px"]}
+          justifyContent="space-evenly"
+          alignItems="center"
+          // py="6"
+          // bg="red"
+          color="white"
+          fontSize={["15px", "12px", "25px", "25px"]}
+          fontFamily="Anton"
+        >
+          <a href={`tel:${settings?.contact}`} target="_blank" rel="noreferrer">
+            <Image h="50px" w="50px" src="/images/viber.png" />
+          </a>
+          <a
+            href={`https://wa.me/91${settings?.whatsapp}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image h="50px" w="100%" src="/images/whatsapp.png" />
+          </a>
+          <a
+            href={`mailto:${settings?.email}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image h="50px" w="100%" src="/images/gmail.png" />
+          </a>
+          <a href={settings?.instagram} target="_blank" rel="noreferrer">
+            <Image h="50px" w="100%" src="/images/instagram.png" />
+          </a>
+        </Flex> */}
       </Flex>
+
       <Flex
         height="50px"
         justifyContent="center"

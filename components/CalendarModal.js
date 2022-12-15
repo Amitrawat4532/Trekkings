@@ -97,7 +97,7 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
                   key={id}
                   src={el?.img_url}
                   width="100%"
-                  height={["120px", "120px", "200px", "200px"]}
+                  height="200px"
                   objectFit="cover"
                   fallbackSrc="/images/logo.png"
                 ></Image>
