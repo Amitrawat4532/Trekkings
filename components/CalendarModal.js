@@ -31,7 +31,7 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
       <ModalContent>
         <ModalHeader>{data?.name}</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>
+        <ModalBody px="4">
           <Flex
             fontSize="16px"
             wrap="wrap"
@@ -40,7 +40,7 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
             w={["100%", "100%", "70%", "60%"]}
           >
             <Box flex="1">
-              <Text variant="calendarModalText">Starting Date -</Text>
+              <Text variant="calendarModalText">Start Date -</Text>
               {moment(data?.startDate, "YYYY-MM-DD HH:mm").format("DD-MM-YYYY")}
             </Box>
 

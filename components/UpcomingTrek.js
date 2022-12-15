@@ -83,23 +83,29 @@ const UpcomingTrek = ({ event, settings }) => {
           maxW="650px"
           overflow="hidden"
         >
-          <Text
-            fontSize="32px"
-            fontWeight="200"
-            fontFamily="anton"
-            letterSpacing="1.3px"
-            textTransform="uppercase"
-            color="black"
+          <Box
             position="relative"
             bottom="-25px"
             bg="white"
             px="4"
-            zIndex={2}
             borderRadius="20px"
+            zIndex={2}
           >
-            {/* {selectedMonth} */}
-            UPCOMING TREKS
-          </Text>
+            <Text
+              fontSize={["28px", "28px", "32px", "32px"]}
+              fontWeight="200"
+              fontFamily="anton"
+              letterSpacing="1.3px"
+              textTransform="uppercase"
+              color="black"
+              bgGradient="radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+            radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);"
+              bgClip="text"
+            >
+              {/* {selectedMonth} */}
+              UPCOMING TREKS
+            </Text>
+          </Box>
           <Flex
             direction="column"
             borderRadius="20px"
@@ -107,7 +113,7 @@ const UpcomingTrek = ({ event, settings }) => {
             mx="auto"
             px={["2", "2", "6", "6"]}
             pt="10"
-            pb="3"
+            pb="8"
             w="95%"
             h="100%"
             minH="300px"
@@ -254,21 +260,24 @@ const UpcomingTrek = ({ event, settings }) => {
                 </Heading>
               </Box>
             )}
+            <Link href="/events">
+              <Text
+                as="a"
+                fontWeight="400"
+                fontSize={["18px", "18px", "23px", "23px"]}
+                color="#FF3606"
+                fontFamily="anton"
+                textAlign="center"
+                cursor="pointer"
+                position="absolute"
+                bottom="0"
+                mx="auto"
+                w="96%"
+              >
+                EXPLORE ALL TREKKING &rarr;
+              </Text>
+            </Link>
           </Flex>
-          <Link href="/events">
-            <Text
-              as="a"
-              mt="2"
-              fontWeight="400"
-              fontSize="23px"
-              color="#FF3606"
-              fontFamily="anton"
-              textAlign="center"
-              cursor="pointer"
-            >
-              EXPLORE ALL TREKKING &rarr;
-            </Text>
-          </Link>
 
           <CalendarModal
             onClose={onClose}
