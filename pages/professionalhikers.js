@@ -26,7 +26,7 @@ const Professionalhikers = () => {
         src="/images/professionalhikers.png"
         h="100%"
         w="100%"
-        fallbackSrc="/images/logo.png"
+        fallbackSrc="/images/preloader.png"
       />
     </Box>
   );

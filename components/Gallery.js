@@ -83,6 +83,7 @@ const Gallery = ({ gallery }) => {
                     src={el}
                     objectFit="contain"
                     bg="blackAlpha.100"
+                    fallbackSrc="/images/preloader.png"
                   />
                 </SwiperSlide>
               );

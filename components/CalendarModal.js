@@ -81,7 +81,14 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
               </Box>
             )}
           </Flex>
-          <Box my="6">{data?.description}</Box>
+
+          <Text variant="calendarModalText" fontSize="16px">
+            Description -
+          </Text>
+          <Box mb="6">{data?.description}</Box>
+          <Text variant="calendarModalText" fontSize="16px">
+            Images -
+          </Text>
           <Flex
             my="3"
             gap="2"
@@ -99,7 +106,7 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
                   width="100%"
                   height="200px"
                   objectFit="cover"
-                  fallbackSrc="/images/logo.png"
+                  fallbackSrc="/images/preloader.png"
                 ></Image>
               );
             })}

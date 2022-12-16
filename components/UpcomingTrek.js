@@ -117,14 +117,26 @@ const UpcomingTrek = ({ event, settings }) => {
             w="95%"
             h="100%"
             minH="300px"
-            overflowY="auto"
-            background="rgba(0,0,0,0.17)"
+            overflowY="hidden"
+            background="rgb(238 238 238 / 28%)"
+            boxShadow="inset 5px 5px 18px #cacaca,
+            inset -5px -5px 18px #f6f6f6"
             backdropFilter="blur(10px)"
             border="1px solid rgba(255,255,255,0.25)"
           >
             {event
               ?.filter(filterByMonth)
-              .slice(0, 5)
+              .slice(0, 4)
+              .sort((a, b) => {
+                const bDate = moment(b?.startDate, "YYYY-MM-DD HH:mm").format(
+                  "X"
+                );
+                const aDate = moment(a?.startDate, "YYYY-MM-DD HH:mm").format(
+                  "X"
+                );
+
+                return aDate - bDate;
+              })
               .map((el, id) => {
                 const date = moment(el?.startDate, "YYYY-MM-DD HH:mm").format(
                   "DD"
@@ -141,8 +153,8 @@ const UpcomingTrek = ({ event, settings }) => {
                     fontWeight="600"
                     color="#FF3603a7"
                     mb="4"
-                    bg="#ffffff7d"
-                    height="70px"
+                    bg="#cacaca7d"
+                    minHeight="70px"
                     // py="2"
                     borderRadius="10px"
                     _hover={{
@@ -154,15 +166,17 @@ const UpcomingTrek = ({ event, settings }) => {
                     }}
                     overflow="hidden"
                     position="relative"
+                    boxShadow="rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px"
                   >
                     <Flex
                       as="span"
                       color="white"
                       height="100%"
                       px="2"
-                      py="2"
+                      py="3"
                       ml={["3", "3", "4", "4"]}
                       bg="mainOrange"
+                      h="100%"
                       fontFamily="Kanit"
                       textAlign="center"
                       fontSize={["16px", "16px", "18px", "18px"]}
@@ -264,7 +278,7 @@ const UpcomingTrek = ({ event, settings }) => {
               <Text
                 as="a"
                 fontWeight="400"
-                fontSize={["18px", "18px", "23px", "23px"]}
+                fontSize={["18px", "18px", "20px", "20px"]}
                 color="#FF3606"
                 fontFamily="anton"
                 textAlign="center"
@@ -272,7 +286,7 @@ const UpcomingTrek = ({ event, settings }) => {
                 position="absolute"
                 bottom="0"
                 mx="auto"
-                w="96%"
+                w="90%"
               >
                 EXPLORE ALL TREKKING &rarr;
               </Text>

@@ -13,7 +13,7 @@ const StartLoader = () => {
       zIndex="200"
     >
       <video autoPlay loop muted className="startLoader">
-        <source src="/images/start.mp4" type="video/mp4"></source>
+        <source src="/images/start1.mp4" type="video/mp4"></source>
       </video>
     </Flex>
   );
