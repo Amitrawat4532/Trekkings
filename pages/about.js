@@ -1,8 +1,5 @@
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import Link from "next/link";
-import Home from "../components/Home";
-import Navbar from "../components/Navbar";
 
 const AboutPage = () => {
   return (

@@ -109,6 +109,7 @@ const Services = () => {
                       maskPosition: "center",
                     }}
                     src={el?.image}
+                    alt="IGATPURIHILLSTREKTOURISM SERVICES"
                     objectPosition="center"
                     objectFit="cover"
                     width={["200px", "200px", "400px", "500px"]}

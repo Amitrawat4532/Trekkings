@@ -78,6 +78,7 @@ function About() {
                 >
                   <Image
                     src={el?.img}
+                    alt={el?.header}
                     objectFit="cover"
                     height="121px"
                     width="90px"

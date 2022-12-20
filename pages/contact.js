@@ -24,20 +24,30 @@ import {
   BsWhatsapp,
 } from "react-icons/bs";
 import { MdCall, MdOutlineMailOutline } from "react-icons/md";
+import { createClient } from "next-sanity";
 
-const confetti = {
-  light: {
-    primary: "4299E1", // blue.400
-    secondary: "BEE3F8", // blue.100
-  },
+export async function getServerSideProps(context) {
+  const client = createClient({
+    projectId: process.env.PROJECT_ID,
+    dataset: process.env.DATASET,
+    useCdn: false,
+  });
 
-  dark: {
-    primary: "1A365D", // blue.900
-    secondary: "2A4365", // blue.800
-  },
-};
+  const settingsQuery = `*[_type == "settings"]{
+    ..., 
+    "logo": logo.asset->url
+  }`;
 
-export default function ContactFormWithSocialButtons() {
+  const settings = await client.fetch(settingsQuery);
+
+  return {
+    props: {
+      settings,
+    },
+  };
+}
+
+export default function ContactPage({ settings }) {
   return (
     <Box
       p="0"
@@ -96,7 +106,11 @@ export default function ContactFormWithSocialButtons() {
                   justify="space-around"
                   direction={{ base: "row", md: "column" }}
                 >
-                  <Link href="tel:8080463271" target="_blank" rel="noreferrer">
+                  <Link
+                    href={`tel:${settings[0]?.contact}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <IconButton
                       aria-label="call"
                       variant="ghost"
@@ -111,7 +125,7 @@ export default function ContactFormWithSocialButtons() {
                   </Link>
 
                   <Link
-                    href="https://wa.me/918080463271"
+                    href={`https://wa.me/91${settings[0]?.whatsapp}`}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -129,7 +143,7 @@ export default function ContactFormWithSocialButtons() {
                   </Link>
 
                   <Link
-                    href="https://www.gmail.com"
+                    href={`mailto:${settings[0]?.email}`}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -148,7 +162,7 @@ export default function ContactFormWithSocialButtons() {
                   </Link>
 
                   <Link
-                    href="https://www.instagram.com"
+                    href={settings[0]?.instagram}
                     target="_blank"
                     rel="noreferrer"
                   >

@@ -114,6 +114,7 @@ function Destination({ destination }) {
                 >
                   <Image
                     src={el?.thumbnail}
+                    alt={el?.location}
                     h="320px"
                     w="400px"
                     fallbackSrc="/images/plusicon.png"

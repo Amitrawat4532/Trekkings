@@ -221,6 +221,7 @@ const UpcomingTrek = ({ event, settings }) => {
                             height="15px"
                             width="15px"
                             src="/images/Travel.png"
+                            alt="travel"
                           />
                         </Button>
                       )}
@@ -237,6 +238,7 @@ const UpcomingTrek = ({ event, settings }) => {
                             height="15px"
                             width="15px"
                             src="/images/Home.png"
+                            alt="home"
                           />
                         </Button>
                       )}
@@ -253,6 +255,7 @@ const UpcomingTrek = ({ event, settings }) => {
                             height="15px"
                             width="15px"
                             src="/images/Food.png"
+                            alt="food"
                           />
                         </Button>
                       )}
@@ -276,7 +279,7 @@ const UpcomingTrek = ({ event, settings }) => {
             )}
             <Link href="/events">
               <Text
-                as="a"
+                // as="a"
                 fontWeight="400"
                 fontSize={["18px", "18px", "20px", "20px"]}
                 color="#FF3606"

@@ -11,7 +11,12 @@ const Videobox = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Image src="./images/videobox.png" width="100%" height="200px" />
+        <Image
+          src="./images/videobox.png"
+          alt="IGATPURIHILLSTREKTOURISM VIDEO THUMBNAIL"
+          width="100%"
+          height="200px"
+        />
         <Text
           position="absolute"
           textColor="orange"

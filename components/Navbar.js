@@ -35,6 +35,7 @@ const Navbar = ({ settings }) => {
         <Box>
           <Image
             src={settings?.logo}
+            alt="IGATPURIHILLSTREKTOURISM LOGO"
             width={["200", "250", "328", "328"]}
             height={["140", "170", "256", "200"]}
           />

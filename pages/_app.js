@@ -12,6 +12,7 @@ import StartLoader from "../components/StartLoader";
 
 import React, { useEffect, useState } from "react";
 import customTheme from "../theme/customTheme";
+import Head from "next/head";
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
@@ -25,6 +26,24 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={customTheme}>
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="We provide eco-tourism activities for groups in the Igatpuri Hill Station region. Our goal is to bring people closer to nature, promote sustainability and ensure the preservation of our environment."
+        />
+        <meta
+          name="keywords"
+          content="Igatpuri , Igatpuri Hiking , Igatpuri Tourism , Igatpuri Travel , Nashik Tours & Travels , Nashik Maharashtra India "
+        />
+        <link rel="shortcut icon" href="/images/logo.png" />
+        <title>IGATPURIHILLSTREKTOURISM</title>
+        {/* <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src https://*; child-src 'none';"
+        /> */}
+      </Head>
       {startAnim && <StartLoader />}
       <Component {...pageProps} />
     </ChakraProvider>

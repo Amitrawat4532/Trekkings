@@ -1,6 +1,8 @@
 import {
+  Box,
   Button,
-  HStack,
+  Flex,
+  Image,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -9,9 +11,6 @@ import {
   ModalHeader,
   ModalOverlay,
   Text,
-  Image,
-  Box,
-  Flex,
 } from "@chakra-ui/react";
 import moment from "moment";
 import React from "react";
@@ -102,6 +101,7 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
               return (
                 <Image
                   key={id}
+                  alt={`${data?.name}  ${el?.id} `}
                   src={el?.img_url}
                   width="100%"
                   height="200px"

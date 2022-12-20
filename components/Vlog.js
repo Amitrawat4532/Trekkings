@@ -1,8 +1,8 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { EffectCards } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";

@@ -81,6 +81,7 @@ const Gallery = ({ gallery }) => {
                     width="100%"
                     height={["320px", "320px", "340px", "340px"]}
                     src={el}
+                    alt="IGATPURIHILLSTREKTOURISM GALLERY IMAGES"
                     objectFit="contain"
                     bg="blackAlpha.100"
                     fallbackSrc="/images/preloader.png"

@@ -1,28 +1,26 @@
 import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Box,
-  InputGroup,
-  InputRightElement,
   Button,
   Flex,
-  Input,
-  IconButton,
-  Text,
-  Image,
   Heading,
-  HStack,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Badge,
+  IconButton,
+  Image,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Text,
 } from "@chakra-ui/react";
 
 import { SearchIcon, WarningTwoIcon } from "@chakra-ui/icons";
-import React, { useState } from "react";
-import { createClient } from "next-sanity";
 import moment from "moment";
+import { createClient } from "next-sanity";
 import Link from "next/link";
+import React, { useState } from "react";
 
 export async function getServerSideProps(context) {
   const client = createClient({

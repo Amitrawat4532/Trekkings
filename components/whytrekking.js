@@ -79,6 +79,7 @@ const Whytrekking = ({ settings }) => {
         >
           <Image
             src="/images/whyTrek.png"
+            alt="ILLUSTRATION"
             // borderRadius="41px"
             width="100%"
             height={["180px", "180px", "350px", "350px"]}
@@ -125,7 +126,7 @@ const Whytrekking = ({ settings }) => {
                       </Text>
                     )}
                   </AnimationOnScroll>
-                  <Image src={el.icon_2} height="20px" />
+                  <Image src={el.icon_2} alt="ilustrator icon" height="20px" />
                 </Flex>
                 <Flex>
                   <Text variant="testimonalHeading">{el.heading}</Text>

@@ -1,6 +1,5 @@
-import { Box, Button, Flex, Image, Text, Input } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
 import React from "react";
-import jump from "jump.js";
 
 const Footer = ({ settings }) => {
   return (
@@ -14,9 +13,14 @@ const Footer = ({ settings }) => {
         // height={["121px", "200px", "210px", "300px"]}
         h="100%"
       >
-        <Image src="./images/footer1.png" className="footerImg" />
+        <Image
+          src="./images/footer1.png"
+          alt="mountain"
+          className="footerImg"
+        />
         <Image
           className="footerImg"
+          alt="mountain"
           src="./images/footer2.png"
           position="relative"
           top={["10px", "10px", "25px", "25px"]}
@@ -38,6 +42,7 @@ const Footer = ({ settings }) => {
           <Image
             className="footerImg"
             src={settings?.logo}
+            alt="IGATPURIHILLSTREKTOURISM LOGO"
             width={["250px", "350px", "450px", "555px"]}
             height={["180px", "180px", "288px", "288px"]}
           />

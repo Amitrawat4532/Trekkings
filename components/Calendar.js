@@ -67,7 +67,12 @@ const CalendarComp = ({ event }) => {
             bg="white"
             boxShadow="rgba(0, 0, 0, 0.56) 0px 22px 70px 4px"
           >
-            <Image src="/images/calendarIcon.png" w="35px" h="35px" />
+            <Image
+              src="/images/calendarIcon.png"
+              alt="calendar icon"
+              w="35px"
+              h="35px"
+            />
           </Button>
         </PopoverTrigger>
         <PopoverContent width="350px" ml="5">
