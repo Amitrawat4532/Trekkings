@@ -185,24 +185,44 @@ const Navbar = ({ settings }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image h="30px" w="30px" src="./images/viber.png" />
+                  <Image
+                    h="30px"
+                    w="30px"
+                    src="./images/viber.png"
+                    alt="call icon"
+                  />
                 </a>
                 <a
                   href={`https://wa.me/91${settings?.whatsapp}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image h="30px" w="30px" src="./images/whatsapp.png" />
+                  <Image
+                    h="30px"
+                    w="30px"
+                    src="./images/whatsapp.png"
+                    alt="whatsapp icon"
+                  />
                 </a>
                 <a
                   href={`mailto:${settings?.email}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image h="30px" w="30px" src="./images/gmail.png" />
+                  <Image
+                    h="30px"
+                    w="30px"
+                    src="./images/gmail.png"
+                    alt="gmail icon"
+                  />
                 </a>
                 <a href={settings?.instagram} target="_blank" rel="noreferrer">
-                  <Image h="30px" w="30px" src="./images/instagram.png" />
+                  <Image
+                    h="30px"
+                    w="30px"
+                    src="./images/instagram.png"
+                    alt="instagram icon"
+                  />
                 </a>
               </Flex>
             </DrawerFooter>

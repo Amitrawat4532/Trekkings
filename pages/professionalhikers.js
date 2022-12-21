@@ -24,6 +24,7 @@ const Professionalhikers = () => {
       </Link>
       <Image
         src="/images/professionalhikers.png"
+        alt="IGATPURIHILLSTREKTOURISM Hikers"
         h="100%"
         w="100%"
         fallbackSrc="/images/preloader.png"

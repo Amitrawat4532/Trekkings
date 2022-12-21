@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build-prod": "set \"GENERATE_SOURCEMAP=false\" && next build"
+    "build-prod": "set \"GENERATE_SOURCEMAP=false\" && next build",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.11",
@@ -19,21 +20,19 @@
     "@fontsource/rubik": "^4.5.11",
     "@fontsource/rubik-glitch": "^4.5.4",
     "@fontsource/sen": "^4.5.9",
+    "@next/bundle-analyzer": "^13.0.7",
     "@sanity/image-url": "^1.0.1",
     "animate.css": "^4.1.1",
-    "framer-motion": "^7.5.3",
+    "cross-env": "^7.0.3",
     "jump.js": "^1.0.2",
     "moment": "^2.29.4",
     "next": "12.3.1",
     "next-sanity": "^2.0.2",
-    "next-sanity-image": "^5.0.0",
     "react": "18.2.0",
     "react-animation-on-scroll": "^5.1.0",
     "react-calendar": "^3.9.0",
-    "react-countup": "^6.3.2",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "react-visibility-sensor": "^5.1.1",
     "swiper": "^8.4.4"
   },
   "devDependencies": {

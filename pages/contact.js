@@ -237,7 +237,6 @@ export default function ContactPage({ settings }) {
                       _hover={{
                         bg: "blue.500",
                       }}
-                      isFullWidth
                     >
                       Send Message
                     </Button>

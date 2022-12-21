@@ -126,6 +126,7 @@ const Secretlocation = () => {
               h={["300px", "300px", "450px", "450px"]}
               w="100%"
               src={el?.image}
+              alt="IGATPURIHILLSTREKTOURISM locations"
             />
           </Flex>
         );

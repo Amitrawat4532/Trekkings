@@ -39,10 +39,6 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="shortcut icon" href="/images/logo.png" />
         <title>IGATPURIHILLSTREKTOURISM</title>
-        {/* <meta
-          http-equiv="Content-Security-Policy"
-          content="default-src 'self'; img-src https://*; child-src 'none';"
-        /> */}
       </Head>
       {startAnim && <StartLoader />}
       <Component {...pageProps} />

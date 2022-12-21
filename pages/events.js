@@ -310,6 +310,7 @@ const Events = ({ event, settings }) => {
                             <Image
                               key={id}
                               src={el?.img_url}
+                              alt={`IGATPURIHILLSTREKTOURISM EVENTS`}
                               width="100%"
                               height={["200px", "200px"]}
                               objectFit="contain"
@@ -336,6 +337,7 @@ const Events = ({ event, settings }) => {
                         height="25px"
                         width="25px"
                         src="/images/Travel.png"
+                        alt="travel icon"
                       />
                     </Button>
                   )}
@@ -352,6 +354,7 @@ const Events = ({ event, settings }) => {
                         height="25px"
                         width="25px"
                         src="/images/Home.png"
+                        alt="home icon"
                       />
                     </Button>
                   )}
@@ -368,6 +371,7 @@ const Events = ({ event, settings }) => {
                         height="25px"
                         width="25px"
                         src="/images/Food.png"
+                        alt="food icon"
                       />
                     </Button>
                   )}

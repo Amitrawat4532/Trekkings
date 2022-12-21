@@ -49,6 +49,7 @@ const Safeadventure = () => {
         <Image
           flex="1"
           src="/images/safeadventure.png"
+          alt="IGATPURIHILLSTREKTOURISM safe adventure"
           h={["250px", "250px", "450px", "450px"]}
           w={["90%", "90%", "100%", "100%"]}
           borderLeft="20px solid #FF4417"
@@ -70,6 +71,7 @@ const Safeadventure = () => {
         <Image
           flex="1"
           src="/images/safeadventure2.png"
+          alt="IGATPURIHILLSTREKTOURISM safe adventure"
           h="300px"
           w={["90%", "90%", "100%", "100%"]}
           borderTopRightRadius="85px"
