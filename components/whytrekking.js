@@ -1,7 +1,7 @@
-import { Flex, Image, Text, HStack, Box } from "@chakra-ui/react";
-import React, { useState, useEffect } from "react";
+import { Flex, Image, Text } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import CountUp, { useCountUp } from "react-countup";
+import CountUp from "react-countup";
 
 const Whytrekking = ({ settings }) => {
   const countUpRef = React.useRef(null);
