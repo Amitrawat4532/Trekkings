@@ -3,7 +3,7 @@ export const ButtonStyle = {
     navButton: {
       h: "38px",
       fontSize: "20px",
-      color: "white",
+      color: "#FF3606",
       bg: "transparent",
       border: "0",
       borderRadius: "0",

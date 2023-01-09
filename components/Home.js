@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Img } from "@chakra-ui/react";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
@@ -13,14 +13,15 @@ const Home = () => {
         bgImg={[
           "url('/images/bg6.png')",
           "url('/images/bg6.png')",
-          "url('/images/finalBg.png')",
-          "url('/images/finalBg.png')",
+          "url('/images/background_final.png')",
+          "url('/images/background_final.png')",
         ]}
         backgroundSize="100%"
         backgroundRepeat="no-repeat"
         justifyContent="center"
         alignItems="center"
-        // border="1px solid red"
+        // flexDirection="column"
+        // border="5px solid red"
       >
         {/* heading container */}
         <Box position="relative" top={["20", "20", "-10", "-10"]}>
@@ -33,6 +34,16 @@ const Home = () => {
             <Text variant="homeHeader2">IMPOSSIBLE</Text>
           </AnimationOnScroll>
         </Box>
+        {/* <Flex border="5px solid black" w="100%" h="100px">
+          <Img
+            src="images/trees.png"
+            alt="basebg"
+            // position="absolute"
+            // top="6.5%"
+
+            border="2px solid black"
+          />
+        </Flex> */}
       </Flex>
     </>
   );

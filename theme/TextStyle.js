@@ -31,7 +31,7 @@ export const TextStyle = {
 
     homeHeader1: {
       as: "p",
-      color: " #FFFFFF",
+      color: " black",
       fontSize: ["45px", "50px", "60px", "70px"],
       fontFamily: "anton",
       p: "0",
