@@ -1,16 +1,18 @@
 import { Box, Image, keyframes } from "@chakra-ui/react";
 import { createClient } from "next-sanity";
-import About from "../components/About";
-import Destination from "../components/Destination";
-import Footer from "../components/footer";
-import Gallery from "../components/Gallery";
-import Home from "../components/Home";
-import Navbar from "../components/Navbar";
-import Services from "../components/Services";
-import WithSpeechBubbles from "../components/Testimonal";
-import UpcomingTrek from "../components/UpcomingTrek";
-import Vlog from "../components/Vlog";
-import Whytrekking from "../components/whytrekking";
+import dynamic from "next/dynamic";
+
+const About = dynamic(() => import("../components/About"));
+const Destination = dynamic(() => import("../components/Destination"));
+const Footer = dynamic(() => import("../components/footer"));
+const Gallery = dynamic(() => import("../components/Gallery"));
+const Home = dynamic(() => import("../components/Home"));
+const Navbar = dynamic(() => import("../components/Navbar"));
+const Services = dynamic(() => import("../components/Services"));
+const WithSpeechBubbles = dynamic(() => import("../components/Testimonal"));
+const UpcomingTrek = dynamic(() => import("../components/UpcomingTrek"));
+const Vlog = dynamic(() => import("../components/Vlog"));
+const Whytrekking = dynamic(() => import("../components/whytrekking"));
 
 export async function getServerSideProps(context) {
   const client = createClient({

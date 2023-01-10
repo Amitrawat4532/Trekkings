@@ -26,18 +26,25 @@ const Navbar = ({ settings }) => {
       <Flex
         justifyContent="space-between"
         alignItems="center"
-        pl={["0", "30px", "30px", "30px"]}
+        pl={["0", "0", "10px", "10px"]}
         pr="30px"
         position="absolute"
         w="100%"
         // border="2px solid white"
+        zIndex="5"
       >
         <Box>
           <Image
             src={settings?.logo}
             alt="IGATPURIHILLSTREKTOURISM LOGO"
-            width={["200", "250", "328", "328"]}
-            height={["140", "170", "256", "200"]}
+            width={["140px", "140px", "200px", "200px"]}
+            // height={["120", "140", "256", "200"]}
+            h="100%"
+            // bgColor="black"
+            // borderRadius="50%"
+            mt="1"
+            className="footerImg"
+            filter="contrast(135%)"
           />
         </Box>
 

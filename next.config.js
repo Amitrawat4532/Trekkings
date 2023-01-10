@@ -16,7 +16,7 @@ const securityHeaders = [
 
 const nextConfig = {
   source: "/:path*",
-  headers: securityHeaders,
+  // headers: securityHeaders,
   reactStrictMode: true,
   swcMinify: true,
   images: {
