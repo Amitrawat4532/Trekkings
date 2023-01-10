@@ -12,7 +12,7 @@ const Home = () => {
         // h={["100vh", "100vh", "120vh", "120vh"]}
         h="100vh"
         bgImg="url('/images/Background_final.png')" // backgroundSize={["100% 102%", "100% 102%", "100%", "100%"]}
-        backgroundSize="100% 100%"
+        backgroundSize="cover"
         backgroundRepeat="no-repeat"
         justifyContent="center"
         alignItems="center"
@@ -44,7 +44,7 @@ const Home = () => {
             alt="basebg"
             w="100%"
             h="100%"
-            objectFit="contain"
+            objectFit="cover"
             objectPosition="bottom"
             zIndex={2}
           />
@@ -56,7 +56,8 @@ const Home = () => {
           objectFit="contain"
           position="absolute"
           bottom="0"
-        ></Image>
+          alt="trees"
+        />
       </Flex>
     </>
   );
