@@ -13,8 +13,8 @@ const Home = () => {
         bgImg={[
           "url('/images/bg6.png')",
           "url('/images/bg6.png')",
-          "url('/images/background_final.png')",
-          "url('/images/background_final.png')",
+          "url('/images/Background_final.png')",
+          "url('/images/Background_final.png')",
         ]}
         backgroundSize="100%"
         backgroundRepeat="no-repeat"
