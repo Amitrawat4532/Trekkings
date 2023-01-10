@@ -38,13 +38,18 @@ const Footer = ({ settings }) => {
         // flexWrap="wrap"
       >
         {/* *****footer logo***** */}
-        <Flex width="100%" height="100%" justifyContent="center">
+        <Flex
+          width={["100%", "100%", "80%", "80%"]}
+          height="100%"
+          justifyContent="center"
+        >
           <Image
             className="footerImg"
             src={settings?.logo}
             alt="IGATPURIHILLSTREKTOURISM LOGO"
-            width={["250px", "350px", "450px", "555px"]}
-            height={["180px", "180px", "288px", "288px"]}
+            width={["150px", "150px", "300px", "300px"]}
+            h="100%"
+            objectFit="contain"
           />
         </Flex>
         {/* *****end***** */}
@@ -193,8 +198,9 @@ const Footer = ({ settings }) => {
         bgColor="black"
       >
         <Text
-          fontSize={["16px", "16px", "20px", "20px"]}
+          fontSize={["13px", "13px", "20px", "20px"]}
           color="whiteAlpha.600"
+          textAlign="center"
         >
           © 2022 {settings?.name}. All right reserved.
         </Text>

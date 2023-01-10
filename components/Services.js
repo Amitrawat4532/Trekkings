@@ -43,6 +43,7 @@ const Services = () => {
         alignItems="start"
         flexDirection="column"
         padding={["0px 20px", ",0px 40px", "20px 100px", "20px 140px"]}
+        pb="80px !important"
         gap="20px"
       >
         {/* header container */}

@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Flex,
-  Image,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -14,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import moment from "moment";
 import React from "react";
+import Image from "next/image";
 
 const CalendarModal = ({ onClose, isOpen, data, settings }) => {
   const fullDate = moment(data?.startDate, "YYYY-MM-DD HH:mm").format(
@@ -91,23 +91,28 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
           <Flex
             my="3"
             gap="2"
-            // maxH="250px"
             w="100%"
-            h="100%"
+            h="300px"
             overflowX="auto"
             overflowY="hidden"
+            position="relative"
+            // className="nextImagesContainer"
           >
             {data?.images?.map((el, id) => {
               return (
-                <Image
-                  key={id}
-                  alt={`${data?.name}  ${el?.id} `}
-                  src={el?.img_url}
-                  width="100%"
-                  height="200px"
-                  objectFit="cover"
-                  fallbackSrc="/images/preloader.png"
-                ></Image>
+                <Box minW="300px" position="relative">
+                  <Image
+                    key={id}
+                    alt={`${data?.name}  ${el?.id} `}
+                    src={el?.img_url}
+                    layout="fill"
+                    // width="1500px"
+                    // height="200px"
+                    objectFit="contain"
+                    objectPosition="center"
+                    // fallbackSrc="/images/preloader.png"
+                  ></Image>
+                </Box>
               );
             })}
           </Flex>

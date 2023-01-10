@@ -9,14 +9,16 @@ const Home = () => {
       <Flex
         className="home_container"
         w="100vw"
-        h={["100vh", "100vh", "120vh", "120vh"]}
+        // h={["100vh", "100vh", "120vh", "120vh"]}
+        h="100vh"
         bgImg={[
-          "url('/images/bg6.png')",
-          "url('/images/bg6.png')",
-          "url('/images/background_final.png')",
-          "url('/images/background_final.png')",
+          "url('/images/mainBgPhone.png')",
+          "url('/images/mainBgPhone.png')",
+          "url('/images/mainBg.png')",
+          "url('/images/mainBg.png')",
         ]}
-        backgroundSize="100%"
+        // backgroundSize={["100% 102%", "100% 102%", "100%", "100%"]}
+        backgroundSize="100% 100%"
         backgroundRepeat="no-repeat"
         justifyContent="center"
         alignItems="center"
@@ -24,7 +26,7 @@ const Home = () => {
         // border="5px solid red"
       >
         {/* heading container */}
-        <Box position="relative" top={["20", "20", "-10", "-10"]}>
+        <Box position="relative" top={["20", "20", "-10", "-10"]} left="3%">
           <Text variant="homeHeader1">MAKE THE</Text>
           <AnimationOnScroll
             animateIn="animate__fadeInUp"

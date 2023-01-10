@@ -36,8 +36,21 @@ const UpcomingTrek = ({ event, settings }) => {
   };
 
   const filterByMonth = (x) => {
-    const selectedMonthNumber = moment(new Date(), "DD-MM-YY").format("X");
+    const selectedMonthNumber = moment(new Date(), "MMMM").format("X");
     const month = moment(x?.startDate, "YYYY-MM-DD HH:mm").format("X");
+
+    console.log(
+      x?.name,
+      "|",
+      x?.startDate,
+      "|",
+      selectedMonthNumber,
+      "|",
+      month,
+      "|",
+      month >= selectedMonthNumber,
+      "---filter"
+    );
     if (month >= selectedMonthNumber) {
       return x;
     }
@@ -126,7 +139,7 @@ const UpcomingTrek = ({ event, settings }) => {
           >
             {event
               ?.filter(filterByMonth)
-              .slice(0, 4)
+              // .slice(0, 4)
               .sort((a, b) => {
                 const bDate = moment(b?.startDate, "YYYY-MM-DD HH:mm").format(
                   "X"

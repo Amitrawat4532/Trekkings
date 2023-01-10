@@ -1,9 +1,10 @@
-import { Flex, Text, Box, Image } from "@chakra-ui/react";
+import { Flex, Text, Box } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 // import Image from "next/image";
@@ -48,7 +49,7 @@ const Gallery = ({ gallery }) => {
               modifier: 1,
               slideShadows: false,
             }}
-            spaceBetween={100}
+            spaceBetween={10}
             slidesPerView={1}
             breakpoints={{
               640: {
@@ -77,14 +78,19 @@ const Gallery = ({ gallery }) => {
             {gallery[0]?.images?.map((el, id) => {
               return (
                 <SwiperSlide key={id}>
-                  <Image
+                  <Box
+                    position="relative"
                     width="100%"
                     height={["320px", "320px", "340px", "340px"]}
+                    bg="blackAlpha.100"
+                  ></Box>
+                  <Image
+                    layout="fill"
                     src={el}
                     alt="IGATPURIHILLSTREKTOURISM GALLERY IMAGES"
                     objectFit="contain"
-                    bg="blackAlpha.100"
-                    fallbackSrc="/images/preloader.png"
+                    objectPosition="center"
+                    // fallbackSrc="/images/preloader.png"
                   />
                 </SwiperSlide>
               );
