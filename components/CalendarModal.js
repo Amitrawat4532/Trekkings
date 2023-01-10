@@ -10,10 +10,10 @@ import {
   ModalHeader,
   ModalOverlay,
   Text,
+  Image,
 } from "@chakra-ui/react";
 import moment from "moment";
 import React from "react";
-import Image from "next/image";
 
 const CalendarModal = ({ onClose, isOpen, data, settings }) => {
   const fullDate = moment(data?.startDate, "YYYY-MM-DD HH:mm").format(
@@ -100,7 +100,7 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
           >
             {data?.images?.map((el, id) => {
               return (
-                <Box minW="300px" position="relative">
+                <Box minW="300px" position="relative" key={id}>
                   <Image
                     key={id}
                     alt={`${data?.name}  ${el?.id} `}
@@ -111,7 +111,7 @@ const CalendarModal = ({ onClose, isOpen, data, settings }) => {
                     objectFit="contain"
                     objectPosition="center"
                     // fallbackSrc="/images/preloader.png"
-                  ></Image>
+                  />
                 </Box>
               );
             })}
