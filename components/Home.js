@@ -12,10 +12,10 @@ const Home = () => {
         // h={["100vh", "100vh", "120vh", "120vh"]}
         h="100vh"
         bgImg={[
-          "url('/images/mainBgPhone.png')",
-          "url('/images/mainBgPhone.png')",
-          "url('/images/mainBg.png')",
-          "url('/images/mainBg.png')",
+          "url('/images/Background_final.PNG')",
+          "url('/images/Background_final.PNG')",
+          "url('/images/Background_final.PNG')",
+          "url('/images/Background_final.PNG')",
         ]}
         // backgroundSize={["100% 102%", "100% 102%", "100%", "100%"]}
         backgroundSize="100% 100%"
@@ -24,9 +24,10 @@ const Home = () => {
         alignItems="center"
         // flexDirection="column"
         // border="5px solid red"
+        position="relative"
       >
         {/* heading container */}
-        <Box position="relative" top={["20", "20", "-10", "-10"]} left="3%">
+        <Box>
           <Text variant="homeHeader1">MAKE THE</Text>
           <AnimationOnScroll
             animateIn="animate__fadeInUp"
@@ -36,16 +37,32 @@ const Home = () => {
             <Text variant="homeHeader2">IMPOSSIBLE</Text>
           </AnimationOnScroll>
         </Box>
-        {/* <Flex border="5px solid black" w="100%" h="100px">
+        <Flex
+          // border="5px solid black"
+          w="100vw"
+          h="100%"
+          position="absolute"
+          bottom="0"
+          // border="2px solid black"
+        >
           <Img
-            src="images/trees.png"
+            src="images/bgTrees.png"
             alt="basebg"
-            // position="absolute"
-            // top="6.5%"
-
-            border="2px solid black"
+            w="100%"
+            h="100%"
+            objectFit="contain"
+            objectPosition="bottom"
+            zIndex={2}
           />
-        </Flex> */}
+        </Flex>
+        <Image
+          src="/images/bgElement.png"
+          h={["500px", "500px", "700px", "700px"]}
+          w="100%"
+          objectFit="contain"
+          position="absolute"
+          bottom="0"
+        ></Image>
       </Flex>
     </>
   );

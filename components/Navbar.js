@@ -31,17 +31,20 @@ const Navbar = ({ settings }) => {
         position="absolute"
         w="100%"
         // border="2px solid white"
+        zIndex="5"
       >
         <Box>
           <Image
             src={settings?.logo}
             alt="IGATPURIHILLSTREKTOURISM LOGO"
-            width={["140px", "140px", "180px", "180px"]}
+            width={["140px", "140px", "200px", "200px"]}
             // height={["120", "140", "256", "200"]}
             h="100%"
-            bgColor="black"
-            borderRadius="50%"
+            // bgColor="black"
+            // borderRadius="50%"
             mt="1"
+            className="footerImg"
+            filter="contrast(135%)"
           />
         </Box>
 
