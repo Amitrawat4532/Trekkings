@@ -34,7 +34,7 @@ const Home = () => {
         <Flex
           // border="5px solid black"
           w="100vw"
-          h={["60%", "60%", "100%", "100%"]}
+          h={["80%", "80%", "100%", "100%"]}
           position="absolute"
           bottom="0"
           // border="2px solid black"
@@ -51,7 +51,7 @@ const Home = () => {
         </Flex>
         <Image
           src="/images/bgElement.png"
-          h={["500px", "500px", "700px", "700px"]}
+          h={["600px", "600px", "700px", "700px"]}
           w="100%"
           objectFit="contain"
           position="absolute"
