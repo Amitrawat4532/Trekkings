@@ -37,14 +37,14 @@ const Navbar = ({ settings }) => {
           <Image
             src={settings?.logo}
             alt="IGATPURIHILLSTREKTOURISM LOGO"
-            width={["140px", "140px", "200px", "200px"]}
+            width={["140px", "140px", "210px", "210px"]}
             // height={["120", "140", "256", "200"]}
             h="100%"
             // bgColor="black"
             // borderRadius="50%"
             mt="1"
             className="footerImg"
-            filter="contrast(135%)"
+            filter="contrast(155%)"
           />
         </Box>
 

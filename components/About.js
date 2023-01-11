@@ -111,7 +111,7 @@ function About() {
 
       {/* ***************************div end************************8 */}
       <Flex
-        gap="30px"
+        gap="10px"
         flexDirection={["column", "column", "row", "row"]}
         justifyContent="center"
         py="6"
@@ -126,8 +126,21 @@ function About() {
           fontFamily="anton"
           textAlign="center"
         >
-          Dont hesistate to contact us for more details
+          Dont hesistate to contact us for more details.
         </Text>
+        <Link href="/events">
+          <Text
+            // as="a"
+            fontWeight="400"
+            fontSize={["18px", "18px", "23px", "23px"]}
+            color="#FF3606"
+            fontFamily="anton"
+            // textAlign="center"
+            cursor="pointer"
+          >
+            EXPLORE ALL TREKKING &rarr;
+          </Text>
+        </Link>
       </Flex>
     </>
   );

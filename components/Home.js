@@ -34,7 +34,7 @@ const Home = () => {
         <Flex
           // border="5px solid black"
           w="100vw"
-          h="100%"
+          h={["60%", "60%", "100%", "100%"]}
           position="absolute"
           bottom="0"
           // border="2px solid black"
@@ -44,7 +44,7 @@ const Home = () => {
             alt="basebg"
             w="100%"
             h="100%"
-            objectFit="cover"
+            objectFit={["cover", "cover", "contain", "contain"]}
             objectPosition="bottom"
             zIndex={2}
           />

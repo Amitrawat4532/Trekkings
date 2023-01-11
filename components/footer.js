@@ -50,6 +50,7 @@ const Footer = ({ settings }) => {
             width={["150px", "150px", "300px", "300px"]}
             h="100%"
             objectFit="contain"
+            filter="contrast(125%)"
           />
         </Flex>
         {/* *****end***** */}
