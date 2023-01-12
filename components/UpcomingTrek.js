@@ -39,18 +39,18 @@ const UpcomingTrek = ({ event, settings }) => {
     const selectedMonthNumber = moment(new Date(), "MMMM").format("X");
     const month = moment(x?.startDate, "YYYY-MM-DD HH:mm").format("X");
 
-    console.log(
-      x?.name,
-      "|",
-      x?.startDate,
-      "|",
-      selectedMonthNumber,
-      "|",
-      month,
-      "|",
-      month >= selectedMonthNumber,
-      "---filter"
-    );
+    // console.log(
+    //   x?.name,
+    //   "|",
+    //   x?.startDate,
+    //   "|",
+    //   selectedMonthNumber,
+    //   "|",
+    //   month,
+    //   "|",
+    //   month >= selectedMonthNumber,
+    //   "---filter"
+    // );
     if (month >= selectedMonthNumber) {
       return x;
     }

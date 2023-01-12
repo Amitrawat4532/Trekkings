@@ -55,7 +55,8 @@ export default function ContactPage({ settings }) {
       minH="100vh"
       overflow="hidden"
       position="relative"
-      bg="gray.200"
+      // bg="gray.200"
+      bgImage="url('/images/Background_final.png')"
     >
       <Link href="/">
         <Button
@@ -75,7 +76,7 @@ export default function ContactPage({ settings }) {
         </Button>
       </Link>
       <Flex
-        bg="gray.200"
+        // bg="gray.200"
         align="center"
         justify="center"
         id="contact"
