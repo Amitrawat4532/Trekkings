@@ -41,31 +41,19 @@ const Home = () => {
             <Text variant="homeHeader2">IMPOSSIBLE</Text>
           </AnimationOnScroll>
         </Box>
-        <Flex
-          // border="5px solid black"
-          w="100vw"
-          h={["80%", "80%", "100%", "100%"]}
-          position="absolute"
-          bottom="0"
-          // border="2px solid black"
-        >
+        <Flex w="100vw" h="100%" position="absolute" bottom="0">
           <Img
             src="images/bgTrees.png"
             alt="basebg"
             w="100%"
             h="100%"
-            objectFit={["cover", "cover", "contain", "contain"]}
+            objectFit="cover"
             objectPosition="bottom"
             zIndex={2}
           />
         </Flex>
 
         <ChakraBox
-        <Image
-          src="/images/bgElement.png"
-          h={["600px", "600px", "700px", "700px"]}
-          w="100%"
-          objectFit="contain"
           position="absolute"
           initial="onscreen"
           whileInView="onscreen"
@@ -86,7 +74,7 @@ const Home = () => {
           alignItems="center"
           width="100px"
           height="100px"
-        />
+        >
           <Image
             as={motion.img}
             src="/images/bgElement.png"
