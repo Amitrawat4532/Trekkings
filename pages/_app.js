@@ -16,7 +16,7 @@ import Head from "next/head";
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
 function MyApp({ Component, pageProps }) {
-  const [startAnim, setStartAnim] = useState(true);
+  const [startAnim, setStartAnim] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
