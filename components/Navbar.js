@@ -1,9 +1,7 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { IconButton } from "@chakra-ui/react";
+import { isValidMotionProp, motion } from "framer-motion";
 import jump from "jump.js";
 import React, { useRef } from "react";
-import { chakra, shouldForwardProp } from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
 
 import {
   Box,
@@ -16,6 +14,9 @@ import {
   Flex,
   Image,
   useDisclosure,
+  chakra,
+  IconButton,
+  shouldForwardProp,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -40,17 +41,20 @@ const Navbar = ({ settings }) => {
       {/* main container */}
       <ChakraBox
         position="absolute"
+        left="0"
         top="0"
+        // border="2px solid black"
+        w="100%"
+        h="200px"
+        // variants={container}
         animate={{
           opacity: [0, 1],
         }}
         transition={{
-          duration: 2,
+          duration: 3,
           ease: "easeInOut",
         }}
-        border="2px solid black"
-        height="200px"
-        w="100%"
+        zIndex={10}
       >
         <Flex
           justifyContent="space-between"
