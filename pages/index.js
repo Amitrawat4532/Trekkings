@@ -104,7 +104,7 @@ const index = ({
         <Destination destination={destination} />
         <Services />
         <Whytrekking settings={settings[0]} />
-        <Gallery gallery={gallery} />
+        {/* <Gallery gallery={gallery} /> */}
         <WithSpeechBubbles testimonial={testimonial} />
         <Vlog vlog={vlog} />
         <Footer settings={settings[0]} />

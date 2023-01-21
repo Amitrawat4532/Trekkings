@@ -135,7 +135,7 @@ function About() {
             fontSize={["18px", "18px", "23px", "23px"]}
             color="#FF3606"
             fontFamily="anton"
-            // textAlign="center"
+            textAlign="center"
             cursor="pointer"
           >
             EXPLORE ALL TREKKING &rarr;

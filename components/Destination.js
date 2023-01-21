@@ -10,16 +10,15 @@ function Destination({ destination }) {
         // width={["96%", "96%", "92%", "92%"]}
         h="100%"
         w={["100%", "100%", "96%", "96%"]}
-        backgroundColor="#666161e3"
+        backgroundColor="#717171"
         flexDirection="column"
         px={["0", "0", "20", "20"]}
-        pt={["6", "6", "50px", "50px"]}
-        pb="4"
+        pb="0"
         // minHeight="75vh"
         justifyContent="space-around"
-        gap="7"
+        gap="3"
         mx="auto"
-        my="50px"
+        pt="30px"
         borderRadius={["0px", "0px", "50px", "50px"]}
         // boxShadow="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
         // borderRadius="3% 3% 3% 3% / 50% 50% 50% 50%"
@@ -46,10 +45,6 @@ function Destination({ destination }) {
           px={["20px", "20px", "0px", "0px"]}
           flexDirection={["column", "column", "column", "row"]}
         >
-          <Text variant="destinationHeading2">
-            HERE WE LIST OUR MOST POPULAR DESTINATIONS WE HAD AND FULL DETAILS
-            ARE AS FOLLOWED
-          </Text>
           {/* <Button
             backgroundColor="#FF3606"
             color="#FFFFFF"
@@ -115,10 +110,17 @@ function Destination({ destination }) {
                   <Image
                     src={el?.thumbnail}
                     alt={el?.location}
-                    h="320px"
-                    w="400px"
+                    h="380px"
+                    w="500px"
+                    transition=".2s all ease"
                     fallbackSrc="/images/plusicon.png"
                     objectFit="cover"
+                    filter="brightness(0.8)"
+                    _hover={{
+                      filter: "brightness(1)",
+                      transform: "scale(1.05)",
+                      transition: ".2s all ease",
+                    }}
                   />
                   <Flex
                     height="64px"
@@ -128,59 +130,64 @@ function Destination({ destination }) {
                     bottom="50px"
                   >
                     <Box
-                      height={["50px", "55px", "60px", "64px"]}
-                      width={["48px", "55px", "66px", "100px"]}
+                      height={["50px", "50px", "64px", "64px"]}
+                      width={["60px", "60px", "100px", "100px"]}
                       backgroundColor="#FF4417"
                       textAlign="center"
-                      padding="3"
+                      px="3"
+                      py="1"
                     >
                       <Text
-                        as="h1"
+                        as="p"
                         color="#FFFFFF"
                         fontWeight="400"
-                        fontSize={["10px", "12px", "15px", "15px"]}
+                        fontSize={["18px", "18px", "22px", "22px"]}
                         fontFamily="anton"
                       >
                         {el?.trekkers}
                       </Text>
-                      <Text variant="destinationPerson">PERSON</Text>
+                      <Text variant="destinationSecondaryText">PERSON</Text>
                     </Box>
 
                     <Box
-                      padding="3"
-                      height={["50px", "55px", "60px", "64px"]}
-                      width={["48px", "55px", "66px", "100px"]}
+                      px="3"
+                      py="1"
+                      height={["50px", "50px", "64px", "64px"]}
+                      width={["60px", "60px", "100px", "100px"]}
                       backgroundColor="#FF4417"
                       textAlign="center"
                     >
                       <Text
-                        as="h1"
+                        as="p"
                         color="#FFFFFF"
                         fontWeight="400"
-                        fontSize={["10px", "12px", "15px", "15px"]}
+                        fontSize={["18px", "18px", "22px", "22px"]}
                         fontFamily="anton"
                       >
                         {el?.days}
                       </Text>
-                      <Text variant="destinationDays">Days</Text>
+                      <Text variant="destinationSecondaryText">Days</Text>
                     </Box>
                     <Box
-                      height={["50px", "55px", "60px", "64px"]}
-                      width={["85px", "95px", "110px", "110px"]}
+                      height={["50px", "50px", "64px", "64px"]}
+                      width={["95px", "95px", "110px", "110px"]}
                       backgroundColor="#FFFFFF"
                       textAlign="center"
-                      padding="3"
+                      px="3"
+                      py="1"
                     >
                       <Text
-                        as="h1"
+                        as="p"
                         fontWeight="400"
-                        fontSize={["10px", "12px", "15px", "15px"]}
+                        fontSize={["18px", "18px", "22px", "22px"]}
                         color="#FF4417"
                         fontFamily="anton"
                       >
                         {el?.price} Rs
                       </Text>
-                      <Text variant="destinationPerperson">PER PERSON</Text>
+                      <Text variant="destinationSecondaryText2">
+                        PER PERSON
+                      </Text>
                     </Box>
                   </Flex>
                   <Text
@@ -195,6 +202,13 @@ function Destination({ destination }) {
             })}
           </Flex>
         </AnimationOnScroll>
+        <Text variant="destinationHeading2">
+          HERE WE LIST OUR MOST POPULAR DESTINATIONS WE HAD AND FULL DETAILS ARE
+          AS FOLLOWED{" "}
+          <Text as="span" bottom="5px" position="relative">
+            &#8594;
+          </Text>
+        </Text>
       </Flex>
     </>
   );

@@ -47,7 +47,7 @@ const Home = () => {
             alt="basebg"
             w="100%"
             h="100%"
-            objectFit="cover"
+            objectFit="contain"
             objectPosition="bottom"
             zIndex={2}
           />

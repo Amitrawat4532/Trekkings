@@ -48,7 +48,7 @@ const Safeadventure = () => {
         </Flex>
         <Image
           flex="1"
-          src="/images/safeadventure.png"
+          src="/images/ta2.jpg"
           alt="IGATPURIHILLSTREKTOURISM safe adventure"
           h={["250px", "250px", "450px", "450px"]}
           w={["90%", "90%", "100%", "100%"]}
