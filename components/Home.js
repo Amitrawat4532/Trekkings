@@ -1,18 +1,23 @@
-import { Box, Flex, Image, Text, Img } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  Text,
+  chakra,
+  shouldForwardProp,
+} from "@chakra-ui/react";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-<<<<<<< HEAD
-import { motion, useTransform } from "framer-motion";
-import { useScroll } from "framer-motion";
+import {
+  motion,
+  isValidMotionProp,
+  useTransform,
+  useScroll,
+} from "framer-motion";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
-=======
-import { chakra, shouldForwardProp } from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
-
-const Home = () => {
   const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) =>
       isValidMotionProp(prop) || shouldForwardProp(prop),
@@ -23,7 +28,6 @@ const Home = () => {
     },
   };
 
->>>>>>> 61aa3f804ae0d35262f973ae854d79f41935f0f1
   return (
     <>
       {/* main container */}
@@ -53,7 +57,7 @@ const Home = () => {
           </AnimationOnScroll>
         </Box>
         <Flex w="100vw" h="100%" position="absolute" bottom="0">
-          <Img
+          <Image
             src="images/bgTrees.png"
             alt="basebg"
             w="100%"
