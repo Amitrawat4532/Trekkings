@@ -1,17 +1,24 @@
 import { Box, Flex, Image, Text, Img } from "@chakra-ui/react";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { motion, useTransform } from "framer-motion";
-import { useScroll } from "framer-motion";
+import { chakra, shouldForwardProp } from "@chakra-ui/react";
+import { motion, isValidMotionProp } from "framer-motion";
 
 const Home = () => {
-  const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+  const ChakraBox = chakra(motion.div, {
+    shouldForwardProp: (prop) =>
+      isValidMotionProp(prop) || shouldForwardProp(prop),
+  });
+  const cardVariants = {
+    onscreen: {
+      y: 100,
+    },
+  };
+
   return (
     <>
       {/* main container */}
       <Flex
-        as={motion.div}
         className="home_container"
         w="100vw"
         // h={["100vh", "100vh", "120vh", "120vh"]}
@@ -22,7 +29,6 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
         position="relative"
-        scale={scrollYProgress.current}
       >
         {/* heading container */}
         <Box>
@@ -74,7 +80,7 @@ const Home = () => {
             src="/images/bgElement.png"
             objectFit="contain"
             position="absolute"
-            bottom={["-10%", "-10%", "0", "0"]}
+            bottom="0"
             alt="trees"
           />
         </ChakraBox>

@@ -44,7 +44,6 @@ const Navbar = ({ settings }) => {
         animate={{
           opacity: [0, 1],
         }}
-        viewport={{ once: true }}
         transition={{
           duration: 2,
           ease: "easeInOut",
