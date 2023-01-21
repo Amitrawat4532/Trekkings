@@ -24,7 +24,11 @@
     "@sanity/image-url": "^1.0.1",
     "animate.css": "^4.1.1",
     "cross-env": "^7.0.3",
+<<<<<<< HEAD
+    "framer-motion": "^8.4.2",
+=======
     "framer": "^2.2.1",
+>>>>>>> 61aa3f804ae0d35262f973ae854d79f41935f0f1
     "jump.js": "^1.0.2",
     "moment": "^2.29.4",
     "next": "12.3.1",
