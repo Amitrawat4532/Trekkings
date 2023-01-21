@@ -1,14 +1,6 @@
 import { Box, Flex, Image, Text, Img } from "@chakra-ui/react";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-<<<<<<< HEAD
-import { motion, useTransform } from "framer-motion";
-import { useScroll } from "framer-motion";
-
-const Home = () => {
-  const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
-=======
 import { chakra, shouldForwardProp } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
 
@@ -23,7 +15,6 @@ const Home = () => {
     },
   };
 
->>>>>>> 61aa3f804ae0d35262f973ae854d79f41935f0f1
   return (
     <>
       {/* main container */}
@@ -39,7 +30,7 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
         position="relative"
-        scale={scrollYProgress.current}
+        // scale={scrollYProgress.current}
       >
         {/* heading container */}
         <Box>
