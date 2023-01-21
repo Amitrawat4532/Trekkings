@@ -95,7 +95,7 @@ const Home = () => {
             src="/images/bgElement.png"
             objectFit="contain"
             position="absolute"
-            bottom={["-10%", "-10%", "0", "0"]}
+            bottom="0"
             alt="trees"
           />
         </ChakraBox>
