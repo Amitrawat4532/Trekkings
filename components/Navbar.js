@@ -205,7 +205,7 @@ const Navbar = ({ settings }) => {
                   Latest Blog
                 </Button>
                 <Link href="/contact">
-                  <Button variant="responsiveNavButton">Contact Us</Button>
+                  <Button variant="responsiveNavButton">Contact </Button>
                 </Link>
               </Flex>
 
