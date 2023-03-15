@@ -27,15 +27,7 @@ const Navbar = ({ settings }) => {
     shouldForwardProp: (prop) =>
       isValidMotionProp(prop) || shouldForwardProp(prop),
   });
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.5,
-      },
-    },
-  };
+
   return (
     <>
       {/* main container */}
@@ -43,10 +35,8 @@ const Navbar = ({ settings }) => {
         position="absolute"
         left="0"
         top="0"
-        // border="2px solid black"
         w="100%"
         h="200px"
-        // variants={container}
         animate={{
           opacity: [0, 1],
         }}
@@ -65,9 +55,10 @@ const Navbar = ({ settings }) => {
           w="100%"
           zIndex="50"
         >
-          <Box>
+          <Box ml="10px">
             <Image
-              src={settings?.logo}
+              // src={settings?.logo}
+              src="./images/newlogo.png"
               alt="IGATPURIHILLSTREKTOURISM LOGO"
               width={["140px", "140px", "200px", "200px"]}
               // height={["120", "140", "256", "200"]}
@@ -82,7 +73,7 @@ const Navbar = ({ settings }) => {
 
           {/* Navbar container desktop */}
           <Flex
-            backgroundColor="rgba(255,255,255,0.3)"
+            // backgroundColor="rgba(255,255,255,0.3)"
             width="70%"
             flexDirection=""
             justifyContent="end"
@@ -118,14 +109,14 @@ const Navbar = ({ settings }) => {
             >
               Gallery
             </Button>
-            <Button
+            {/* <Button
               variant="navButton"
               onClick={() => jump(".blogs_container", { duration: 5000 })}
             >
-              Latest Blog
-            </Button>
+             
+            </Button> */}
             <Link href="/contact">
-              <Button variant="blogButton">Contact Us</Button>
+              <Button variant="blogButton"> Latest Blog</Button>
             </Link>
           </Flex>
 

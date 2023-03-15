@@ -1,6 +1,7 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Image from "next/image";
 
 const Services = () => {
   const Ourservices = [
@@ -8,119 +9,95 @@ const Services = () => {
       header: "HIKING / TREKKING",
       paragraph:
         " WE PROVIDE YOU THE BEST AND THE SAFEST TREK AMONG ANY OTHER.WE PROVIDE OU WITH THE PROFESSIONAL TREKKER AND HELP YOU TO REACH THE DESTINY AND ENJOY YOUR ADVENTURE",
-      image: "./images/gallery1.png",
+      image: "/images/service1.png",
     },
     {
       header: "TOURS & TRAVELS",
       paragraph:
         "WE WILL PROVIDE YOU WITH THE BEST TRAVEL FACOLITY SO THAT IT CAN HELP YOU TO REACH US AT VERY EASE AND WE ALSO HAVE STARTED HOME PICK UP AND DROP SERVICES WHICH WILL MAKE IT MORE EASE FOR YOU",
-      image: "./images/gallery2.png",
+      image: "/images/service2.png",
     },
     {
       header: "CAMPING & LIVING",
       paragraph:
         "WE WILL PROVIDE YOU WITH YOUR WISH LIVING IN YOUR ADVENTURE WHEATHER YOU DECIDE TO LIVE IN TENT OR LUXURIOUS HOTEL IT TOTALLY DEPEND ON YOU .",
-      image: "./images/gallery3.png",
+      image: "/images/service3.png",
     },
     {
       header: "FOOD AND BEVERAGES",
       paragraph:
         "THE FOOD WE PROVIDE WILL BE ABSOLUTELY 100 PERCENT FRESH AND HEALTHY CAUSE IT WILL HELP YOU TO MAKE YOUR TRIP OR ADVENTURE EASE SO THAT IT WONT AFFECT YOUR HEALT",
-      image: "./images/gallery4.png",
+      image: "/images/service4.png",
     },
   ];
   return (
     <>
       {/* main container */}
-      <Flex
-        className="service_container"
-        // backgroundImage="url('./images/map 2.png')"
-        // backgroundSize="10%"
-        background="radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 0% 0% / 20px 20px, radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 10px 10px / 20px 20px, linear-gradient(rgba(94, 60, 5, 0.02) 2px, transparent 2px) 0px -1px / 10px 10px, linear-gradient(90deg, rgba(94, 60, 5, 0.04) 2px, #ffffff 2px) -1px 0px / 10px 10px #ffffff"
-        width="100vw"
-        height="100%"
-        justifyContent="start"
-        alignItems="start"
-        flexDirection="column"
-        padding={["0px 20px", ",0px 40px", "20px 100px", "20px 140px"]}
-        pb="80px !important"
-        gap="20px"
-      >
+      <Flex w="100vw" h="100%" flexDirection="column" pb="94px" pt="50px">
         {/* header container */}
         <Flex
-          position="relative"
-          width="100%"
-          heigh="100px"
-          alignSelf="start"
+          flexDirection="column"
           justifyContent="center"
-          alignItems="center"
+          alignItems={["center", "center", "center", "center"]}
+          pb={["20px", "20px", "0px", "0px"]}
         >
-          <Text variant="serviceHeader1">SERVICES</Text>
-
-          <Text variant="serviceHeader2">TOUR TRAVEL FOOD AND STAY</Text>
+          <Text variant="serviceHeader1">TOUR TRAVEL FOOD AND STAY</Text>
+          <Text variant="serviceHeader">SERVICES</Text>
         </Flex>
 
-        {/* card container */}
-        <Box width="100%">
-          {Ourservices.map((el, key) => {
+        <Flex
+          h="100%"
+          w="100vw"
+          bgColor="white"
+          flexWrap="wrap"
+          justifyContent="center"
+          alignItems="center"
+          gap={["200px", "200px", "20px", "20px"]}
+          pt={["140px", "120px", "80px", "80px"]}
+        >
+          {Ourservices?.map((el, id) => {
             return (
-              <AnimationOnScroll
-                animateOnce={true}
-                animateIn={
-                  key % 2 === 0
-                    ? "animate__fadeInLeftBig"
-                    : "animate__fadeInRightBig"
-                }
-                key={key}
+              <Flex
+                h={["281px", "281px", "546px", "546px"]}
+                w="295px"
+                bgColor="#210011"
+                justifyContent="space-around"
+                alignItems="center"
+                borderRadius="20px"
+                padding="30px 40px"
+                flexDirection="column"
+                position="relative"
               >
-                <Flex
-                  flexDirection={key % 2 === 0 ? "row" : "row-reverse"}
-                  gap={["20px", "20px", "40px", "50px"]}
-                  alignItems="center"
-                  mx="1"
-                  my="12"
+                <Box
+                  position={["absolute", "absolute", "unset", "unset"]}
+                  top={["-110px", "-110px", "0", "0"]}
+                  // border="2px solid red"
+                  borderRadius={["50%", "50%", "0%", "0%"]}
+                  overflow="hidden"
+                  w={["184px", "184px", "216px", "216px"]}
+                  h={["184px", "184px", "216px", "216px"]}
                 >
-                  <Flex
-                    flexDirection="column"
-                    gap="20px"
-                    flex="1"
-                    width="100%"
-                    alignItems={key % 2 === 0 ? "start" : "end"}
-                  >
-                    <Text
-                      variant="serviceHeader"
-                      textAlign={key % 2 === 0 ? "start" : "end"}
-                    >
-                      {el.header}
-                    </Text>
-                    <Text
-                      variant="serviceParagraph"
-                      textAlign={key % 2 === 0 ? "start" : "end"}
-                    >
-                      {el.paragraph}
-                    </Text>
-                    <Button variant="whytrekkingButton">KNOW MORE</Button>
-                  </Flex>
+                  <Image src={el?.image} height="216px" width="216px" />
+                </Box>
 
-                  <Image
-                    css={{
-                      maskImage: "url('/images/stroke_mask.png')",
-                      maskSize: "134%",
-                      maskRepeat: "no-repeat",
-                      maskPosition: "center",
-                    }}
-                    src={el?.image}
-                    alt="IGATPURIHILLSTREKTOURISM SERVICES"
-                    objectPosition="center"
-                    objectFit="cover"
-                    width={["200px", "200px", "400px", "500px"]}
-                    height={["200px", "200px", "294px", "294px"]}
-                  />
-                </Flex>
-              </AnimationOnScroll>
+                <Text mt={["50px", "50px", "0", "0"]} variant="serviceHeader2">
+                  {el?.header}
+                </Text>
+                <Text variant="serviceParagraph">{el?.paragraph}</Text>
+                <Button
+                  variant="serviceButton"
+                  position={["absolute", "absolute", "relative", "relative"]}
+                  bottom={["-20px", "-20px", "0px", "0px"]}
+                >
+                  Explore More{" "}
+                  <Text as="span" fontSize="20px" ml="8px">
+                    &rarr;
+                  </Text>{" "}
+                </Button>
+              </Flex>
             );
           })}
-        </Box>
+        </Flex>
       </Flex>
     </>
   );

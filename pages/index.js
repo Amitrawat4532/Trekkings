@@ -99,7 +99,7 @@ const index = ({
       <Box p="0" m="0" overflow="hidden" position="relative">
         <Navbar settings={settings[0]} />
         <Home />
-        <UpcomingTrek event={event} settings={settings} />
+        {/* <UpcomingTrek event={event} settings={settings} /> */}
         <About />
         <Destination destination={destination} />
         <Services />
@@ -109,7 +109,7 @@ const index = ({
         <Vlog vlog={vlog} />
         <Footer settings={settings[0]} />
         {/* <CalendarComp event={event} /> */}
-        <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
+        {/* <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
           <a
             href={`https://wa.me/91${settings[0]?.whatsapp}?text=Hello There`}
             target="_blank"
@@ -122,7 +122,7 @@ const index = ({
               className="btn-whatsapp-pulse"
             />
           </a>
-        </Box>
+        </Box> */}
         {/* <Box
           position="fixed"
           left="10"

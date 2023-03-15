@@ -7,6 +7,7 @@ import "@fontsource/anton/400.css";
 import "@fontsource/kanit";
 import "@fontsource/rubik-glitch";
 import "@fontsource/sen";
+import "@fontsource/roboto";
 import "animate.css/animate.min.css";
 import StartLoader from "../components/StartLoader";
 

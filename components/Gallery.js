@@ -51,20 +51,20 @@ const Gallery = ({ gallery }) => {
             }}
             spaceBetween={10}
             slidesPerView={1}
-            breakpoints={{
-              640: {
-                spaceBetween: 100,
-                slidesPerView: 1,
-              },
-              768: {
-                spaceBetween: 10,
-                slidesPerView: 3,
-              },
-              1024: {
-                spaceBetween: 10,
-                slidesPerView: 3,
-              },
-            }}
+            // breakpoints={{
+            //   640: {
+            //     spaceBetween: 100,
+            //     slidesPerView: 1,
+            //   },
+            //   768: {
+            //     spaceBetween: 10,
+            //     slidesPerView: 3,
+            //   },
+            //   1024: {
+            //     spaceBetween: 10,
+            //     slidesPerView: 3,
+            //   },
+            // }}
             autoplay={{
               delay: 3500,
               disableOnInteraction: false,

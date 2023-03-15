@@ -17,13 +17,13 @@
     "@emotion/styled": "^11.10.4",
     "@fontsource/anton": "^4.5.9",
     "@fontsource/kanit": "^4.5.10",
+    "@fontsource/roboto": "^4.5.8",
     "@fontsource/rubik": "^4.5.11",
     "@fontsource/rubik-glitch": "^4.5.4",
     "@fontsource/sen": "^4.5.9",
     "@next/bundle-analyzer": "^13.0.7",
     "@sanity/image-url": "^1.0.1",
     "animate.css": "^4.1.1",
-    "cross-env": "^7.0.3",
     "framer-motion": "^8.4.2",
     "jump.js": "^1.0.2",
     "moment": "^2.29.4",
@@ -35,8 +35,7 @@
     "react-countup": "^6.4.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "sharp": "^0.31.2",
-    "swiper": "^8.4.4"
+    "swiper": "^8.4.7"
   },
   "devDependencies": {
     "eslint": "8.25.0",
