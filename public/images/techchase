@@ -1,0 +1,149 @@
+import Image from 'next/image';
+import { useRef, useState } from "react";
+import type SwiperCore from 'swiper';
+import "swiper/css";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+type Props = {
+    className?:string
+    hideHeading?:boolean
+    data:any
+}
+
+const Slider = ({className='', hideHeading,data}: Props) => {
+    const [activeIndex, setActiveIndex] = useState(0)
+    const swiperRef = useRef<SwiperCore>()
+    return (
+        <section className={`${className}`}>
+            {!hideHeading && <h3 className={`text-[28px] md:text-[40px] mb-6 md:mb-8 text-center headings-weight text-dark-100 dark:text-grey-500`}>What they say about us</h3>}
+            <Swiper
+                className="relative rounded-input swiper-testimonials"
+                slidesPerView={1}
+                loop
+                spaceBetween={20}
+                centeredSlides
+                onSlideChange={({ realIndex }) => setActiveIndex(realIndex)}
+                onBeforeInit={(swiper) => {
+                    swiperRef.current = swiper
+                }}
+                breakpoints={{
+                    768: {
+                        slidesPerView: 1.4,
+                    },
+                    896: {
+                        slidesPerView: 1.465
+                    }
+                }}
+            >
+
+                {data.map(({ img, name, designation,about }:any, i:number) => (
+                    <SwiperSlide className="bg-grey-100 dark:bg-dark-500 p-6 md:p-8  layout3xl:p-10 rounded-3xl md:rounded-input !grid grid-cols-1 row-span-2 layoutsm:grid-rows-1 layoutsm:grid-cols-3 layoutsm:gap-5 layout3xl:gap-10"
+                        key={i}
+                    >
+                        {({ isActive }) => (
+                            <>
+                                <div className={`col-span-1  ${!isActive && 'md:blur'}`}>
+                                    <div className="unset-img">
+                                        <Image fill={true} className={`aspect-square rounded-2xl object-cover custom-img`} src={img} alt="" />
+                                    </div>
+                                    <p className={`pt-4 font-manrope text-h-two text-dark-100 dark:text-grey-500`}>{name}</p>
+                                    <p className={`text-grey-400 text-base py-1 dark:text-grey-300`}>{designation}</p>
+
+
+                                </div>
+                                <p className={`col-span-2 text-base md:text-[20px] md:leading-[32.8px] layout3xl:text-[24px] layout3xl:leading-[39.36px] pt-3 layoutsm:pt-0 text-dark-100 dark:text-grey-500  ${!isActive && 'md:blur'}`}>
+                                    {about}
+                                </p>
+
+                            </>
+                        )}
+                    </SwiperSlide>
+                ))}
+
+                <button
+                    aria-label="swipe-left"
+                    onClick={() => swiperRef.current?.slidePrev()}
+                    className=" absolute top-1/2 left-10 z-[2]  -translate-y-1/2  rounded-full bg-dark-100 dark:bg-grey-500 pt-[15px] pr-[21px] pb-[16px] pl-[18px] hidden md:block shadow-btnShadow dark:shadow-btnShadowDark"
+                >
+                    <svg width="9" height="17" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19L2 10.5L11 2" stroke="#F5F5F7" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="dark:stroke-dark-100"/>
+                    </svg>
+
+
+                </button>
+                <button
+                    aria-label="swipe-right"
+                    onClick={() => swiperRef.current?.slideNext()}
+                    className=" absolute top-1/2 right-10 z-[2]  -translate-y-1/2 rounded-full  bg-dark-100 dark:bg-grey-500 pt-[16px] pr-[18px] pb-[15px] pl-[21px] hidden md:block shadow-btnShadow dark:shadow-btnShadowDark"
+                >
+                    <svg width="9" height="17" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L11 10.5L2 19" stroke="#F5F5F7" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="dark:stroke-dark-100"/>
+                    </svg>
+
+
+                </button>
+            </Swiper>
+            {data.length > 1 && (
+                <div className="flex items-center justify-center p-2 my-2 space-x-5 md:hidden">
+                    {data.map((item:any, i:number) => (
+                        <button
+                            role="navigation"
+                            aria-label="slides"
+                            key={i}
+                            className={`cursor-pointer rounded-full ease-in ${i === activeIndex
+                                ? 'h-3 w-3 bg-dark-100 dark:bg-grey-200'
+                                : 'h-2 w-2 bg-grey-200 dark:bg-dark-100'
+                                }`}
+                            onClick={() => swiperRef.current?.slideToLoop(i)}
+                        ></button>
+                    ))}
+                </div>
+            )}
+
+        </section>
+    )
+}
+
+export default Slider
+
+
+
+
+
+export const SliderData = [
+  {
+    img: "/assets/gallery/kanika.webp",
+    name: "Kanika Gupta",
+    designation: "Operations Head @ INFS",
+    about:
+      "“The team at Rovae Incorporation was responsive to our feedback and provided excellent communication throughout the entire process. They took the time to understand our business and our goals, which allowed them to create a website that effectively represents our brand and provides a positive user experience.”",
+  },
+  {
+    img: "/assets/gallery/ratansingh.webp",
+    name: "Ratan Singh",
+    designation: "Deputy Manager @ Deloitte",
+    about:
+      "“Rovae is a great company to work with. Great staff with high professionalism and commitment to get the results you want . We have a great working relationship and we intend to keep working with Rovae.”",
+  },
+  {
+    img: "/assets/gallery/sambaran.webp",
+    name: "Sambaran Chatterjee",
+    designation: "Director @ ClickEdge Solutions Pvt Ltd",
+    about:
+      "“I have been very happy with the customer service and the attention to detail. I highly recommend Rovae for both your website and SEO needs. I trust that Rovae will do what is needed to be sure their clients are completely satisfied. We found Rovae team very passionate towards the detailing of work and support.”",
+  },
+  {
+    img: "/assets/gallery/ronak.webp",
+    name: "Ronak Gala ",
+    designation: "Co-Founder @ Leapup",
+    about:
+      "“Talented team and a cooperative attitude makes them an ideal partner for us.”",
+  },
+  {
+    img: "/assets/gallery/jai.webp",
+    name: "Jai Singh",
+    designation: " Co-Founder & Managing Partner @ Cleo Consulting",
+    about:
+      "“We’ve been working with Rovae for the last couple of months. They manage our website and helped us recently in moving our domain from one hosting provider to another. It was quick and seamless. They are also managing our website, and their response time on tickets is extremely quick”",
+  },
+];

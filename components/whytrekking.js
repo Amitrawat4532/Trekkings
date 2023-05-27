@@ -65,70 +65,10 @@ const Whytrekking = ({ settings }) => {
           <Text variant="whytrekkingHeader2">
             WE PROVIDE YOU THE BEST EXPERIENCE
           </Text>
-          <Text variant="whytrekkingHeader1">WHY TREVELLING WITH US?</Text>
+          <Text variant="whytrekkingHeader1" mt={["0px","0px","20px","20px"]}>WHY TREVELLING WITH US?</Text>
         </Flex>
 
-        {/* img container */}
-        {/* <Flex
-          justifyContent="center"
-          width="100%"
-          pb="8"
-          my="8"
-          // height="20%"
-        >
-          <Image
-            src="/images/whyTrek.png"
-            alt="ILLUSTRATION"
-            // borderRadius="41px"
-            width="100%"
-            height={["180px", "180px", "350px", "350px"]}
-            objectFit="contain"
-          />
-        </Flex> */}
-
-        {/* Feature Context */}
-        {/* <Flex
-          px="4"
-          my="6"
-          alignItems="start"
-          justifyContent="space-evenly"
-          flexDirection="row"
-          flexWrap="wrap"
-          gap="10"
-        >
-          {Testimonal_context.map((el, key) => {
-            return (
-              <Flex
-                flexDirection="column"
-                alignItems="center"
-                alignSelf="start"
-                key={key}
-                minW="100px"
-           
-              >
-                <Flex gap="10px" alignItems="center">
-                  <AnimationOnScroll
-                    animateOnce={true}
-                    duration={0}
-                    animateIn="animate__fadeIn"
-                    afterAnimatedIn={() => setVisible(true)}
-                    initiallyVisible={true}
-                  >
-                    {visible && (
-                      <Text variant="testimonalHeader" ref={countUpRef}>
-                        <CountUp end={el?.number} delay={0}></CountUp>
-                      </Text>
-                    )}
-                  </AnimationOnScroll>
-                  <Image src={el.icon_2} alt="ilustrator icon" height="20px" />
-                </Flex>
-                <Flex>
-                  <Text variant="testimonalHeading">{el.heading}</Text>
-                </Flex>
-              </Flex>
-            );
-          })}
-        </Flex> */}
+       
 
         <Flex
           flexDirection="column"
@@ -136,6 +76,7 @@ const Whytrekking = ({ settings }) => {
           justifyContent="center"
           alignItems="center"
           position="relative"
+          // display={["flex","flex","none", "none"]}
         >
           <Box position="absolute" top="30px">
             <svg
@@ -272,14 +213,15 @@ const Whytrekking = ({ settings }) => {
             </Text>
           </Flex>
           <Box
-            border="2px solid white"
             height="117px"
             width="126px"
             borderRadius="50%"
+            mt="30px"
           >
-            logo
+            <img src="/images/Logo.png"></img>
           </Box>
         </Flex>
+
       </Flex>
     </>
   );

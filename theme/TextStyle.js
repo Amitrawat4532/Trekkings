@@ -232,7 +232,7 @@ export const TextStyle = {
     testimonalHeader1: {
       as: "h1",
       fontWeight: "400",
-      fontSize: ["43px", "60px", "80px", "80px"],
+      fontSize: ["35px", "35px", "70px", "70px"],
       color: "#000000",
       opacity: "0.19",
       fontFamily: "anton",
@@ -241,7 +241,7 @@ export const TextStyle = {
     testimonalHeader2: {
       as: "p",
       fontWeight: "400",
-      fontSize: ["12px", "15px", "25px", "25px"],
+      fontSize: ["16px", "16px", "25px", "25px"],
       color: "#FF3606",
       position: "absolute",
       textAlign: "center",
