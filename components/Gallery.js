@@ -3,7 +3,7 @@ import { Flex,Grid ,GridItem} from "@chakra-ui/react";
 const Gallery = () => {
   return (
     <>
-    <Flex justifyContent="center" alignItems="center"  height="100%" my="62px" display={["none","none","flex","flex"]}>
+    <Flex justifyContent="center" alignItems="center"  height="100%" my="62px" display={["none","none","flex","flex"]} className="gallery_container">
       {/* Desktop version */}
         <Grid templateColumns="repeat(3, 1fr)"  height="100%" width={["0px","0px","70%","70%"]} gap={3}   >
       <GridItem rowSpan={2} colSpan={1} maxW="400px"  >

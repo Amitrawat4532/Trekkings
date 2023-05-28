@@ -32,7 +32,7 @@ const Services = () => {
   return (
     <>
       {/* main container */}
-      <Flex w="100vw" h="100%" flexDirection="column" pb="94px" pt="50px">
+      <Flex w="100vw" h="100%" flexDirection="column" pb="94px" pt="50px" className="service_container">
         {/* header container */}
         <Flex
           flexDirection="column"

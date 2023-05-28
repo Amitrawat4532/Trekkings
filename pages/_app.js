@@ -10,6 +10,8 @@ import "@fontsource/sen";
 import "@fontsource/roboto";
 import "animate.css/animate.min.css";
 import StartLoader from "../components/StartLoader";
+import NextNProgress from 'nextjs-progressbar';
+
 
 import React, { useEffect, useState } from "react";
 import customTheme from "../theme/customTheme";
@@ -42,6 +44,8 @@ function MyApp({ Component, pageProps }) {
         <title>IGATPURIHILLSTREKTOURISM</title>
       </Head>
       {startAnim && <StartLoader />}
+      <NextNProgress options={{ showSpinner: false }} />
+
       <Component {...pageProps} />
     </ChakraProvider>
   );
