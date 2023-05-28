@@ -1,7 +1,11 @@
 import { Box,Flex, Image, Input, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import CountUp from "react-countup";
+
 
 const Footer = () => {
+  const [visible, setVisible] = useState(false);
   const numData = [
     {
       number: "15",
@@ -114,6 +118,15 @@ const Footer = () => {
       {/* main section */}
       <Flex flexDirection="column" height="100%" width="100%">
         {/* number section */}
+
+
+        <AnimationOnScroll
+                    animateOnce={true}
+                    duration={0}
+                    animateIn="animate__fadeIn"
+                    afterAnimatedIn={() => setVisible(true)}
+                    initiallyVisible={true}
+                  >
         <Flex
           justifyContent="center"
           gap="100px"
@@ -122,9 +135,11 @@ const Footer = () => {
           my="60px"
           flexWrap="wrap"
         >
+           
           {numData.map((el, id) => {
             return (
               <>
+                {visible && (
                 <Flex alignItems="center" flexDirection="column">
                   <Flex key={id} gap="9px" alignItems="center">
                     <svg
@@ -147,7 +162,7 @@ const Footer = () => {
                       fontWeight="400"
                       lineHeight="92px"
                     >
-                      {el.number}
+                       <CountUp end={el?.number} delay={0}></CountUp>
                     </Text>
                     <svg
                       width="25"
@@ -169,10 +184,12 @@ const Footer = () => {
                     {el.title}
                   </Text>
                 </Flex>
+                )}
               </>
             );
           })}
         </Flex>
+        </AnimationOnScroll>
 
         {/* img section */}
         <Box height="422px" width="100%">
@@ -194,25 +211,30 @@ const Footer = () => {
         {/* footer section */}
         <Flex
           bgColor="#2C111E"
-          justifyContent="center"
+          justifyContent="start"
           alignItems="center"
           gap={["0px","0px","140px","140px"]}
           flexDirection={["column","column","row","row"]}
+          width="100%"
         >
           {/* left container */}
-          <Flex pt="40px" width="50%">
+          <Flex p="40px" 
+          
+          ml={["0px","0px","200px","200px"]}
+          >
             <Image src="/images/finallogo.png"></Image>
           </Flex>
 
           {/* right section */}
           <Flex
-            width="50%"
+            // width="50%"
             justifyContent="center"
             alignItems="start"
             flexDirection="column"
             gap="70px"
             pt={["40px","40px","88px","88px"]}
-            margin="auto"
+            // margin="auto"
+
 
           >
             <Flex gap={["50px","50px","120px","120px"]} 
@@ -242,7 +264,7 @@ const Footer = () => {
                 {Links.map((el, id) => {
                   return (
                     <>
-                      <Flex key={id} gap="30px">
+                      <Flex key={id} gap="30px" alignItems="center">
                         <svg
                           width="13"
                           height="14"

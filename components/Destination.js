@@ -1,9 +1,9 @@
 import { Text, Flex, Box, Button, Progress, Stack } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Autoplay, Mousewheel, Pagination, S } from "swiper";
+import { Autoplay, Mousewheel} from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, useCycle } from "framer-motion";
 import Image from "next/image";
 import "swiper/css/pagination";
@@ -94,7 +94,6 @@ function Destination({}) {
           <Swiper
             onSlideChange={(e) => {
               swiperProgressHandler(e.progress, e.activeIndex);
-              console.log(swiper ?? swiper, e.activeIndex);
             }}
             onSwiper={setSwiper}
             style={{
@@ -105,7 +104,7 @@ function Destination({}) {
               display: "flex",
             }}
             slidesPerView={1}
-            modules={[Autoplay, Mousewheel, Pagination]}
+            modules={[Autoplay, Mousewheel]}
             mousewheel={false}
             autoplay={{
               delay: 4500,
@@ -130,7 +129,7 @@ function Destination({}) {
               },
              
             }}
-            navigation={true}
+            // navigation={true}
             centeredSlides={true}
             direction={"horizontal"}
             loop={true}
