@@ -57,14 +57,10 @@ const Navbar = ({ settings }) => {
         >
           <Box ml="10px">
             <Image
-              // src={settings?.logo}
               src="./images/newlogo.png"
               alt="IGATPURIHILLSTREKTOURISM LOGO"
               width={["140px", "140px", "200px", "200px"]}
-              // height={["120", "140", "256", "200"]}
               h="100%"
-              // bgColor="black"
-              // borderRadius="50%"
               mt="1"
               className="footerImg"
               filter="contrast(135%)"
@@ -73,7 +69,6 @@ const Navbar = ({ settings }) => {
 
           {/* Navbar container desktop */}
           <Flex
-            // backgroundColor="rgba(255,255,255,0.3)"
             width="70%"
             flexDirection=""
             justifyContent="end"
@@ -109,12 +104,7 @@ const Navbar = ({ settings }) => {
             >
               Gallery
             </Button>
-            {/* <Button
-              variant="navButton"
-              onClick={() => jump(".blogs_container", { duration: 5000 })}
-            >
-             
-            </Button> */}
+           
             <Link href="/contact">
               <Button variant="blogButton"> Latest Blog</Button>
             </Link>
@@ -127,7 +117,7 @@ const Navbar = ({ settings }) => {
             aria-label="Search database"
             icon={<HamburgerIcon />}
             display={["flex", "flex", "none", "none"]}
-            color="red"
+            color="black"
             background="tranparent"
             fontSize="40px"
           />

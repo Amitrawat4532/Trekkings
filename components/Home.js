@@ -92,50 +92,7 @@ const Home = ({ settings }) => {
             </a>
           </Flex>
         </Box>
-        {/* <Flex w="100vw" h="100%" position="absolute" bottom="0">
-          <Img
-            src="images/bgTrees.png"
-            alt="basebg"
-            w="100%"
-            h="100%"
-            objectFit="cover"
-            objectPosition="bottom"
-            zIndex={2}
-          />
-        </Flex>
-
-        <ChakraBox
-          position="absolute"
-          initial="onscreen"
-          whileInView="onscreen"
-          variants={cardVariants}
-          animate={{
-            scale: [10, 4],
-            // Y: [120, 100],
-            rotate: [0, 0, 0, 0, 0],
-            // borderRadius: ["20%", "30%", "40%", "50%", "60%", ""],
-          }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-          }}
-          padding="2"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          width="100px"
-          height="100px"
-        >
-          <Image
-            as={motion.img}
-            src="/images/bgElement.png"
-            objectFit="contain"
-            position="absolute"
-            bottom="0"
-            alt="trees"
-          />
-        </ChakraBox> */}
-      </Flex>
+             </Flex>
     </>
   );
 };

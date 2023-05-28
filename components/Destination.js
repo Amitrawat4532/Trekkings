@@ -50,22 +50,17 @@ function Destination({}) {
       img: "/images/destination1.png",
       name: "10 - Great ranges of mountain",
     },
-    // {
-    //   img: "/images/destination2.png",
-    //   name: "The dense forest",
-    // },
+    
   ];
 
   const [swiperData, setSwiperData] = useState({ progress: 0, activeIndex: 1 });
   const [isTouch, setTouch] = useCycle(false, true);
   const [swiper, setSwiper] = useState(null);
 
-  // const swiper = useSwiper();
 
   const swiperProgressHandler = (progressVal, activeVal) => {
     setSwiperData({
       ...swiperData,
-      // progress: progressVal * 100,
       progress: Math.round(progressVal * 10) * 10,
       activeIndex: activeVal,
     });
@@ -84,7 +79,6 @@ function Destination({}) {
         justifyContent="space-around"
         // gap="7"
       >
-        {/* header container */}
         <Flex
           flexDirection="column"
           justifyContent="center"
@@ -134,6 +128,7 @@ function Destination({}) {
                 spaceBetween: 10,
                 slidesPerView: 4,
               },
+             
             }}
             navigation={true}
             centeredSlides={true}
@@ -163,13 +158,6 @@ function Destination({}) {
                         opacity: 1,
                       }}
                       animate={{
-                        // scale: isTouch
-                        //   ? 0.75
-                        //   : isActive
-                        //   ? 1
-                        //   : isPrev || isNext
-                        //   ? 0.95
-                        //   : 0.85,
                         scale: isActive ? 1.1 : 1,
                         opacity: isTouch
                           ? 0.49
@@ -265,9 +253,6 @@ function Destination({}) {
                             viewBox="0 0 50 50"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            // _hover={{
-                            //   fill: "red",
-                            // }}
                           >
                             <path
                               d="M25.125 33.1875L25 33.3125L24.8625 33.1875C18.925 27.8 15 24.2375 15 20.625C15 18.125 16.875 16.25 19.375 16.25C21.3 16.25 23.175 17.5 23.8375 19.2H26.1625C26.825 17.5 28.7 16.25 30.625 16.25C33.125 16.25 35 18.125 35 20.625C35 24.2375 31.075 27.8 25.125 33.1875ZM30.625 13.75C28.45 13.75 26.3625 14.7625 25 16.35C23.6375 14.7625 21.55 13.75 19.375 13.75C15.525 13.75 12.5 16.7625 12.5 20.625C12.5 25.3375 16.75 29.2 23.1875 35.0375L25 36.6875L26.8125 35.0375C33.25 29.2 37.5 25.3375 37.5 20.625C37.5 16.7625 34.475 13.75 30.625 13.75Z"

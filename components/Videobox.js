@@ -6,26 +6,27 @@ const Videobox = () => {
     <>
       <Flex
         width="100%"
-        height="100%"
-        position="relative"
+        height="507px"
         alignItems="center"
         justifyContent="center"
+        flexDirection="column"
       >
         <Image
-          src="./images/videobox.png"
+          src="./images/finalGallary6.png"
           alt="IGATPURIHILLSTREKTOURISM VIDEO THUMBNAIL"
           width="100%"
-          height="200px"
+          height="100%"
         />
         <Text
           position="absolute"
-          textColor="orange"
+          textColor="white"
           fontSize="50px"
           textAlign="center"
           fontFamily="anton"
         >
-          Yha pe video
+          EXPLORE FULL OUR BLOGS & TRIP IDEAS FOR HIKING
         </Text>
+        
       </Flex>
     </>
   );

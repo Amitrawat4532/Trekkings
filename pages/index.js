@@ -1,6 +1,9 @@
-import { Box, Image, keyframes } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { createClient } from "next-sanity";
 import dynamic from "next/dynamic";
+import Videobox from "../components/Videobox";
+
+
 
 const About = dynamic(() => import("../components/About"));
 const Destination = dynamic(() => import("../components/Destination"));
@@ -13,6 +16,7 @@ const WithSpeechBubbles = dynamic(() => import("../components/Testimonal"));
 const UpcomingTrek = dynamic(() => import("../components/UpcomingTrek"));
 const Vlog = dynamic(() => import("../components/Vlog"));
 const Whytrekking = dynamic(() => import("../components/whytrekking"));
+
 
 export async function getServerSideProps(context) {
   const client = createClient({
@@ -91,6 +95,7 @@ const index = ({
         <Whytrekking settings={settings[0]} />
         <Gallery gallery={gallery} />
         <WithSpeechBubbles testimonial={testimonial} />
+        <Videobox />
         {/* <Vlog vlog={vlog} /> */}
         <Footer settings={settings[0]} />
         {/* <CalendarComp event={event} /> */}

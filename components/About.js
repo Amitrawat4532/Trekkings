@@ -1,6 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import Image from "next/image";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Link from "next/link";
 
@@ -52,10 +51,8 @@ function About() {
       <Flex
         className="about_container"
         width="100%"
-        // minHeight="70vh"
         height="100%"
         justifyContent="center"
-        // backgroundImage="url('/images/bg1.png')"
         pb="40px"
         pt="80px"
         flexWrap="wrap"
@@ -63,7 +60,6 @@ function About() {
         backgroundSize="70%"
         backgroundPosition="center"
         bgRepeat="no-repeat"
-        // border="1px solid red"
       >
         {/* card container */}
         {cards.map((el, id) => {
@@ -105,7 +101,6 @@ function About() {
                   flexDirection="column"
                   gap="10px"
                   justifyContent="center"
-                  // p={["10px", "10px", "20px", "20px"]}
                   pt={["20px", "20px", "40px", "40px"]}
                 >
                   <Text
@@ -121,9 +116,17 @@ function About() {
                     {el?.description}
                   </Text>
                   <Link href={el?.link}>
-                    <Text variant="aboutbutton" fontWeight="600" pb="50px">
-                      READ MORE &rarr;
+                    <Flex gap="8px">
+                    <Text variant="aboutbutton" fontWeight="600" pb="50px">  
+                    READ MORE 
                     </Text>
+
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.9378 16.082L16.4378 10.582C16.5211 10.4987 16.5803 10.4084 16.6153 10.3112C16.6503 10.2139 16.6675 10.1098 16.667 9.99867C16.667 9.88756 16.6495 9.78339 16.6145 9.68617C16.5795 9.58894 16.5206 9.49867 16.4378 9.41533L10.9378 3.91533C10.785 3.76256 10.5939 3.68283 10.3645 3.67617C10.135 3.6695 9.93726 3.74922 9.77115 3.91533C9.60448 4.06811 9.51753 4.25922 9.51031 4.48867C9.50309 4.71811 9.58309 4.91589 9.75031 5.082L13.8336 9.16533H4.52115C4.28504 9.16533 4.08698 9.24533 3.92698 9.40533C3.76698 9.56533 3.68726 9.76311 3.68781 9.99867C3.68781 10.2348 3.76754 10.4328 3.92698 10.5928C4.08642 10.7528 4.28448 10.8326 4.52115 10.832H13.8336L9.75031 14.9153C9.59754 15.0681 9.51753 15.2626 9.51031 15.4987C9.50309 15.7348 9.58309 15.9292 9.75031 16.082C9.90309 16.2487 10.0975 16.332 10.3336 16.332C10.5698 16.332 10.7711 16.2487 10.9378 16.082Z" fill="#FF461D"/>
+</svg>
+                    </Flex>
+                    
+
                   </Link>
                 </Flex>
               </Flex>

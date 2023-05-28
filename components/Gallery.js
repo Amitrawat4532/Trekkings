@@ -33,9 +33,9 @@ const Gallery = () => {
         <img src="images/finalGallary6.png" width="860px"></img>
 
       </GridItem>
-      <GridItem rowSpan={1} colSpan={1}  maxW="400px" >
+      <GridItem rowSpan={1} colSpan={1}  maxW="400px"  bgImage="url('/images/finalGallary7.png')" >
         {/* Seventh child */} 
-        <img src="images/finalGallary7.png"></img>
+        {/* <img src="images/finalGallary7.png" ></img> */}
 
       </GridItem>
      

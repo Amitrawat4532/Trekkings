@@ -1,40 +1,9 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-import CountUp from "react-countup";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
-const Whytrekking = ({ settings }) => {
-  const countUpRef = React.useRef(null);
-  const [visible, setVisible] = useState(false);
+const Whytrekking = ({}) => {
+ 
 
-  const Testimonal_context = [
-    {
-      icon_1: "./images/tickicon.png",
-      number: settings?.experience,
-      icon_2: "./images/plusicon.png",
-      heading: "Years Of Experience",
-    },
-    {
-      icon_1: "./images/tickicon.png",
-      number: settings?.totalTreks,
-      icon_2: "./images/plusicon.png",
-      heading: "Treks Completed",
-    },
-
-    {
-      icon_1: "./images/tickicon.png",
-      number: settings?.hikers,
-      icon_2: "./images/plusicon.png",
-      heading: "Satisfied Hikers",
-    },
-
-    {
-      icon_1: "./images/tickicon.png",
-      number: settings?.destination,
-      icon_2: "./images/plusicon.png",
-      heading: "Destinations Hiked",
-    },
-  ];
+ 
 
   return (
     <>
@@ -45,10 +14,10 @@ const Whytrekking = ({ settings }) => {
         height="100%"
         flexDirection="column"
         minHeight="100vh"
-        // justifyContent="space-around"
-        // p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
         px={["4", "4", "20", "20"]}
         py="20px"
+        justifyContent="center"
+        alignItems="center"
       >
         {/* header container */}
         <Flex
@@ -60,7 +29,6 @@ const Whytrekking = ({ settings }) => {
           position="relative"
           backgroundColor="transparent"
           p="20px"
-          // p={["2% 2%", "2% 4%", "3% 6%", "3% 7%"]}
         >
           <Text variant="whytrekkingHeader2">
             WE PROVIDE YOU THE BEST EXPERIENCE
@@ -76,9 +44,9 @@ const Whytrekking = ({ settings }) => {
           justifyContent="center"
           alignItems="center"
           position="relative"
-          // display={["flex","flex","none", "none"]}
+          mt="40px"
         >
-          <Box position="absolute" top="30px">
+          <Flex position="absolute" top="30px">
             <svg
               width="291"
               height="586"
@@ -94,7 +62,7 @@ const Whytrekking = ({ settings }) => {
                 stroke-dasharray="6 6"
               />
             </svg>
-          </Box>
+          </Flex>
 
           <Flex
             w="150px"
