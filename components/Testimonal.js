@@ -16,27 +16,27 @@ const Testimonal = () => {
     },
     {
       images:"/images/testimonaltwo.png",
-      name:"Neha Rautela",
+      name:"Rajesh Rawat",
       para:"We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer."
     },
     {
       images:"/images/testimonaltwo.png",
-      name:"Neha Rautela",
+      name:"Rajesh Rawat",
       para:"We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer."
     },
     {
       images:"/images/testimonaltwo.png",
-      name:"Neha Rautela",
+      name:"Rajesh Rawat",
       para:"We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer."
     },
     {
       images:"/images/testimonaltwo.png",
-      name:"Neha Rautela",
+      name:"Rajesh Rawat",
       para:"We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer."
     },
     {
       images:"/images/testimonaltwo.png",
-      name:"Neha Rautela",
+      name:"Rajesh Rawat",
       para:"We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer."
     },
     {
@@ -55,7 +55,7 @@ const Testimonal = () => {
       >
         <Text variant="whytrekkingHeader2">WHAT THEY SAY ABOUT US</Text>
         <Text variant="whytrekkingHeader1" mt={["0px", "0px", "20px", "20px"]}>
-          TESTIMONALS
+          TESTIMONIALS
         </Text>
       </Flex>
       <Swiper
@@ -84,7 +84,7 @@ const Testimonal = () => {
               <Image src={el.images} layout="fill" alt="testimonal" />
   
               </Box> 
-              <Flex flexDirection="column" py="42px" gap="30px" justifyContent="center" alignItems="center">
+              <Flex flexDirection="column" py="42px" gap="30px" justifyContent="center" alignItems="start">
                <Text color="white" fontWeight="500" lineHeight="35px" fontSize={["20px","20px","30px","30px"]} fontFamily="Roboto">{el.name}</Text> 
                <Text color="white" fontWeight="400" lineHeight="23px" fontSize={["16px","16px","20px","20px"]} fontFamily="Roboto" textAlign={["center","center","start","start"]}>{el.para}</Text> 
                <Flex ><svg width="160" height="24" viewBox="0 0 160 24" fill="none" xmlns="http://www.w3.org/2000/svg">

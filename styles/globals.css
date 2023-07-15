@@ -159,3 +159,14 @@ border: 1px solid red !important;
   align-items: center;
 }
 
+.headinggallery{
+  color: #ff4517;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 2px;
+}
+.headinggallerytwo{
+  font-family: Rubik Glitch;
+  font-size: 80px;
+  color: #210011;
+}

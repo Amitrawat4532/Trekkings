@@ -332,7 +332,7 @@ const Footer = () => {
                   pl="40px"
                   py="15px"
                   variant="unstyled"
-                  fontSize={["12px","12px","23px","23px"]}
+                  fontSize={["12px","12px","18px","18px"]}
 
                   fontFamily="Archivo"
                 />
@@ -341,12 +341,12 @@ const Footer = () => {
                   as="button"
                   height="100%"
                   color="white"
-                  fontSize={["12px","12px","23px","23px"]}
+                  fontSize={["12px","12px","18px","18px"]}
 
                   fontWeight="600"
                   width="20%"
                   border="2px solid red"
-                  px="4px"
+                  px="5px"
                 >
                   SEND
                 </Box>
