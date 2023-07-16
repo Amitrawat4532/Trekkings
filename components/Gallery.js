@@ -19,8 +19,11 @@ const Gallery = () => {
         <img src="images/finalGallary3.png"></img>
 
       </GridItem>
-      <GridItem rowSpan={1} colSpan={1}  borderRadius="24px" maxW="400px" >
-        <img src="images/finalGallary4.png"></img>
+      <GridItem rowSpan={1} colSpan={1}  borderRadius="24px" maxW="400px">
+        <Flex justifyContent="center" alignItems="center" h="100%" width="100%" flexDirection="column">
+        <h3 className="headinggallery">GALLERY OF OUR TOURS</h3>
+        <h1 className="headinggallerytwo">JOURNEY</h1>
+        </Flex>
         {/* Fourth child */}
       </GridItem>
       <GridItem rowSpan={1} colSpan={1}  maxW="400px" >

@@ -143,6 +143,7 @@ const Navbar = ({ settings }) => {
                 display={["flex", "flex", "none", "none"]}
                 alignItems="center"
                 height="100%"
+                width="100vw"
               >
                 <Button
                   variant="responsiveNavButton"
@@ -198,7 +199,7 @@ const Navbar = ({ settings }) => {
               <DrawerFooter borderTopWidth="1px">
                 <Flex
                   height="4vh"
-                  width="100%"
+                  width="100vw"
                   justifyContent="space-evenly"
                   alignItems="center"
                   py="6"
