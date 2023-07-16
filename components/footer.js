@@ -1,5 +1,6 @@
 import { Box,Flex, Image, Input, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { Fragment } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import CountUp from "react-countup";
 
@@ -139,10 +140,10 @@ const Footer = () => {
            
           {numData.map((el, id) => {
             return (
-              <>
+              <Fragment key={id}>
                 {visible && (
                 <Flex alignItems="center" flexDirection="column" justifyContent="center">
-                  <Flex key={id} gap="9px" alignItems="center">
+                  <Flex gap="9px" alignItems="center">
                     <Box display={["none","none","block","block"]}>
                     <svg
                       width="56"
@@ -207,7 +208,7 @@ const Footer = () => {
                   </Text>
                 </Flex>
                 )}
-              </>
+              </Fragment>
             );
           })}
         </Flex>
@@ -265,7 +266,6 @@ const Footer = () => {
               <Flex flexDirection="column" gap={["16px","16px","40px","40px"]}>
                 {footerData.map((el, id) => {
                   return (
-                    <>
                       <Flex key={id} gap="30px">
                         {el.svg}
                         <Text
@@ -278,14 +278,12 @@ const Footer = () => {
                           {el.title}
                         </Text>
                       </Flex>
-                    </>
                   );
                 })}
               </Flex>
               <Flex flexDirection="column" gap={["16px","16px","40px","40px"]}>
                 {Links.map((el, id) => {
                   return (
-                    <>
                       <Flex key={id} gap="30px" alignItems="center">
                         <svg
                           width="13"
@@ -310,7 +308,6 @@ const Footer = () => {
                           {el.links}
                         </Text>
                       </Flex>
-                    </>
                   );
                 })}
               </Flex>

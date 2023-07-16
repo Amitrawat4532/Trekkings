@@ -106,7 +106,7 @@ const Navbar = ({ settings }) => {
             </Button>
            
             <Link href="/contact">
-              <Button variant="blogButton"> Latest Blog</Button>
+              <Button variant="blogButton">Contact Us</Button>
             </Link>
           </Flex>
 
@@ -127,6 +127,7 @@ const Navbar = ({ settings }) => {
             placement="right"
             onClose={onClose}
             finalFocusRef={btnRef}
+            size='lg'
           >
             <DrawerOverlay />
             <DrawerContent
@@ -135,7 +136,7 @@ const Navbar = ({ settings }) => {
             >
               <DrawerCloseButton fontSize="30px" color="red" m="4" />
 
-              {/* Navbar container desktop */}
+              {/* Navbar container mobile */}
 
               <Flex
                 flexDirection="column"
@@ -143,7 +144,6 @@ const Navbar = ({ settings }) => {
                 display={["flex", "flex", "none", "none"]}
                 alignItems="center"
                 height="100%"
-                width="100vw"
               >
                 <Button
                   variant="responsiveNavButton"
