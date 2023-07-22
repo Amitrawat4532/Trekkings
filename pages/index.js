@@ -87,8 +87,7 @@ const index = ({
     <>
       <Box p="0" m="0" overflow="hidden" position="relative">
         <Navbar settings={settings[0]} />
-        <Home />
-        {/* <UpcomingTrek event={event} settings={settings} /> */}
+         <Home />
         <About />
         <Destination destination={destination} />
         <Services />
@@ -96,9 +95,21 @@ const index = ({
         <Gallery gallery={gallery} />
         <WithSpeechBubbles testimonial={testimonial} />
         <Videobox />
+        <Footer settings={settings[0]} /> 
+      
+      </Box>
+    </>
+  );
+};
+
+export default index;
+
         {/* <Vlog vlog={vlog} /> */}
-        <Footer settings={settings[0]} />
-        {/* <CalendarComp event={event} /> */}
+
+        {/* <UpcomingTrek event={event} settings={settings} /> */}
+
+
+  {/* <CalendarComp event={event} /> */}
          {/* <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
           <a
             href={`https://wa.me/91${settings[0]?.whatsapp}?text=Hello There`}
@@ -141,9 +152,3 @@ const index = ({
             top="0"
           />
         </Box>  */}
-      </Box>
-    </>
-  );
-};
-
-export default index;

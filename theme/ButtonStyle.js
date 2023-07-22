@@ -36,9 +36,20 @@ export const ButtonStyle = {
     },
     responsiveNavButton: {
       fontSize: "25px",
-      color: "black",
+      color: "#535353",
+      // bg: "red",
+      h: "70px",
+      w: "100%",
+      fontFamily: "anton",
+      fontWeight: "light",
+      letterSpacing: "3px",
+      textTransform: "uppercase",
+    },
+    responsiveNavButtonhome: {
+      fontSize: "25px",
+      color: "#571432",
       bg: "transparent",
-      h: "100px",
+      h: "70px",
       w: "100%",
       fontFamily: "anton",
       fontWeight: "light",
@@ -84,6 +95,19 @@ export const ButtonStyle = {
       background: "#FF461D",
       borderRadius: "60px",
       color: "white",
+    },
+    Homebutton: {
+      padding: "10px 30px",
+      boxShadow:"0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+      boxShadow:"0px 4px 4px 0px rgba(0, 0, 0, 0.25)", fontSize:"20px" ,fontFamily:"Roboto" ,fontWeight:"700",
+      background: "#591433",
+      borderRadius: "50px",
+      color: "white",
+      mt:"-50px",
+      _hover: {
+        color: "red",
+        bg:"black"
+      },
     },
   },
 };
