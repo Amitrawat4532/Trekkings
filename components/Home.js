@@ -91,6 +91,8 @@ const Home = () => {
             </Flex>
             <Flex height="full" justifyContent="center" mr="30px" flexDirection={["row","row","column","column"]} alignItems="center" gap={["10px","10px","0px","0px"]}>
          <Text color="#591433" fontSize={["30px","30px","50px","50px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px">MSME</Text>
+  
+
          <Text color="white" fontSize={["16px","16px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px">REGISTERED</Text>
 
 
