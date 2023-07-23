@@ -44,12 +44,13 @@ export const TextStyle = {
     },
     homeHeader2: {
       as: "p",
-      color: "rgba(255, 255, 255, 0.6)",
+      color: "rgba(255, 255, 255, 0.60)",
       fontSize: ["55px", "60px", "108px", "108px"],
       fontWeight: "400",
       fontFamily: "Rubik Glitch",
       p: "0",
       m: "0",
+      
     },
 
     // ************************destination page****************

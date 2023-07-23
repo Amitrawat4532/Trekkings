@@ -1,23 +1,46 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { Autoplay, Mousewheel} from "swiper";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import React from 'react';
 
-const Home = ({ settings }) => {
+
+const Home = () => {
+  const ContactData = [
+    {
+      img: "/images/newfinalbg.png",
+    },
+    {
+      img: "/images/swiperbg.png",
+    },
+    {
+      img: "/images/swiperbg2.png",
+    },
+    {
+      img: "/images/swiperbg3.png",
+    },
+    {
+      img: "/images/swiperbg4.png",
+    },
+    {
+      img: "/images/swiperbg5.png",
+    },
+    {
+      img: "/images/swiperbg6.png",
+    },
+    
+    
+  ];
   return (
     <>
       {/* main container */}
       <Flex
         className="home_container"
-        w="100vw"
+        w="100%"
         h="100vh"
-        bgImg={[
-          "url('/images/newfinalmobbg.png')",
-          "url('/images/newfinalmobbg.png')",
-          "url('/images/newfinalbg.png')",
-          "url('/images/newfinalbg.png')",
-        ]}
-        backgroundSize="cover"
-        backgroundRepeat="no-repeat"
         justifyContent="end"
         alignItems="center"
         position="relative"
@@ -33,7 +56,7 @@ const Home = ({ settings }) => {
             initiallyVisible={true}
             animateOnce={true}
           >
-            <Text variant="homeHeader2">IMPOSSIBLE</Text>
+            <Text variant="homeHeader2" textShadow="0px 0px 40px 0px rgba(0, 0, 0, 0.65)">IMPOSSIBLE</Text>
           </AnimationOnScroll>
         </Box>
           
@@ -73,6 +96,67 @@ const Home = ({ settings }) => {
 
           </Flex>
           </Flex>
+
+          <Swiper
+           
+            style={{
+              position: "absolute",
+              height: "100vh",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              width:"100%",
+              zIndex:"-1"
+              
+            }}
+            slidesPerView={1}
+            modules={[Autoplay, Mousewheel]}
+            mousewheel={false}
+            autoplay={{
+              delay: 4500,
+              disableOnInteraction: true,
+            }}
+            breakpoints={{
+              1600: {
+                slidesPerView: 1,
+              },
+              1000: {
+                slidesPerView: 1,
+              },
+              400: {
+                slidesPerView: 1,
+              },
+             
+            }}
+            centeredSlides={true}
+            direction={"horizontal"}
+            loop={true}
+            grabCursor={true}
+            
+          >
+            {ContactData.map((item, i) => {
+              return (
+                <SwiperSlide
+                  key={i}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100vh",
+                    width:"100%",
+                    border:"2px solid black"
+                  }}
+                >
+                 
+                     
+                    
+                        <img src={item.img}  height="100vh" width="100%" />
+                        
+                  
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
              </Flex>
     </>
   );
