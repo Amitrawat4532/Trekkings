@@ -1,4 +1,4 @@
-import { Box,Flex, Image, Input, Text } from "@chakra-ui/react";
+import { Box,Button,Flex, Image, Input, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Fragment } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
@@ -314,7 +314,7 @@ const Footer = () => {
             </Flex>
 
             <Flex justifyContent="center">
-              <Flex
+              {/* <Flex
                 bg="white"
                 borderRadius="90px"
                 overflow="hidden"
@@ -347,6 +347,10 @@ const Footer = () => {
                 >
                   SEND
                 </Box>
+              </Flex> */}
+              <Flex width={["280px","300px","650px","650px"]} borderRadius="50px" overflow="hidden">
+                < Box as="input" type="text" placeholder="Connect with us" height="100%" width="100%" pl="15px" fontSize={["18px","18px","20px","20px"]}/>
+                <Button p="10px 30px" fontSize={["18px","18px","23px","23px"]} lineHeight="30px" borderRadius="0px" bgColor="#591433" color="white" fontWeight="600">SEND</Button>
               </Flex>
             </Flex>
           </Flex>

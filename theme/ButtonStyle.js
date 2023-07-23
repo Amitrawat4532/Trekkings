@@ -34,6 +34,12 @@ export const ButtonStyle = {
       fontFamily: "Roboto",
       fontWeight: "700",
     },
+    backbutton: {
+     
+      _hover: {
+        color: "transparent",
+      },
+    },
     responsiveNavButton: {
       fontSize: "25px",
       color: "#535353",

@@ -1,6 +1,6 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text ,Image, effect} from "@chakra-ui/react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { Autoplay, Mousewheel} from "swiper";
+import { Autoplay, Mousewheel,EffectFade} from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -90,10 +90,11 @@ const Home = () => {
 
             </Flex>
             <Flex height="full" justifyContent="center" mr="30px" flexDirection={["row","row","column","column"]} alignItems="center" gap={["10px","10px","0px","0px"]}>
-         <Text color="#591433" fontSize={["30px","30px","50px","50px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px">MSME</Text>
+         <img src="/images/svg img.png" />        
+
   
 
-         <Text color="white" fontSize={["16px","16px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px">REGISTERED</Text>
+         <Text color="white" fontSize={["16px","16px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px" pl={["0","0","20px","20px"]}>REGISTERED</Text>
 
 
           </Flex>
@@ -109,10 +110,10 @@ const Home = () => {
               display: "flex",
               width:"100%",
               zIndex:"-1"
-              
             }}
+            effect={'fade'}
             slidesPerView={1}
-            modules={[Autoplay, Mousewheel]}
+            modules={[Autoplay, Mousewheel,EffectFade]}
             mousewheel={false}
             autoplay={{
               delay: 4500,
@@ -127,14 +128,13 @@ const Home = () => {
               },
               400: {
                 slidesPerView: 1,
+               
               },
-             
             }}
             centeredSlides={true}
             direction={"horizontal"}
             loop={true}
             grabCursor={true}
-            
           >
             {ContactData.map((item, i) => {
               return (
@@ -144,17 +144,10 @@ const Home = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "100vh",
-                    width:"100%",
-                    border:"2px solid black"
+                    backgroundColor:"red"
                   }}
-                >
-                 
-                     
-                    
-                        <img src={item.img}  height="100vh" width="100%" />
-                        
-                  
+                >   
+                        <Image src={item.img}  height="100%" width="100%" alt="logo"  />
                 </SwiperSlide>
               );
             })}
