@@ -17,15 +17,7 @@ const Videobox = () => {
           width="100%"
           height="100%"
         />
-        <Text
-          position="absolute"
-          textColor="white"
-          fontSize="50px"
-          textAlign="center"
-          fontFamily="anton"
-        >
-          EXPLORE FULL OUR BLOGS & TRIP IDEAS FOR HIKING
-        </Text>
+        
         
       </Flex>
     </>

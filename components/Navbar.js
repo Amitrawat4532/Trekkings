@@ -104,10 +104,16 @@ const Navbar = ({ settings }) => {
               Gallery
             </Button>
            
-            <Link href="/contact">
-              <Button variant="blogButton">Contact Us</Button>
+            
+          </Flex>
+          <Flex h="200px" alignItems="center" 
+           mt="-50px"  display={["none","none","flex","flex"]}
+           > 
+          <Link href="/contact">
+              <Button variant="blogButton">Lets Connect</Button>
             </Link>
           </Flex>
+          
           
 
           <IconButton
@@ -138,7 +144,7 @@ const Navbar = ({ settings }) => {
               borderRadius="12px"
               bg="rgba(255, 255, 255, 0.58)"
             >
-              <DrawerCloseButton fontSize="30px" color="red" m="4" />
+              <DrawerCloseButton fontSize="30px" color="#571432" m="4" />
 
               {/* Navbar container mobile */}
 

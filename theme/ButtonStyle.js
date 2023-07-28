@@ -19,10 +19,11 @@ export const ButtonStyle = {
     },
     blogButton: {
       h: "43px",
-      width: "142px",
+      // width: "142px",
       fontSize: "20px",
-      color: "#FF461D",
-      bg: "#111111",
+      color: "white",
+      fontFamily:"Roboto",
+      bg: "#591433",
       border: "0",
       borderRadius: "100px",
       _hover: {
@@ -30,7 +31,7 @@ export const ButtonStyle = {
       },
 
       py: "10px",
-      px: "20px",
+      px: "25px",
       fontFamily: "Roboto",
       fontWeight: "700",
     },

@@ -51,7 +51,7 @@ const Services = () => {
           flexWrap="wrap"
           justifyContent="center"
           alignItems="center"
-          gap={["200px", "200px", "20px", "20px"]}
+          gap={["150px", "150px", "20px", "20px"]}
           pt={["140px", "120px", "80px", "80px"]}
         >
           {Ourservices?.map((el, id) => {

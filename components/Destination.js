@@ -244,35 +244,7 @@ function Destination({}) {
                         }}
                       >
                         <Image src={item.img} height="450px" width="328px" />
-                        <Box position="absolute" top={"10px"} right={"10px"}>
-                          <Box
-                            as="svg"
-                            width="50"
-                            height="50"
-                            viewBox="0 0 50 50"
-                            _hover={{
-                              background:'rgba(255, 255, 255, 0.362)',
-                              color:'white'
-                            }}
-                            borderRadius={50}
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M25.125 33.1875L25 33.3125L24.8625 33.1875C18.925 27.8 15 24.2375 15 20.625C15 18.125 16.875 16.25 19.375 16.25C21.3 16.25 23.175 17.5 23.8375 19.2H26.1625C26.825 17.5 28.7 16.25 30.625 16.25C33.125 16.25 35 18.125 35 20.625C35 24.2375 31.075 27.8 25.125 33.1875ZM30.625 13.75C28.45 13.75 26.3625 14.7625 25 16.35C23.6375 14.7625 21.55 13.75 19.375 13.75C15.525 13.75 12.5 16.7625 12.5 20.625C12.5 25.3375 16.75 29.2 23.1875 35.0375L25 36.6875L26.8125 35.0375C33.25 29.2 37.5 25.3375 37.5 20.625C37.5 16.7625 34.475 13.75 30.625 13.75Z"
-                              fill="#FF461D"
-                            />
-                            <rect
-                              x="0.75"
-                              y="0.75"
-                              width="48.5"
-                              height="48.5"
-                              rx="24.25"
-                              stroke="#FF461D"
-                              strokeWidth="1.5"
-                            />
-                          </Box>
-                        </Box>
+                        
                       </motion.div>
                       </>
  
@@ -282,18 +254,14 @@ function Destination({}) {
               );
             })}
           </Swiper>
-          <motion.div
-            animate={{
-              opacity: isTouch ? 0 : 1,
-            }}
-            className="bg-[#EBEBED] h-14 dark:bg-dark-200  w-auto mx-7 absolute inset-0 my-auto z-[-2] rounded-[8px]"
-          />
+        
         </Flex>
 
         <Flex
           flexWrap="wrap"
           justifyContent={"space-between"}
           mb="30px"
+          mt="50px"
           px={["20px", "20px", "100px", "100px"]}
           gap="20px"
         >

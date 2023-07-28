@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination} from "swiper";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
 const Testimonal = () => {
@@ -66,10 +66,11 @@ const Testimonal = () => {
         style={{
           width: "80%",
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        // navigation={true}
+        modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
+        <Flex className="swiper-button-prev" color="#591433"/>
         {swiperData.map((el, id) => {
           return (
             <SwiperSlide key={id}>
@@ -157,6 +158,8 @@ const Testimonal = () => {
             </SwiperSlide>
           );
         })}
+        <Flex className="swiper-button-next" color="#591433"/>
+
       </Swiper>
     </Flex>
   );

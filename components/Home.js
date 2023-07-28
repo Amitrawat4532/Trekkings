@@ -62,7 +62,7 @@ const Home = () => {
           
           <Flex  width="100%"  justifyContent="space-between" mt="50px" pb="20px" pl="30px" flexDirection={["column","column","row","row"]} alignItems="center">
 
-            <Flex flexDirection="column"  p="18px 30px" bg="rgba(255, 255, 255, 0.08)" borderRadius="16px" boxShadow="0px 0px 15px 0px rgba(0, 0, 0, 0.10)" gap="10px">
+            <Flex flexDirection="column"  p="18px 30px" bg="rgba(255, 255, 255, 0.08)" borderRadius="16px" boxShadow="0px 0px 15px 0px rgba(0, 0, 0, 0.10)" gap="10px" alignItems={["center","center","start","start"]}>
               <Text color="white" fontSize={["18px","18px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px">Hi Trekkers!</Text>
               <Text color="white" fontSize={["14px","14px","18px","18px"]} fontFamily="Poppins" fontWeight="400" letterSpacing="0.66px">Welcome! Explore and start your <br/>adventure now........</Text>
               <Flex

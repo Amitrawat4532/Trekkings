@@ -142,8 +142,8 @@ const Footer = () => {
             return (
               <Fragment key={id}>
                 {visible && (
-                <Flex alignItems="center" flexDirection="column" justifyContent="center">
-                  <Flex gap="9px" alignItems="center">
+                <Flex alignItems="center" flexDirection="column" justifyContent="center" >
+                  <Flex gap="20px" alignItems="center">
                     <Box display={["none","none","block","block"]}>
                     <svg
                       width="56"
@@ -215,18 +215,18 @@ const Footer = () => {
         </AnimationOnScroll>
 
         {/* img section */}
-        <Box height="422px" width="100%">
+        <Box height={["170px","170px","422px","422px"]} width="100%" mb={["-5px","-5px","0px","0px"]} >
           <Box
             height="100%"
             width="100%"
             bgRepeat="no-repeat"
             bgImg={[
-              "url('/images/footermob.png')",
-              "url('/images/footermob.png')",
+              "url('/images/footermobile.png')",
+              "url('/images/footermobile.png')",
               "url('/images/footernew.png')",
               "url('/images/footernew.png')",
             ]}
-            bgSize="cover"
+            bgSize={["contain","cover","cover","cover"]}
             backgroundPosition="center"
           ></Box>
         </Box>
@@ -314,42 +314,9 @@ const Footer = () => {
             </Flex>
 
             <Flex justifyContent="center">
-              {/* <Flex
-                bg="white"
-                borderRadius="90px"
-                overflow="hidden"
-                width={["230px","250px","630px","680px"]}
-                // width="100%"
-                height={["27px","27px","53px","53px"]}
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Input
-                  placeholder="CONNECT WITH US"
-                  pl="40px"
-                  py="15px"
-                  variant="unstyled"
-                  fontSize={["12px","12px","18px","18px"]}
-
-                  fontFamily="Archivo"
-                />
-                <Box
-                  bg="red"
-                  as="button"
-                  height="100%"
-                  color="white"
-                  fontSize={["12px","12px","18px","18px"]}
-
-                  fontWeight="600"
-                  width="20%"
-                  border="2px solid red"
-                  px="5px"
-                >
-                  SEND
-                </Box>
-              </Flex> */}
+              
               <Flex width={["280px","300px","650px","650px"]} borderRadius="50px" overflow="hidden">
-                < Box as="input" type="text" placeholder="Connect with us" height="100%" width="100%" pl="15px" fontSize={["18px","18px","20px","20px"]}/>
+                < Box as="input" type="text" placeholder="Connect with us" height="100%" width="100%" pl="25px" fontSize={["18px","18px","20px","20px"]}/>
                 <Button p="10px 30px" fontSize={["18px","18px","23px","23px"]} lineHeight="30px" borderRadius="0px" bgColor="#591433" color="white" fontWeight="600">SEND</Button>
               </Flex>
             </Flex>
