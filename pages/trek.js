@@ -30,7 +30,8 @@ export async function getServerSideProps(context) {
 
   const eventQuery = `*[_type == "events"]{
         ..., 
-        images[]{"img_url": asset->url}
+        images[]{"img_url": asset->url},
+        "itinerary": itinerary.asset->url,
       }`;
   const settingsQuery = `*[_type == "settings"]{
     ..., 
@@ -185,7 +186,6 @@ const Trek = ({ event, settings }) => {
               const currentDate = new Date();
               const upcomingDates = dates.filter((date) => date > currentDate);
               const latestUpcomingDate = new Date(Math.min(...upcomingDates));
-
               return (
                 <Box key={id} w="100%"
                 alignItems='stretch'
@@ -197,7 +197,8 @@ const Trek = ({ event, settings }) => {
                   ) : (
                     <SmallCard data={el} />
                   )} */}
-                    <BigCard data={el} />
+                    <BigCard data={el} isUpcoming={new Date(latestUpcomingDate).getTime() ==
+                  new Date(el.startDate).getTime() ? true : false} />
 
                 </Box>
               );

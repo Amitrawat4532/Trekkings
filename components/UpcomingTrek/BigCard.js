@@ -88,6 +88,7 @@ const BigCard = (props) => {
       paddingTop: "8px",
     },
   };
+
   return (
     <>
       <Flex
@@ -102,9 +103,9 @@ const BigCard = (props) => {
         position={"relative"}
        
       >
-
         {/* UPCOMING badge */}
-        <Box
+{
+props?.isUpcoming && <Box
           position={"absolute"}
           top={3}
           left={3}
@@ -148,6 +149,8 @@ const BigCard = (props) => {
                 UPCOMING
                   </Text>  
         </Box>
+}
+
         
         <Flex flexWrap={"wrap"} direction={"row"}>
           {/* Image */}
@@ -171,7 +174,7 @@ const BigCard = (props) => {
             />
             <Box
         position={'absolute'}
-        top='80%'
+        bottom='3'
         right='3'
         >
         <ShowImages images={images} />
@@ -316,10 +319,15 @@ const BigCard = (props) => {
                 background="#E9E9E9"
                 color="black"
                 borderRadius="8px"
+                as='a'
+                href={props.data?.itinerary}
+                 target="_blank"
+                  download
                 // onClick={ShowImages}
               >
-                Know More
+                View Itinerary
               </Button>
+              {/* <a href={props.data?.itinerary} target="_blank" download>Download</a> */}
             </Flex>
           </Flex>
         </Flex>
