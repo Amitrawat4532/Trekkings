@@ -6,7 +6,6 @@ export const TextStyle = {
     aboutHeader: {
       as: "h3",
       fontWeight: "500",
-      fontSize: "20px",
       color: "#FFFFFF",
       fontFamily: "Roboto",
       fontWeight: "400",
@@ -21,7 +20,6 @@ export const TextStyle = {
     },
     aboutParagraph: {
       as: "h4",
-      fontSize: "16px",
       fontWeight: "400",
       fontFamily: "Roboto",
       textAlign: "center",

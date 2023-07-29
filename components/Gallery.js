@@ -2,41 +2,38 @@ import { Box, Flex,Grid ,GridItem} from "@chakra-ui/react";
 
 const Gallery = () => {
   return (
-    <><Box className="gallery_container">
-<Flex justifyContent="center" alignItems="center"  height="100%" my="62px" display={["none","none","flex","flex"]} >
+    <><Box className="gallery_container"  my="62px" mx="100px">
+<Flex justifyContent="center" alignItems="center"  height="100%"  display={["none","none","flex","flex"]} width="100%" >
       {/* Desktop version */}
-        <Grid templateColumns="repeat(3, 1fr)"  height="100%" width={["0px","0px","70%","70%"]} gap={3}   >
-      <GridItem rowSpan={2} colSpan={1} maxW="400px"  >
-        <img src="images/finalGallary1.png"></img>
+        <Grid templateColumns="repeat(3, 1fr)"  height="100%" width={["0px","0px","100%","100%"]} gap={3}  flexWrap="wrap">
+      <GridItem rowSpan={2} colSpan={1}  bgImage="url('/images/finalGallary1.png')" bgSize="cover" bgRepeat="no-repeat"  >
       </GridItem>
-      <GridItem rowSpan={1} colSpan={1}  maxW="400px" >
+      <GridItem rowSpan={1} colSpan={1} width="100%" h={["0px","0px","250px","400px"]}   bgImage="url('/images/finalGallary2.png')" bgSize="cover" bgRepeat="no-repeat" >
         {/* Second child */}
-        <img src="images/finalGallary2.png"></img>
+        
         
       </GridItem>
-      <GridItem rowSpan={1} colSpan={1}  maxW="400px" >
+      <GridItem rowSpan={1} colSpan={1}  width="100%"   bgImage="url('/images/finalGallary3.png')" bgSize="cover" bgRepeat="no-repeat">
         {/* Third child */}
-        <img src="images/finalGallary3.png"></img>
-
+        
       </GridItem>
-      <GridItem rowSpan={1} colSpan={1}  borderRadius="24px" maxW="400px">
-        <Flex justifyContent="center" alignItems="center" h="100%" width="100%" flexDirection="column">
+      <GridItem rowSpan={1} colSpan={1}  borderRadius="24px"  width="100%"  >
+        <Flex justifyContent="center" alignItems="center" h="100%" width="100%" flexDirection="column" >
         <h3 className="headinggallery">GALLERY OF OUR TOURS</h3>
         <h1 className="headinggallerytwo">JOURNEY</h1>
         </Flex>
         {/* Fourth child */}
       </GridItem>
-      <GridItem rowSpan={1} colSpan={1}  maxW="400px" >
+      <GridItem rowSpan={1} colSpan={1}  h={["0px","0px","250px","400px"]}  width="100%"   bgImage="url('/images/finalGallary5.png')" bgSize="cover" bgRepeat="no-repeat" >
         {/* Fifth child */}
-        <img src="images/finalGallary5.png"></img>
+       
 
       </GridItem>
-      <GridItem rowSpan={1} colSpan={2}  maxW="887px" >
+      <GridItem rowSpan={1} colSpan={2}  h={["0px","0px","250px","500px"]}  width="100%"  bgImage="url('/images/finalGallary6.png')" bgSize="cover" bgRepeat="no-repeat" >
         {/* Sixth child */}
-        <img src="images/finalGallary6.png" width="860px"></img>
 
       </GridItem>
-      <GridItem rowSpan={1} colSpan={1}  maxW="400px"  bgImage="url('/images/finalGallary7.png')" >
+      <GridItem rowSpan={1} colSpan={1}  width="100%"   bgImage="url('/images/finalGallary7.png')" bgSize="cover" bgRepeat="no-repeat" >
         {/* Seventh child */} 
         {/* <img src="images/finalGallary7.png" ></img> */}
 

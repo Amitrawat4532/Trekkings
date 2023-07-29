@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { createClient } from "next-sanity";
 import dynamic from "next/dynamic";
-import Videobox from "../components/Videobox";
+// import Videobox from "../components/Videobox";
 
 
 
@@ -94,7 +94,6 @@ const index = ({
         <Whytrekking settings={settings[0]} />
         <Gallery gallery={gallery} />
         <WithSpeechBubbles testimonial={testimonial} />
-        <Videobox />
         <Footer settings={settings[0]} /> 
       
       </Box>

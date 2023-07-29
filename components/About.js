@@ -51,13 +51,15 @@ function About() {
         width="100%"
         height="100%"
         justifyContent="center"
-        pb="40px"
-        pt="80px"
+        py={["45px","45px","40px","40px"]}
+        px={["56px","56px","80px","80px"]}
         flexWrap="wrap"
         gap="80px"
         backgroundSize="70%"
         backgroundPosition="center"
         bgRepeat="no-repeat"
+        flexDirection="row"
+        
       >
         {/* card container */}
         {cards.map((el, id) => {
@@ -67,22 +69,18 @@ function About() {
               animateIn="animate__bounceIn"
               key={id}
             >
-              <Flex
-                width={["80%", "80%", "350px", "350px"]}
-                height="100%"
-                maxHeight="420px"
+
+              <Flex  h="100%" 
+                width={["100%", "100%", "350px", "370px"]}
+                p={["39px","39px","52px","52px"]}
                 justifyContent="center"
                 alignItems="center"
-                backgroundColor="#210011"
-                direction="column"
+                backgroundColor="#210011" 
                 border="1px solid #949494"
                 boxShadow="15px 15px 8px rgba(0, 0, 0, 0.14)"
-                borderRadius="30px"
-                p={["10px", "10px", "20px", "20px"]}
-                m="auto"
-                position="relative"
-              >
-                <Box pt={["60px", "60px", "53px", "53px"]}>
+                borderRadius="30px">
+                <Flex flexDirection="column">
+                <Flex  width="100%" alignItems="center" justifyContent="center" mb={["30px","30px","40px","40px"]}>
                   <svg
                     width="68"
                     height="85"
@@ -92,46 +90,37 @@ function About() {
                   >
                     {el?.svg}
                   </svg>
-                </Box>
-
-                <Flex
-                  alignItems="center"
-                  flexDirection="column"
-                  gap="10px"
-                  justifyContent="center"
-                  pt={["20px", "20px", "40px", "40px"]}
-                >
-                  <Text
+                </Flex>
+      <Flex h="100%"  flexDirection="column" alignItems="center" justifyContent="center" gap={["18px","18px","24px","24px"]}>
+      <Text
                     variant="aboutHeader"
-                    pb={["15px", "15px", "24px", "24px"]}
+      fontSize= {["18px","20px","20px","20px"]}
+                    
                   >
                     {el?.header}
                   </Text>
                   <Text
                     variant="aboutParagraph"
-                    pb={["20px", "20px", "40px", "40px"]}
+      fontSize= {["14px","14px","16px","16px"]}
+                   
                   >
                     {el?.description}
                   </Text>
                   <Link href={el?.link}>
-                    <Flex gap="8px">
-                    <Text variant="aboutbutton" fontWeight="600" pb="50px">  
+                    <Flex gap="8px" pt={["12px","12px","16px","16px"]}>
+                    <Text variant="aboutbutton" fontWeight="600" >  
                     Read more
                     </Text>
-
-                    {/* <Flex display={["none", "none","flex" ,"flex"]}> */}
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.9378 16.082L16.4378 10.582C16.5211 10.4987 16.5803 10.4084 16.6153 10.3112C16.6503 10.2139 16.6675 10.1098 16.667 9.99867C16.667 9.88756 16.6495 9.78339 16.6145 9.68617C16.5795 9.58894 16.5206 9.49867 16.4378 9.41533L10.9378 3.91533C10.785 3.76256 10.5939 3.68283 10.3645 3.67617C10.135 3.6695 9.93726 3.74922 9.77115 3.91533C9.60448 4.06811 9.51753 4.25922 9.51031 4.48867C9.50309 4.71811 9.58309 4.91589 9.75031 5.082L13.8336 9.16533H4.52115C4.28504 9.16533 4.08698 9.24533 3.92698 9.40533C3.76698 9.56533 3.68726 9.76311 3.68781 9.99867C3.68781 10.2348 3.76754 10.4328 3.92698 10.5928C4.08642 10.7528 4.28448 10.8326 4.52115 10.832H13.8336L9.75031 14.9153C9.59754 15.0681 9.51753 15.2626 9.51031 15.4987C9.50309 15.7348 9.58309 15.9292 9.75031 16.082C9.90309 16.2487 10.0975 16.332 10.3336 16.332C10.5698 16.332 10.7711 16.2487 10.9378 16.082Z" fill="#591433"/>
 </svg>
+</Flex>
 
-                      {/* </Flex>  */}
-
-                     
-                    </Flex>
-                    
-
-                  </Link>
+</Link>
+                   
+      </Flex>
                 </Flex>
+             
               </Flex>
             </AnimationOnScroll>
           );
@@ -139,11 +128,11 @@ function About() {
       </Flex>
 
       {/* ***************************div end************************8 */}
-      <Flex gap="10px" justifyContent="center" py="6" px="2" alignItems="center" >
+      <Flex gap="10px" justifyContent="center" py="46px" px="2px" alignItems="center"  flexDirection={["column","column","row","row"]}>
         <Text
           as="h1"
           fontWeight="400"
-          fontSize={["10px", "10px", "20px", "20px"]}
+          fontSize={["16px", "16px", "20px", "20px"]}
           letterSpacing="0.01em"
           color="#210011"
           fontFamily="Roboto"
@@ -152,34 +141,36 @@ function About() {
           Dont hesistate to contact us for more details.
         </Text>
         <Link href="/events">
-          <Flex alignItems="center"  >
+          <Flex alignItems="center" h="100%" >
           <Text
             
             fontWeight="700"
-            fontSize={["8px", "8px", "16px", "16px"]}
+            fontSize={["14px", "14px", "16px", "16px"]}
             color="#591433"
             fontFamily="Roboto"
-            // alignSelf="center"
+            lineHeight="7px"
             cursor="pointer"
+            pr="10px"
           >
             EXPLORE ALL TREKKING  
           </Text>
-          <Flex display={["none","none","flex","flex"]}>
+          <Box display={["none","none","flex","flex"]}>
           <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.9378 16.582L16.4378 11.082C16.5211 10.9987 16.5803 10.9084 16.6153 10.8112C16.6503 10.7139 16.6675 10.6098 16.667 10.4987C16.667 10.3876 16.6495 10.2834 16.6145 10.1862C16.5795 10.0889 16.5206 9.99867 16.4378 9.91533L10.9378 4.41533C10.785 4.26256 10.5939 4.18283 10.3645 4.17617C10.135 4.1695 9.93726 4.24922 9.77115 4.41533C9.60448 4.56811 9.51753 4.75922 9.51031 4.98867C9.50309 5.21811 9.58309 5.41589 9.75031 5.582L13.8336 9.66533H4.52115C4.28504 9.66533 4.08698 9.74533 3.92698 9.90533C3.76698 10.0653 3.68726 10.2631 3.68781 10.4987C3.68781 10.7348 3.76754 10.9328 3.92698 11.0928C4.08642 11.2528 4.28448 11.3326 4.52115 11.332H13.8336L9.75031 15.4153C9.59754 15.5681 9.51753 15.7626 9.51031 15.9987C9.50309 16.2348 9.58309 16.4292 9.75031 16.582C9.90309 16.7487 10.0975 16.832 10.3336 16.832C10.5698 16.832 10.7711 16.7487 10.9378 16.582Z" fill="#591433"/>
 </svg>
 
 
 
-          </Flex>
+          </Box>
 
-          <Flex display={["flex","flex","none","none"]}>
+          <Box display={["flex","flex","none","none"]}>
 
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.46939 8.03905L8.21939 5.28905C8.26106 5.24738 8.29064 5.20224 8.30814 5.15363C8.32564 5.10502 8.33426 5.05294 8.33398 4.99738C8.33398 4.94182 8.32523 4.88974 8.30773 4.84113C8.29023 4.79252 8.26078 4.74738 8.21939 4.70571L5.46939 1.95571C5.39301 1.87932 5.29745 1.83946 5.18273 1.83613C5.06801 1.8328 4.96912 1.87266 4.88606 1.95571C4.80273 2.0321 4.75926 2.12766 4.75564 2.24238C4.75203 2.3571 4.79203 2.45599 4.87564 2.53905L6.91731 4.58071H2.26106C2.14301 4.58071 2.04398 4.62071 1.96398 4.70071C1.88398 4.78071 1.84412 4.8796 1.84439 4.99738C1.84439 5.11544 1.88426 5.21446 1.96398 5.29446C2.0437 5.37446 2.14273 5.41432 2.26106 5.41405H6.91731L4.87564 7.45571C4.79926 7.5321 4.75926 7.62932 4.75564 7.74738C4.75203 7.86544 4.79203 7.96266 4.87564 8.03905C4.95203 8.12238 5.04926 8.16405 5.16731 8.16405C5.28537 8.16405 5.38606 8.12238 5.46939 8.03905Z" fill="#FF461D"/>
+          <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.70409 12.0586L12.8291 7.93357C12.8916 7.87107 12.936 7.80336 12.9622 7.73045C12.9885 7.65753 13.0014 7.5794 13.001 7.49607C13.001 7.41274 12.9878 7.33461 12.9616 7.2617C12.9353 7.18878 12.8912 7.12107 12.8291 7.05857L8.70409 2.93357C8.58951 2.81899 8.44618 2.7592 8.27409 2.7542C8.10201 2.7492 7.95368 2.80899 7.82909 2.93357C7.70409 3.04815 7.63888 3.19149 7.63347 3.36357C7.62805 3.53565 7.68805 3.68399 7.81347 3.80857L10.876 6.87107H3.89159C3.71451 6.87107 3.56597 6.93107 3.44597 7.05107C3.32597 7.17107 3.26618 7.3194 3.26659 7.49607C3.26659 7.67315 3.32638 7.8217 3.44597 7.9417C3.56555 8.0617 3.71409 8.12149 3.89159 8.12107H10.876L7.81347 11.1836C7.69888 11.2982 7.63888 11.444 7.63347 11.6211C7.62805 11.7982 7.68805 11.944 7.81347 12.0586C7.92805 12.1836 8.07388 12.2461 8.25097 12.2461C8.42805 12.2461 8.57909 12.1836 8.70409 12.0586Z" fill="#591433"/>
 </svg>
 
-          </Flex>
+
+          </Box>
          
 
 

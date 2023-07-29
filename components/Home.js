@@ -60,9 +60,9 @@ const Home = () => {
           </AnimationOnScroll>
         </Box>
           
-          <Flex  width="100%"  justifyContent="space-between" mt="50px" pb="20px" pl="30px" flexDirection={["column","column","row","row"]} alignItems="center">
+          <Flex  width="100%"  justifyContent="space-between" mt="50px" pb="20px" px="30px" flexDirection={["column","column","row","row"]} alignItems="center">
 
-            <Flex flexDirection="column"  p="18px 30px" bg="rgba(255, 255, 255, 0.08)" borderRadius="16px" boxShadow="0px 0px 15px 0px rgba(0, 0, 0, 0.10)" gap="10px" alignItems={["center","center","start","start"]}>
+            <Flex flexDirection="column"  p="18px 30px" bg="rgba(255, 255, 255, 0.2)" borderRadius="16px" boxShadow="0px 0px 15px 0px rgba(0, 0, 0, 0.10)" gap="10px" alignItems={["center","center","start","start"]}>
               <Text color="white" fontSize={["18px","18px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px">Hi Trekkers!</Text>
               <Text color="white" fontSize={["14px","14px","18px","18px"]} fontFamily="Poppins" fontWeight="400" letterSpacing="0.66px">Welcome! Explore and start your <br/>adventure now........</Text>
               <Flex
@@ -89,8 +89,8 @@ const Home = () => {
           
 
             </Flex>
-            <Flex height="full" justifyContent="center" mr="30px" flexDirection={["row","row","column","column"]} alignItems="center" gap={["10px","10px","0px","0px"]}>
-         <img src="/images/svg img.png" />        
+            <Flex  justifyContent="center" mt="20px" mr="30px" flexDirection={["row","row","column","column"]} alignItems="center" gap={["10px","10px","0px","0px"]}>
+         <img src="/images/svg img.png" width={["80px","26px","50px","50px"]} h="25px" objectFit="contain"></img>         
 
   
 
@@ -147,7 +147,7 @@ const Home = () => {
                     backgroundColor:"red"
                   }}
                 >   
-                        <Image src={item.img}  height="100%" width="100%" alt="logo"  />
+                        <Image src={item.img}  height="100%" width="100%" alt="logo"  objectFit="cover" />
                 </SwiperSlide>
               );
             })}
