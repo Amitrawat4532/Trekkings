@@ -1,122 +1,69 @@
-import { Flex, Text, Box } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import Image from "next/image";
+import { Box, Flex,Grid ,GridItem} from "@chakra-ui/react";
 
-import { EffectCoverflow, Pagination, Autoplay } from "swiper";
-// import Image from "next/image";
-
-const Gallery = ({ gallery }) => {
+const Gallery = () => {
   return (
-    <>
-      {/* header container */}
-      <Flex
-        width="100vw"
-        height="100%"
-        className="gallery_container"
-        // minHeight="70vh"
-        flexDirection="column"
-        justifyContent="space-around"
-      >
-        <Flex
-          my="8"
-          position="relative"
-          width="100%"
-          height="100%"
-          alignSelf="start"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Text variant="galleryHeader1">JOURNEY</Text>
-
-          <Text variant="galleryHeader2">GALLERY OF THE TOURS</Text>
+    <><Box className="gallery_container"  my={["30px","30px","62px","62px"]} mx={["0px","10px","100px","100px"]}>
+<Flex justifyContent="center" alignItems="center"  height="100%"  display={["none","none","flex","flex"]} width="100%" >
+      {/* Desktop version */}
+        <Grid templateColumns="repeat(3, 1fr)"  height="100%" width={["0px","0px","100%","100%"]} gap={3}  flexWrap="wrap">
+      <GridItem rowSpan={2} colSpan={1}  bgImage="url('/images/finalGallary1.png')" bgSize="cover" bgRepeat="no-repeat"  >
+      </GridItem>
+      <GridItem rowSpan={1} colSpan={1} width="100%" h={["0px","0px","250px","400px"]}   bgImage="url('/images/finalGallary2.png')" bgSize="cover" bgRepeat="no-repeat" >
+        {/* Second child */}
+        
+        
+      </GridItem>
+      <GridItem rowSpan={1} colSpan={1}  width="100%"   bgImage="url('/images/finalGallary3.png')" bgSize="cover" bgRepeat="no-repeat">
+        {/* Third child */}
+        
+      </GridItem>
+      <GridItem rowSpan={1} colSpan={1}  borderRadius="24px"  width="100%"  >
+        <Flex justifyContent="center" alignItems="center" h="100%" width="100%" flexDirection="column" >
+        <h3 className="headinggallery">GALLERY OF OUR TOURS</h3>
+        <h1 className="headinggallerytwo">JOURNEY</h1>
         </Flex>
-        {/* header container end */}
+        {/* Fourth child */}
+      </GridItem>
+      <GridItem rowSpan={1} colSpan={1}  h={["0px","0px","250px","400px"]}  width="100%"   bgImage="url('/images/finalGallary5.png')" bgSize="cover" bgRepeat="no-repeat" >
+        {/* Fifth child */}
+       
 
-        {/* Gallery Slides */}
-        <Box w="100%" h="100%" mt="4" px="4" mb="5">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            // centeredSlides={true}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: false,
-            }}
-            spaceBetween={10}
-            slidesPerView={1}
-            breakpoints={{
-              640: {
-                spaceBetween: 100,
-                slidesPerView: 1,
-              },
-              768: {
-                spaceBetween: 10,
-                slidesPerView: 3,
-              },
-              1024: {
-                spaceBetween: 10,
-                slidesPerView: 3,
-              },
-            }}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            pagination={true}
-            modules={[Autoplay, EffectCoverflow, Pagination]}
-            className="mySwiper"
-          >
-            {gallery[0]?.images?.map((el, id) => {
-              return (
-                <SwiperSlide key={id}>
-                  <Box
-                    position="relative"
-                    width="100%"
-                    height={["320px", "320px", "340px", "340px"]}
-                    bg="blackAlpha.100"
-                  ></Box>
-                  <Image
-                    layout="fill"
-                    src={el}
-                    alt="IGATPURIHILLSTREKTOURISM GALLERY IMAGES"
-                    objectFit="contain"
-                    objectPosition="center"
-                    // fallbackSrc="/images/preloader.png"
-                  />
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </Box>
+      </GridItem>
+      <GridItem rowSpan={1} colSpan={2}  h={["0px","0px","250px","500px"]}  width="100%"  bgImage="url('/images/finalGallary6.png')" bgSize="cover" bgRepeat="no-repeat" >
+        {/* Sixth child */}
 
-        <Text variant="destinationHeading3" my="4">
-          <Text as="span" fontSize="40px" color="red" fontFamily="anton">
-            &#34;
-          </Text>
-          THE BEST JOURNEY IN THE LIFE ARE THOSE THAT ANSWER QUESTION YOU NEVER
-          THOUGHT TO ASK
-          <Text
-            as="span"
-            fontSize="40px"
-            color="red"
-            fontFamily="anton"
-            lineHeight=".6"
-            position="relative"
-            top={["10px", "10px", "0px", "0px"]}
-          >
-            &#34;
-          </Text>
-        </Text>
-      </Flex>
+      </GridItem>
+      <GridItem rowSpan={1} colSpan={1}  width="100%"   bgImage="url('/images/finalGallary7.png')" bgSize="cover" bgRepeat="no-repeat" >
+        {/* Seventh child */} 
+        {/* <img src="images/finalGallary7.png" ></img> */}
+
+      </GridItem>
+     
+     
+    </Grid>
+
+    {/* Mobile version */}
+   
+    </Flex>
+
+    <Flex flexDirection="column" p="20px" gap="20px" display={["flex","flex","none","none"]} justifyContent="center" alignItems="center">
+    <Flex>
+      <img src="images/finalGallary3.png"></img>
+
+    </Flex>
+    <Flex>
+      <img src="images/finalGallary8.png"></img>
+
+    </Flex>
+
+    <Flex>
+      <img src="images/finalGallary7.png"></img>
+
+    </Flex>
+    </Flex>
+    </Box>
+    
+   
     </>
   );
 };

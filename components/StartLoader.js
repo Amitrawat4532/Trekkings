@@ -11,7 +11,6 @@ const StartLoader = () => {
       h="100vh"
       bg="white"
       zIndex="200"
-      // className="startloaderAnim"
     >
       <video autoPlay loop muted className="startLoader">
         <source src="/images/start1.mp4" type="video/mp4"></source>

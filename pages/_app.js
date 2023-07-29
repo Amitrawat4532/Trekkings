@@ -7,8 +7,11 @@ import "@fontsource/anton/400.css";
 import "@fontsource/kanit";
 import "@fontsource/rubik-glitch";
 import "@fontsource/sen";
+import "@fontsource/roboto";
 import "animate.css/animate.min.css";
 import StartLoader from "../components/StartLoader";
+import NextNProgress from 'nextjs-progressbar';
+
 
 import React, { useEffect, useState } from "react";
 import customTheme from "../theme/customTheme";
@@ -28,7 +31,10 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={customTheme}>
       <Head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" 
+        // content="width=device-width, initial-scale=1.0"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        />
         <meta
           name="description"
           content="We provide eco-tourism activities for groups in the Igatpuri Hill Station region. Our goal is to bring people closer to nature, promote sustainability and ensure the preservation of our environment."
@@ -41,6 +47,8 @@ function MyApp({ Component, pageProps }) {
         <title>IGATPURIHILLSTREKTOURISM</title>
       </Head>
       {startAnim && <StartLoader />}
+      <NextNProgress options={{ showSpinner: false }} />
+
       <Component {...pageProps} />
     </ChakraProvider>
   );

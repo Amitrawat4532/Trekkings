@@ -1,6 +1,6 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import Image from "next/image";
 
 const Services = () => {
   const Ourservices = [
@@ -8,119 +8,98 @@ const Services = () => {
       header: "HIKING / TREKKING",
       paragraph:
         " WE PROVIDE YOU THE BEST AND THE SAFEST TREK AMONG ANY OTHER.WE PROVIDE OU WITH THE PROFESSIONAL TREKKER AND HELP YOU TO REACH THE DESTINY AND ENJOY YOUR ADVENTURE",
-      image: "./images/gallery1.png",
+      image: "/images/service1.png",
     },
     {
       header: "TOURS & TRAVELS",
       paragraph:
         "WE WILL PROVIDE YOU WITH THE BEST TRAVEL FACOLITY SO THAT IT CAN HELP YOU TO REACH US AT VERY EASE AND WE ALSO HAVE STARTED HOME PICK UP AND DROP SERVICES WHICH WILL MAKE IT MORE EASE FOR YOU",
-      image: "./images/gallery2.png",
+      image: "/images/service2.png",
     },
     {
       header: "CAMPING & LIVING",
       paragraph:
         "WE WILL PROVIDE YOU WITH YOUR WISH LIVING IN YOUR ADVENTURE WHEATHER YOU DECIDE TO LIVE IN TENT OR LUXURIOUS HOTEL IT TOTALLY DEPEND ON YOU .",
-      image: "./images/gallery3.png",
+      image: "/images/service3.png",
     },
     {
       header: "FOOD AND BEVERAGES",
       paragraph:
         "THE FOOD WE PROVIDE WILL BE ABSOLUTELY 100 PERCENT FRESH AND HEALTHY CAUSE IT WILL HELP YOU TO MAKE YOUR TRIP OR ADVENTURE EASE SO THAT IT WONT AFFECT YOUR HEALT",
-      image: "./images/gallery4.png",
+      image: "/images/service4.png",
     },
   ];
   return (
     <>
       {/* main container */}
-      <Flex
-        className="service_container"
-        // backgroundImage="url('./images/map 2.png')"
-        // backgroundSize="10%"
-        background="radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 0% 0% / 20px 20px, radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 10px 10px / 20px 20px, linear-gradient(rgba(94, 60, 5, 0.02) 2px, transparent 2px) 0px -1px / 10px 10px, linear-gradient(90deg, rgba(94, 60, 5, 0.04) 2px, #ffffff 2px) -1px 0px / 10px 10px #ffffff"
-        width="100vw"
-        height="100%"
-        justifyContent="start"
-        alignItems="start"
-        flexDirection="column"
-        padding={["0px 20px", ",0px 40px", "20px 100px", "20px 140px"]}
-        pb="80px !important"
-        gap="20px"
-      >
+      <Flex w="100vw" h="100%" flexDirection="column" pb="94px" pt="50px" className="service_container">
         {/* header container */}
         <Flex
-          position="relative"
-          width="100%"
-          heigh="100px"
-          alignSelf="start"
+          flexDirection="column"
           justifyContent="center"
-          alignItems="center"
+          alignItems={["center", "center", "center", "center"]}
+          pb={["20px", "20px", "0px", "0px"]}
         >
-          <Text variant="serviceHeader1">SERVICES</Text>
-
-          <Text variant="serviceHeader2">TOUR TRAVEL FOOD AND STAY</Text>
+          <Text variant="serviceHeader1">TOUR TRAVEL FOOD AND STAY</Text>
+          <Text variant="serviceHeader">SERVICES</Text>
         </Flex>
 
-        {/* card container */}
-        <Box width="100%">
-          {Ourservices.map((el, key) => {
+        <Flex
+          h="100%"
+          w="100vw"
+          bgColor="white"
+          flexWrap="wrap"
+          justifyContent="center"
+          alignItems="center"
+          gap={["150px", "150px", "20px", "20px"]}
+          pt={["140px", "120px", "80px", "80px"]}
+        >
+          {Ourservices?.map((el, id) => {
             return (
-              <AnimationOnScroll
-                animateOnce={true}
-                animateIn={
-                  key % 2 === 0
-                    ? "animate__fadeInLeftBig"
-                    : "animate__fadeInRightBig"
-                }
-                key={key}
+              <Flex
+                h={["281px", "281px", "546px", "546px"]}
+                w="295px"
+                bgColor="#210011"
+                justifyContent="space-around"
+                alignItems="center"
+                borderRadius="20px"
+                padding="30px 40px"
+                flexDirection="column"
+                position="relative"
+                key={id}
               >
-                <Flex
-                  flexDirection={key % 2 === 0 ? "row" : "row-reverse"}
-                  gap={["20px", "20px", "40px", "50px"]}
-                  alignItems="center"
-                  mx="1"
-                  my="12"
+                <Box
+                  position={["absolute", "absolute", "unset", "unset"]}
+                  top={["-110px", "-110px", "0", "0"]}
+                  borderRadius={["50%", "50%", "0%", "0%"]}
+                  overflow="hidden"
+                  w={["184px", "184px", "216px", "216px"]}
+                  h={["184px", "184px", "216px", "216px"]}
                 >
-                  <Flex
-                    flexDirection="column"
-                    gap="20px"
-                    flex="1"
-                    width="100%"
-                    alignItems={key % 2 === 0 ? "start" : "end"}
-                  >
-                    <Text
-                      variant="serviceHeader"
-                      textAlign={key % 2 === 0 ? "start" : "end"}
-                    >
-                      {el.header}
-                    </Text>
-                    <Text
-                      variant="serviceParagraph"
-                      textAlign={key % 2 === 0 ? "start" : "end"}
-                    >
-                      {el.paragraph}
-                    </Text>
-                    <Button variant="whytrekkingButton">KNOW MORE</Button>
-                  </Flex>
+                  <Image src={el?.image} height="216px" width="216px" />
+                </Box>
 
-                  <Image
-                    css={{
-                      maskImage: "url('/images/stroke_mask.png')",
-                      maskSize: "134%",
-                      maskRepeat: "no-repeat",
-                      maskPosition: "center",
-                    }}
-                    src={el?.image}
-                    alt="IGATPURIHILLSTREKTOURISM SERVICES"
-                    objectPosition="center"
-                    objectFit="cover"
-                    width={["200px", "200px", "400px", "500px"]}
-                    height={["200px", "200px", "294px", "294px"]}
-                  />
-                </Flex>
-              </AnimationOnScroll>
+                <Text mt={["50px", "50px", "0", "0"]} variant="serviceHeader2">
+                  {el?.header}
+                </Text>
+                <Text variant="serviceParagraph">{el?.paragraph}</Text>
+                <Button
+                  variant="serviceButton"
+                  position={["absolute", "absolute", "relative", "relative"]}
+                  bottom={["-20px", "-20px", "0px", "0px"]}
+                >
+                  Explore More
+                  <Box ml="8px">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.9378 16.082L16.4378 10.582C16.5211 10.4987 16.5803 10.4084 16.6153 10.3112C16.6503 10.2139 16.6675 10.1098 16.667 9.99867C16.667 9.88756 16.6495 9.78339 16.6145 9.68617C16.5795 9.58894 16.5206 9.49867 16.4378 9.41533L10.9378 3.91533C10.785 3.76256 10.5939 3.68283 10.3645 3.67617C10.135 3.6695 9.93726 3.74922 9.77115 3.91533C9.60448 4.06811 9.51753 4.25922 9.51031 4.48867C9.50309 4.71811 9.58309 4.91589 9.75031 5.082L13.8336 9.16533H4.52115C4.28504 9.16533 4.08698 9.24533 3.92698 9.40533C3.76698 9.56533 3.68726 9.76311 3.68781 9.99867C3.68781 10.2348 3.76754 10.4328 3.92698 10.5928C4.08642 10.7528 4.28448 10.8326 4.52115 10.832H13.8336L9.75031 14.9153C9.59754 15.0681 9.51753 15.2626 9.51031 15.4987C9.50309 15.7348 9.58309 15.9292 9.75031 16.082C9.90309 16.2487 10.0975 16.332 10.3336 16.332C10.5698 16.332 10.7711 16.2487 10.9378 16.082Z" fill="white"/>
+</svg>
+
+                  </Box>
+                </Button>
+              </Flex>
             );
           })}
-        </Box>
+        </Flex>
       </Flex>
     </>
   );

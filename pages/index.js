@@ -1,6 +1,9 @@
-import { Box, Image, keyframes } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { createClient } from "next-sanity";
 import dynamic from "next/dynamic";
+// import Videobox from "../components/Videobox";
+
+
 
 const About = dynamic(() => import("../components/About"));
 const Destination = dynamic(() => import("../components/Destination"));
@@ -13,6 +16,7 @@ const WithSpeechBubbles = dynamic(() => import("../components/Testimonal"));
 const UpcomingTrek = dynamic(() => import("../components/UpcomingTrek"));
 const Vlog = dynamic(() => import("../components/Vlog"));
 const Whytrekking = dynamic(() => import("../components/whytrekking"));
+
 
 export async function getServerSideProps(context) {
   const client = createClient({
@@ -72,44 +76,40 @@ export async function getServerSideProps(context) {
   };
 }
 
-const pulseRing = keyframes`
-	0% {
-    transform: scale(0.33);
-  }
-  40%,
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-	`;
 
 const index = ({
   gallery,
   destination,
-  event,
-  vlog,
   testimonial,
   settings,
 }) => {
-  // console.log(settings, "---settings");
   return (
     <>
       <Box p="0" m="0" overflow="hidden" position="relative">
         <Navbar settings={settings[0]} />
-        <Home />
-        <UpcomingTrek event={event} settings={settings} />
+         <Home />
         <About />
         <Destination destination={destination} />
         <Services />
         <Whytrekking settings={settings[0]} />
         {/* <Gallery gallery={gallery} /> */}
         <WithSpeechBubbles testimonial={testimonial} />
-        <Vlog vlog={vlog} />
-        <Footer settings={settings[0]} />
-        {/* <CalendarComp event={event} /> */}
-        <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
+        <Footer settings={settings[0]} /> 
+      
+      </Box>
+    </>
+  );
+};
+
+export default index;
+
+        {/* <Vlog vlog={vlog} /> */}
+
+        {/* <UpcomingTrek event={event} settings={settings} /> */}
+
+
+  {/* <CalendarComp event={event} /> */}
+         {/* <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
           <a
             href={`https://wa.me/91${settings[0]?.whatsapp}?text=Hello There`}
             target="_blank"
@@ -122,8 +122,8 @@ const index = ({
               className="btn-whatsapp-pulse"
             />
           </a>
-        </Box>
-        {/* <Box
+        </Box>  */}
+         {/* <Box
           position="fixed"
           left="10"
           bottom="10"
@@ -150,10 +150,4 @@ const index = ({
             position="absolute"
             top="0"
           />
-        </Box> */}
-      </Box>
-    </>
-  );
-};
-
-export default index;
+        </Box>  */}
