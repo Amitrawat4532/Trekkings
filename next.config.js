@@ -23,6 +23,11 @@ const nextConfig = {
     domains: ["cdn.sanity.io"],
     // loader: "custom",
   },
+  experimental: {
+    images: { // This will cause an error
+      allowFutureImage: true,
+    },
+  },
 };
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({

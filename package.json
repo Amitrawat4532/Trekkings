@@ -13,10 +13,13 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.0.11",
     "@chakra-ui/react": "^2.3.5",
+    "@choc-ui/chakra-autocomplete": "^5.1.8",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@fontsource/anton": "^4.5.9",
+    "@fontsource/inter": "^5.0.5",
     "@fontsource/kanit": "^4.5.10",
+    "@fontsource/raleway": "^5.0.5",
     "@fontsource/roboto": "^4.5.8",
     "@fontsource/rubik": "^4.5.11",
     "@fontsource/rubik-glitch": "^4.5.4",
@@ -39,6 +42,7 @@
     "swiper": "^8.4.7"
   },
   "devDependencies": {
+    "@types/node": "20.4.5",
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1"
   }

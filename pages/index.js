@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { createClient } from "next-sanity";
 import dynamic from "next/dynamic";
 import Videobox from "../components/Videobox";
+import FooterCounter from "../components/FooterCounter";
 
 
 
@@ -97,6 +98,9 @@ const index = ({
         <WithSpeechBubbles testimonial={testimonial} />
         <Videobox />
         {/* <Vlog vlog={vlog} /> */}
+            
+        {/* number section */}
+        <FooterCounter />
         <Footer settings={settings[0]} />
         {/* <CalendarComp event={event} /> */}
          {/* <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
