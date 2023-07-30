@@ -8,6 +8,8 @@ import "@fontsource/kanit";
 import "@fontsource/rubik-glitch";
 import "@fontsource/sen";
 import "@fontsource/roboto";
+import "@fontsource/raleway";
+import "@fontsource/inter";
 import "animate.css/animate.min.css";
 import StartLoader from "../components/StartLoader";
 import NextNProgress from 'nextjs-progressbar';
