@@ -7,7 +7,25 @@ import FooterCounter from "./FooterCounter";
 
 
 const Footer = () => {
-
+  const [visible, setVisible] = useState(false);
+  const numData = [
+    {
+      number: "15",
+      title: "Years of experience",
+    },
+    {
+      number: "30",
+      title: "Certified guides",
+    },
+    {
+      number: "32",
+      title: "Satisfied hikers",
+    },
+    {
+      number: "60",
+      title: "Years of best experience",
+    },
+  ];
 
   const footerData = [
     {
