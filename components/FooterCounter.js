@@ -3,26 +3,26 @@ import React, { Fragment, useState } from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import CountUp from 'react-countup';
 
-const FooterCounter = () => {
-    const [visible, setVisible] = useState(false);
-    const numData = [
-      {
-        number: "15",
-        title: "Years of experience",
-      },
-      {
-        number: "30",
-        title: "Certified guides",
-      },
-      {
-        number: "32",
-        title: "Satisfied hikers",
-      },
-      {
-        number: "60",
-        title: "Years of best experience",
-      },
-    ];
+const FooterCounter = ({settings}) => {
+  const [visible, setVisible] = useState(false);
+  const numData = [
+    {
+      number: settings?.destination,
+      title: "Destination Hiked",
+    },
+    {
+      number: settings?.totalTreks,
+      title: "Treks Completed",
+    },
+    {
+      number: settings?.hikers,
+      title: "Satisfied hikers",
+    },
+    {
+      number: settings?.experience,
+      title: "Years of best experience",
+    },
+  ];
   return (
     <>
     <AnimationOnScroll
@@ -42,12 +42,12 @@ const FooterCounter = () => {
           padding="16px"
         >
            
-          {numData.map((el, id) => {
+          {numData?.map((el, id) => {
             return (
               <Fragment key={id}>
                 {visible && (
-                <Flex alignItems="center" flexDirection="column" justifyContent="center">
-                  <Flex gap="9px" alignItems="center">
+                <Flex alignItems="center" flexDirection="column" justifyContent="center" >
+                  <Flex gap="20px" alignItems="center">
                     <Box display={["none","none","block","block"]}>
                     <svg
                       width="56"

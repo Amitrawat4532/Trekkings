@@ -56,7 +56,7 @@ const Trek = ({ event, settings }) => {
   return (
     <>
       {/* Navbar */}
-      <Navbar />
+      <Navbar logo={'./images/mobilenavlogo.png'}/>
 
       <Box
         top={["150px", "150px", "200px", "200px"]}
@@ -156,6 +156,8 @@ const Trek = ({ event, settings }) => {
           gap="10"
           flexWrap={"wrap"}
           justifyContent={"center"}
+        alignItems={'start'}
+        mb={10}
         >
           {event
             ?.filter((row) => {
@@ -270,7 +272,7 @@ const Trek = ({ event, settings }) => {
 
       {/* Footer */}
       <Box top={["150px", "150px", "200px", "200px"]} position={"relative"}>
-        <Footer />
+        <Footer settings={settings[0]} />
       </Box>
     </>
   );

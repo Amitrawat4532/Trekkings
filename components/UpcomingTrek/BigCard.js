@@ -94,7 +94,7 @@ const BigCard = (props) => {
       <Flex
         // maxH={["100%", "100%", "551px", "551px"]}
         w="100%"
-        minW='450px'
+        minW={['auto','auto','450px','450px']}
         borderRadius="16px"
         border="1px solid #CFD8DC"
         background="#FFF"
@@ -158,7 +158,7 @@ props?.isUpcoming && <Box
             position={"relative"}
             width={"100%"}
             minW={["100%", "100%", "350px", "350px"]}
-            minHeight={"200px"}
+            minHeight={"220px"}
             flex={1}
             background={'gray.300'}
           >

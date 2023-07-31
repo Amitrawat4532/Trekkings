@@ -7,44 +7,7 @@ import Image from "next/image";
 import { Autoplay, Pagination} from "swiper";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
-const Testimonal = () => {
-  const swiperData = [
-    {
-      images: "/images/testimonaltwo.png",
-      name: "Oliver Morries",
-      para: "We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer.",
-    },
-    {
-      images: "/images/testimonaltwo.png",
-      name: "Rajesh Rawat",
-      para: "We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer.",
-    },
-    {
-      images: "/images/testimonaltwo.png",
-      name: "Rajesh Rawat",
-      para: "We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer.",
-    },
-    {
-      images: "/images/testimonaltwo.png",
-      name: "Rajesh Rawat",
-      para: "We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer.",
-    },
-    {
-      images: "/images/testimonaltwo.png",
-      name: "Rajesh Rawat",
-      para: "We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer.",
-    },
-    {
-      images: "/images/testimonaltwo.png",
-      name: "Rajesh Rawat",
-      para: "We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer.",
-    },
-    {
-      images: "/images/testimonaltwo.png",
-      name: "Oliver Morries",
-      para: "We prefer to have an expert for our customer to guide them the best possible way and help them to make the route as easy for all our customer.",
-    },
-  ];
+const Testimonal = ({testimonial}) => {
   return (
     <Flex bg="#210011" flexDirection="column">
       <Flex width="100%" flexDirection="column" alignItems="center" p="32px">
@@ -71,7 +34,7 @@ const Testimonal = () => {
         className="mySwiper"
       >
         <Flex className="swiper-button-prev" color="#591433"/>
-        {swiperData.map((el, id) => {
+        {testimonial?.map((el, id) => {
           return (
             <SwiperSlide key={id}>
               <Flex
@@ -90,7 +53,7 @@ const Testimonal = () => {
                   width={["200px", "300px", "500px", "500px"]}
                   position="relative"
                 >
-                  <Image src={el.images} layout="fill" alt="testimonal" />
+                  <Image src={el?.image} layout="fill" alt="testimonal" />
                 </Box>
                 <Flex
                   flexDirection="column"
@@ -108,7 +71,7 @@ const Testimonal = () => {
                     textAlign={["center", "center", "start", "start"]}
                     w="100%"
                   >
-                    {el.name}
+                    {el?.name}
                   </Text>
                   <Text
                     color="white"
@@ -118,7 +81,7 @@ const Testimonal = () => {
                     fontFamily="Roboto"
                     textAlign={["center", "center", "start", "start"]}
                   >
-                    {el.para}
+                    {el?.description}
                   </Text>
                   <Flex
                     justifyContent={["center", "center", "start", "start"]}
@@ -131,10 +94,15 @@ const Testimonal = () => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path
-                        d="M12.0003 18.2742L7.85033 20.7742C7.667 20.8909 7.47533 20.9409 7.27533 20.9242C7.07533 20.9076 6.90033 20.8409 6.75033 20.7242C6.60033 20.6076 6.48366 20.4616 6.40033 20.2862C6.317 20.1109 6.30033 19.9152 6.35033 19.6992L7.45033 14.9742L3.77533 11.7992C3.60866 11.6492 3.50466 11.4782 3.46333 11.2862C3.422 11.0942 3.43433 10.9069 3.50033 10.7242C3.567 10.5409 3.667 10.3909 3.80033 10.2742C3.93366 10.1576 4.117 10.0826 4.35033 10.0492L9.20033 9.62422L11.0753 5.17422C11.1587 4.97422 11.288 4.82422 11.4633 4.72422C11.6387 4.62422 11.8177 4.57422 12.0003 4.57422C12.1837 4.57422 12.3627 4.62422 12.5373 4.72422C12.712 4.82422 12.8413 4.97422 12.9253 5.17422L14.8003 9.62422L19.6503 10.0492C19.8837 10.0826 20.067 10.1576 20.2003 10.2742C20.3337 10.3909 20.4337 10.5409 20.5003 10.7242C20.567 10.9076 20.5797 11.0952 20.5383 11.2872C20.497 11.4792 20.3927 11.6499 20.2253 11.7992L16.5503 14.9742L17.6503 19.6992C17.7003 19.9159 17.6837 20.1119 17.6003 20.2872C17.517 20.4626 17.4003 20.6082 17.2503 20.7242C17.1003 20.8409 16.9253 20.9076 16.7253 20.9242C16.5253 20.9409 16.3337 20.8909 16.1503 20.7742L12.0003 18.2742Z"
-                        fill="white"
-                      />
+                      {
+                        el?.rating?.map((xel,xid)=>{
+                          return <path key={xid}
+                          d="M12.0003 18.2742L7.85033 20.7742C7.667 20.8909 7.47533 20.9409 7.27533 20.9242C7.07533 20.9076 6.90033 20.8409 6.75033 20.7242C6.60033 20.6076 6.48366 20.4616 6.40033 20.2862C6.317 20.1109 6.30033 19.9152 6.35033 19.6992L7.45033 14.9742L3.77533 11.7992C3.60866 11.6492 3.50466 11.4782 3.46333 11.2862C3.422 11.0942 3.43433 10.9069 3.50033 10.7242C3.567 10.5409 3.667 10.3909 3.80033 10.2742C3.93366 10.1576 4.117 10.0826 4.35033 10.0492L9.20033 9.62422L11.0753 5.17422C11.1587 4.97422 11.288 4.82422 11.4633 4.72422C11.6387 4.62422 11.8177 4.57422 12.0003 4.57422C12.1837 4.57422 12.3627 4.62422 12.5373 4.72422C12.712 4.82422 12.8413 4.97422 12.9253 5.17422L14.8003 9.62422L19.6503 10.0492C19.8837 10.0826 20.067 10.1576 20.2003 10.2742C20.3337 10.3909 20.4337 10.5409 20.5003 10.7242C20.567 10.9076 20.5797 11.0952 20.5383 11.2872C20.497 11.4792 20.3927 11.6499 20.2253 11.7992L16.5503 14.9742L17.6503 19.6992C17.7003 19.9159 17.6837 20.1119 17.6003 20.2872C17.517 20.4626 17.4003 20.6082 17.2503 20.7242C17.1003 20.8409 16.9253 20.9076 16.7253 20.9242C16.5253 20.9409 16.3337 20.8909 16.1503 20.7742L12.0003 18.2742Z"
+                          fill="white"
+                        />
+                        })
+                      }
+                      
                       <path
                         d="M46.0003 18.2742L41.8503 20.7742C41.667 20.8909 41.4753 20.9409 41.2753 20.9242C41.0753 20.9076 40.9003 20.8409 40.7503 20.7242C40.6003 20.6076 40.4837 20.4616 40.4003 20.2862C40.317 20.1109 40.3003 19.9152 40.3503 19.6992L41.4503 14.9742L37.7753 11.7992C37.6087 11.6492 37.5047 11.4782 37.4633 11.2862C37.422 11.0942 37.4343 10.9069 37.5003 10.7242C37.567 10.5409 37.667 10.3909 37.8003 10.2742C37.9337 10.1576 38.117 10.0826 38.3503 10.0492L43.2003 9.62422L45.0753 5.17422C45.1587 4.97422 45.288 4.82422 45.4633 4.72422C45.6387 4.62422 45.8177 4.57422 46.0003 4.57422C46.1837 4.57422 46.3627 4.62422 46.5373 4.72422C46.712 4.82422 46.8413 4.97422 46.9253 5.17422L48.8003 9.62422L53.6503 10.0492C53.8837 10.0826 54.067 10.1576 54.2003 10.2742C54.3337 10.3909 54.4337 10.5409 54.5003 10.7242C54.567 10.9076 54.5797 11.0952 54.5383 11.2872C54.497 11.4792 54.3927 11.6499 54.2253 11.7992L50.5503 14.9742L51.6503 19.6992C51.7003 19.9159 51.6837 20.1119 51.6003 20.2872C51.517 20.4626 51.4003 20.6082 51.2503 20.7242C51.1003 20.8409 50.9253 20.9076 50.7253 20.9242C50.5253 20.9409 50.3337 20.8909 50.1503 20.7742L46.0003 18.2742Z"
                         fill="white"

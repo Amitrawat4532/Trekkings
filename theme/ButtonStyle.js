@@ -14,7 +14,7 @@ export const ButtonStyle = {
       fontWeight: "700",
       fontStyle: "normal",
       _hover: {
-        color: "white",
+        color: "gray",
       },
     },
     blogButton: {

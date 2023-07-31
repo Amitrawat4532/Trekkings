@@ -72,7 +72,7 @@ const SideBar = ({ data, setLocation, location , setSearchInput }) => {
         </Stack>
       </Flex>
 
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}
+      <Button ref={btnRef} bg="#241314" color='white' onClick={onOpen}
         display={["flex", "flex","none", "none"]}
       
       >
@@ -121,9 +121,10 @@ const SideBar = ({ data, setLocation, location , setSearchInput }) => {
 
           <DrawerFooter>
             <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
+              Close
             </Button>
-            <Button colorScheme="blue"
+            <Button 
+            bg="#241314" color='white'
             onClick={() => {
               setSearchInput("");
               setLocation("");

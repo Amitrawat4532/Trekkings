@@ -12,7 +12,7 @@ export const TextStyle = {
     },
     aboutbutton: {
       as: "a",
-      color: "#591433",
+      color: "#e03b85",
       fontWeight: "500",
       fontSize: "16px",
       fontFamily: "Roboto",

@@ -8,55 +8,10 @@ import { motion, useCycle } from "framer-motion";
 import Image from "next/image";
 import "swiper/css/pagination";
 
-function Destination({}) {
-  const ContactData = [
-    {
-      img: "/images/swiper.png",
-      name: "1 - Himaliyan Range of Mountain",
-    },
-    {
-      img: "/images/destination1.png",
-      name: "2 - Great ranges of mountain",
-    },
-    {
-      img: "/images/destination2.png",
-      name: "3 - The dense forest",
-    },
-    {
-      img: "/images/swiper.png",
-      name: "4 - Great ranges of mountain",
-    },
-    {
-      img: "/images/destination1.png",
-      name: "5 - Great ranges of mountain",
-    },
-    {
-      img: "/images/destination2.png",
-      name: "6 - The dense forest",
-    },
-    {
-      img: "/images/swiper.png",
-      name: "7 - The dense forest",
-    },
-    {
-      img: "/images/destination1.png",
-      name: "8 - Great ranges of mountain",
-    },
-    {
-      img: "/images/destination2.png",
-      name: "9 - The dense forest",
-    },
-    {
-      img: "/images/destination1.png",
-      name: "10 - Great ranges of mountain",
-    },
-    
-  ];
-
+function Destination({destination}) {
   const [swiperData, setSwiperData] = useState({ progress: 0, activeIndex: 1 });
   const [isTouch, setTouch] = useCycle(false, true);
   const [swiper, setSwiper] = useState(null);
-
 
   const swiperProgressHandler = (progressVal, activeVal) => {
     setSwiperData({
@@ -136,7 +91,7 @@ function Destination({}) {
             onTouchStart={(e) => setTouch(true)}
             onTouchEnd={(e) => setTouch(false)}
           >
-            {ContactData.map((item, i) => {
+            {destination.map((item, i) => {
               return (
                 <SwiperSlide
                   key={i}
@@ -174,7 +129,7 @@ function Destination({}) {
                         fontFamily="Roboto"
                         fontWeight="600"
                       >
-                        {item.name}
+                        {item?.name}
                       </Text>
                       <Flex flexDirection="row" pb="10px" gap="6px">
                         <svg
@@ -243,7 +198,7 @@ function Destination({}) {
                           position: "relative",
                         }}
                       >
-                        <Image src={item.img} height="450px" width="328px" />
+                        <Image src={item?.thumbnail} height="450px" width="328px" objectFit="cover"/>
                         
                       </motion.div>
                       </>

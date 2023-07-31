@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { createClient } from "next-sanity";
 import dynamic from "next/dynamic";
+import FooterCounter from "../components/FooterCounter";
 // import Videobox from "../components/Videobox";
 
 
@@ -86,14 +87,15 @@ const index = ({
   return (
     <>
       <Box p="0" m="0" overflow="hidden" position="relative">
-        <Navbar settings={settings[0]} />
+        <Navbar settings={settings[0]} logo={'./images/logowhite.png'}/>
          <Home />
         <About />
         <Destination destination={destination} />
         <Services />
         <Whytrekking settings={settings[0]} />
-        {/* <Gallery gallery={gallery} /> */}
+        <Gallery gallery={gallery} />
         <WithSpeechBubbles testimonial={testimonial} />
+        <FooterCounter settings={settings[0]} />
         <Footer settings={settings[0]} /> 
       
       </Box>
