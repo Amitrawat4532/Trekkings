@@ -1,4 +1,4 @@
-import { Box, Flex,Grid ,GridItem} from "@chakra-ui/react";
+import { Box, Flex,Grid ,GridItem, Image} from "@chakra-ui/react";
 
 const Gallery = () => {
   return (
@@ -19,8 +19,8 @@ const Gallery = () => {
       </GridItem>
       <GridItem rowSpan={1} colSpan={1}  borderRadius="24px"  width="100%"  >
         <Flex justifyContent="center" alignItems="center" h="100%" width="100%" flexDirection="column" >
-        <h3 className="headinggallery">GALLERY OF OUR TOURS</h3>
-        <h1 className="headinggallerytwo">JOURNEY</h1>
+        <h1 className="headinggallery">GALLERY OF OUR TOURS</h1>
+        <h2 className="headinggallerytwo">JOURNEY</h2>
         </Flex>
         {/* Fourth child */}
       </GridItem>
@@ -35,7 +35,7 @@ const Gallery = () => {
       </GridItem>
       <GridItem rowSpan={1} colSpan={1}  width="100%"   bgImage="url('/images/finalGallary7.png')" bgSize="cover" bgRepeat="no-repeat" >
         {/* Seventh child */} 
-        {/* <img src="images/finalGallary7.png" ></img> */}
+        {/* <Image src="images/finalGallary7.png" ></img> */}
 
       </GridItem>
      
@@ -48,16 +48,16 @@ const Gallery = () => {
 
     <Flex flexDirection="column" p="20px" gap="20px" display={["flex","flex","none","none"]} justifyContent="center" alignItems="center">
     <Flex>
-      <img src="images/finalGallary3.png"></img>
+      <Image src="images/finalGallary3.png" alt="gallery" />
 
     </Flex>
     <Flex>
-      <img src="images/finalGallary8.png"></img>
+      <Image src="images/finalGallary8.png"  alt="galleryone"/>
 
     </Flex>
 
     <Flex>
-      <img src="images/finalGallary7.png"></img>
+      <Image src="images/finalGallary7.png" alt="gallerytwo" />
 
     </Flex>
     </Flex>

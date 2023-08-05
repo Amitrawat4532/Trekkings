@@ -93,7 +93,7 @@ const Home = () => {
 
             </Flex>
             <Flex  justifyContent="center" mt="20px" mr="30px" flexDirection={["row","row","column","column"]} alignItems="center" gap={["10px","10px","0px","0px"]}>
-         <img src="/images/svg img.png" width={["80px","26px","50px","50px"]} h="25px" objectFit="contain"></img>         
+         <Image src="/images/svg img.png" width={["80px","26px","50px","50px"]} h="25px" objectFit="contain" alt="homeimg" />         
 
   
 
@@ -147,7 +147,7 @@ const Home = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    backgroundColor:"red"
+                    // backgroundColor:"red"
                   }}
                 >   
                         <Image src={item.img}  height="100%" width="100%" alt="logo"  objectFit="cover" />

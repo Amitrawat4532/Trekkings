@@ -15,7 +15,7 @@ const Contact = () => {
         </Box>
         <Flex  px={["20px","20px","40px","40px"]} pb="15px" w="100%" position="relative" >
         <Text lineHeight="32px" color="white" fontSize={["20px","20px","32px","32px"]} fontWeight="700">IGATPURIHILLSTOTREAKTOURISM</Text>
-         <Image src="/images/svgcontact.png"  position="absolute" right="40px" top={["-150px","-150px","-100px","-100px"]} />
+         <Image src="/images/svgcontact.png"  position="absolute" right="40px" top={["-150px","-150px","-100px","-100px"]} alt='contact img' />
         </Flex>
 
       </Flex>

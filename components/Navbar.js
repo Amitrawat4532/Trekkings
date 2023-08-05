@@ -151,7 +151,7 @@ const Navbar = ({ settings }) => {
 
               {/* Navbar container mobile */}
 <Flex width="100%"  justifyContent="center" alignItems="end">
-  <Image mt="100px" mb="20px" src="./images/mobilenavlogo.png"></Image>
+  <Image mt="100px" mb="20px" src="./images/mobilenavlogo.png" alt="trekkings logo" />
 </Flex>
               <Flex
                 flexDirection="column"
