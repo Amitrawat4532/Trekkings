@@ -1,6 +1,7 @@
 import { isValidMotionProp, motion } from "framer-motion";
 import jump from "jump.js";
 import React, { useRef } from "react";
+import Image from "next/image";
 
 import {
   Box,
@@ -11,7 +12,6 @@ import {
   DrawerFooter,
   DrawerOverlay,
   Flex,
-  Image,
   useDisclosure,
   chakra,
   IconButton,
@@ -35,7 +35,7 @@ const Navbar = ({ settings }) => {
         left="0"
         top="0"
         w="100%"
-        h="200px"
+        // h="100%"
         animate={{
           opacity: [0, 1],
         }}
@@ -44,6 +44,7 @@ const Navbar = ({ settings }) => {
           ease: "easeInOut",
         }}
         zIndex={10}
+        backdropBlur="32px"
       >
         <Flex
           justifyContent="space-between"
@@ -53,14 +54,19 @@ const Navbar = ({ settings }) => {
           position="absolute"
           w="100%"
           zIndex="50"
+          border="2px solid red"
+          
+          bg="rgba(2, 25, 25, 0.20)"
+          backdropFilter='auto'
+          backdropInvert='10%'
+          backdropBlur='2px'
         >
-          <Box ml="10px" mt={["20px","20px","0px","0px"]}>
+          <Box ml="10px" >
             <Image
-              src="./images/logowhite.png"
+              src="/images/navlogotwo.png"
               alt="IGATPURIHILLSTREKTOURISM LOGO"
-              width={["100px", "100px", "200px", "200px"]}
-              h="100%"
-              
+              width={60}
+              height={60}
               className="footerImg"
               filter="contrast(135%)"
               
@@ -73,7 +79,6 @@ const Navbar = ({ settings }) => {
             flexDirection=""
             justifyContent="center"
             gap="2"
-           mt="-50px"
             pr="6"
             display={["none", "none", "flex", "flex"]}
             position="relative"
@@ -107,8 +112,8 @@ const Navbar = ({ settings }) => {
            
             
           </Flex>
-          <Flex h="200px" alignItems="center" 
-           mt="-50px"  display={["none","none","flex","flex"]}
+          <Flex  alignItems="center" 
+             display={["none","none","flex","flex"]}
            > 
           <Link href="/contact">
               <Button variant="blogButton">Lets Connect</Button>
@@ -151,7 +156,10 @@ const Navbar = ({ settings }) => {
 
               {/* Navbar container mobile */}
 <Flex width="100%"  justifyContent="center" alignItems="end">
-  <Image mt="100px" mb="20px" src="./images/mobilenavlogo.png" alt="trekkings logo" />
+  <Box mt="100px" mb="20px" position="relative" height="105px" width="102px">
+  <Image  src="/images/mobilenavlogo.png" alt="trekkings logo"  layout="fill"/>
+
+  </Box>
 </Flex>
               <Flex
                 flexDirection="column"

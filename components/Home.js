@@ -1,4 +1,4 @@
-import { Box, Flex, Text ,Image, effect} from "@chakra-ui/react";
+import { Box, Flex, Text , effect} from "@chakra-ui/react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Autoplay, Mousewheel,EffectFade} from "swiper";
 import "swiper/css";
@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import React from 'react';
 import Popup from "./Popup";
+import Image from "next/image";
 
 
 const Home = () => {
@@ -93,11 +94,14 @@ const Home = () => {
 
             </Flex>
             <Flex  justifyContent="center" mt="20px" mr="30px" flexDirection={["row","row","column","column"]} alignItems="center" gap={["10px","10px","0px","0px"]}>
-         <Image src="/images/svg img.png" width={["80px","26px","50px","50px"]} h="25px" objectFit="contain" alt="homeimg" />         
+              <Box position="relative"  height={["25px","25px","51px","51px"]} width={["74px","74px","149px","149px"]}>
+         <Image src="/images/svg img.png" layout="fill" objectFit="contain" alt="homeimg"  position="absolute"/>         
+
+              </Box>
 
   
 
-         <Text color="white" fontSize={["16px","16px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px" pl={["0","0","20px","20px"]}>REGISTERED</Text>
+         <Text color="white" fontSize={["16px","16px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px" pl={["0px","0px","20px","30px"]}>REGISTERED</Text>
 
 
           </Flex>
@@ -150,7 +154,7 @@ const Home = () => {
                     // backgroundColor:"red"
                   }}
                 >   
-                        <Image src={item.img}  height="100%" width="100%" alt="logo"  objectFit="cover" />
+                        <Image src={item.img}  layout="fill" alt="logo"  objectFit="cover" />
                 </SwiperSlide>
               );
             })}
