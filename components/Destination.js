@@ -307,6 +307,8 @@ function Destination({destination}) {
             px="30px"
             margin={["auto", "auto", "0px", "0px"]}
             borderRadius="60px"
+            as='a'
+            href='/trek'
           >
             Explore more
             <svg

@@ -33,30 +33,37 @@ export async function getServerSideProps(context) {
         images[]{"img_url": asset->url},
         "itinerary": itinerary.asset->url,
       }`;
+  const questionsQuery = `*[_type == "questions"]{
+        ..., 
+      }`;
+
   const settingsQuery = `*[_type == "settings"]{
     ..., 
     "logo": logo.asset->url
   }`;
 
   const event = await client.fetch(eventQuery);
+  const questions = await client.fetch(questionsQuery);
   const settings = await client.fetch(settingsQuery);
 
   return {
     props: {
       event,
+      questions,
       settings,
     },
   };
 }
 
-const Trek = ({ event, settings }) => {
+const Trek = ({ event, questions, settings }) => {
   const [searchInput, setSearchInput] = useState("");
   const [location, setLocation] = useState("");
 
+  console.log(questions , 'quest');
   return (
     <>
       {/* Navbar */}
-      <Navbar logo={'./images/mobilenavlogo.png'}/>
+      <Navbar logo={"./images/mobilenavlogo.png"} />
 
       <Box
         top={["150px", "150px", "200px", "200px"]}
@@ -156,8 +163,8 @@ const Trek = ({ event, settings }) => {
           gap="10"
           flexWrap={"wrap"}
           justifyContent={"center"}
-        alignItems={'start'}
-        mb={10}
+          alignItems={"start"}
+          mb={10}
         >
           {event
             ?.filter((row) => {
@@ -189,19 +196,22 @@ const Trek = ({ event, settings }) => {
               const upcomingDates = dates.filter((date) => date > currentDate);
               const latestUpcomingDate = new Date(Math.min(...upcomingDates));
               return (
-                <Box key={id} w="100%"
-                alignItems='stretch'
-                flex='1'
-                >
+                <Box key={id} w="100%" alignItems="stretch" flex="1">
                   {/* {new Date(latestUpcomingDate).getDate() ==
                   new Date(el.startDate).getDate() ? (
                     <BigCard data={el} />
                   ) : (
                     <SmallCard data={el} />
                   )} */}
-                    <BigCard data={el} isUpcoming={new Date(latestUpcomingDate).getTime() ==
-                  new Date(el.startDate).getTime() ? true : false} />
-
+                  <BigCard
+                    data={el}
+                    isUpcoming={
+                      new Date(latestUpcomingDate).getTime() ==
+                      new Date(el.startDate).getTime()
+                        ? true
+                        : false
+                    }
+                  />
                 </Box>
               );
             })}
@@ -265,10 +275,8 @@ const Trek = ({ event, settings }) => {
       </Flex>
 
       <Box top={["150px", "150px", "200px", "200px"]} position={"relative"}>
-<Question />
-
-</Box>
-
+        <Question data={questions[0].questionsList} />
+      </Box>
 
       {/* Footer */}
       <Box top={["150px", "150px", "200px", "200px"]} position={"relative"}>
