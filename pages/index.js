@@ -13,7 +13,7 @@ const Gallery = dynamic(() => import("../components/Gallery"));
 const Home = dynamic(() => import("../components/Home"));
 const Navbar = dynamic(() => import("../components/Navbar"));
 const Services = dynamic(() => import("../components/Services"));
-const WithSpeechBubbles = dynamic(() => import("../components/Testimonal"));
+const Testimonial = dynamic(() => import("../components/Testimonal"));
 const UpcomingTrek = dynamic(() => import("../components/UpcomingTrek"));
 const Vlog = dynamic(() => import("../components/Vlog"));
 const Whytrekking = dynamic(() => import("../components/whytrekking"));
@@ -25,7 +25,7 @@ export async function getServerSideProps(context) {
     dataset: process.env.DATASET,
     useCdn: false,
   });
-  //hello
+
   const galleryQuery = `*[_type == "gallery"]{
     "images": images[].asset->url
    }`;
@@ -94,7 +94,7 @@ const index = ({
         <Services />
         <Whytrekking settings={settings[0]} />
         <Gallery gallery={gallery} />
-        <WithSpeechBubbles testimonial={testimonial} />
+        <Testimonial testimonial={testimonial} />
         <FooterCounter settings={settings[0]} />
         <Footer settings={settings[0]} /> 
       
@@ -104,52 +104,3 @@ const index = ({
 };
 
 export default index;
-
-        {/* <Vlog vlog={vlog} /> */}
-
-        {/* <UpcomingTrek event={event} settings={settings} /> */}
-
-
-  {/* <CalendarComp event={event} /> */}
-         {/* <Box position="fixed" left="5" bottom="5" zIndex="100" cursor="pointer">
-          <a
-            href={`https://wa.me/91${settings[0]?.whatsapp}?text=Hello There`}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Chat on WhatsApp"
-          >
-            <Image
-              alt="Chat on WhatsApp"
-              src="/images/whatsapp.png"
-              className="btn-whatsapp-pulse"
-            />
-          </a>
-        </Box>  */}
-         {/* <Box
-          position="fixed"
-          left="10"
-          bottom="10"
-          w="70px"
-          h="70px"
-          _before={{
-            content: "''",
-            position: "relative",
-            display: "block",
-            width: "300%",
-            height: "300%",
-            boxSizing: "border-box",
-            marginLeft: "-100%",
-            marginTop: "-75%",
-            borderRadius: "50%",
-            bgColor: "green",
-            animation: `2.25s ${pulseRing} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`,
-          }}
-        >
-          <Image
-            alt="Chat on WhatsApp"
-            src="/images/whatsapp.png"
-            className="btn-whatsapp-pulse"
-            position="absolute"
-            top="0"
-          />
-        </Box>  */}

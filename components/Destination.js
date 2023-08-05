@@ -197,7 +197,7 @@ function Destination({destination}) {
                           position: "relative",
                         }}
                       >
-                        <Image src={item.img} height="450px" width="328px" alt="destination img"/>
+                        <Image src={item?.thumbnail} height="450px" width="328px" alt="destination img"/>
                         
                       </motion.div>
                       </>
