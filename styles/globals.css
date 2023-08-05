@@ -171,3 +171,6 @@ border: 1px solid red !important;
   color: #210011;
 }
 
+textarea:focus, input:focus{
+  outline: none;
+}

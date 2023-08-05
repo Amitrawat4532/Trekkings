@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" 
         // content="width=device-width, initial-scale=1.0"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2"
         />
         <meta
           name="description"
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
         <title>IGATPURIHILLSTREKTOURISM</title>
       </Head>
       {startAnim && <StartLoader />}
-      <NextNProgress options={{ showSpinner: false }} />
+      <NextNProgress options={{ showSpinner: false }} aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" role="progressbar" class="css-1huyijp" />
 
       <Component {...pageProps} />
     </ChakraProvider>

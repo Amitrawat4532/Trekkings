@@ -5,7 +5,9 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
-import React from "react";
+import React from 'react';
+import Popup from "./Popup";
+
 
 const Home = () => {
   const ContactData = [
@@ -60,6 +62,8 @@ const Home = () => {
               IMPOSSIBLE
             </Text>
           </AnimationOnScroll>
+      <Popup />
+
         </Box>
 
         <Flex
@@ -139,6 +143,14 @@ const Home = () => {
                 />
               </svg>
             </Flex>
+            <Flex  justifyContent="center" mt="20px" mr="30px" flexDirection={["row","row","column","column"]} alignItems="center" gap={["10px","10px","0px","0px"]}>
+         <Image src="/images/svg img.png" width={["80px","26px","50px","50px"]} h="25px" objectFit="contain" alt="homeimg" />         
+
+  
+
+         <Text color="white" fontSize={["16px","16px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px" pl={["0","0","20px","20px"]}>REGISTERED</Text>
+
+
           </Flex>
           <Flex
             justifyContent="center"
@@ -152,84 +164,23 @@ const Home = () => {
             gap={["10px", "10px", "0px", "0px"]}
             bg={'whiteAlpha.500'}
           >
-            <img
-              src="/images/svg img.png"
-              // width={["80px", "26px", "100px", "100px"]}
-              h="50px"
-              w='100%'
-              objectFit="contain"
-            ></img>
-
-            <Text
-              color="white"
-              fontSize={["16px", "16px", "22px", "22px"]}
-              fontFamily="Poppins"
-              fontWeight="600"
-              letterSpacing="0.66px"
-              // pl={["0", "0", "20px", "20px"]}
-            >
-              REGISTERED
-            </Text>
-          </Flex>
-        </Flex>
-
-        <Swiper
-          style={{
-            position: "absolute",
-            height: "100vh",
-            justifyContent: "center",
-            alignItems: "center",
-            display: "flex",
-            width: "100%",
-            zIndex: "-1",
-          }}
-          effect={"fade"}
-          slidesPerView={1}
-          modules={[Autoplay, Mousewheel, EffectFade]}
-          mousewheel={false}
-          autoplay={{
-            delay: 4500,
-            disableOnInteraction: true,
-          }}
-          breakpoints={{
-            1600: {
-              slidesPerView: 1,
-            },
-            1000: {
-              slidesPerView: 1,
-            },
-            400: {
-              slidesPerView: 1,
-            },
-          }}
-          centeredSlides={true}
-          direction={"horizontal"}
-          loop={true}
-          grabCursor={true}
-        >
-          {ContactData.map((item, i) => {
-            return (
-              <SwiperSlide
-                key={i}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "red",
-                }}
-              >
-                <Image
-                  src={item.img}
-                  height="100%"
-                  width="100%"
-                  alt="logo"
-                  objectFit="cover"
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </Flex>
+            {ContactData.map((item, i) => {
+              return (
+                <SwiperSlide
+                  key={i}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    // backgroundColor:"red"
+                  }}
+                >   
+                        <Image src={item.img}  height="100%" width="100%" alt="logo"  objectFit="cover" />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+             </Flex>
     </>
   );
 };

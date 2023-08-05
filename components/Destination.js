@@ -103,9 +103,8 @@ function Destination({destination}) {
                   }}
                 >
                   {({ isActive, isPrev, isNext }) => (
-                    <motion.a
-                      href={item.link}
-                      target="_blank"
+                    <motion.div
+                      
                       initial={{
                         scale: 1,
                         opacity: 1,
@@ -203,7 +202,7 @@ function Destination({destination}) {
                       </motion.div>
                       </>
  
-                    </motion.a>
+                    </motion.div>
                   )}
                 </SwiperSlide>
               );
