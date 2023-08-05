@@ -161,7 +161,8 @@ const Trek = ({ event, questions, settings }) => {
         <Flex
           // border="3px solid green"
           gap="10"
-          flexWrap={"wrap"}
+          flexDirection={'column'}
+          // flexWrap={"wrap"}
           justifyContent={"center"}
           alignItems={"start"}
           mb={10}
