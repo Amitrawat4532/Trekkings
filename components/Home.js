@@ -6,6 +6,7 @@ import "swiper/css/autoplay";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import React from 'react';
+import Popup from "./Popup";
 
 
 const Home = () => {
@@ -58,6 +59,8 @@ const Home = () => {
           >
             <Text variant="homeHeader2" textShadow="0px 0px 40px 0px rgba(0, 0, 0, 0.65)">IMPOSSIBLE</Text>
           </AnimationOnScroll>
+      <Popup />
+
         </Box>
           
           <Flex  width="100%"  justifyContent="space-between" mt="50px" pb="20px" px="30px" flexDirection={["column","column","row","row"]} alignItems="center">
