@@ -1,4 +1,5 @@
-import { Box, Flex, Text ,Image} from "@chakra-ui/react";
+import { Box, Flex, Text} from "@chakra-ui/react";
+import Image from "next/image";
 
 const Whytrekking = ({}) => {
  
@@ -184,8 +185,9 @@ const Whytrekking = ({}) => {
             width="126px"
             borderRadius="50%"
             mt="30px"
+            position="relative"
           >
-            <Image src="/images/Logo.png" alt="whytrekking"/>
+            <Image src="/images/Logo.png" alt="whytrekking" layout="fill" />
           </Box>
         </Flex>
 
@@ -338,8 +340,9 @@ const Whytrekking = ({}) => {
             width="126px"
             borderRadius="50%"
             mt="30px"
+            position="relative"
           >
-            <Image src="/images/Logo.png"  alt="why trekking us"/>
+            <Image src="/images/Logo.png"  alt="why trekking us" layout="fill"/>
           </Box>
 
         </Flex>

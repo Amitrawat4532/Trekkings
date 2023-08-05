@@ -1,4 +1,4 @@
-import { Text, Flex, Box, Button, Progress, Stack, background } from "@chakra-ui/react";
+import { Text, Flex, Box, Button, Progress, } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Autoplay, Mousewheel} from "swiper";
 import "swiper/css";
@@ -197,7 +197,7 @@ function Destination({destination}) {
                           position: "relative",
                         }}
                       >
-                        <Image src={item?.thumbnail} height="450px" width="328px" objectFit="cover"/>
+                        <Image src={item.img} height="450px" width="328px" alt="destination img"/>
                         
                       </motion.div>
                       </>

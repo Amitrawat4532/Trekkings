@@ -83,7 +83,7 @@ const Services = () => {
                   w={["184px", "184px", "216px", "216px"]}
                   h={["184px", "184px", "216px", "216px"]}
                 >
-                  <Image src={el?.image} height="216px" width="216px" />
+                  <Image src={el?.image} height="216px" width="216px" alt="service img" />
                 </Box>
 
                 <Text mt={["50px", "50px", "0", "0"]} variant="serviceHeader2">
