@@ -143,7 +143,7 @@ const Trek = ({ event, questions, settings }) => {
         position={"relative"}
         minH="100vh"
         justifyContent="start"
-        px="9vw"
+        px={["5vw","5vw","9vw","9vw"]}
         gap="10"
         my="5"
         // flexWrap={'wrap'}
@@ -206,6 +206,7 @@ const Trek = ({ event, questions, settings }) => {
                   )} */}
                   <BigCard
                     data={el}
+                    settings={settings[0]}
                     isUpcoming={
                       new Date(latestUpcomingDate).getTime() ==
                       new Date(el.startDate).getTime()
