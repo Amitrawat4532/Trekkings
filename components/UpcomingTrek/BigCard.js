@@ -11,15 +11,15 @@ import {
   ModalHeader,
   ModalOverlay,
   Text,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import moment from "moment";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import { CopyIcon } from "@chakra-ui/icons";
 
@@ -46,7 +46,7 @@ const BigCard = (props) => {
       fontStyle: "normal",
       fontWeight: "600",
       lineHeight: "27px",
-      textTransform:'capitalize'
+      textTransform: "capitalize",
     },
     cardTextSmall: {
       color: "#000",
@@ -94,64 +94,56 @@ const BigCard = (props) => {
       <Flex
         // maxH={["100%", "100%", "551px", "551px"]}
         w="100%"
-        minW={['auto','auto','450px','450px']}
+        minW={["auto", "auto", "450px", "450px"]}
         borderRadius="16px"
         border="1px solid #CFD8DC"
         background="#FFF"
         boxShadow="0px 4px 40px 0px rgba(0, 0, 0, 0.08)"
         overflow="hidden"
         position={"relative"}
-       
       >
         {/* UPCOMING badge */}
-{
-props?.isUpcoming && <Box
-          position={"absolute"}
-          top={3}
-          left={3}
-          zIndex={100}
-          pr={4}
-          pl={2}
-          py={1}
-        
-          rounded={"full"}
-          bg={"blue.400"}
-          boxShadow={
-            "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-          }
-          _hover={{
-            bg: "blue.500",
-          }}
-          _focus={{
-            bg: "blue.500",
-          }}
-          display={'flex'}
-          gap={2}
-        >
-          <svg
-                width="18"
-                height="17"
-                viewBox="0 0 18 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                  d="M8.99983 13.7717L13.1498 16.2817C13.9098 16.7417 14.8398 16.0617 14.6398 15.2017L13.5398 10.4817L17.2098 7.30172C17.8798 6.72172 17.5198 5.62172 16.6398 5.55172L11.8098 5.14172L9.91983 0.681719C9.57983 -0.128281 8.41983 -0.128281 8.07983 0.681719L6.18983 5.13172L1.35983 5.54172C0.479829 5.61172 0.119828 6.71172 0.789828 7.29172L4.45983 10.4717L3.35983 15.1917C3.15983 16.0517 4.08983 16.7317 4.84983 16.2717L8.99983 13.7717Z"
-                  fill="#EAC800"
-                  />
-              </svg>
-                <Text
-                  fontSize={"sm"}
-                  fontWeight={"bold"}
-          color={"white"}
+        {props?.isUpcoming && (
+          <Box
+            position={"absolute"}
+            top={3}
+            left={3}
+            zIndex={100}
+            pr={4}
+            pl={2}
+            py={1}
+            rounded={"full"}
+            bg={"blue.400"}
+            boxShadow={
+              "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+            }
+            _hover={{
+              bg: "blue.500",
+            }}
+            _focus={{
+              bg: "blue.500",
+            }}
+            display={"flex"}
+            gap={2}
+          >
+            <svg
+              width="18"
+              height="17"
+              viewBox="0 0 18 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.99983 13.7717L13.1498 16.2817C13.9098 16.7417 14.8398 16.0617 14.6398 15.2017L13.5398 10.4817L17.2098 7.30172C17.8798 6.72172 17.5198 5.62172 16.6398 5.55172L11.8098 5.14172L9.91983 0.681719C9.57983 -0.128281 8.41983 -0.128281 8.07983 0.681719L6.18983 5.13172L1.35983 5.54172C0.479829 5.61172 0.119828 6.71172 0.789828 7.29172L4.45983 10.4717L3.35983 15.1917C3.15983 16.0517 4.08983 16.7317 4.84983 16.2717L8.99983 13.7717Z"
+                fill="#EAC800"
+              />
+            </svg>
+            <Text fontSize={"sm"} fontWeight={"bold"} color={"white"}>
+              UPCOMING
+            </Text>
+          </Box>
+        )}
 
-                >
-                UPCOMING
-                  </Text>  
-        </Box>
-}
-
-        
         <Flex flexWrap={"wrap"} direction={"row"}>
           {/* Image */}
           <Box
@@ -160,7 +152,7 @@ props?.isUpcoming && <Box
             minW={["100%", "100%", "350px", "350px"]}
             minHeight={"220px"}
             flex={1}
-            background={'gray.300'}
+            background={"gray.300"}
           >
             <Image
               src={
@@ -172,16 +164,12 @@ props?.isUpcoming && <Box
               fallbackSrc="/images/logo.png"
               layout="fill"
             />
-            <Box
-        position={'absolute'}
-        bottom='3'
-        right='3'
-        >
-        <ShowImages images={images} />
-        </Box>
+            <Box position={"absolute"} bottom="3" right="3">
+              <ShowImages images={images} />
+            </Box>
           </Box>
 
-              {/* Details */}
+          {/* Details */}
           <Flex
             h="auto"
             w="100%"
@@ -194,12 +182,35 @@ props?.isUpcoming && <Box
           >
             {/* Card Text */}
             <Flex direction={"column"}>
-              <Flex justifyContent={'space-between'} 
-              flexDirection={['column','column','row','row']}
-              >
-
-              <Text style={styles.cardText1}>{name}</Text>
-              <Text style={styles.cardTextSmall}>{location}</Text>
+              <Flex justifyContent={"space-between"} flexDirection={"column"}>
+                <Text style={styles.cardText1}>{name}</Text>
+                <Flex
+                  flexDirection={"row"}
+                  gap={1}
+                  style={styles.cardTextSmall}
+                >
+                  <svg
+                    width="14"
+                    height="30"
+                    viewBox="0 0 23 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.25 9.75C13.25 10.2141 13.0656 10.6592 12.7374 10.9874C12.4092 11.3156 11.9641 11.5 11.5 11.5C11.0359 11.5 10.5908 11.3156 10.2626 10.9874C9.93437 10.6592 9.75 10.2141 9.75 9.75C9.75 9.28587 9.93437 8.84075 10.2626 8.51256C10.5908 8.18437 11.0359 8 11.5 8C11.9641 8 12.4092 8.18437 12.7374 8.51256C13.0656 8.84075 13.25 9.28587 13.25 9.75Z"
+                      stroke="#241314"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M21.125 10.625C21.125 15.9415 17.625 22 11.5 29C5.375 22 1.875 15.9415 1.875 10.625C1.875 8.07229 2.88906 5.62413 4.6941 3.8191C6.49913 2.01406 8.94729 1 11.5 1C14.0527 1 16.5009 2.01406 18.3059 3.8191C20.1109 5.62413 21.125 8.07229 21.125 10.625Z"
+                      stroke="#241314"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </svg>{" "}
+                  - {location}
+                </Flex>
               </Flex>
               <Text
                 style={styles.cardText2}
@@ -232,13 +243,18 @@ props?.isUpcoming && <Box
               >
                 Rs - {price}
               </Text>
+              
             </Flex>
 
             <Divider color="red" h="1px" w="100%" my="12px" />
 
             {/* Card Details */}
-            <Flex flexWrap={"wrap"} justifyContent={"space-around"} gap={["5","5","3","3"]}>
             <Flex
+              flexWrap={"wrap"}
+              justifyContent={"space-around"}
+              gap={["5", "5", "3", "3"]}
+            >
+              <Flex
                 direction={"column"}
                 alignItems={"center"}
                 justifyContent={"center"}
@@ -261,9 +277,10 @@ props?.isUpcoming && <Box
                   {moment(endDate, "YYYY-MM-DD HH:mm").format("DD MMM YY")}
                 </Text>
               </Flex>
-              <Flex direction={"column"}
-              alignItems={"center"}
-              justifyContent={"center"}
+              <Flex
+                direction={"column"}
+                alignItems={"center"}
+                justifyContent={"center"}
               >
                 <svg
                   width="20"
@@ -319,10 +336,10 @@ props?.isUpcoming && <Box
                 background="#E9E9E9"
                 color="black"
                 borderRadius="8px"
-                as='a'
+                as="a"
                 href={props.data?.itinerary}
-                 target="_blank"
-                  download
+                target="_blank"
+                download
                 // onClick={ShowImages}
               >
                 View Itinerary
@@ -337,7 +354,6 @@ props?.isUpcoming && <Box
 };
 
 export default BigCard;
-
 
 // function StatsCard(props) {
 //   const { title, stat, icon } = props
@@ -369,60 +385,67 @@ export default BigCard;
 //   )
 // }
 
-export function ShowImages({images}) {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+export function ShowImages({ images }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen} 
-      leftIcon={
-        <CopyIcon />
-      }
-      h='6'
-      w='100%'
-      px='3'
-      color={'white'}
-      bg='red.400'
-      borderRadius={30}
-      fontSize={['10px','10px','14px','14px']}
-      >Show More Images</Button>
+      <Button
+        onClick={onOpen}
+        leftIcon={<CopyIcon />}
+        h="6"
+        w="100%"
+        px="3"
+        color={"white"}
+        bg="red.400"
+        borderRadius={30}
+        fontSize={["10px", "10px", "14px", "14px"]}
+      >
+        Show More Images
+      </Button>
 
       <Modal isOpen={isOpen} onClose={onClose} size="5xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Images ( High Quality Images may take longer to load )</ModalHeader>
+          <ModalHeader>
+            Images ( High Quality Images may take longer to load )
+          </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-          <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-            {
-              Array.isArray(images) && images.map((el,id)=> <SwiperSlide key={id}> <Box
-                position={"relative"}
-                width={"100%"}
-                minW={["100%", "100%", "350px", "350px"]}
-                minHeight={"500px"}
-                flex={1}
-              >
-                <Image
-                  src={el ? el.img_url 
-                      : "/images/finallogo.png"
-                  }
-                  objectFit="contain"
-                  blurDataURL="/images/preloader.png"
-                  layout="fill"
-                />
-              </Box></SwiperSlide>
-                
-                )
-            }
-      </Swiper>
+            <Swiper
+              navigation={true}
+              modules={[Navigation]}
+              className="mySwiper"
+            >
+              {Array.isArray(images) &&
+                images.map((el, id) => (
+                  <SwiperSlide key={id}>
+                    {" "}
+                    <Box
+                      position={"relative"}
+                      width={"100%"}
+                      minW={["100%", "100%", "350px", "350px"]}
+                      minHeight={"500px"}
+                      flex={1}
+                    >
+                      <Image
+                        src={el ? el.img_url : "/images/finallogo.png"}
+                        objectFit="contain"
+                        blurDataURL="/images/preloader.png"
+                        layout="fill"
+                      />
+                    </Box>
+                  </SwiperSlide>
+                ))}
+            </Swiper>
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
     </>
-  )
+  );
 }
