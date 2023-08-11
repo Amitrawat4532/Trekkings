@@ -12,7 +12,7 @@ export const TextStyle = {
     },
     aboutbutton: {
       as: "a",
-      color: "#e03b85",
+      color: "mainSecondaryColor",
       fontWeight: "500",
       fontSize: "16px",
       fontFamily: "Roboto",
@@ -69,7 +69,7 @@ export const TextStyle = {
       fontFamily: "anton",
       fontSize: ["15px", "15px", "20px", "20px"],
       fontWeight: "300",
-      color: "#FF461D",
+      color: "mainSecondaryColor",
       lineHeight: "24px",
       letterSpacing: ["2px", "2px", "3px", "3px"],
     },

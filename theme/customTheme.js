@@ -8,6 +8,7 @@ const customTheme = extendTheme({
     mainWhite: "#FFFFFF",
     mainBlack: "#000000",
     secondaryText: "#3E3E3E",
+    mainSecondaryColor: '#FF461D'
   },
   components: {
     Button,

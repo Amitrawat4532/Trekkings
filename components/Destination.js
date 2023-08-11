@@ -231,7 +231,7 @@ function Destination({destination}) {
                 swiper?.slidePrev();
               }}
               cursor={'pointer'}
-              color='#FF461D'
+              color='mainSecondaryColor'
               _hover={{
                 color:'white',
                 transition:'.2s all ease'
@@ -254,7 +254,7 @@ function Destination({destination}) {
                 swiper?.slideNext();
               }}
               cursor={'pointer'}
-              color='#FF461D'
+              color='mainSecondaryColor'
               _hover={{
                 color:'white',
                 transition:'.2s all ease'
@@ -274,7 +274,7 @@ function Destination({destination}) {
             alignItems="center"
           >
             <Text
-              color="#FF461D"
+              color="mainSecondaryColor"
               fontSize={["15px", "15px", "30px", "30px"]}
               alignSelf="center"
               fontWeight="600"
@@ -295,12 +295,12 @@ function Destination({destination}) {
           </Flex>
 
           <Button
-            bgColor="#FF461D"
+            bgColor="mainSecondaryColor"
             alignSelf="center"
             fontSize="16px"
             color="white"
             _hover={{
-              color:'#FF461D',
+              color:'mainSecondaryColor',
               background:'white'
             }}
             px="30px"
