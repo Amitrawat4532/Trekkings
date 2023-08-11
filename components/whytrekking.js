@@ -117,8 +117,9 @@ const Whytrekking = ({}) => {
               fontSize="16px"
               fontFamily="Roboto"
               fontWeight="400"
+              textAlign={'center'}
             >
-              EXPORATION
+              PROVIDED EQUIPMENTS
             </Text>
           </Flex>
           <Flex
@@ -146,7 +147,7 @@ const Whytrekking = ({}) => {
               fontFamily="Roboto"
               fontWeight="400"
             >
-              EXPORATION
+              ADVENTURES
             </Text>
           </Flex>
 
@@ -176,18 +177,19 @@ const Whytrekking = ({}) => {
               fontSize="16px"
               fontFamily="Roboto"
               fontWeight="400"
+              textAlign={'center'}
             >
-              EXPORATION
+              PROFESSIONAL GUIDE
             </Text>
           </Flex>
           <Box
             height="117px"
-            width="126px"
+            width="156px"
             borderRadius="50%"
             mt="30px"
             position="relative"
           >
-            <Image src="/images/Logo.png" alt="whytrekking" layout="fill" />
+            <Image src="/images/Logo.png" alt="whytrekking" layout="fill"  />
           </Box>
         </Flex>
 
@@ -215,7 +217,7 @@ const Whytrekking = ({}) => {
             h="200px"
             justifyContent="start"
             pt="30px"
-            pl="30px"
+            pl="70px"
             alignItems="start"
             flexDirection="column"
             zIndex={2}
@@ -269,8 +271,10 @@ const Whytrekking = ({}) => {
               fontSize="16px"
               fontFamily="Roboto"
               fontWeight="400"
+              textAlign={'center'}
+
             >
-              EXPORATION
+              PROVIDED EQUIPMENTS
             </Text>
           </Flex>
           <Flex
@@ -299,7 +303,7 @@ const Whytrekking = ({}) => {
               fontFamily="Roboto"
               fontWeight="400"
             >
-              EXPORATION
+              ADVENTURES
             </Text>
           </Flex>
 
@@ -331,18 +335,20 @@ const Whytrekking = ({}) => {
               fontSize="16px"
               fontFamily="Roboto"
               fontWeight="400"
+              textAlign={'center'}
             >
-              EXPORATION
+              PROFESSIONAL GUIDE
             </Text>
           </Flex>
           <Box
             height="200px"
-            width="126px"
-            borderRadius="50%"
+            width="220px"
+            // borderRadius="50%"
             mt="30px"
             position="relative"
+            // background={'red'}
           >
-            <Image src="/images/Logo.png"  alt="why trekking us" layout="fill"/>
+            <Image src="/images/Logo.png"  alt="why trekking us" layout="fill" objectFit="contain"/>
           </Box>
 
         </Flex>

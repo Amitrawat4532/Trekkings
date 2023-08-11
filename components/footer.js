@@ -1,5 +1,6 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import Image from "next/image";
+import React from "react";  
 
 const Footer = ({ settings }) => {
   const footerData = [
@@ -140,12 +141,12 @@ const Footer = ({ settings }) => {
             p="40px"
             // border={'1px solid green'}
             h="340px"
-            w="auto"
-            objectFit={"contain"}
+            w="300px"
+            position={'relative'}
             justifyContent={"center"}
             // ml={["0px","0px","200px","200px"]}
           >
-            <Image src="/images/finallogo.png"></Image>
+            <Image layout="fill" objectFit={"contain"} src="/images/finallogo.png"></Image>
           </Flex>
 
           {/* right section */}
@@ -270,7 +271,7 @@ const Footer = ({ settings }) => {
             px='4'
             textAlign={'center'}
           >
-            Disclaimer : Copyrights belown to {settings?.name} of year 2023-2024
+            Copyrights below to {settings?.name} of year 2023-2024
           </Text>
         </Flex>
       </Flex>
