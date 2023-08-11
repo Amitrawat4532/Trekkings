@@ -1,9 +1,7 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
-
-const Footer = ({settings}) => {
-
+const Footer = ({ settings }) => {
   const footerData = [
     {
       svg: (
@@ -20,7 +18,7 @@ const Footer = ({settings}) => {
           />
         </svg>
       ),
-      link:`tel:${settings?.contact}`,
+      link: `tel:${settings?.contact}`,
       title: settings?.contact,
     },
     {
@@ -42,7 +40,7 @@ const Footer = ({settings}) => {
           />
         </svg>
       ),
-      link:`mailto:${settings?.email}`,
+      link: `mailto:${settings?.email}`,
       title: settings?.email,
     },
     // {
@@ -77,7 +75,7 @@ const Footer = ({settings}) => {
           />
         </svg>
       ),
-      title: 'igatpurihillstrektourism',
+      title: "igatpurihillstrektourism",
       link: settings?.instagram,
     },
   ];
@@ -99,13 +97,14 @@ const Footer = ({settings}) => {
   return (
     <>
       {/* main section */}
-      <Flex flexDirection="column" height="100%" width="100%" pt={10}
-      >
+      <Flex flexDirection="column" height="100%" width="100%" pt={10}>
         {/* number section */}
 
         {/* img section */}
-        <Box height={["170px","170px","422px","422px"]} width="100%" mb={["-5px","-5px","0px","0px"]} 
-        
+        <Box
+          height={["170px", "170px", "422px", "422px"]}
+          width="100%"
+          mb={["-5px", "-5px", "0px", "0px"]}
         >
           <Box
             height="100%"
@@ -117,114 +116,138 @@ const Footer = ({settings}) => {
               "url('/images/footernew.png')",
               "url('/images/footernew.png')",
             ]}
-            bgSize={["cover","cover","cover","cover"]}
+            bgSize={["cover", "cover", "cover", "cover"]}
             backgroundPosition="center"
           ></Box>
         </Box>
 
         {/* footer section */}
         <Flex
-          flex='2'
-          position={'relative'}
+          flex="2"
+          position={"relative"}
           bgColor="#2C111E"
           justifyContent="center"
           alignItems="center"
-          gap={["0px","0px","10%","10%"]}
-          flexDirection={["column","column","row","row"]}
+          gap={["0px", "0px", "10%", "10%"]}
+          flexDirection={["column", "column", "row", "row"]}
           width="100%"
-          flexWrap={['wrap','wrap','wrap','nowrap']}
+          flexWrap={["wrap", "wrap", "wrap", "nowrap"]}
           // px={20}
           // border={'2px solid blue'}
-
-            
         >
           {/* left container */}
-          <Flex p="40px" 
+          <Flex
+            p="40px"
             // border={'1px solid green'}
-          h='340px'
-          w='auto'
-          objectFit={'contain'}
-          justifyContent={'center'}
-          // ml={["0px","0px","200px","200px"]}
+            h="340px"
+            w="auto"
+            objectFit={"contain"}
+            justifyContent={"center"}
+            // ml={["0px","0px","200px","200px"]}
           >
             <Image src="/images/finallogo.png"></Image>
           </Flex>
 
           {/* right section */}
           <Flex
-          // border={'2px solid yellow'}
+            // border={'2px solid yellow'}
 
             // width="50%"
             justifyContent="center"
             alignItems="start"
             flexDirection="column"
             gap="70px"
-            pt={["40px","40px","88px","88px"]}
+            pt={["40px", "40px", "88px", "88px"]}
             // margin="auto"
-
-
           >
-            <Flex gap={["50px","50px","120px","120px"]} 
-          flexDirection={["column","column","row","row"]}
-          >
-              <Flex flexDirection="column" gap={["16px","16px","40px","40px"]}>
+            <Flex
+              gap={["50px", "50px", "120px", "120px"]}
+              flexDirection={["column", "column", "row", "row"]}
+            >
+              <Flex
+                flexDirection="column"
+                gap={["16px", "16px", "40px", "40px"]}
+              >
                 {footerData.map((el, id) => {
                   return (
-                      <Flex key={id} gap="30px">
-                        {el.svg}
-                        <Text
-                        as='a'
-                          color="white"
-                          fontSize={["16px","16px","23px","23px"]}
-                          fontWeight="500"
-                          fontFamily="Roboto"
-                          lineHeight="27px"
-                          href={el?.link}
-                          target='_blank'
-                        >
-                          {el.title}
-                        </Text>
-                      </Flex>
+                    <Flex key={id} gap="30px">
+                      {el.svg}
+                      <Text
+                        as="a"
+                        color="white"
+                        fontSize={["16px", "16px", "23px", "23px"]}
+                        fontWeight="500"
+                        fontFamily="Roboto"
+                        lineHeight="27px"
+                        href={el?.link}
+                        target="_blank"
+                      >
+                        {el.title}
+                      </Text>
+                    </Flex>
                   );
                 })}
               </Flex>
-              <Flex flexDirection="column" gap={["16px","16px","40px","40px"]}>
+              <Flex
+                flexDirection="column"
+                gap={["16px", "16px", "40px", "40px"]}
+              >
                 {Links.map((el, id) => {
                   return (
-                      <Flex key={id} gap="30px" alignItems="center">
-                        <svg
-                          width="13"
-                          height="14"
-                          viewBox="0 0 13 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.932 13.138V10.217L9.396 7.02L0.932 3.823V0.879L12.478 5.479V8.538L0.932 13.138Z"
-                            fill="#FF3606"
-                          />
-                        </svg>
-                        <Text
-                          color="white"
-                          fontSize={["16px","16px","23px","23px"]}
-
-                          fontWeight="500"
-                          fontFamily="Roboto"
-                          lineHeight="27px"
-                        >
-                          {el.links}
-                        </Text>
-                      </Flex>
+                    <Flex key={id} gap="30px" alignItems="center">
+                      <svg
+                        width="13"
+                        height="14"
+                        viewBox="0 0 13 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.932 13.138V10.217L9.396 7.02L0.932 3.823V0.879L12.478 5.479V8.538L0.932 13.138Z"
+                          fill="#FF3606"
+                        />
+                      </svg>
+                      <Text
+                        color="white"
+                        fontSize={["16px", "16px", "23px", "23px"]}
+                        fontWeight="500"
+                        fontFamily="Roboto"
+                        lineHeight="27px"
+                      >
+                        {el.links}
+                      </Text>
+                    </Flex>
                   );
                 })}
               </Flex>
             </Flex>
 
             <Flex justifyContent="center">
-              
-              <Flex width={["280px","300px","650px","650px"]} borderRadius="50px" overflow="hidden">
-                < Box as="input" type="text" placeholder="Connect with us" height="100%" width="100%" pl="25px" fontSize={["18px","18px","20px","20px"]}/>
-                <Button p="10px 30px" fontSize={["18px","18px","23px","23px"]} lineHeight="30px" borderRadius="0px" bgColor="#591433" color="white" fontWeight="600">SEND</Button>
+              <Flex
+                width={["280px", "300px", "650px", "650px"]}
+                borderRadius="50px"
+                overflow="hidden"
+              >
+                <Box
+                  as="input"
+                  type="text"
+                  placeholder="Connect with us"
+                  height="100%"
+                  width="100%"
+                  pl="25px"
+                  fontSize={["18px", "18px", "20px", "20px"]}
+                />
+                <Button
+                  p="10px 30px"
+                  fontSize={["18px", "18px", "23px", "23px"]}
+                  lineHeight="30px"
+                  borderRadius="0px"
+                  bgColor="#6E314C"
+                  color="white"
+                  fontWeight="600"
+                >
+                  SEND
+                </Button>
               </Flex>
             </Flex>
           </Flex>
@@ -236,14 +259,16 @@ const Footer = ({settings}) => {
           width="100%"
           justifyContent="center"
           alignItems="center"
-          pt={["76px","76px","84px","84px"]}
-          pb="25px"
+          pt={["36px", "36px", "84px", "84px"]}
+          pb={["15px","15px","25px","25px"]}
         >
           <Text
             color="white"
-            fontSize={["10px","10px","15px","15px"]}
+            fontSize={["14px", "14px", "15px", "15px"]}
             fontFamily="Roboto"
             lineHeight="17px"
+            px='4'
+            textAlign={'center'}
           >
             Disclaimer : Copyrights belown to {settings?.name} of year 2023-2024
           </Text>

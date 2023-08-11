@@ -42,7 +42,7 @@ const Question = ({data}) => {
                     <Text
                     color= '#FFF'
                     fontFamily= 'Inter'
-                    fontSize= '18px'
+                    fontSize= {['14px','14px','18px','18px']}
                     fontStyle= 'normal'
                     fontWeight= '700'
                     lineHeight= '120%' /* 21.6px */
@@ -58,7 +58,7 @@ const Question = ({data}) => {
                   color= '#939393'
                   /* Text/3 regular */
                   fontFamily= 'Inter'
-                  fontSize= '16px'
+                  fontSize= {['14px','14px','18px','18px']}
                   fontStyle= 'normal'
                   fontWeight= '400'
                   lineHeight= '140%' /* 22.4px */

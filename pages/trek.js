@@ -72,7 +72,7 @@ const Trek = ({ event, questions, settings }) => {
             bg="transparent"
             color="#241314"
             fontWeight="normal"
-            fontSize="28px"
+            fontSize={["20px","20px","28px","28px"]}
             fontFamily="anton"
           >
             <Text as="span" pb="2" pr="1">
@@ -83,7 +83,7 @@ const Trek = ({ event, questions, settings }) => {
         </Link>
 
       <Box
-        top={["30px", "30px", "50px", "50px"]}
+        top={["60px", "60px", "50px", "50px"]}
         position={"relative"}
         maxW="100vw"
         h={"100%"}
@@ -156,7 +156,7 @@ const Trek = ({ event, questions, settings }) => {
       <Flex
         // border="2px solid red"
         h={"auto"}
-        top={["30px", "30px", "50px", "50px"]}
+        top={["60px", "60px", "50px", "50px"]}
         position={"relative"}
         minH="100vh"
         justifyContent="start"
@@ -293,12 +293,12 @@ const Trek = ({ event, questions, settings }) => {
         </Flex>
       </Flex>
 
-      <Box top={["30px", "30px", "50px", "50px"]} position={"relative"}>
+      <Box top={["60px", "60px", "50px", "50px"]} position={"relative"}>
         <Question data={questions[0].questionsList} />
       </Box>
 
       {/* Footer */}
-      <Box top={["30px", "30px", "50px", "50px"]} position={"relative"}>
+      <Box top={["60px", "60px", "50px", "50px"]} position={"relative"}>
         <Footer settings={settings[0]} />
       </Box>
     </>
