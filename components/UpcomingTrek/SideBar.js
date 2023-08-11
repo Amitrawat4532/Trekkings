@@ -90,7 +90,7 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
         <Stack spacing={3} direction="column" color="white" my="30px">
           <Text style={styles.label}>Budget</Text>
           <Slider
-          my='2'
+            my="2"
             aria-label="slider-ex-4"
             // defaultValue={30}
             min={499}
@@ -156,20 +156,62 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
               ))}
             </Select>
 
+            <Divider color='black' my='4' w='100%' h='10px' />
+
+            <FormLabel htmlFor="tourType" mt="5">
+              Services
+            </FormLabel>
+            <Stack spacing={3} direction="column" color="black">
+              <Checkbox>Food</Checkbox>
+              <Checkbox>Transport</Checkbox>
+            </Stack>
+
+            <Divider color='black' my='4' w='100%' h='10px' />
+
             <FormLabel htmlFor="tourType" mt="5">
               Tour Type
             </FormLabel>
             <Stack spacing={3} direction={"row"}>
-              <Checkbox size="md" colorScheme="green" defaultChecked>
-                Group
-              </Checkbox>
-              <Checkbox size="md" colorScheme="green" defaultChecked>
-                Corporate
-              </Checkbox>
-              <Checkbox size="md" colorScheme="green" defaultChecked>
-                Personal
-              </Checkbox>
+              <Radio value="public">Public</Radio>
+              <Radio value="private">Private</Radio>
+              <Radio value="corporate">Corporate</Radio>
             </Stack>
+
+            <Divider color='black' my='4' w='100%' h='10px' />
+
+            <FormLabel htmlFor="tourType" mt="5">
+              Budget
+            </FormLabel>
+            <Slider
+            my="2"
+            aria-label="slider-ex-4"
+            // defaultValue={30}
+            min={499}
+            max={7999}
+            onChange={(v) => setSliderValue(v)}
+            onMouseEnter={() => setShowTooltip(true)}
+            onMouseLeave={() => setShowTooltip(false)}
+          >
+            <SliderMark value={499} mt="3" ml="-2.5" fontSize="sm">
+              499
+            </SliderMark>
+            <SliderTrack bg="red.100">
+              <SliderFilledTrack bg="tomato" />
+            </SliderTrack>
+            <SliderMark value={7999} mt="3" ml="-2.5" fontSize="sm">
+              7999
+            </SliderMark>
+            <Tooltip
+              hasArrow
+              bg="teal.500"
+              color="white"
+              placement="top"
+              isOpen={showTooltip}
+              label={`Rs ${sliderValue}`}
+            >
+              <SliderThumb boxSize={6} />
+            </Tooltip>
+          </Slider>
           </DrawerBody>
 
           <DrawerFooter>
