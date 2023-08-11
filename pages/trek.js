@@ -156,7 +156,7 @@ const Trek = ({ event, questions, settings }) => {
       <Flex
         // border="2px solid red"
         h={"auto"}
-        top={["60px", "60px", "50px", "50px"]}
+        top={["20px", "20px", "50px", "50px"]}
         position={"relative"}
         minH="100vh"
         justifyContent="start"
