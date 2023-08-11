@@ -55,33 +55,37 @@ export async function getServerSideProps(context) {
 }
 
 const Trek = ({ event, questions, settings }) => {
-  const [searchInput, setSearchInput] = useState("");
-  const [location, setLocation] = useState("");
+  const [filterData, setFilterData] = useState({
+    searchInput: "",
+    location: "",
+    tourType: "",
+    budget: 7999,
+    services: [],
+  });
 
-  console.log(questions , 'quest');
+  console.log(filterData , 'main data');
   return (
     <>
-      {/* Navbar */}
-      {/* <Navbar logo={"./images/mobilenavlogo.png"} /> */}
-
+      {/* Back Button */}
       <Link href="/">
-          <Button
-            position="absolute"
-            mt="4"
-            ml="4"
-            bg="transparent"
-            color="#241314"
-            fontWeight="normal"
-            fontSize={["20px","20px","28px","28px"]}
-            fontFamily="anton"
-          >
-            <Text as="span" pb="2" pr="1">
-              &larr;
-            </Text>
-            Back
-          </Button>
-        </Link>
+        <Button
+          position="absolute"
+          mt="4"
+          ml="4"
+          bg="transparent"
+          color="#241314"
+          fontWeight="normal"
+          fontSize={["20px", "20px", "28px", "28px"]}
+          fontFamily="anton"
+        >
+          <Text as="span" pb="2" pr="1">
+            &larr;
+          </Text>
+          Back
+        </Button>
+      </Link>
 
+        {/* Search bar */}
       <Box
         top={["60px", "60px", "50px", "50px"]}
         position={"relative"}
@@ -91,7 +95,6 @@ const Trek = ({ event, questions, settings }) => {
         display="flex"
         justifyContent={"center"}
       >
-        {/* Search bar */}
         <InputGroup
           w={["90vw", "90vw", "80vw", "80vw"]}
           size={"lg"}
@@ -109,8 +112,8 @@ const Trek = ({ event, questions, settings }) => {
             placeholder="What trek are you looking for ?"
             borderRadius={"30"}
             fontSize={["16px", "16px", "18px", "18px"]}
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
+            value={filterData.searchInput}
+            onChange={(e) => setFilterData({...filterData, searchInput: e.target.value})}
             boxShadow="1.6197646856307983px 1.6197646856307983px 17.817411422729492px 0px rgba(0, 0, 0, 0.12)"
           />
 
@@ -128,8 +131,8 @@ const Trek = ({ event, questions, settings }) => {
               borderRadius="0"
               borderLeftWidth={2}
               borderColor={"rgba(20, 20, 20, 0.10)"}
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              value={filterData.location}
+              onChange={(e) => setFilterData({...filterData, location :e.target.value})}
             >
               {event?.map((el) => (
                 <option value={el.location}>{el.location.toUpperCase()}</option>
@@ -160,7 +163,7 @@ const Trek = ({ event, questions, settings }) => {
         position={"relative"}
         minH="100vh"
         justifyContent="start"
-        px={["5vw","5vw","9vw","9vw"]}
+        px={["5vw", "5vw", "9vw", "9vw"]}
         gap="10"
         my="5"
         // flexWrap={'wrap'}
@@ -169,17 +172,14 @@ const Trek = ({ event, questions, settings }) => {
         {/* SideBar */}
         <SideBar
           data={event}
-          setLocation={setLocation}
-          location={location}
-          setSearchInput={setSearchInput}
+          setFilterData={setFilterData}
+          filterData={filterData}
         />
 
         {/* Trek Card Section */}
         <Flex
-          // border="3px solid green"
           gap="10"
-          flexDirection={'column'}
-          // flexWrap={"wrap"}
+          flexDirection={"column"}
           justifyContent={"center"}
           alignItems={"start"}
           mb={10}
@@ -188,16 +188,24 @@ const Trek = ({ event, questions, settings }) => {
             ?.filter((row) => {
               const currentDate = new Date();
               const trekStartDate = new Date(row.startDate);
-
+              console.log(row,'row');
               return (
                 Object.values(row?.name)
                   .join("")
                   .toLowerCase()
-                  .includes(searchInput.toLowerCase()) &&
+                  .includes(filterData.searchInput.toLowerCase()) &&
                 trekStartDate > currentDate &&
-                (location === ""
+                (filterData.location === ""
                   ? true
-                  : row.location.toLowerCase() === location.toLowerCase())
+                  : row.location.toLowerCase() === filterData.location.toLowerCase())
+                && 
+                (filterData.services.includes('food') ? row?.food === Boolean(filterData.services.includes('food')) : true )
+                &&
+                (filterData.services.includes('transport') ? row?.travel === Boolean(filterData.services.includes('transport')) : true )
+                &&
+                (filterData.tourType ? row?.type === filterData.tourType : true)
+                &&
+                (row.price <= filterData.budget)
               );
             })
             .sort((a, b) => {
@@ -244,11 +252,19 @@ const Trek = ({ event, questions, settings }) => {
                 Object.values(row?.name)
                   .join("")
                   .toLowerCase()
-                  .includes(searchInput.toLowerCase()) &&
+                  .includes(filterData.searchInput.toLowerCase()) &&
                 trekStartDate > currentDate &&
-                (location === ""
+                (filterData.location === ""
                   ? true
-                  : row.location.toLowerCase() === location.toLowerCase())
+                  : row.location.toLowerCase() === filterData.location.toLowerCase())
+                  && 
+                  (filterData.services.includes('food') ? row?.food === Boolean(filterData.services.includes('food')) : true )
+                  &&
+                  (filterData.services.includes('transport') ? row?.travel === Boolean(filterData.services.includes('transport')) : true )
+                  &&
+                  (filterData.tourType ? row?.type === filterData.tourType : true)
+                  &&
+                  (row.price <= filterData.budget)
               );
             })
             .sort((a, b) => {
@@ -281,8 +297,13 @@ const Trek = ({ event, questions, settings }) => {
                   color="white"
                   variant="solid"
                   onClick={() => {
-                    setSearchInput("");
-                    setLocation("");
+                    setFilterData({ 
+                      searchInput: "",
+                      location: "",
+                      tourType: "",
+                      budget: "",
+                      services: "",
+                    })
                   }}
                 >
                   Show Available Treks

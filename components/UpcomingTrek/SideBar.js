@@ -1,3 +1,4 @@
+import { RepeatIcon } from "@chakra-ui/icons";
 import {
   Flex,
   Stack,
@@ -25,10 +26,12 @@ import {
   Box,
   Tooltip,
   SliderMark,
+  filter,
+  CheckboxGroup,
 } from "@chakra-ui/react";
 import React from "react";
 
-const SideBar = ({ data, setLocation, location, setSearchInput }) => {
+const SideBar = ({ data, setFilterData, filterData }) => {
   const styles = {
     label: {
       color: "#969696",
@@ -52,7 +55,6 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [showTooltip, setShowTooltip] = React.useState(false);
-  const [sliderValue, setSliderValue] = React.useState(5);
 
   return (
     <>
@@ -68,18 +70,49 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
         direction={"column"}
         display={["none", "none", "flex", "flex"]}
       >
+        <Flex justifyContent={'space-between'}>
         <Text style={styles.sidebarLabel}>Filter</Text>
+        <RepeatIcon 
+        h='5'
+        w='5'
+        color='white'
+        onClick={() => {
+          setFilterData({
+            searchInput: "",
+            location: "",
+            tourType: "",
+            budget: 7999,
+            services: "",
+          });
+        }}
+        />
+        
+        </Flex>
 
         <Stack spacing={3} direction="column" color="white" my="30px">
           <Text style={styles.label}>Services</Text>
-          <Checkbox>Food</Checkbox>
-          <Checkbox>Transport</Checkbox>
+          <CheckboxGroup colorScheme='green' value={filterData.services}
+           onChange={(e) => {
+            setFilterData({ ...filterData, services: e });
+          }}
+          >
+          <Stack spacing={2} direction={'column'}>
+          <Checkbox value={'food'}>Food</Checkbox>
+          <Checkbox value={'transport'}>Transport</Checkbox>
+          </Stack>
+          </CheckboxGroup>
         </Stack>
         <Divider />
         <Stack spacing={3} direction="column" color="white" my="30px">
           <Text style={styles.label}>Tour Type</Text>
-          <RadioGroup value={"public"}>
+          <RadioGroup
+            value={filterData.tourType}
+            onChange={(e) => {
+              setFilterData({ ...filterData, tourType: e });
+            }}
+          >
             <Stack direction="column">
+              <Radio value="">All</Radio>
               <Radio value="public">Public</Radio>
               <Radio value="private">Private</Radio>
               <Radio value="corporate">Corporate</Radio>
@@ -92,10 +125,10 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
           <Slider
             my="2"
             aria-label="slider-ex-4"
-            // defaultValue={30}
+            value={filterData.budget}
             min={499}
             max={7999}
-            onChange={(v) => setSliderValue(v)}
+            onChange={(v) => setFilterData({ ...filterData, budget: v })}
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
           >
@@ -114,7 +147,7 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
               color="white"
               placement="top"
               isOpen={showTooltip}
-              label={`Rs ${sliderValue}`}
+              label={`Rs ${filterData.budget}`}
             >
               <SliderThumb boxSize={6} />
             </Tooltip>
@@ -147,8 +180,10 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
             <Select
               id="loc"
               placeholder="Filter By Location"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              value={filterData.location}
+              onChange={(e) =>
+                setFilterData({ ...filterData, location: e.target.value })
+              }
               size="sm"
             >
               {data?.map((el) => (
@@ -156,7 +191,7 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
               ))}
             </Select>
 
-            <Divider color='black' my='4' w='100%' h='10px' />
+            <Divider color="black" my="4" w="100%" h="10px" />
 
             <FormLabel htmlFor="tourType" mt="5">
               Services
@@ -166,52 +201,53 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
               <Checkbox>Transport</Checkbox>
             </Stack>
 
-            <Divider color='black' my='4' w='100%' h='10px' />
+            <Divider color="black" my="4" w="100%" h="10px" />
 
             <FormLabel htmlFor="tourType" mt="5">
               Tour Type
             </FormLabel>
-            <Stack spacing={3} direction={"row"}>
+            <Stack spacing={3} direction={"column"}>
+            <Radio value="">All</Radio>
               <Radio value="public">Public</Radio>
               <Radio value="private">Private</Radio>
               <Radio value="corporate">Corporate</Radio>
             </Stack>
 
-            <Divider color='black' my='4' w='100%' h='10px' />
+            <Divider color="black" my="4" w="100%" h="10px" />
 
             <FormLabel htmlFor="tourType" mt="5">
               Budget
             </FormLabel>
             <Slider
-            my="2"
-            aria-label="slider-ex-4"
-            // defaultValue={30}
-            min={499}
-            max={7999}
-            onChange={(v) => setSliderValue(v)}
-            onMouseEnter={() => setShowTooltip(true)}
-            onMouseLeave={() => setShowTooltip(false)}
-          >
-            <SliderMark value={499} mt="3" ml="-2.5" fontSize="sm">
-              499
-            </SliderMark>
-            <SliderTrack bg="red.100">
-              <SliderFilledTrack bg="tomato" />
-            </SliderTrack>
-            <SliderMark value={7999} mt="3" ml="-4" fontSize="sm">
-              7999
-            </SliderMark>
-            <Tooltip
-              hasArrow
-              bg="teal.500"
-              color="white"
-              placement="top"
-              isOpen={showTooltip}
-              label={`Rs ${sliderValue}`}
+              my="2"
+              aria-label="slider-ex-4"
+              value={filterData.budget}
+              min={499}
+              max={7999}
+              onChange={(v) => setFilterData({ ...filterData, budget: v })}
+              onMouseEnter={() => setShowTooltip(true)}
+              onMouseLeave={() => setShowTooltip(false)}
             >
-              <SliderThumb boxSize={6} />
-            </Tooltip>
-          </Slider>
+              <SliderMark value={499} mt="3" ml="-2.5" fontSize="sm">
+                499
+              </SliderMark>
+              <SliderTrack bg="red.100">
+                <SliderFilledTrack bg="tomato" />
+              </SliderTrack>
+              <SliderMark value={7999} mt="3" ml="-4" fontSize="sm">
+                7999
+              </SliderMark>
+              <Tooltip
+                hasArrow
+                bg="teal.500"
+                color="white"
+                placement="top"
+                isOpen={showTooltip}
+                label={`Rs ${filterData.budget}`}
+              >
+                <SliderThumb boxSize={6} />
+              </Tooltip>
+            </Slider>
           </DrawerBody>
 
           <DrawerFooter>
@@ -222,8 +258,13 @@ const SideBar = ({ data, setLocation, location, setSearchInput }) => {
               bg="#241314"
               color="white"
               onClick={() => {
-                setSearchInput("");
-                setLocation("");
+                setFilterData({
+                  searchInput: "",
+                  location: "",
+                  tourType: "",
+                  budget: 7999,
+                  services: "",
+                });
               }}
             >
               Reset
