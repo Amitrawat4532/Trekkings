@@ -14,9 +14,12 @@ const Question = ({data}) => {
   return (
     <>
       <Flex
-        minH="80vh"
-        maxW="100vw"
-        padding={["28px 30px","28px 30px","113px 130px","113px 130px"]}
+        minH="auto"
+        my={['30','30','40','40']}
+        mx='auto'
+        borderRadius={'30'}
+        maxW={["90vw","90vw","80vw","80vw"]}
+        padding={["28px 20px","28px 20px","50px 100px","50px 100px"]}
         justifyContent="flex-start"
         alignItems="start"
         bgColor={"#241314"}
@@ -32,7 +35,7 @@ const Question = ({data}) => {
         </Text>
 
 
-        <Accordion color={'white'} w='100%' my='16' defaultIndex={[0]} allowMultiple>
+        <Accordion color={'white'} w='100%' my='10' defaultIndex={[0]} allowMultiple>
           {
             data?.map((el,id)=>{
               return  <AccordionItem py='4' key={id}>

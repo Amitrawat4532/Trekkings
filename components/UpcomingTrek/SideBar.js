@@ -139,7 +139,7 @@ const SideBar = ({ data, setFilterData, filterData }) => {
             <SliderTrack bg="red.100">
               <SliderFilledTrack bg="tomato" />
             </SliderTrack>
-            <SliderMark value={7999} mt="3" ml="-2.5" fontSize="sm">
+            <SliderMark value={7999} mt="3" ml="-4" fontSize="sm">
               7999
             </SliderMark>
             <Tooltip
@@ -250,7 +250,7 @@ const SideBar = ({ data, setFilterData, filterData }) => {
               <SliderTrack bg="red.100">
                 <SliderFilledTrack bg="tomato" />
               </SliderTrack>
-              <SliderMark value={7999} mt="3" ml="-4" fontSize="sm">
+              <SliderMark value={7999} mt="3" ml="-6" fontSize="sm">
                 7999
               </SliderMark>
               <Tooltip
