@@ -376,7 +376,7 @@ const BigCard = (props) => {
                 color="white"
                 textAlign="center"
                 fontFamily="Raleway"
-                fontSize={["16px", "16px", "22px", "22px"]}
+                fontSize={["18px", "18px", "22px", "22px"]}
                 fontStyle="normal"
                 fontWeight="600"
                 lineHeight="normal"
@@ -390,7 +390,7 @@ const BigCard = (props) => {
                 color="gray.500"
                 textAlign="center"
                 fontFamily="Raleway"
-                fontSize={["14px", "14px", "18px", "18px"]}
+                fontSize={["16px", "16px", "18px", "18px"]}
                 fontStyle="normal"
                 fontWeight="600"
                 lineHeight="normal"
