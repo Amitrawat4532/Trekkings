@@ -77,8 +77,8 @@ const Navbar = ({ settings, logo }) => {
             <Image
               src="/images/navlogotwo.png"
               alt="IGATPURIHILLSTREKTOURISM LOGO"
-              width={60}
-              height={60}
+              width={80}
+              height={80}
               className="footerImg"
               filter="contrast(135%)"
               // bg='gray.300'
@@ -95,7 +95,7 @@ const Navbar = ({ settings, logo }) => {
             pr="6"
             display={["none", "none", "flex", "flex"]}
             position="relative"
-            bg="whiteAlpha.600"
+            bg="transparent"
           >
             <Button
               variant="navButton"

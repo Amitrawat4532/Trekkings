@@ -1,26 +1,24 @@
 import { Search2Icon } from "@chakra-ui/icons";
 import {
   Box,
+  Button,
   Flex,
+  Heading,
   Input,
   InputGroup,
   InputLeftElement,
   InputRightElement,
   Select,
-  Heading,
-  Button,
   Text,
 } from "@chakra-ui/react";
 import { createClient } from "next-sanity";
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 import BigCard from "../components/UpcomingTrek/BigCard";
 import SideBar from "../components/UpcomingTrek/SideBar";
 import Footer from "../components/footer";
 
-import SmallCard from "../components/UpcomingTrek/SmallCard";
-import Question from "../components/UpcomingTrek/Question";
 import Link from "next/link";
+import Question from "../components/UpcomingTrek/Question";
 
 export async function getServerSideProps(context) {
   const client = createClient({
