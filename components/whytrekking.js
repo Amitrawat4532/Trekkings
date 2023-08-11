@@ -189,7 +189,7 @@ const Whytrekking = ({}) => {
             mt="30px"
             position="relative"
           >
-            <Image src="/images/Logo.png" alt="whytrekking" layout="fill"  />
+            <Image src="/images/finallogo.png" alt="whytrekking" layout="fill"  />
           </Box>
         </Flex>
 
@@ -348,7 +348,7 @@ const Whytrekking = ({}) => {
             position="relative"
             // background={'red'}
           >
-            <Image src="/images/Logo.png"  alt="why trekking us" layout="fill" objectFit="contain"/>
+            <Image src="/images/finallogo.png"  alt="why trekking us" layout="fill" objectFit="contain"/>
           </Box>
 
         </Flex>

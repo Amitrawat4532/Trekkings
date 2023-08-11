@@ -69,18 +69,18 @@ const Navbar = ({ settings, logo }) => {
           // border="2px solid red"
           
           bg="whiteAlpha.300"
-          backdropFilter='auto'
-          backdropInvert='10%'
-          backdropBlur='2px'
+          // backdropFilter='auto'
+          // backdropInvert='10%'
+          // backdropBlur='2px'
         >
           <Box ml="10px" >
             <Image
-              src="/images/navlogotwo.png"
+              src="/images/finallogo.png"
               alt="IGATPURIHILLSTREKTOURISM LOGO"
-              width={80}
-              height={80}
+              width={180}
+              height={180}
               className="footerImg"
-              filter="contrast(135%)"
+              // filter="contrast(135%)"
               // bg='gray.300'
               borderRadius={100}
             />
