@@ -18,10 +18,10 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import { CopyIcon, PhoneIcon } from "@chakra-ui/icons";
+import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
-import { CopyIcon, PhoneIcon } from "@chakra-ui/icons";
 
 // import required modules
 
@@ -82,12 +82,13 @@ const BigCard = (props) => {
     cardText4: {
       color: "#607D8A",
       fontFamily: "Raleway",
-      fontSize: "16px",
+      fontSize: ["12px", "12px", "16px", "16px"],
       fontStyle: "normal",
-      fontWeight: "600",
+      fontWeight: ["400", "400", "600", "600"],
       lineHeight: "normal",
       textAlign: "center",
       paddingTop: "8px",
+      textTransform: "capitalize",
     },
   };
 
@@ -184,7 +185,14 @@ const BigCard = (props) => {
           >
             {/* Card Text */}
             <Flex direction={"column"}>
-              <Text style={styles.cardText1}>{name} {type === 'corporate' &&  <Text as='span' color={'gray.400'} fontSize='18px' >( {type} )</Text>}</Text>
+              <Text style={styles.cardText1}>
+                {name}{" "}
+                {type === "corporate" && (
+                  <Text as="span" color={"gray.400"} fontSize="18px">
+                    ( {type} )
+                  </Text>
+                )}
+              </Text>
               <Text
                 style={styles.cardText2}
                 h={"auto"}
@@ -205,7 +213,7 @@ const BigCard = (props) => {
             <Flex
               flexWrap={"wrap"}
               justifyContent={"space-around"}
-              alignItems={"center"}
+              alignItems={"flex-start"}
               gap={["5", "5", "3", "3"]}
             >
               {/* Location */}
@@ -217,8 +225,8 @@ const BigCard = (props) => {
                 minW="20px"
               >
                 <svg
-                  width="23"
-                  height="30"
+                  width="20"
+                  height="20"
                   viewBox="0 0 23 30"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -248,8 +256,8 @@ const BigCard = (props) => {
                 minW="20px"
               >
                 <svg
-                  width="28"
-                  height="28"
+                  width="20"
+                  height="20"
                   viewBox="0 0 28 28"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -280,8 +288,8 @@ const BigCard = (props) => {
                   minW="20px"
                 >
                   <svg
-                    width="40"
-                    height="28"
+                    width="25"
+                    height="25"
                     viewBox="0 0 40 28"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -315,8 +323,8 @@ const BigCard = (props) => {
                   minW="20px"
                 >
                   <svg
-                    width="26"
-                    height="30"
+                    width="20"
+                    height="20"
                     viewBox="0 0 26 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -356,10 +364,10 @@ const BigCard = (props) => {
               )}
             </Flex>
 
-            <Divider color="red" h="1px" w="100%" mt="12px" mb="20px" />
+            <Divider color="red" h="1px" w="100%" mt="12px" mb="16px" />
 
             {/* Card Pricing*/}
-            <Flex alignItems={"end"} my="6px">
+            <Flex alignItems={"end"} mt="3px">
               <Text
                 borderRadius="17px"
                 background="#27AE60"
@@ -368,7 +376,7 @@ const BigCard = (props) => {
                 color="white"
                 textAlign="center"
                 fontFamily="Raleway"
-                fontSize="26px"
+                fontSize={["16px", "16px", "22px", "22px"]}
                 fontStyle="normal"
                 fontWeight="600"
                 lineHeight="normal"
@@ -379,20 +387,21 @@ const BigCard = (props) => {
                 borderRadius="17px"
                 px="10px"
                 py="4px"
-                color="gray.600"
+                color="gray.500"
                 textAlign="center"
                 fontFamily="Raleway"
-                fontSize="20px"
+                fontSize={["14px", "14px", "18px", "18px"]}
                 fontStyle="normal"
                 fontWeight="600"
                 lineHeight="normal"
                 textDecoration={"line-through"}
               >
-                Rs {props.data?.discountedPrice}
+                {props.data?.discountedPrice
+                  ? `Rs ${props.data?.discountedPrice}`
+                  : ""}
               </Text>
               <Text
                 borderRadius="17px"
-                px="10px"
                 py="4px"
                 color="gray.600"
                 textAlign="center"
@@ -407,7 +416,12 @@ const BigCard = (props) => {
             </Flex>
 
             {/* Button Group */}
-            <Flex gap="3" mt="30" mb="2" flexWrap={['wrap','wrap','nowrap','nowrap']}>
+            <Flex
+              gap="3"
+              mt="20px"
+              mb="2"
+              flexWrap={["wrap", "wrap", "nowrap", "nowrap"]}
+            >
               {/* <Button
                 colorScheme="blue"
                 w="100%"
@@ -417,57 +431,56 @@ const BigCard = (props) => {
               >
                 Contact Us
               </Button> */}
-              <Flex justifyContent={'space-between'} w='100%' gap='3'>
-
-              <Button
-                rightIcon={<PhoneIcon />}
-                colorScheme="blue"
-                variant="outline"
-                w="100%"
-                as="a"
-                target="_blank"
-                href={`tel:${props.settings?.contact}`}
-                rel="noreferrer"
-                aria-label="Chat on WhatsApp"
-              >
-                Call Now{" "}
-              </Button>
-              <Button
-                w="100%"
-                as="a"
-                target="_blank"
-                href={`https://wa.me/91${
-                  props.settings?.whatsapp
-                }?text=Event Name = ${name}
+              <Flex justifyContent={"space-between"} w="100%" gap="3">
+                <Button
+                  rightIcon={<PhoneIcon />}
+                  colorScheme="blue"
+                  variant="outline"
+                  w="100%"
+                  as="a"
+                  target="_blank"
+                  href={`tel:${props.settings?.contact}`}
+                  rel="noreferrer"
+                  aria-label="Chat on WhatsApp"
+                >
+                  Call Now{" "}
+                </Button>
+                <Button
+                  w="100%"
+                  as="a"
+                  target="_blank"
+                  href={`https://wa.me/91${
+                    props.settings?.whatsapp
+                  }?text=Event Name = ${name}
                 Event Date = ${moment(startDate, "YYYY-MM-DD HH:mm").format(
                   "DD MMM YYYY"
                 )}
                
                 `}
-                rel="noreferrer"
-                aria-label="Chat on WhatsApp"
-                rightIcon={
-                  <>
-                    <svg
-                      width="27"
-                      height="27"
-                      viewBox="0 0 57 57"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                  rel="noreferrer"
+                  aria-label="Chat on WhatsApp"
+                  rightIcon={
+                    <>
+                      <svg
+                        width="27"
+                        height="27"
+                        viewBox="0 0 57 57"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                      <path
-                        d="M56.9531 26.7124C55.9842 10.2486 40.9667 -2.43991 23.6695 0.398679C11.758 2.3573 2.21175 11.9801 0.359495 23.8454C-0.723364 30.7148 0.70145 37.2151 3.80755 42.58L1.27138 51.9757C0.70145 54.1047 2.66769 56.0349 4.77642 55.4388L14.0662 52.8841C18.2837 55.3537 23.2135 56.773 28.4853 56.773C44.5572 56.773 57.8935 42.6652 56.9531 26.7124ZM42.42 38.9466C41.7328 40.3509 40.5586 41.46 39.1144 42.0691C38.2596 42.4381 37.3192 42.6084 36.3218 42.6084C34.8685 42.6084 33.3012 42.2678 31.6769 41.5581C29.9458 40.801 28.3024 39.8587 26.7756 38.7479C25.1228 37.5557 23.584 36.2216 22.1022 34.7739C20.6204 33.2979 19.3095 31.7366 18.1127 30.1187C16.9443 28.5007 16.004 26.8827 15.32 25.2647C14.6361 23.6467 14.2942 22.0855 14.2942 20.6094C14.2942 19.6443 14.4652 18.7075 14.8071 17.856C15.1491 16.976 15.6905 16.1812 16.4599 15.4716C17.3718 14.5632 18.3692 14.1374 19.4235 14.1374C19.8225 14.1374 20.2214 14.2226 20.5919 14.3929C20.9623 14.5632 21.3043 14.8187 21.5607 15.1877L24.8663 19.843C25.1228 20.212 25.3222 20.5242 25.4362 20.8365C25.5787 21.1487 25.6357 21.4326 25.6357 21.7164C25.6357 22.0571 25.5217 22.3977 25.3222 22.7383C25.1228 23.079 24.8663 23.4196 24.5243 23.7602L23.4415 24.8957C23.2705 25.066 23.2135 25.2363 23.2135 25.4634C23.2135 25.5769 23.242 25.6905 23.2705 25.804C23.3275 25.9175 23.356 26.0027 23.3845 26.0879C23.641 26.5704 24.0969 27.1665 24.7238 27.9046C26.058 29.4663 27.516 30.9186 29.0838 32.2476C29.8247 32.8721 30.4516 33.2979 30.936 33.5533C31.0215 33.5817 31.107 33.6385 31.1925 33.6669C31.3065 33.7237 31.4204 33.7237 31.5629 33.7237C31.8194 33.7237 31.9904 33.6385 32.1614 33.4682L33.2442 32.3895C33.6147 32.0205 33.9566 31.765 34.2701 31.5947C34.612 31.396 34.9255 31.2825 35.2959 31.2825C35.5809 31.2825 35.8659 31.3392 36.1793 31.4812C36.4928 31.6231 36.8347 31.7934 37.1767 32.0489L41.9071 35.3984C42.2775 35.6539 42.534 35.9661 42.705 36.3068C42.8475 36.6758 42.9329 37.0164 42.9329 37.4138C42.762 37.8964 42.648 38.4357 42.42 38.9466Z"
-                        fill="#54E58E"
-                      />
-                    </svg>
-                  </>
-                }
-                colorScheme="green"
-                variant="outline"
+                        <path
+                          d="M56.9531 26.7124C55.9842 10.2486 40.9667 -2.43991 23.6695 0.398679C11.758 2.3573 2.21175 11.9801 0.359495 23.8454C-0.723364 30.7148 0.70145 37.2151 3.80755 42.58L1.27138 51.9757C0.70145 54.1047 2.66769 56.0349 4.77642 55.4388L14.0662 52.8841C18.2837 55.3537 23.2135 56.773 28.4853 56.773C44.5572 56.773 57.8935 42.6652 56.9531 26.7124ZM42.42 38.9466C41.7328 40.3509 40.5586 41.46 39.1144 42.0691C38.2596 42.4381 37.3192 42.6084 36.3218 42.6084C34.8685 42.6084 33.3012 42.2678 31.6769 41.5581C29.9458 40.801 28.3024 39.8587 26.7756 38.7479C25.1228 37.5557 23.584 36.2216 22.1022 34.7739C20.6204 33.2979 19.3095 31.7366 18.1127 30.1187C16.9443 28.5007 16.004 26.8827 15.32 25.2647C14.6361 23.6467 14.2942 22.0855 14.2942 20.6094C14.2942 19.6443 14.4652 18.7075 14.8071 17.856C15.1491 16.976 15.6905 16.1812 16.4599 15.4716C17.3718 14.5632 18.3692 14.1374 19.4235 14.1374C19.8225 14.1374 20.2214 14.2226 20.5919 14.3929C20.9623 14.5632 21.3043 14.8187 21.5607 15.1877L24.8663 19.843C25.1228 20.212 25.3222 20.5242 25.4362 20.8365C25.5787 21.1487 25.6357 21.4326 25.6357 21.7164C25.6357 22.0571 25.5217 22.3977 25.3222 22.7383C25.1228 23.079 24.8663 23.4196 24.5243 23.7602L23.4415 24.8957C23.2705 25.066 23.2135 25.2363 23.2135 25.4634C23.2135 25.5769 23.242 25.6905 23.2705 25.804C23.3275 25.9175 23.356 26.0027 23.3845 26.0879C23.641 26.5704 24.0969 27.1665 24.7238 27.9046C26.058 29.4663 27.516 30.9186 29.0838 32.2476C29.8247 32.8721 30.4516 33.2979 30.936 33.5533C31.0215 33.5817 31.107 33.6385 31.1925 33.6669C31.3065 33.7237 31.4204 33.7237 31.5629 33.7237C31.8194 33.7237 31.9904 33.6385 32.1614 33.4682L33.2442 32.3895C33.6147 32.0205 33.9566 31.765 34.2701 31.5947C34.612 31.396 34.9255 31.2825 35.2959 31.2825C35.5809 31.2825 35.8659 31.3392 36.1793 31.4812C36.4928 31.6231 36.8347 31.7934 37.1767 32.0489L41.9071 35.3984C42.2775 35.6539 42.534 35.9661 42.705 36.3068C42.8475 36.6758 42.9329 37.0164 42.9329 37.4138C42.762 37.8964 42.648 38.4357 42.42 38.9466Z"
+                          fill="#54E58E"
+                        />
+                      </svg>
+                    </>
+                  }
+                  colorScheme="green"
+                  variant="outline"
                 >
-                Chat Now
-              </Button>
-                </Flex>
+                  Chat Now
+                </Button>
+              </Flex>
               <Button
                 w="100%"
                 background="#E9E9E9"

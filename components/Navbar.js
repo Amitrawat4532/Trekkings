@@ -66,9 +66,9 @@ const Navbar = ({ settings, logo }) => {
           position="absolute"
           w="100%"
           zIndex="50"
-          border="2px solid red"
+          // border="2px solid red"
           
-          bg="rgba(2, 25, 25, 0.20)"
+          bg="whiteAlpha.300"
           backdropFilter='auto'
           backdropInvert='10%'
           backdropBlur='2px'

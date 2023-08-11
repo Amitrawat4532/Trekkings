@@ -20,6 +20,7 @@ import Footer from "../components/footer";
 
 import SmallCard from "../components/UpcomingTrek/SmallCard";
 import Question from "../components/UpcomingTrek/Question";
+import Link from "next/link";
 
 export async function getServerSideProps(context) {
   const client = createClient({
@@ -63,10 +64,28 @@ const Trek = ({ event, questions, settings }) => {
   return (
     <>
       {/* Navbar */}
-      <Navbar logo={"./images/mobilenavlogo.png"} />
+      {/* <Navbar logo={"./images/mobilenavlogo.png"} /> */}
+
+      <Link href="/">
+          <Button
+            position="absolute"
+            mt="4"
+            ml="4"
+            bg="transparent"
+            color="#241314"
+            fontWeight="normal"
+            fontSize="28px"
+            fontFamily="anton"
+          >
+            <Text as="span" pb="2" pr="1">
+              &larr;
+            </Text>
+            Back
+          </Button>
+        </Link>
 
       <Box
-        top={["150px", "150px", "200px", "200px"]}
+        top={["30px", "30px", "50px", "50px"]}
         position={"relative"}
         maxW="100vw"
         h={"100%"}
@@ -139,7 +158,7 @@ const Trek = ({ event, questions, settings }) => {
       <Flex
         // border="2px solid red"
         h={"auto"}
-        top={["150px", "150px", "200px", "200px"]}
+        top={["30px", "30px", "50px", "50px"]}
         position={"relative"}
         minH="100vh"
         justifyContent="start"
@@ -276,12 +295,12 @@ const Trek = ({ event, questions, settings }) => {
         </Flex>
       </Flex>
 
-      <Box top={["150px", "150px", "200px", "200px"]} position={"relative"}>
+      <Box top={["30px", "30px", "50px", "50px"]} position={"relative"}>
         <Question data={questions[0].questionsList} />
       </Box>
 
       {/* Footer */}
-      <Box top={["150px", "150px", "200px", "200px"]} position={"relative"}>
+      <Box top={["30px", "30px", "50px", "50px"]} position={"relative"}>
         <Footer settings={settings[0]} />
       </Box>
     </>
