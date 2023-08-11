@@ -70,36 +70,37 @@ const SideBar = ({ data, setFilterData, filterData }) => {
         direction={"column"}
         display={["none", "none", "flex", "flex"]}
       >
-        <Flex justifyContent={'space-between'}>
-        <Text style={styles.sidebarLabel}>Filter</Text>
-        <RepeatIcon 
-        h='5'
-        w='5'
-        color='white'
-        onClick={() => {
-          setFilterData({
-            searchInput: "",
-            location: "",
-            tourType: "",
-            budget: 7999,
-            services: "",
-          });
-        }}
-        />
-        
+        <Flex justifyContent={"space-between"}>
+          <Text style={styles.sidebarLabel}>Filter</Text>
+          <RepeatIcon
+            h="5"
+            w="5"
+            color="white"
+            onClick={() => {
+              setFilterData({
+                searchInput: "",
+                location: "",
+                tourType: "",
+                budget: 7999,
+                services: "",
+              });
+            }}
+          />
         </Flex>
 
         <Stack spacing={3} direction="column" color="white" my="30px">
           <Text style={styles.label}>Services</Text>
-          <CheckboxGroup colorScheme='green' value={filterData.services}
-           onChange={(e) => {
-            setFilterData({ ...filterData, services: e });
-          }}
+          <CheckboxGroup
+            colorScheme="green"
+            value={filterData.services}
+            onChange={(e) => {
+              setFilterData({ ...filterData, services: e });
+            }}
           >
-          <Stack spacing={2} direction={'column'}>
-          <Checkbox value={'food'}>Food</Checkbox>
-          <Checkbox value={'transport'}>Transport</Checkbox>
-          </Stack>
+            <Stack spacing={2} direction={"column"}>
+              <Checkbox value={"food"}>Food</Checkbox>
+              <Checkbox value={"transport"}>Transport</Checkbox>
+            </Stack>
           </CheckboxGroup>
         </Stack>
         <Divider />
@@ -196,22 +197,37 @@ const SideBar = ({ data, setFilterData, filterData }) => {
             <FormLabel htmlFor="tourType" mt="5">
               Services
             </FormLabel>
-            <Stack spacing={3} direction="column" color="black">
-              <Checkbox>Food</Checkbox>
-              <Checkbox>Transport</Checkbox>
-            </Stack>
+            <CheckboxGroup
+              colorScheme="green"
+              value={filterData.services}
+              onChange={(e) => {
+                setFilterData({ ...filterData, services: e });
+              }}
+            >
+              <Stack spacing={3} direction="column" color="black">
+                <Checkbox value="food">Food</Checkbox>
+                <Checkbox value="transport">Transport</Checkbox>
+              </Stack>
+            </CheckboxGroup>
 
             <Divider color="black" my="4" w="100%" h="10px" />
 
             <FormLabel htmlFor="tourType" mt="5">
               Tour Type
             </FormLabel>
+            <RadioGroup
+            value={filterData.tourType}
+            onChange={(e) => {
+              setFilterData({ ...filterData, tourType: e });
+            }}
+          >
             <Stack spacing={3} direction={"column"}>
-            <Radio value="">All</Radio>
+              <Radio value="">All</Radio>
               <Radio value="public">Public</Radio>
               <Radio value="private">Private</Radio>
               <Radio value="corporate">Corporate</Radio>
             </Stack>
+          </RadioGroup>
 
             <Divider color="black" my="4" w="100%" h="10px" />
 

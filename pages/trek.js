@@ -301,7 +301,7 @@ const Trek = ({ event, questions, settings }) => {
                       searchInput: "",
                       location: "",
                       tourType: "",
-                      budget: "",
+                      budget: 7999,
                       services: "",
                     })
                   }}
