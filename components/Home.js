@@ -52,8 +52,8 @@ const Home = ({whatsApp}) => {
           rel="noreferrer"
         >
           <Flex
-            w="90px"
-            h="90px"
+            w="80px"
+            h="80px"
             justifyContent="center"
             alignItems={'center'}
             position="fixed"
