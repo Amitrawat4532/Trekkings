@@ -6,7 +6,6 @@ import "swiper/css/autoplay";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import React from 'react';
-import Popup from "./Popup";
 import Image from "next/image";
 
 
@@ -60,7 +59,6 @@ const Home = () => {
           >
             <Text variant="homeHeader2" textShadow="0px 0px 40px 0px rgba(0, 0, 0, 0.65)">IMPOSSIBLE</Text>
           </AnimationOnScroll>
-      <Popup />
 
         </Box>
           

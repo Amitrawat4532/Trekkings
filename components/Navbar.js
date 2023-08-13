@@ -115,7 +115,7 @@ const Navbar = ({ settings }) => {
           <Flex  alignItems="center" 
              display={["none","none","flex","flex"]}
            > 
-          <Link href="/contact">
+          <Link href="/Contact">
               <Button variant="blogButton">Lets Connect</Button>
             </Link>
           </Flex>
