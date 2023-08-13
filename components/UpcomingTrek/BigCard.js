@@ -489,7 +489,7 @@ const BigCard = (props) => {
                 as="a"
                 href={props.data?.itinerary}
                 target="_blank"
-                download
+                // download
                 // onClick={ShowImages}
               >
                 View Itinerary
