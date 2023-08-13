@@ -174,3 +174,9 @@ border: 1px solid red !important;
 textarea:focus, input:focus{
   outline: none;
 }
+
+
+.inputbox{
+  max-width: 350px;
+
+}

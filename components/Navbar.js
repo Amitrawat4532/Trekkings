@@ -2,6 +2,7 @@ import { isValidMotionProp, motion } from "framer-motion";
 import jump from "jump.js";
 import React, { useRef } from "react";
 import Image from "next/image";
+import Modalbox from "../components/Modalbox"
 
 import {
   Box,
@@ -115,9 +116,10 @@ const Navbar = ({ settings }) => {
           <Flex  alignItems="center" 
              display={["none","none","flex","flex"]}
            > 
-          <Link href="/Contact">
-              <Button variant="blogButton">Lets Connect</Button>
-            </Link>
+          {/* <Link href="/Contact"> */}
+              {/* <Button variant="blogButton">Lets Connect</Button> */}
+            {/* </Link> */}
+            <Modalbox />
           </Flex>
           
           
@@ -213,9 +215,11 @@ const Navbar = ({ settings }) => {
                 >
                   Latest Blog
                 </Button>
-                <Link href="/contact">
-                  <Button variant="responsiveNavButton">Contact US</Button>
-                </Link>
+                {/* <Link href="/Contact"> */}
+                  {/* <Button variant="responsiveNavButton">Contact US</Button> */}
+            <Modalbox />
+
+                {/* </Link> */}
                 <DrawerFooter borderTopWidth="1px" width="80%" mt="50px" borderTopColor="black">
                 <Flex
             gap="15px"

@@ -101,7 +101,6 @@ const Home = () => {
 
          <Text color="white" fontSize={["16px","16px","22px","22px"]} fontFamily="Poppins" fontWeight="600" letterSpacing="0.66px" pl={["0px","0px","20px","30px"]}>REGISTERED</Text>
 
-
           </Flex>
           </Flex>
 
