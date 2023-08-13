@@ -267,7 +267,7 @@ const Footer = ({ settings }) => {
             color="white"
             fontSize={["16px", "16px", "15px", "15px"]}
             fontFamily="Roboto"
-            lineHeight="17px"
+            lineHeight="22px"
             px='6'
             textAlign={'center'}
           >

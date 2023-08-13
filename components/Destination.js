@@ -278,13 +278,13 @@ function Destination({destination}) {
           </Flex>
 
           <Flex
-            w={["60%", "60%", "441px", "441px"]}
+            w={["auto", "auto", "441px", "441px"]}
             gap={["10px", "10px", "24px", "24px"]}
             alignItems="center"
           >
             <Text
               color="mainSecondaryColor"
-              fontSize={["15px", "15px", "30px", "30px"]}
+              fontSize={["18px", "18px", "30px", "30px"]}
               alignSelf="center"
               fontWeight="600"
               fontFamily="Roboto"
@@ -295,7 +295,7 @@ function Destination({destination}) {
               <Progress
                 colorScheme="red"
                 height={["4px", "4px", "6px", "6px"]}
-                w={["150px", "190px", "381px", "381px"]}
+                w={["170px", "190px", "381px", "381px"]}
                 value={swiperData.progress}
                 borderRadius="30px"
                 bgColor="#8C8C8C"

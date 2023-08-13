@@ -80,8 +80,8 @@ const Home = ({whatsApp}) => {
              w="60px"
              h="60px"
             //  mt='3
-            pt='2.5'
-            pl='2.5'
+            pt='1'
+            pl='1'
              // justifyContent="start"
              zIndex="100"
              bg='rgba(89, 20, 51, 0.50)'
@@ -96,8 +96,8 @@ const Home = ({whatsApp}) => {
 
             <Image
               src="/images/asset/whatsapp_logo.png"
-              height={40}
-              width={40}
+              height={50}
+              width={50}
               alt="whatsapp icon"
               objectFit="contain"
               />
