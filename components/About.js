@@ -51,7 +51,7 @@ function About() {
         width="100%"
         height="100%"
         justifyContent="center"
-        py={["45px","45px","40px","40px"]}
+        pt={["45px","45px","80px","80px"]}
         px={["56px","56px","80px","80px"]}
         flexWrap="wrap"
         gap="80px"

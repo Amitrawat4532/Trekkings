@@ -2,8 +2,8 @@
 
 import { isValidMotionProp, motion } from "framer-motion";
 import jump from "jump.js";
-import React, { useRef } from "react";
 import Image from "next/image";
+import React, { useRef } from "react";
 
 import {
   Box,
@@ -14,14 +14,13 @@ import {
   DrawerFooter,
   DrawerOverlay,
   Flex,
-  useDisclosure,
-  chakra,
   IconButton,
+  chakra,
   shouldForwardProp,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { redirect } from "next/dist/server/api-utils";
 
 const Navbar = ({ settings, logo }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -32,13 +31,6 @@ const Navbar = ({ settings, logo }) => {
   });
   const router = useRouter();
 
-  function routeTO(link, jumpLink) {
-    console.log(router);
-    if (router.route === link) {
-      // jump(".home_container", { duration: 1000 })
-    }
-  }
-
   return (
     <>
       {/* main container */}
@@ -47,7 +39,6 @@ const Navbar = ({ settings, logo }) => {
         left="0"
         top="0"
         w="100%"
-        // h="100%"
         animate={{
           opacity: [0, 1],
         }}
@@ -66,23 +57,16 @@ const Navbar = ({ settings, logo }) => {
           position="absolute"
           w="100%"
           zIndex="50"
-          // border="2px solid red"
-          
-          bg="whiteAlpha.300"
-          // backdropFilter='auto'
-          // backdropInvert='10%'
-          // backdropBlur='2px'
         >
-          <Box ml="10px" >
+          {/* Logo */}
+          <Box ml="10px"
+          mt={['6','6','0','0']}
+          width={[140,140,180,180]} height={[130,130,180,180]} position={"relative"}>
             <Image
               src="/images/finallogo.png"
               alt="IGATPURIHILLSTREKTOURISM LOGO"
-              width={180}
-              height={180}
-              className="footerImg"
-              // filter="contrast(135%)"
-              // bg='gray.300'
-              borderRadius={100}
+              layout="fill"
+              objectFit="contain"
             />
           </Box>
 
@@ -90,12 +74,11 @@ const Navbar = ({ settings, logo }) => {
           <Flex
             width="auto"
             flexDirection=""
-            justifyContent="center"
-            gap="2"
+            justifyContent="enter"
+            gap="4"
             pr="6"
             display={["none", "none", "flex", "flex"]}
             position="relative"
-            bg="transparent"
           >
             <Button
               variant="navButton"
@@ -107,50 +90,42 @@ const Navbar = ({ settings, logo }) => {
                   router.push("/");
                 }
               }}
+              _hover={{
+                transform: "scale(1.2)",
+              }}
             >
               Home
             </Button>
             <Button
               variant="navButton"
-              onClick={() => {
-                if (router.route === "/") {
-                  jump(".about_container", { duration: 2000 });
-                } else {
-                  router.push("/");
-                }
+              onClick={() => jump(".about_container", { duration: 2000 })}
+              _hover={{
+                transform: "scale(1.2)",
               }}
             >
               About Us
             </Button>
             <Button
               variant="navButton"
-              onClick={() => {
-                if (router.route === "/") {
-                  jump(".service_container", { duration: 3000 });
-                } else {
-                  router.push("/");
-                }
+              onClick={() => jump(".service_container", { duration: 3000 })}
+              _hover={{
+                transform: "scale(1.2)",
               }}
             >
               Service
             </Button>
             <Button
               variant="navButton"
-              onClick={() => {
-                if (router.route === "/") {
-                  jump(".gallery_container", { duration: 4000 });
-                } else {
-                  router.push("/");
-                }
+              onClick={() => jump(".gallery_container", { duration: 4000 })}
+              _hover={{
+                transform: "scale(1.2)",
               }}
             >
               Gallery
             </Button>
           </Flex>
-          <Flex  alignItems="center" 
-             display={["none","none","flex","flex"]}
-           > 
-          <Link href="/contact">
+          <Flex alignItems="center" display={["none", "none", "flex", "flex"]}>
+            <Link href="/contact">
               <Button variant="blogButton">Lets Connect</Button>
             </Link>
           </Flex>
@@ -196,14 +171,22 @@ const Navbar = ({ settings, logo }) => {
             >
               <DrawerCloseButton fontSize="30px" color="#571432" m="4" />
 
-
               {/* Navbar container mobile */}
-<Flex width="100%"  justifyContent="center" alignItems="end">
-  <Box mt="100px" mb="20px" position="relative" height="105px" width="102px">
-  <Image  src="/images/mobilenavlogo.png" alt="trekkings logo"  layout="fill"/>
-
-  </Box>
-</Flex>
+              <Flex width="100%" justifyContent="center" alignItems="end">
+                <Box
+                  mt="100px"
+                  mb="20px"
+                  position="relative"
+                  height="105px"
+                  width="102px"
+                >
+                  <Image
+                    src="/images/mobilenavlogo.png"
+                    alt="trekkings logo"
+                    layout="fill"
+                  />
+                </Box>
+              </Flex>
               <Flex
                 flexDirection="column"
                 justifyContent="start"

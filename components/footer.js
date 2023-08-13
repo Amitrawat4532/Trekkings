@@ -229,7 +229,7 @@ const Footer = ({ settings }) => {
                 borderRadius="50px"
                 overflow="hidden"
               >
-                <Box
+                {/* <Box
                   as="input"
                   type="text"
                   placeholder="Connect with us"
@@ -248,7 +248,7 @@ const Footer = ({ settings }) => {
                   fontWeight="600"
                 >
                   SEND
-                </Button>
+                </Button> */}
               </Flex>
             </Flex>
           </Flex>

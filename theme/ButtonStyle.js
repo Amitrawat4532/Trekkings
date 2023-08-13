@@ -3,7 +3,7 @@ export const ButtonStyle = {
     navButton: {
       h: "38px",
       fontSize: "20px",
-      color: "#111111;",
+      color: "#FFF",
       bg: "transparent",
       border: "0",
       borderRadius: "0",
@@ -13,9 +13,6 @@ export const ButtonStyle = {
       fontFamily: "Roboto",
       fontWeight: "700",
       fontStyle: "normal",
-      _hover: {
-        color: "gray",
-      },
     },
     blogButton: {
       h: "43px",
