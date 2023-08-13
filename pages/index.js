@@ -88,7 +88,7 @@ const index = ({
     <>
       <Box p="0" m="0" overflow="hidden" position="relative">
         <Navbar settings={settings[0]} logo={'./images/logowhite.png'}/>
-         <Home />
+         <Home whatsApp={settings[0]?.whatsapp} />
         <About />
         <Destination destination={destination} />
         <Services />

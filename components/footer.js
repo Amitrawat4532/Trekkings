@@ -146,7 +146,7 @@ const Footer = ({ settings }) => {
             justifyContent={"center"}
             // ml={["0px","0px","200px","200px"]}
           >
-            <Image layout="fill" objectFit={"contain"} src="/images/finallogo.png"></Image>
+            <Image layout="fill" objectFit={"contain"} src={"/images/finallogo.png"}></Image>
           </Flex>
 
           {/* right section */}

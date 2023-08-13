@@ -5,31 +5,10 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import Popup from "./Popup";
+import Image from "next/image";
 
-const Home = () => {
-  const ContactData = [
-    {
-      img: "/images/newfinalbg.png",
-    },
-    {
-      img: "/images/swiperbg.png",
-    },
-    {
-      img: "/images/swiperbg2.png",
-    },
-    {
-      img: "/images/swiperbg3.png",
-    },
-    {
-      img: "/images/swiperbg4.png",
-    },
-    {
-      img: "/images/swiperbg5.png",
-    },
-    {
-      img: "/images/swiperbg6.png",
-    },
-  ];
+const Home = ({whatsApp}) => {
+  console.log(whatsApp,'d');
   return (
     <>
       {/* main container */}
@@ -68,6 +47,42 @@ const Home = () => {
           </AnimationOnScroll>
         </Box>
       </Flex>
+      <a
+          href={`https://wa.me/91${whatsApp}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Flex
+            w="60px"
+            h="60px"
+            pl="3"
+            py="2.5"
+            justifyContent="start"
+            position="fixed"
+            bottom="10%"
+            left="0"
+            zIndex="100"
+            transition=".3s ease"
+            boxShadow="rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"
+            borderTopRightRadius="20px"
+            borderBottomRightRadius="20px"
+            bg="white"
+            cursor="pointer"
+            _hover={{
+              transform: "scale(1.16)",
+              transition: ".3s ease",
+            }}
+            className="whatsappAnim"
+          >
+            <Image
+              src="/images/asset/whatsapp_logo.png"
+              height={40}
+              width={40}
+              alt="whatsapp icon"
+              contain
+            />
+          </Flex>
+        </a>
     </>
   );
 };

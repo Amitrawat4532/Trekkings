@@ -63,7 +63,7 @@ const Navbar = ({ settings, logo }) => {
           mt={['6','6','0','0']}
           width={[140,140,180,180]} height={[130,130,180,180]} position={"relative"}>
             <Image
-              src="/images/finallogo.png"
+              src={settings.logo}
               alt="IGATPURIHILLSTREKTOURISM LOGO"
               layout="fill"
               objectFit="contain"
