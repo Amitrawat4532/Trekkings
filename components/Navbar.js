@@ -125,12 +125,13 @@ const Navbar = ({ settings, logo }) => {
               Gallery
             </Button>
           </Flex>
-          {/* <Flex alignItems="center" display={["none", "none", "flex", "flex"]}>
-            <Link href="/contact">
+
+           <Flex alignItems="center" display={["none", "none", "flex", "flex"]}>
+            <Modalbox />
+            {/* <Link href="/contact">
               <Button variant="blogButton">Lets Connect</Button>
-            </Link>
-          </Flex> */}
-          <Modalbox />
+            </Link> */}
+          </Flex> 
           <IconButton
             ref={btnRef}
             colorScheme="teal"

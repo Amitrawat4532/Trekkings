@@ -52,34 +52,52 @@ const Home = ({whatsApp}) => {
           rel="noreferrer"
         >
           <Flex
-            w="60px"
-            h="60px"
-            pl="3"
-            py="2.5"
-            justifyContent="start"
+            w="90px"
+            h="90px"
+            justifyContent="center"
+            alignItems={'center'}
             position="fixed"
-            bottom="10%"
-            left="0"
+            bottom="2%"
+            left="1%"
             zIndex="100"
-            transition=".3s ease"
-            boxShadow="rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"
-            borderTopRightRadius="20px"
-            borderBottomRightRadius="20px"
-            bg="white"
-            cursor="pointer"
-            _hover={{
-              transform: "scale(1.16)",
-              transition: ".3s ease",
-            }}
-            className="whatsappAnim"
+            bg='rgba(89, 20, 51, 0.8)'
+            borderRadius={'50%'}
+            border="1.5px solid rgba(89, 20, 51, 0.30)"
+
+            // transition=".3s ease"
+            // boxShadow="rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"
+            // borderTopRightRadius="20px"
+            // borderBottomRightRadius="20px"
+            // bg="white"
+            // cursor="pointer"
+            // _hover={{
+            //   transform: "scale(1.16)",
+            //   transition: ".3s ease",
+            // }}
+            // className="whatsappAnim"
           >
+            <Box position={'relative'}
+             w="60px"
+             h="60px"
+            //  mt='3
+            pt='2.5'
+            pl='2.5'
+             // justifyContent="start"
+             zIndex="100"
+             bg='rgba(89, 20, 51, 0.50)'
+             borderRadius={'50%'}
+             border="1.5px solid rgba(89, 20, 51, 0.60)"
+
+            >
+
             <Image
               src="/images/asset/whatsapp_logo.png"
               height={40}
               width={40}
               alt="whatsapp icon"
-              contain
-            />
+              objectFit="contain"
+              />
+              </Box>
           </Flex>
         </a>
     </>
