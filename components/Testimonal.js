@@ -20,11 +20,8 @@ const Testimonal = ({ testimonial }) => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 4500,
           disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
         }}
         style={{
           width: "80%",
@@ -33,7 +30,7 @@ const Testimonal = ({ testimonial }) => {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-        <Flex className="swiper-button-prev" color="#591433" />
+        <Flex className="swiper-button-prev" color="mainSecondaryColor" />
         {testimonial?.map((el, id) => {
           return (
             <SwiperSlide key={id}>
@@ -110,7 +107,7 @@ const Testimonal = ({ testimonial }) => {
             </SwiperSlide>
           );
         })}
-        <Flex className="swiper-button-next" color="#591433" />
+        <Flex className="swiper-button-next" color="mainSecondaryColor" />
       </Swiper>
     </Flex>
   );

@@ -71,17 +71,18 @@ const Trek = ({ event, questions, settings }) => {
         <Button
           position="absolute"
           mt="4"
-          ml="4"
-          bg="transparent"
-          color="#241314"
-          fontWeight="normal"
-          fontSize={["20px", "20px", "28px", "28px"]}
+          mb='10'
+          bg="#241314"
+          color="white"
+          fontWeight="light"
+          fontSize={["20px", "20px", "22px", "22px"]}
           fontFamily="anton"
+          ml={['5vw','5vw','9vw','9vw']}
         >
           <Text as="span" pb="2" pr="1">
             &larr;
           </Text>
-          Back
+          Home
         </Button>
       </Link>
 
