@@ -142,8 +142,8 @@ const Navbar = ({ settings, logo }) => {
             fontSize="40px"
           >
             <svg
-              width="32"
-              height="27"
+              width="35"
+              height="30"
               viewBox="0 0 32 27"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

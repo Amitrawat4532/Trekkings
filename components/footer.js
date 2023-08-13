@@ -265,10 +265,10 @@ const Footer = ({ settings }) => {
         >
           <Text
             color="white"
-            fontSize={["14px", "14px", "15px", "15px"]}
+            fontSize={["16px", "16px", "15px", "15px"]}
             fontFamily="Roboto"
             lineHeight="17px"
-            px='4'
+            px='6'
             textAlign={'center'}
           >
             Copyrights below to {settings?.name} of year 2023-2024

@@ -130,7 +130,16 @@ function Destination({destination}) {
                       >
                         {item?.name}
                       </Text>
-                      <Flex flexDirection="row" pb="10px" gap="6px">
+                      <Text
+                        as="h1"
+                        color="gray"
+                        fontSize="16px"
+                        fontFamily="raleway"
+                        fontWeight="600"
+                      >
+                        {item?.location}
+                      </Text>
+                      {/* <Flex flexDirection="row" pb="10px" gap="6px">
                         <svg
                           width="18"
                           height="17"
@@ -191,7 +200,7 @@ function Destination({destination}) {
                             fill="white"
                           />
                         </svg>
-                      </Flex>
+                      </Flex> */}
                       <motion.div
                         style={{
                           position: "relative",
@@ -280,7 +289,7 @@ function Destination({destination}) {
               fontWeight="600"
               fontFamily="Roboto"
             >
-              {swiperData.activeIndex}
+              {/* {swiperData.activeIndex} */}
             </Text>
             <Box>
               <Progress

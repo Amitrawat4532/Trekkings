@@ -36,8 +36,8 @@ const Home = () => {
       <Flex
         className="home_container"
         w="100%"
-        h={["90vh","90vh","110vh","110vh"]}
-        maxH={["90vh","90vh","110vh","110vh"]}
+        h={["97vh","97vh","110vh","110vh"]}
+        maxH={["97vh","97vh","110vh","110vh"]}
         justifyContent="center"
         alignItems="center"
         position="relative"
