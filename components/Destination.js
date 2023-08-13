@@ -206,7 +206,7 @@ function Destination({destination}) {
                           position: "relative",
                         }}
                       >
-                        <Image src={item?.thumbnail} height="450px" width="328px" alt="destination img"/>
+                        <Image src={item?.thumbnail} height="450px" width="328px" alt="destination img" objectFit="cover" />
                         
                       </motion.div>
                       </>
@@ -289,7 +289,7 @@ function Destination({destination}) {
               fontWeight="600"
               fontFamily="Roboto"
             >
-              {/* {swiperData.activeIndex} */}
+              {swiperData.activeIndex}
             </Text>
             <Box>
               <Progress
