@@ -58,7 +58,7 @@ const Home = ({whatsApp}) => {
             alignItems={'center'}
             position="fixed"
             bottom="2%"
-            left="1%"
+            left={["3%","3%","1%","1%"]}
             zIndex="100"
             bg='rgba(89, 20, 51, 0.8)'
             borderRadius={'50%'}
@@ -87,7 +87,11 @@ const Home = ({whatsApp}) => {
              bg='rgba(89, 20, 51, 0.50)'
              borderRadius={'50%'}
              border="1.5px solid rgba(89, 20, 51, 0.60)"
-
+            transition=".3s ease"
+             _hover={{
+                transform: "scale(1.16)",
+                transition: ".3s ease",
+              }}
             >
 
             <Image
