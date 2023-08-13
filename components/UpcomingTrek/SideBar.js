@@ -63,7 +63,7 @@ const SideBar = ({ data, setFilterData, filterData }) => {
         maxW="299px"
         minW="250px"
         h={"100%"}
-        bg="#241314"
+        bg="#241314cf"
         borderRadius={"10"}
         py="22px"
         px="28px"

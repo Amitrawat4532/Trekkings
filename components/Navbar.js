@@ -137,12 +137,13 @@ const Navbar = ({ settings, logo }) => {
             aria-label="Search database"
             display={["flex", "flex", "none", "none"]}
             color="black"
-            background={"tranparent"}
+            background={"#241314"}
+            p='4'
             fontSize="40px"
           >
             <svg
-              width="32"
-              height="27"
+              width="22"
+              height="17"
               viewBox="0 0 32 27"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
