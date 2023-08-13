@@ -4,7 +4,6 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
-import Popup from "./Popup";
 import Image from "next/image";
 
 const Home = ({whatsApp}) => {

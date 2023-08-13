@@ -4,6 +4,7 @@ import { isValidMotionProp, motion } from "framer-motion";
 import jump from "jump.js";
 import Image from "next/image";
 import React, { useRef } from "react";
+import Modalbox from "../components/Modalbox"
 
 import {
   Box,
@@ -259,6 +260,8 @@ const Navbar = ({ settings, logo }) => {
                 <Link href="/contact">
                   <Button variant="responsiveNavButton">Contact US</Button>
                 </Link>
+                <Modalbox />
+
                 <DrawerFooter
                   borderTopWidth="1px"
                   width="80%"
@@ -271,6 +274,7 @@ const Navbar = ({ settings, logo }) => {
                     width="100%"
                     mt="36px"
                   >
+
                     <svg
                       width="30"
                       height="30"

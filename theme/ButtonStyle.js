@@ -39,6 +39,23 @@ export const ButtonStyle = {
         color: "transparent",
       },
     },
+    ContactButton: {
+     
+      _hover: {
+        color: "white",
+      },
+
+      py: "10px",
+      px: "25px",
+      fontFamily: "Roboto",
+      fontWeight: "700",
+    },
+    backbutton: {
+     
+      _hover: {
+        color: "green",
+      },
+    },
     responsiveNavButton: {
       fontSize: "25px",
       color: "#535353",

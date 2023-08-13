@@ -12,17 +12,15 @@ import Contact from './Contact';
     }
   
     
-    const sizes = ['full']
+    // const sizes = ['full']
   
     return (
       <>
-        {sizes.map((size) => (
           <Button
             onClick={() => handleSizeClick(size)}
-            key={size}
             m={4}
-          >{`Open ${size} Modal`}</Button>
-        ))}
+            variant="blogButton"
+          >Lets Connect</Button>
   
         <Modal onClose={onClose} size={size} isOpen={isOpen} isCentered>
           <ModalOverlay   />
